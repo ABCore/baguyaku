@@ -7,7 +7,7 @@ permalink: /README/
 
 [kaizoman666](https://github.com/kaizoman666)氏がまとめている[SMW-Data](https://github.com/kaizoman666/SMW-Data)/[Glitch List.md
 ](https://github.com/kaizoman666/SMW-Data/blob/master/Glitch%20List.md)の和訳を用意するリポジトリです。  
-[https://abcore.github.io/baguyaku/GlitchList](https://abcore.github.io/baguyaku/GlitchList)・[https://github.com/ABCore/baguyaku/blob/master/Glitch%20List.md](https://github.com/ABCore/baguyaku/blob/master/Glitch%20List.md)で公開しています。
+[https://abcore.github.io/baguyaku/GlitchList](https://abcore.github.io/baguyaku/GlitchList)・[https://github.com/ABCore/baguyaku/blob/gh-pages/Glitch%20List.md](https://github.com/ABCore/baguyaku/blob/gh-pages/Glitch%20List.md)で公開しています。
 
 ## 方針・メモ
 
