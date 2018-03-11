@@ -1,4 +1,29 @@
-# SMW-Data
-The ``Disassembly`` folder contains commented banks of SMW I've written, using the [smw-irq](https://github.com/Alcaro/smw-irq) project as a basis. Formatting may be somewhat inconsistent due to being written over the course of several years, but it should at least help you understand what the code is trying to do.
+---
+layout: rm
+permalink: /README/
+---
 
-The ``Misc`` folder contains various other bits of information I've documented over time. Check each individual file for explanations of their contents.
+# バグリスト和訳
+
+[kaizoman666](https://github.com/kaizoman666)氏がまとめている[SMW-Data](https://github.com/kaizoman666/SMW-Data)/[Glitch List.md
+](https://github.com/kaizoman666/SMW-Data/blob/master/Glitch%20List.md)の和訳を用意するリポジトリです。  
+[https://abcore.github.io/baguyaku/GlitchList](https://abcore.github.io/baguyaku/GlitchList)・[https://github.com/ABCore/baguyaku/blob/master/Glitch%20List.md](https://github.com/ABCore/baguyaku/blob/master/Glitch%20List.md)で公開しています。
+
+## 方針・メモ
+
+| English | 日本語 | 備考 |
+|:-----------:|:------------:|:-----------|
+| goal tape | ゴールバー ||
+| Yoshi | Y | 頻出なので省略系|
+
+## お手伝い
+
+間違い・提案等がありました、
+
+* issueを立てる
+* Pull requrest
+* Twitterでリプライ
+
+のどれかをお願います。
+
+
