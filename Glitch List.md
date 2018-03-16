@@ -6,12 +6,12 @@ permalink: /GlitchList/
 <!--
 # Physics-Related Glitches  
 -->
-# 物理的バグ(Physics-Related Glitches)
+# 物理的バグ(Physics-Related Glitches)  
 
 <!--
 __(Mario and controls)__  
 -->
-__マリオと操作(Mario and controls)__
+__マリオと操作(Mario and controls)__  
 
 <!--
 _70 recorded glitches, 64 of which are useful_  
@@ -21,92 +21,92 @@ _70個(64個有用)_
 <!--
 * If Mario becomes surrounded by blocks and touches the ground, he will be crushed and die. However, avoiding touching the ground can be done in a number of ways, such as by flying before Mario gets surrounded, or swimming upwards. [Video](https://www.youtube.com/watch?v=oxUGDQCccF4)
 -->
-* If Mario becomes surrounded by blocks and touches the ground, he will be crushed and die. However, avoiding touching the ground can be done in a number of ways, such as by flying before Mario gets surrounded, or swimming upwards. [Video](https://www.youtube.com/watch?v=oxUGDQCccF4)
+* マリオがブロックに囲まれまま地面に足がつくと、圧死する。しかし、飛行状態や上方向に泳ぐなどの地面に足がつかない方法で圧死を避けられる。[Video](https://www.youtube.com/watch?v=oxUGDQCccF4)
 
 <!--
 * If Mario is far enough inside a solid tile, he will be pushed leftward by it. Oddly, Layer 2 does will not do this, and instead Mario will be able to freely walk around (though unable to jump).
 -->
-* If Mario is far enough inside a solid tile, he will be pushed leftward by it. Oddly, Layer 2 does will not do this, and instead Mario will be able to freely walk around (though unable to jump).
+* マリオがソリッドタイルにめり込んでいる時、左方向に押される。ただし、レイヤー2ではそうならず、ジャンプはできないが自由に走り回れる。
 
 <!--
 * If Mario is big and stands up or jumps in a one-tile space, he may be pushed through the floor. Also works if Mario lands on Yoshi, and can even occur while Mario is small if he gets stuck in a turnblock during the jump.
 -->
-* If Mario is big and stands up or jumps in a one-tile space, he may be pushed through the floor. Also works if Mario lands on Yoshi, and can even occur while Mario is small if he gets stuck in a turnblock during the jump.
+* デカマリオが1タイル分の空間で立つと同時にジャンプすると、下向きに押され床抜けする。これはマリオがヨッシーに乗った時や、チビマリオが回転中のクルクルブロックに重なって、回転し終えた瞬間ジャンプしたときにも起こる。
 
 <!--
 * If Layer 2 or Layer 3 are active in a level, standing Mario up in a one-tile space with blocks on the same layer both above and below him will cause him to sink slightly into the block, as opposed to being pushed left like normal. Often this will cause him to fall through the ground without the need to jump.
 -->
-* If Layer 2 or Layer 3 are active in a level, standing Mario up in a one-tile space with blocks on the same layer both above and below him will cause him to sink slightly into the block, as opposed to being pushed left like normal. Often this will cause him to fall through the ground without the need to jump.
+* レイヤー2・3レベルで、同じレイヤーのブロックが上下に配置された1タイルの隙間でデカマリオが立つと、通常左に押されるのとは対称的に、マリオがブロックの中で震える。この状態では、ジャンプしなくても床抜けすることがある。
 
 <!--
 * Smashola: Doing the above through turnblocks while caped and spinjumping may cause Mario to "warp" his way downward very quickly.
 -->
-* Smashola: Doing the above through turnblocks while caped and spinjumping may cause Mario to "warp" his way downward very quickly.
+* スマッシュオラ：マントマリオがスピンジャンプでクルクルブロックの中を掘り進む時、ワープしたかのように極めて早く下移動することがある。
 
 <!--
 * Walljump: With enough speed, Mario can land on the corners of blocks for a frame - even if they're part of a wall - and jump off of it. As an alternative, this frame can also be used to enter doors or pipes, even if they don't normally have ground. [More info](http://smwc.me/617858) - [Video](https://www.youtube.com/watch?v=yp3Z6d81sX4) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=8815)
 -->
-* Walljump: With enough speed, Mario can land on the corners of blocks for a frame - even if they're part of a wall - and jump off of it. As an alternative, this frame can also be used to enter doors or pipes, even if they don't normally have ground. [More info](http://smwc.me/617858) - [Video](https://www.youtube.com/watch?v=yp3Z6d81sX4) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=8815)
+* 壁ジャンプ：十分な速度で壁にぶつかると、ブロックの角に1Fだけ乗ることができ、この瞬間にジャンプが可能。ジャンプの変わりに、地面でない所では通常入れないドアや土管に入ることもできる。[More info](http://smwc.me/617858) - [Video](https://www.youtube.com/watch?v=yp3Z6d81sX4) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=8815)
 
 <!--
 * Mario can enter a pipe even if his head is the only part touching it.
 -->
-* Mario can enter a pipe even if his head is the only part touching it.
+* マリオの頭部が土管の一部に触れてさえいれば、入ることが可能。
 
 <!--
 * Jumping on the first frame after coming out of an upwards pipe will let Mario jump without triggering the effects of the block he came out on top of (including Munchers).
 -->
-* Jumping on the first frame after coming out of an upwards pipe will let Mario jump without triggering the effects of the block he came out on top of (including Munchers).
+* 上向き土管用の動きで出てきて、行動できる最初のFにジャンプすると、足がつくことになる（ブラパを含めた）ブロックの効果が作用しない。
 
 <!--
 * Slope clip: Mario can pass through the corners of slope tiles so long as he is moving upward as he crosses it. [More info](http://smwc.me/617858) - [Video](https://www.youtube.com/watch?v=OmU8Vd5-QYM) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=8816)
 -->
-* Slope clip: Mario can pass through the corners of slope tiles so long as he is moving upward as he crosses it. [More info](http://smwc.me/617858) - [Video](https://www.youtube.com/watch?v=OmU8Vd5-QYM) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=8816)
+* 坂抜け：上昇中のマリオが坂タイルの角を横切ると、坂を通り抜けられる。[More info](http://smwc.me/617858) - [Video](https://www.youtube.com/watch?v=OmU8Vd5-QYM) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=8816)
 
 <!--
 * Clipping into an upside-down slope will force Mario on top of it. This can also force him inside blocks, killing him.
 -->
-* Clipping into an upside-down slope will force Mario on top of it. This can also force him inside blocks, killing him.
+* マリオが天地逆さの坂にめり込むと、坂によって下方向に押される。これにより、マリオがブロック内に押し込まれ、圧死することがある。
 
 <!--
 * Clipping into the bottom corner of a block that is on a ledge may cause Mario to be forced on top of the ledge, killing him inside the block.
 -->
-* Clipping into the bottom corner of a block that is on a ledge may cause Mario to be forced on top of the ledge, killing him inside the block.
+* 下に足場があるブロックの底の角にめり込むと、足場に乗り上げブロックの中で圧死する。
 
 <!--
 * If Mario hits the vertical screen barrier while walking up a slope, he will fall through the slope.
 -->
-* If Mario hits the vertical screen barrier while walking up a slope, he will fall through the slope.
+* 画面上部の判定が取られる境界上の坂を登ろうとすると、坂をすり抜けて落ちる。
 
 <!--
 * Mario will "stick" to the vertical screen barrier when jumping; he won't fall down until his speed actually becomes positive, but he can't rise higher either. [Video](https://twitter.com/Kaizoman666/status/905846914674982912)
 -->
-* Mario will "stick" to the vertical screen barrier when jumping; he won't fall down until his speed actually becomes positive, but he can't rise higher either. [Video](https://twitter.com/Kaizoman666/status/905846914674982912)
+* ジャンプ中のマリオは、画面上部境界より上に行けず、境界にくっつく。上速度を持つ間、落ちはしないが、高くもならない。[Video](https://twitter.com/Kaizoman666/status/905846914674982912)
 
 <!--
 * Corner clip: With enough speed, Mario can "enter" the corner of a block in order to pass through it. If he's small or ducking, though, he may be crushed. [Mo](http://smwc.me/617858)[re](http://www.smwcentral.net/?p=viewthread&t=72714) [info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#CornerClip)
 -->
-* Corner clip: With enough speed, Mario can "enter" the corner of a block in order to pass through it. If he's small or ducking, though, he may be crushed. [Mo](http://smwc.me/617858)[re](http://www.smwcentral.net/?p=viewthread&t=72714) [info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#CornerClip)
+* 角抜け：十分速い速度でブロックの角に突っ込むと、そのまま抜ける時がある。もしチビマリオだったりしゃがんでいると、圧死する。[Mo](http://smwc.me/617858)[re](http://www.smwcentral.net/?p=viewthread&t=72714) [info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#CornerClip)
 
 <!--
 * If Mario is big, you can also force him into inner corners where a leftside wall and ceiling meet. If the corner is non-solid, he can go through without dying.
 -->
-* If Mario is big, you can also force him into inner corners where a leftside wall and ceiling meet. If the corner is non-solid, he can go through without dying.
+* デカマリオなら、壁の左上角を抜けることもできる。もし角が非ソリッドタイルなら、死なずに済む。
 
 <!--
 * If Mario is ducking when he enters certain states (climbing, balloon), then he will still retain his reduced hitbox size, despite what the graphics for these states suggest. He'll also still be ducking once he exits those states.
 -->
-* If Mario is ducking when he enters certain states (climbing, balloon), then he will still retain his reduced hitbox size, despite what the graphics for these states suggest. He'll also still be ducking once he exits those states.
+* マリオがしゃがんでいる最中、何かを掴んだりPバルーンなど特定の状態になると、マリオはその状態における表示が描写されるが、実際の当たり判定はしゃがんだ範囲となる。状態が解除されると、当たり判定は通常に戻る。
 
 <!--
 * If Mario grows from a powerup while in certain phases (climbing, Lakitu cloud) and his head ends up inside a ceiling, he'll be pushed leftward, even through solid blocks.
 -->
-* If Mario grows from a powerup while in certain phases (climbing, Lakitu cloud) and his head ends up inside a ceiling, he'll be pushed leftward, even through solid blocks.
+* 何かを掴んでいたりジュゲムの雲に乗っているなどの特定の状況で、マリオの頭が天井に触れている時にパワーアップすると、左向きに押されてソリッドブロックも貫通する。
 
 <!--
 * If Mario has 99 lives and he gets a life through any means, his life counter will briefly increase past 99 for a frame. Exiting a level on that frame (via start+select or a screen side exit) will then display a glitched value for his life counter on the overworld. Entering a new level will fix it, however.
 -->
-* If Mario has 99 lives and he gets a life through any means, his life counter will briefly increase past 99 for a frame. Exiting a level on that frame (via start+select or a screen side exit) will then display a glitched value for his life counter on the overworld. Entering a new level will fix it, however.
+* 残機が99の時に残機を1増やすと、1Fだけ残機が99を越えて値が増える。そのFにステージを出る（Start+Select/画面横出口)と、OW上での残機表示がバグる。これは新しいレベルに入ると治る。
 
 <!--
 * It's possible to completely prevent any sprite from spawning so long as the spawn region of the screen can be passed over it (a distance of just over 16 pixels). Because the spawn routine only runs every other frame, this means that you can have up to three frames to do this (the last frame of which can be gotten from pausing the game breifly to realign the frame counter). Two verified methods of doing so are using a rope mechanism to drag Mario during those frame, and using a fast-spinning revolving platform. If moving fast enough, it may also be possible without the use of any sprites. [More info](http://tasvideos.org/forum/viewtopic.php?p=464958#464958)
@@ -116,57 +116,57 @@ _70個(64個有用)_
 <!--
 * If vertical scrolling is enabled in a level, you can prevent the screen from scrolling by jumping off of the ground the frame that Mario lands on it.
 -->
-* If vertical scrolling is enabled in a level, you can prevent the screen from scrolling by jumping off of the ground the frame that Mario lands on it.
+* 縦スクロールができるレベルで、マリオの足が地に着くFにジャンプし続けると、縦スクロールしない。
 
 <!--
 * While being "stuck" by a noteblock, Mario can enter solid blocks, though he'll be crushed. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8815)
 -->
-* While being "stuck" by a noteblock, Mario can enter solid blocks, though he'll be crushed. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8815)
+* 音符ブロックにくっついてる間、横にあるソリッドブロックにめり込めるが、押し潰される。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8815)
 
 <!--
 * Mario can stick to a row of noteblocks without bouncing off of them if he runs across them at the right speed.
 -->
-* Mario can stick to a row of noteblocks without bouncing off of them if he runs across them at the right speed.
+* 横に並んだ音符ブロック列に適切な速さで突っ込むと、跳ねずに通り過ぎることができる。
 
 <!--
 * If Mario is moving fast enough (x-speed of 64-80), then Mario will be unable to jump. Any faster and his jump height will also be significantly higher than usual.
 -->
-* If Mario is moving fast enough (x-speed of 64-80), then Mario will be unable to jump. Any faster and his jump height will also be significantly higher than usual.
+* マリオのX速度が64-80のとき、ジャンプできない。これより速い速度のときは、通常より高いジャンプが可能。
 
 <!--
 * Mario can spinjump off of noteblocks if you press A on the frame that he actually bounces off.
 -->
-* Mario can spinjump off of noteblocks if you press A on the frame that he actually bounces off.
+* 音符ブロックで跳ねるFにAを押すと、スピンジャンプで跳ねることができる。
 
 <!--
 * The top tile of tileset-specific lava can be used to push Mario into blocks. Interestingly, if Mario is big, it can also be used send him all the way through solid walls or solid floors without being crushed.
 -->
-* The top tile of tileset-specific lava can be used to push Mario into blocks. Interestingly, if Mario is big, it can also be used send him all the way through solid walls or solid floors without being crushed.
+* 洞窟溶岩の一番上のタイルはマリオをブロックの中に押し込む作用がある。デカマリオのとき、圧死せずに壁や地面を抜けられる。
 
 <!--
 * The left and right edges of tileset-specific lava are solid.
 -->
-* The left and right edges of tileset-specific lava are solid.
+* 洞窟溶岩の右側と左側はソリッド。
 
 <!--
 * Mario can swim in standard object lava so long as he doesn't swim too far into the top of the tile.
 -->
-* Mario can swim in standard object lava so long as he doesn't swim too far into the top of the tile.
+* 洞窟溶岩はそのタイルの下側を泳げる。
 
 <!--
 * Mario's P-meter will not decrease while in water.
 -->
-* Mario's P-meter will not decrease while in water.
+* Pメーターは水中にいる間、減少しない。
 
 <!--
 * Layer 2 will not reset Mario's Y speed when he stands on it; this means, if you walk off of a Layer 2 platform, Mario will start falling much faster than he normally would.
 -->
-* Layer 2 will not reset Mario's Y speed when he stands on it; this means, if you walk off of a Layer 2 platform, Mario will start falling much faster than he normally would.
+* レイヤー2はマリオのY速度をリセットしない。つまり、レイヤー2の足場から落下し始めると、通常より早い速度で落下し始める。
 
 <!--
 * When scrolling the screen, Mario will not interact with solid blocks; this can be used to pass through solid Layer 2 blocks if the horizontal scroll setting for them is set to something other than constant.
 -->
-* When scrolling the screen, Mario will not interact with solid blocks; this can be used to pass through solid Layer 2 blocks if the horizontal scroll setting for them is set to something other than constant.
+* 画面をLRスクロールする時、マリオはソリッドブロックと相互作用しない。これにより、レイヤー2の横スクロール設定がConstant以外に設定されている時、レイヤー2のソリッドブロックを横から貫通できる。
 
 <!--
 * Mario can survive a few blocks under the bottom of levels.
@@ -176,27 +176,27 @@ _70個(64個有用)_
 <!--
 * Changing between powerups while Mario is offscreen will cause his transformation animation to be skipped. [Fix](http://www.smwcentral.net/?p=section&a=details&id=5780)
 -->
-* Changing between powerups while Mario is offscreen will cause his transformation animation to be skipped. [Fix](http://www.smwcentral.net/?p=section&a=details&id=5780)
+* 画面外でパワーアップしたとき、変身アニメーションがスキップされる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=5780)
 
 <!--
 * Net punching while climbing can kill sprites other than the Climbing Net Koopas; the only requirement is that Mario and the sprite be on opposite sides of the fence, even if the sprite isn't actually "climbing" it.
 -->
-* Net punching while climbing can kill sprites other than the Climbing Net Koopas; the only requirement is that Mario and the sprite be on opposite sides of the fence, even if the sprite isn't actually "climbing" it.
+* 金網パンチは金網ノコノコ以外のスプライトも倒すことができる。これをするのに必要な条件は、マリオとスプライトが金網の反対側にいることである。
 
 <!--
 * Net punching will destroy extended sprites regardless of what side of the fence they're on.
 -->
-* Net punching will destroy extended sprites regardless of what side of the fence they're on.
+* 金網の裏表に関係なく、拡張スプライトは金網パンチで消える。
 
 <!--
 * Net punching can also hit blocks. When in front of the fence, the hitbox is to the top right of Mario; when behind it, it's to the top left.
 -->
-* Net punching can also hit blocks. When in front of the fence, the hitbox is to the top right of Mario; when behind it, it's to the top left.
+* 金網パンチはブロックを叩くことができる。マリオが金網の表にいる時、判定はマリオの右上に出現するが、裏側の場合は左上。
 
 <!--
 * The capespin timer isn't cleared inbetween rooms, so capespinning prior to entering a door/pipe will cause Mario to start the next room with a capespin. Normally this isn't very useful, but one advantage is that it applies to even diagonal pipes, which normally don't allow input for a brief period after being fired. Additionally, it can be used to enter and exit pipes while facing the opposite direction you normally would.
 -->
-* The capespin timer isn't cleared inbetween rooms, so capespinning prior to entering a door/pipe will cause Mario to start the next room with a capespin. Normally this isn't very useful, but one advantage is that it applies to even diagonal pipes, which normally don't allow input for a brief period after being fired. Additionally, it can be used to enter and exit pipes while facing the opposite direction you normally would.
+* マント回転タイマーはルーム簡で保持される。マント回転しながらドアや土管に入ると、移動後に回転を再開する。通常これはあまり役に立たないが、発射後入力を受け付けない斜め土管からの出現時に使うことが出来る。さらに、土管の出入りの時に通常と逆を向くことが可能になる。
 
 <!--
 * When Layer 2 or Layer 3 is scrolling and has interaction, the relative Layer 2 position ($7E0026) gets added to capespins to handle interaction with between them. Normally, this resets back to Mario when it goes back to handle sprites and Layer 1, but if the game is frozen (via $9D), this doesn't happen, and the relative position keeps gets added repeatedly. This causes the cape hitbox  axis of Layer 2/3's movement during the freeze, hitting any blocks or sprites along the way. [More information](http://smwc.me/1228582)
@@ -206,169 +206,170 @@ _70個(64個有用)_
 <!--
 * Mario can turn while flying by pressing X or Y to capespin.
 -->
-* Mario can turn while flying by pressing X or Y to capespin.
+* 飛行中、XorY入力のマント回転で方向転換できる。
 
 <!--
 * Fast diving: Mario's flying "frame" will increase or decrease every time a direction is tapped, allowing his speed to increase faster than simply holding it down. With this in mind, you can rapidly press one direction to dive quickly or build big air faster.
 -->
-* Fast diving: Mario's flying "frame" will increase or decrease every time a direction is tapped, allowing his speed to increase faster than simply holding it down. With this in mind, you can rapidly press one direction to dive quickly or build big air faster.
+* ファストダイビング：飛行中、進行方向への入力で毎F速度が増減する。単純な押しっぱではなく、調整して入力することで、通常より早く最速になることが出来る。また、1F毎に進行方向へ入力すると、早くダイブの姿勢になり、ビッグエアを得られる。
 
 <!--
 * Air cancel: You can cancel an air catch through a number of ways, including spinning around, hitting a ceiling, or reversing your speed. If you manage to do this, it can be used to decrease the height given by an air catch (useful for tight passages), or it can be used to catch air while maintaining big air.
 -->
-* Air cancel: You can cancel an air catch through a number of ways, including spinning around, hitting a ceiling, or reversing your speed. If you manage to do this, it can be used to decrease the height given by an air catch (useful for tight passages), or it can be used to catch air while maintaining big air.
+* エアキャンセル(上昇キャンセル)：マント回転・天井に当たる・速度を反転させるなどのいくつかの方法で、上昇をキャンセルできる。エアによる上昇の抑制（狭い通路で有用）、ビッグエアの保持に使える。
 
 <!--
 * Infinite air catch: Based off the above, you can catch big air with a low X speed, use <+B to slow Mario down, and then reverse his speed to cancel the catch. This will give him a significant Y-speed boost while maintaining big air, which can then be repeated an infinite number of times. [More](http://smwc.me/617858) [info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#PerpetualAirCatch)
 -->
-* Infinite air catch: Based off the above, you can catch big air with a low X speed, use <+B to slow Mario down, and then reverse his speed to cancel the catch. This will give him a significant Y-speed boost while maintaining big air, which can then be repeated an infinite number of times. [More](http://smwc.me/617858) [info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#PerpetualAirCatch)
+* ∞エアキャッチ(無限上昇)：上記に基づくと、小さいX速度でビッグエアを得られ、<+Bを使ってX速度を小さくし、X速度を反転させると上昇キャンセルができる。この操作は大きいY加速を得つつも、ビッグエアを保持でき、さらに何回でも繰り返すことが出来る。[More](http://smwc.me/617858) [info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#PerpetualAirCatch
 
 <!--
 * Mario can "stick" to ceilings if he catches air close enough to it. Simple hold the opposite direction to Mario's direction and he won't start to fall downward. Big air can also be maintained through this glitch.
 -->
-* Mario can "stick" to ceilings if he catches air close enough to it. Simple hold the opposite direction to Mario's direction and he won't start to fall downward. Big air can also be maintained through this glitch.
+* 天井近くでエアをキャッチしたとき、天井に貼り付ける。単純にマリオの逆方向を入力すれば、落ちることはない。このバグをしている最中、ビッグエアは保持され続ける。
 
 <!--
 * Mario can regain flight after letting go of X or Y by pressing it again while he is moving downward and his takeoff meter (7E149F) is greater than 2.
 -->
 * Mario can regain flight after letting go of X or Y by pressing it again while he is moving downward and his takeoff meter (7E149F) is greater than 2.
+-テイクオフメータ(7E149F)が3以上・XorYを押している・Y速度が負を満たすとき、再飛行が可能。
 
 <!--
 * If Mario is flying and takes a screen exit, he can regain flight in the next room in the same was described above.
 -->
-* If Mario is flying and takes a screen exit, he can regain flight in the next room in the same was described above.
+* 上記を満たしていれば、ルーム移動してからでも再飛行できる。
 
 <!--
 * Mario will not lose flight while climbing, nor after collecting a P-balloon, so long as he doesn't touch the ground. It should be noted that, in either case, Mario retains the extra hit from flight even while in that state.
 -->
-* Mario will not lose flight while climbing, nor after collecting a P-balloon, so long as he doesn't touch the ground. It should be noted that, in either case, Mario retains the extra hit from flight even while in that state.
+* バルーン状態やツタ・金網・ロープを掴んでいる間、飛行は維持される。ただし、バルーン状態で地面に触れたら飛行は解除される。飛行を維持している時に敵に当たると、バルーン状態や掴んでいる状態は維持したまま、飛行が解除される。
 
 <!--
 * Pressing both left and right at the same time while flying will act as if Mario is pressing just left, but will not affect his X speed.
 -->
-* Pressing both left and right at the same time while flying will act as if Mario is pressing just left, but will not affect his X speed.
+* 飛行中に左右同時押しをすると、<をおした時と同じ行動をとるが、X速度は変化する。
 
 <!--
 * L+R glitch: Holding down both the left and right directions at the same time while Mario has either a P-balloon or Lakitu cloud will boost Mario rightward at higher speeds than normal, even allowing him to force his way through solid objects without dying. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8771)
 -->
-* L+R glitch: Holding down both the left and right directions at the same time while Mario has either a P-balloon or Lakitu cloud will boost Mario rightward at higher speeds than normal, even allowing him to force his way through solid objects without dying. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8771)
+* LRバグ(左右同時押し)：バルーン状態か雲に乗っている間に、左右同時押しをすると、右向きに通常より速い速度で進む。このとき圧死せず、ソリッドオブジェクトを通り抜けられる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8771)
 
 <!--
 * The timer for the P-balloon continues to decrement even while the game is frozen with $9D.
 -->
-* The timer for the P-balloon continues to decrement even while the game is frozen with $9D.
+* Pバルーンのタイマーは、$9Dでフリーズしている間も減り続ける。
 
 <!--
 * The item in the item box can be released even while the game is frozen with $9D.
 -->
-* The item in the item box can be released even while the game is frozen with $9D.
+* アイテムボックスのアイテムは、$9Dでフリーズしていても出すことが出来る。
 
 <!--
 * Shooting a fireball at a moving conveyor belt or rope slope will warp the fireball five blocks upward if the slope is moving downward, and ten blocks upward if it is moving upward. The opposite height changes will occur if the fireball hits the slope while moving downward in parallel with it.
 -->
-* Shooting a fireball at a moving conveyor belt or rope slope will warp the fireball five blocks upward if the slope is moving downward, and ten blocks upward if it is moving upward. The opposite height changes will occur if the fireball hits the slope while moving downward in parallel with it.
+* ファイアを動くコンベアor動くロープ坂に当てると、上方にワープする。下向きに動く坂だと5ブロック分、上向きに動く坂だと10ブロック分ワープする。下向きに動く坂の場合、時々全く異なる所にワープする。
 
 <!--
 * Fireballs can pass through the corners formed by two diagonally placed blocks.
 -->
-* Fireballs can pass through the corners formed by two diagonally placed blocks.
+* ファイアは斜めに配置された2つのブロック間を通過できる。
 
 <!--
 * Fireballs and silver P-switches can't kill sprites in slot #A or #B.
 -->
-* Fireballs and silver P-switches can't kill sprites in slot #A or #B.
+* ファイアと銀Pは、スロット#Aor#Bのスプライトを倒すことが出来ない。
 
 <!--
 * Mario can kill many sprites that would normally be unkillable by sliding into them, often resulting in a glitched death sprite. Similarly, you can also get some glitched sprites with star power, capespins, and quake sprites as well.
 -->
-* Mario can kill many sprites that would normally be unkillable by sliding into them, often resulting in a glitched death sprite. Similarly, you can also get some glitched sprites with star power, capespins, and quake sprites as well.
+* マント滑りで普通に殺せないスプライトを殺すことができ、表示がバグるスプライトもある。スター・マント回転・揺れスプライトでも似たことが可能。
 
 <!--
 * Grabbing a vine/fence or collecting a P-balloon while in the sliding state will cause the state to persist, meaning any sprites you touch will be instantly killed. The effect will end if you move horizontally in midair while not holding onto the fence. [Video](https://www.youtube.com/watch?v=puNUhG2j9Qg)
 -->
-* Grabbing a vine/fence or collecting a P-balloon while in the sliding state will cause the state to persist, meaning any sprites you touch will be instantly killed. The effect will end if you move horizontally in midair while not holding onto the fence. [Video](https://www.youtube.com/watch?v=puNUhG2j9Qg)
+* 坂滑り状態でツタや金網を掴んだりPバルーンを取ると、坂滑りが保持され、マリオに触れたスプライトは瞬殺される。この状態は金網などを掴んでいない時、空中で水平方向に移動すると解除される。[Video](https://www.youtube.com/watch?v=puNUhG2j9Qg)
 
 <!--
 * Killing a sprite by sliding into it will set the counter for the number of sprites Mario has killed with a star to 1. [Fix](http://www.smwcentral.net/?p=section&a=details&id=12574)
 -->
-* Killing a sprite by sliding into it will set the counter for the number of sprites Mario has killed with a star to 1. [Fix](http://www.smwcentral.net/?p=section&a=details&id=12574)
+* 坂滑りでスプライトを倒すと、スターのキルカウンターが1にセットされる。 [Fix](http://www.smwcentral.net/?p=section&a=details&id=12574)
 
 <!--
 * While the star power timer normally decrements once every four frames, freezing the game (via $9D) on a frame the timer is meant to decrement will cause it to decrease every frame while the game is paused.
 -->
-* While the star power timer normally decrements once every four frames, freezing the game (via $9D) on a frame the timer is meant to decrement will cause it to decrease every frame while the game is paused.
+* スタータイマーは通常4F毎に1減少する。減少するFに（＄9Dで）フリーズさせると、フリーズ中、毎Fタイマー値が減っていく。
 
 <!--
 * The star's kill counter only resets if you come in contact with a sprite that uses default interaction while Mario doesn't have star power. This means you can start building the counter with one star, let it run out, then grab a second star to continue building the counter. [Fix](http://www.smwcentral.net/?p=section&a=details&id=12574)
 -->
-* The star's kill counter only resets if you come in contact with a sprite that uses default interaction while Mario doesn't have star power. This means you can start building the counter with one star, let it run out, then grab a second star to continue building the counter. [Fix](http://www.smwcentral.net/?p=section&a=details&id=12574)
+* スターのキルカウンターはスター状態に関わらない方法でスプライトと接触した時にのみ、リセットされる。1つ目のスターを使いきってから、2つ目をとれば、カウンターを引き継げる。 [Fix](http://www.smwcentral.net/?p=section&a=details&id=12574)
 
 <!--
 * Mario may be killed if he spinjumps on two sprites at the same time. [Fix](http://www.smwcentral.net/?p=section&a=details&id=6700)
 -->
-* Mario may be killed if he spinjumps on two sprites at the same time. [Fix](http://www.smwcentral.net/?p=section&a=details&id=6700)
+* 2体以上重なったスプライトでスピンジャンプをすると、ダメージをくらうことがある。 [Fix](http://www.smwcentral.net/?p=section&a=details&id=6700)
 
 <!--
 * Destroying a sprite via spinjump will stop Mario's vertical movement. Because Parakoopas and Super Koopas can be bounced off of even with an upwards Y speed, it's possible to reduce the height of a jump to as little as a few pixels using them.
 -->
-* Destroying a sprite via spinjump will stop Mario's vertical movement. Because Parakoopas and Super Koopas can be bounced off of even with an upwards Y speed, it's possible to reduce the height of a jump to as little as a few pixels using them.
+* スピンジャンプでスプライトを倒すと、垂直方向の動きがなくなる。パタパタとマントガメはマリオが上昇中でも踏めるので、ジャンプの高さを数ピクセルにまで抑えることが可能。
 
 <!--
 * If Mario's Y position is 14 pixels higher than a sprite in midair on the frame before Mario touches the ground, interacting with said sprite on the same frame he lands will cause him to bounce off the sprite as if he actually landed on top of it. Notably, this can be used to turn a spinjump into a normal jump. [Video](https://twitter.com/Kaizoman666/status/869397277370142720)
 -->
-* If Mario's Y position is 14 pixels higher than a sprite in midair on the frame before Mario touches the ground, interacting with said sprite on the same frame he lands will cause him to bounce off the sprite as if he actually landed on top of it. Notably, this can be used to turn a spinjump into a normal jump. [Video](https://twitter.com/Kaizoman666/status/869397277370142720)
+* マリオが地面に着地する前のFに、マリオのY位置が空中のスプライトより14ピクセル以上高い時、着地と同時にスプライトに触れると、そのスプライトを踏める。スピンでこれを行うと、通常のジャンプのように跳ねる。[Video](https://twitter.com/Kaizoman666/status/869397277370142720)
 
 <!--
 * If Mario is big, ducking on the frame just before he turns upright after wall-running will cause him to clip into the wall.
 -->
-* If Mario is big, ducking on the frame just before he turns upright after wall-running will cause him to clip into the wall.
+* 壁走り中のデカマリオが角で体を起こすFにしゃがむと、壁にめり込む。
 
 <!--
 * Mario can survive being crushed by the Layer 3 smashers by alternating A and B every frame.
 -->
-* Mario can survive being crushed by the Layer 3 smashers by alternating A and B every frame.
+* レイヤー3の槌に潰されても、1F毎にA・Bを交互に押せば圧死しない。
 
 <!--
 * Mario will "stick" to the bottom of the Layer 3 smashers, making him fall slower if he touches them as they're poking out of the ceiling.
 -->
-* Mario will "stick" to the bottom of the Layer 3 smashers, making him fall slower if he touches them as they're poking out of the ceiling.
+* レイヤー3の槌より遅い速度で落下すれば、地面に着地するまで槌の底にくっつける。
 
 <!--
 * Mario can fly through Layer 3 smashers if he either dives into them at the right angle or gets pushed into them.
 -->
-* Mario can fly through Layer 3 smashers if he either dives into them at the right angle or gets pushed into them.
+* 右向きに突っ込むか押し込まれていれば、レイヤー3の槌の中で飛行していられる。
 
 ---
 
 <!--
 * Screen-scrolling while the Yoshi's House smoke sprite is onscreen will cause it to glitch out.
 -->
-* Screen-scrolling while the Yoshi's House smoke sprite is onscreen will cause it to glitch out.
+* 画面内にあるヨッシーの家の煙スプライトは、スクロールするとバグる。
 
 <!--
 * Alternating directions every other frame while swimming with an item will cause Mario to appear as if he's holding the item on his back.
 -->
-* Alternating directions every other frame while swimming with an item will cause Mario to appear as if he's holding the item on his back.
+* 水中で1F毎に左右を押すと、マリオがアイテムを尻に挟んでいるかのように見える。
 
 <!--
 * Touching a damaging object (e.g. muncher, spike) while swimming upward will glitch Mario's shrinking animation. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8753)
 -->
-* Touching a damaging object (e.g. muncher, spike) while swimming upward will glitch Mario's shrinking animation. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8753)
+* 水中で上昇中にダメージオブジェクト(ブラパ・トゲ)に触れると、マリオのチビ化アニメーションがバグる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8753)
 
 <!--
 * Capespinning or shooting a fireball while running up a wall will cause Mario to stop animating briefly. The abilities will also still behave as if he were horizontal.
 -->
-* Capespinning or shooting a fireball while running up a wall will cause Mario to stop animating briefly. The abilities will also still behave as if he were horizontal.
+* 壁走り中にマント回転やファイアを出すと、走るアニメーションが止まる。これらの効果は、水平時と同じように作用する。
 
 <!--
 * Mario will decelerate significantly slower when sliding up a left-facing very steep slope than when he directly runs at it. This also happens with right-facing very steep slopes, though to a much lesser degree.
 -->
-* Mario will decelerate significantly slower when sliding up a left-facing very steep slope than when he directly runs at it. This also happens with right-facing very steep slopes, though to a much lesser degree.
+* マリオは左向きのとても急な坂を坂滑りで登る時、減速具合が歩いて登る時より緩やかになる。右向きでも同様のことが起こるが、程度が小さい。
 
 <!--
 * If Mario finishes a capespin during the goal walk, the cape's hitbox will persist even after the spin at whatever position he stopped at.
 -->
-* If Mario finishes a capespin during the goal walk, the cape's hitbox will persist even after the spin at whatever position he stopped at.
+* マント回転しながらゴールバーを切ると、マント回転の当たり判定がゴールした瞬間の位置に存在し続ける。
 
 ---
 ---
@@ -376,92 +377,92 @@ _70個(64個有用)_
 <!--
 # Yoshi-Related Glitches
 -->
-# Yoshi-Related Glitches
+# ヨッシー関係のバグ(Yoshi-Related Glitches)
 
 <!--
 __(things requiring Yoshi)__  
 -->
-__(things requiring Yoshi)__  
+__ヨッシーを必要とする物事(things requiring Yoshi)__  
 
 <!--
 _148 recorded glitches, 127 of which are useful_
 -->
-_148個(127個有用)_
+_148個(127個有用)_  
 
 <!--
 * After mounting Yoshi, Mario can not be hit by enemies for a few frames. Only works with certain sprites, however. [More info](http://smwc.me/649544)
 -->
-* After mounting Yoshi, Mario can not be hit by enemies for a few frames. Only works with certain sprites, however. [More info](http://smwc.me/649544)
+* Yに乗った直後の数F、敵に触れてもヒットしない。ただし、一部のスプライトは例外でヒットする。[More info](http://smwc.me/649544)
 
 <!--
 * Keys and P-switches can still hit blocks while stuck to Yoshi's tongue.
 -->
-* Keys and P-switches can still hit blocks while stuck to Yoshi's tongue.
+* Yの舌で掴んでいる鍵とスイッチでブロックを叩ける。
 
 <!--
 * Shells, throwblocks, and Goombas can still hit other sprites while stuck to Yoshi's tongue, so long as the sprite it's hitting is in a lower slot.
 -->
-* Shells, throwblocks, and Goombas can still hit other sprites while stuck to Yoshi's tongue, so long as the sprite it's hitting is in a lower slot.
+* 甲羅・ブルブルブロック・クリボンをYの舌で掴んだ時、それらは下位スロットの別スプライトにヒットする。
 
 <!--
 * Spinjumping onto Yoshi will allow Mario to break turnblocks as if he is still spinjumping. If he has a cape, it'll also add the effects of the spinning cape as well.
 -->
-* Spinjumping onto Yoshi will allow Mario to break turnblocks as if he is still spinjumping. If he has a cape, it'll also add the effects of the spinning cape as well.
+* マリオがデカの時にスピンジャンプでYに乗ると、クルクルブロックを壊せる。マント状態であるなら、マント回転の判定も追加される。
 
 <!--
 * You can grab items on Yoshi by landing on Yoshi and grabbing the item on the same frame. If the item is not a springboard, however, it must be in a lower sprite slot than Yoshi.
 -->
-* You can grab items on Yoshi by landing on Yoshi and grabbing the item on the same frame. If the item is not a springboard, however, it must be in a lower sprite slot than Yoshi.
+* Yに乗ると同時にアイテムを持つと、アイテムを持ちながらYに乗れる。ジャンプ台以外でやる場合、アイテムはヨッシーより低いスプライトスロットである必要がある。
 
 <!--
 * If Mario grabs a shell, throwblock, or goomba on Yoshi, he'll be knocked off almost immediately as if Yoshi took damage. Note that this will not occur if the sprite is eat-canceled.
 -->
-* If Mario grabs a shell, throwblock, or goomba on Yoshi, he'll be knocked off almost immediately as if Yoshi took damage. Note that this will not occur if the sprite is eat-canceled.
+* 甲羅・ブルブルブロック・クリボンを持ちながらYに乗ると、ダメージをくらったかのようにすぐ降りてしまう。ただし、これは食べキャンされたスプライトでやると起こらない。
 
 <!--
 * If Mario is running in the same direction as a shell while riding Yoshi, he can pass slightly inside the shell from behind without taking damage from it, until either the shell turns around or he passes far enough inside that he's considered to be in front of the shell.
 -->
-* If Mario is running in the same direction as a shell while riding Yoshi, he can pass slightly inside the shell from behind without taking damage from it, until either the shell turns around or he passes far enough inside that he's considered to be in front of the shell.
+* Yに騎乗中、甲羅と同じ方向に走っていると、甲羅に後ろから少し重なってもダメージを受けることなく走り続けられる。これは甲羅が反転したり、マリオが甲羅の前に行きすぎない限り行える。
 
 <!--
 * Yoshi's fireballs can be destroyed by a capespin mostly regardless of the vertical between them and Mario; the only thing that generally matters is his horizontal distance from them.
 -->
-* Yoshi's fireballs can be destroyed by a capespin mostly regardless of the vertical between them and Mario; the only thing that generally matters is his horizontal distance from them.
+* ヨッシーの吐く火は、マリオの高さとずれていてもマント回転で大抵消せる。殆どの場合、水平距離のみ近ければ良い。
 
 <!--
 * Yoshi has an unusual hitbox that makes all standard clipping glitches have a significantly lower speed requirement. [More info](http://smwc.me/1025243)
 -->
-* Yoshi has an unusual hitbox that makes all standard clipping glitches have a significantly lower speed requirement. [More info](http://smwc.me/1025243)
+* Yは独自の当たり判定を持っていて、全てのクリッピングバグが通常必要とされる速度より小さい速度で可能。[More info](http://smwc.me/1025243)
 
 <!--
 * If Mario clips far enough into a wall and dismounts Yoshi there, the game may consider Yoshi to actually be inside the wall, causing him to climb up it.
 -->
-* If Mario clips far enough into a wall and dismounts Yoshi there, the game may consider Yoshi to actually be inside the wall, causing him to climb up it.
+* マリオが壁に十分めり込んだ状態でYを降りると、Yは壁の中にいると判定され上昇していく。
 
 <!--
 * If Mario is riding Yoshi in water while big, you can clip into the right side of blocks occasionally by just swimming into them.
 -->
-* If Mario is riding Yoshi in water while big, you can clip into the right side of blocks occasionally by just swimming into them.
+* 水中・デカの状態でYに乗っていると、ブロックに右側からめり込むことができる。
 
 <!--
 * While riding Yoshi, Mario can clip upwards through solid blocks by landing on an item near it.
 -->
-* While riding Yoshi, Mario can clip upwards through solid blocks by landing on an item near it.
+* Yに乗っている間、アイテムに乗り上げることでソリッドブロックを上向きに抜けられる。
 
 <!--
 * If a Yoshi is one tile below the top of a ledge, Mario can land on him if he clips far enough into the top of the block while Yoshi is bouncing upward.
 -->
-* If a Yoshi is one tile below the top of a ledge, Mario can land on him if he clips far enough into the top of the block while Yoshi is bouncing upward.
+* Yが1タイル分下に位置していても、Yが一番跳ねた時ならば、床を貫通してYに乗ることが出来る。
 
 <!--
 * Landing on Yoshi at the right angle next to a solid block may clip Mario inside the block.
 -->
-* Landing on Yoshi at the right angle next to a solid block may clip Mario inside the block.
+* ブロックの隣にYがいる状態で、Yがいる方のブロックの角に着地すると、ブロックにめり込める。
 
 <!--
 * Landing on Yoshi while he's inside a springboard and immediately dismounting him will allow Mario to pick up the springboard.
 -->
-* Landing on Yoshi while he's inside a springboard and immediately dismounting him will allow Mario to pick up the springboard.
+* J台に重なったYに乗ってすぐにAを押すと、J台を持ってYを乗り捨てられる。
 
 <!--
 * Jumping at the right angle onto a message box or light switch while riding Yoshi will "suck" Mario on top of the box, even if there is a solid block on top of it. He also won't be able to be crushed while on top of it, though you won't be able to get out otherwise.
@@ -471,12 +472,12 @@ _148個(127個有用)_
 <!--
 * If Yoshi ends up inside a block while Mario is riding him, you will be unable to move out of the block without jumping.
 -->
-* If Yoshi ends up inside a block while Mario is riding him, you will be unable to move out of the block without jumping.
+* Yに乗っていながらブロックにめり込むと、ジャンプしない限りブロックから出られない。
 
 <!--
 * If Yoshi ends up inside a block without Mario riding him, he will "climb" the blocks upward until he reaches an empty block. This can occur as a result of growing Baby Yoshi inside the block, spawning a block on top of Yoshi, or clipping four pixels into the block and dismounting. [Video](https://youtu.be/5Nwcggojnds)
 -->
-* If Yoshi ends up inside a block without Mario riding him, he will "climb" the blocks upward until he reaches an empty block. This can occur as a result of growing Baby Yoshi inside the block, spawning a block on top of Yoshi, or clipping four pixels into the block and dismounting. [Video](https://youtu.be/5Nwcggojnds)
+* マリオに乗られていないYがブロック内部にいると、ブロックのないところまでブロックを登って行く。これは、ブロック内でチビYが成長したり、Yが4ピクセル以上ブロックにめり込んだ状態で乗り捨てられると起こる。[Video](https://youtu.be/5Nwcggojnds)
 
 <!--
 * If Mario is riding Yoshi, on the ground, and inside a solid tile, then for a few frames after jumping off Yoshi, Mario can jump a second time as if he were on the ground. This will not cancel a spinjump, instead just making the jump go higher.
@@ -486,27 +487,27 @@ _148個(127個有用)_
 <!--
 * Yoshi's swallow timer while he has a sprite in his mouth normally decreases once every frame. Freezing the game (via $9D) on one of the decrementing frames, however, will cause the timer to decrease every frame while the game is frozen.
 -->
-* Yoshi's swallow timer while he has a sprite in his mouth normally decreases once every frame. Freezing the game (via $9D) on one of the decrementing frames, however, will cause the timer to decrease every frame while the game is frozen.
+* Yの飲み込みタイマーは通常1F毎に減少する。減少するFに($9Dで）フリーズするとフリーズ中、タイマーは毎F減っていく。
 
 <!--
 * After eating enough berries, you can delay Yoshi's "laying" animation by not touching the ground for more than a frame. If you throw Yoshi in a hole before he lays it, the next-spawned Yoshi will lay it instead.
 -->
-* After eating enough berries, you can delay Yoshi's "laying" animation by not touching the ground for more than a frame. If you throw Yoshi in a hole before he lays it, the next-spawned Yoshi will lay it instead.
+* Yが十分な個数の木の実を食べたあと、1Fより長く地面に足を付けないことで、産卵を遅らせることが可能。産卵する前にYを穴に落としたら、次に現れるYが変わりに産卵する。
 
 <!--
 * The egg Yoshi lays can be used to hit blocks.
 -->
-* The egg Yoshi lays can be used to hit blocks.
+* Yが産んだ卵でブロックを叩ける。
 
 <!--
 * If Yoshi eats a powerup as it's rising from a block, Mario will not actually be given any powerups.
 -->
-* If Yoshi eats a powerup as it's rising from a block, Mario will not actually be given any powerups.
+* ブロックから出てくる最中のパワーアップアイテムをYで食べると、パワーアップできない。
 
 <!--
 * Spinjumping onto Yoshi and then dismounting him the frame Mario lands will cause Mario to spinjump off of Yoshi, yet have the height of a regular jump off of him.
 -->
-* Spinjumping onto Yoshi and then dismounting him the frame Mario lands will cause Mario to spinjump off of Yoshi, yet have the height of a regular jump off of him.
+* スピンジャンプでYに乗ると同時に降りると、スピンジャンプのままYを降りられ、通常より高く跳ねる。
 
 <!--
 * Yoshi's Y speed isn't cleared when mounted, nor when knocked off by enemies (though it is cleared if you press A to actually dismount). This can be used to manipulate his fall speed.
@@ -1166,12 +1167,12 @@ _148個(127個有用)_
 <!--
 __(Carryables and blocks)__  
 -->
-__持ち運べるアイテムとブロック(Carryables and blocks)__
+__持ち運べるアイテムとブロック(Carryables and blocks)__  
 
 <!--
 _118 recorded glitches, 104 of which are useful_
 -->
-_118個(104個有用)_
+_118個(104個有用)_  
 
 <!--
 * Items can get stuck in walls, and will spasm while inside.
@@ -1784,14 +1785,14 @@ _118個(104個有用)_
 # 雑多なバグ(Miscellaneous Glitches)
 
 <!--
-__(Sprites, objects, and levels in-of themselves)__ 
+__(Sprites, objects, and levels in-of themselves)__
 -->
-__スプライト・オブジェクト・レベル(Sprites, objects, and levels in-of themselves)__
+__スプライト・オブジェクト・レベル(Sprites, objects, and levels in-of themselves)__  
 
 <!--
 _278 recorded glitches, 180 of which are useful._
 -->
-_278個(180個有用)_
+_278個(180個有用)_  
 
 <!--
 * Sprites will "slide" with inertia across tiles 1D8-1FF. It should be noted that this means if the sprite hits 0 speed while on one of the blocks, it will be unable to move at all unless Mario causes it to. Because the bottom tile of tileset-specific lava is also included in the range mentioned above, sprites can pass through it without being destroyed; only the top of the lava will actually kill it.
@@ -3209,14 +3210,14 @@ _278個(180個有用)_
 # ロックとクラッシュ(Locks and Crashes)
 
 <!--
-__(Things that break things)__ 
+__(Things that break things)__
 -->
-__ぶっこわ(Things that break things)__
+__ぶっこわ(Things that break things)__  
 
 <!--
 _13 recorded glitches_
 -->
-_13個_
+_13個_  
 
 <!--
 * Transforming into caped Mario while offscreen in an autoscrolling level will softlock the game. [Fix](http://www.smwcentral.net/?p=section&a=details&id=5780)

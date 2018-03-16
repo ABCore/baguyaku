@@ -7,14 +7,12 @@ permalink: /README/
 
 [kaizoman666](https://github.com/kaizoman666)氏がまとめている[SMW-Data](https://github.com/kaizoman666/SMW-Data)/[Glitch List.md
 ](https://github.com/kaizoman666/SMW-Data/blob/master/Glitch%20List.md)の和訳を用意するリポジトリです。  
-[https://abcore.github.io/baguyaku/GlitchList](https://abcore.github.io/baguyaku/GlitchList)・[https://github.com/ABCore/baguyaku/blob/gh-pages/Glitch%20List.md](https://github.com/ABCore/baguyaku/blob/gh-pages/Glitch%20List.md)で公開しています。
+以下で見れます。
 
-## 方針・メモ
-
-| English | 日本語 | 備考 |
-|:-----------:|:------------:|:-----------|
-| goal tape | ゴールバー ||
-| Yoshi | Y | 頻出なので省略系|
+- [https://abcore.github.io/baguyaku/GlitchList](https://abcore.github.io/baguyaku/GlitchList)  
+GitHub Pages：訳文にマウスを重ねると、原文がツールチップで表示されます。
+- [https://github.com/ABCore/baguyaku/blob/gh-pages/Glitch%20List.md](https://github.com/ABCore/baguyaku/blob/gh-pages/Glitch%20List.md)  
+訳文を見れますが、コメントアウトしてある原文は表示されません。
 
 ## お手伝い
 
@@ -26,4 +24,30 @@ permalink: /README/
 
 のどれかをお願います。
 
+## 和訳メモ
 
+#### スプライト
+
+| English | 訳 | 備考 |
+|:--:|:--:|:--|
+| Baby Yoshi | チビY ||
+| fireboll | ファイア | ファイアボール |
+| goal tape | ゴールバー ||
+| powerup | パワーアップアイテム ||
+| quake sprites | 揺れスプライト ||
+| springboard | J台 | ジャンプ台 |
+| Yoshi | Y | |
+
+#### オブジェクト
+
+| English | 訳 | 備考 |
+|:--:|:--:|:--|
+| conveyor belt | コンベア ||
+| muncher | ブラパ | ブラックパックン |
+| throwblock | ブルブルブロック ||
+
+#### その他
+
+| English | 訳 | 備考 |
+|:--:|:--:|:--|
+| screen side exit | 画面横出口 ||
