@@ -221,7 +221,7 @@ _70個(64個有用)_
 <!--
 * Infinite air catch: Based off the above, you can catch big air with a low X speed, use <+B to slow Mario down, and then reverse his speed to cancel the catch. This will give him a significant Y-speed boost while maintaining big air, which can then be repeated an infinite number of times. [More](http://smwc.me/617858) [info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#PerpetualAirCatch)
 -->
-* ∞エアキャッチ(無限上昇)：上記に基づくと、小さいX速度でビッグエアを得られ、<+Bを使ってX速度を小さくし、X速度を反転させると上昇キャンセルができる。この操作は大きいY加速を得つつも、ビッグエアを保持でき、さらに何回でも繰り返すことが出来る。[More](http://smwc.me/617858) [info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#PerpetualAirCatch
+* ∞エアキャッチ(無限上昇)：上記に基づくと、小さいX速度でビッグエアを得られ、<+Bを使ってX速度を小さくし、X速度を反転させると上昇キャンセルができる。この操作は大きいY加速を得つつも、ビッグエアを保持でき、さらに何回でも繰り返すことが出来る。[More](http://smwc.me/617858) [info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#PerpetualAirCatch)
 
 <!--
 * Mario can "stick" to ceilings if he catches air close enough to it. Simple hold the opposite direction to Mario's direction and he won't start to fall downward. Big air can also be maintained through this glitch.
@@ -512,37 +512,37 @@ _148個(127個有用)_
 <!--
 * Yoshi's Y speed isn't cleared when mounted, nor when knocked off by enemies (though it is cleared if you press A to actually dismount). This can be used to manipulate his fall speed.
 -->
-* Yoshi's Y speed isn't cleared when mounted, nor when knocked off by enemies (though it is cleared if you press A to actually dismount). This can be used to manipulate his fall speed.
+* マリオが乗っている間、YのY速度は初期化されない。敵に当たった時も同様。初期化されるのはA入力で普通に降りた時である。これを利用すればYの落下速度を調整できる。
 
 <!--
 * Dismounting Yoshi on the frame he gets damaged will cause Mario to gain invincibility frames as normal without Yoshi running away.
 -->
-* Dismounting Yoshi on the frame he gets damaged will cause Mario to gain invincibility frames as normal without Yoshi running away.
+* ダメージを受けるFにYを降りると、Yが走ることなくマリオが無敵状態になる。
 
 <!--
 * If you land onto Yoshi after gaining flight without touching the ground, you can continue to fly while riding him, though the controls will be a bit strange.
 -->
-* If you land onto Yoshi after gaining flight without touching the ground, you can continue to fly while riding him, though the controls will be a bit strange.
+* 飛行状態でYに乗り、地に足をつけなければ、Yに乗ったまま飛行し続けられる。ただし、操作方法が通常と異なる。
 
 <!--
 * Yoshi can make a powerup count as two powerups if Mario grabs the powerup while it is stuck to Yoshi's tongue.
 -->
-* Yoshi can make a powerup count as two powerups if Mario grabs the powerup while it is stuck to Yoshi's tongue.
+* Yの舌で掴んでるパワーアップアイテムをマリオが取ることで、そのパワーアップアイテムを2回取得できる。
 
 <!--
 * Non-carryable sprites that get eaten by Yoshi are actually erased one frame prior to his tongue fully retracting, allowing you to pick up a second sprite if Yoshi's head passes by it. One well-known use of this is for quickly eating Pokey segments.
 -->
-* Non-carryable sprites that get eaten by Yoshi are actually erased one frame prior to his tongue fully retracting, allowing you to pick up a second sprite if Yoshi's head passes by it. One well-known use of this is for quickly eating Pokey segments.
+* 持ち運べないスプライトがYに食べられる時、舌が完全に引っ込む1F前にそのスプライトは消える。その際、Yの頭が別のスプライトと重なっていれば、2番目のスプライトを舌で掴むことが出来る。よく知られた例として、サンボの高速食いがある。
 
 <!--
 * If Yoshi is despawned with a sprite in his mouth, that sprite will persist despite no longer "existing". It's impossible to despawn the sprite in this state, so the slot essentially becomes useless.
 -->
-* If Yoshi is despawned with a sprite in his mouth, that sprite will persist despite no longer "existing". It's impossible to despawn the sprite in this state, so the slot essentially becomes useless.
+* Yがスプライトを咥えたまま消えると、そのスプライトは現存しないが残り続ける。その状態のスプライトは消すことができず、スプライトがいたスロットは実質的に使えなくなる。
 
 <!--
 * If a sprite on Yoshi's tongue despawns before it is pulled into his mouth, the game will register that sprite as having been eaten, but will still respawn the original sprite. This can also be abused with shells to turn a single shell into many, or in a similar manner with powerups.
 -->
-* If a sprite on Yoshi's tongue despawns before it is pulled into his mouth, the game will register that sprite as having been eaten, but will still respawn the original sprite. This can also be abused with shells to turn a single shell into many, or in a similar manner with powerups.
+* Yの舌につかまれたスプライトが咥えられる前に消えると、そのスプライトは食べられたと認識されるが、元のスプライトが再出現する。これを使えば、一つの甲羅を複数に増やせたり、同じパワーアップアイテムを複数回取得できる。
 
 <!--
 * Yoshi's tongue will have unusual interacting when crossing screen borders. When crossing offscreen, it will loop to the opposite side of the screen, allowing you to pick up items on the other side. When crossing onscreen, it will "compress" toward Yoshi. An interesting advantage of this is that jumping off Yoshi when it's compressed will let Mario grab the sprite as he's jumping off. Doing this at the bottom of the screen can potentially cause the sprite to register as having despawned before Mario grabs it, allowing you to duplicate the sprite.
@@ -567,7 +567,7 @@ _148個(127個有用)_
 <!--
 * Invisi-Yoshi: Spawning more than one Yoshi onscreen will cause all Yoshis other than the one in the lowest sprite slot to turn invisible and have unusual interaction. [Video](https://youtu.be/uXUHCyOL-AM)
 -->
-* Invisi-Yoshi: Spawning more than one Yoshi onscreen will cause all Yoshis other than the one in the lowest sprite slot to turn invisible and have unusual interaction. [Video](https://youtu.be/uXUHCyOL-AM)
+* 透明Y：レベル内でYを複数匹出すと、スロット番号が一番小さいY以外が透明化する。透明Yは普通とは異なる挙動を示す。[Video](https://youtu.be/uXUHCyOL-AM)
 
 <!--
 * Dismounting an invisi-Yoshi will cause Mario to warp to whatever its Y-position was when he mounted it. It should be noted that Invisi-Yoshi can still move for a few frames after jumping on him, and can also be sent running if touched with a thrown shell, meaning its Y-position (and where Mario warps) can be changed. Should also be noted that invisi-Yoshi can be landed on mid-fall.
@@ -1162,7 +1162,7 @@ _148個(127個有用)_
 <!--
 # Item and Object Glitches
 -->
-# アイテムとオブジェクト(Item and Object Glitches)
+# アイテムとオブジェクトのバグ(Item and Object Glitches)
 
 <!--
 __(Carryables and blocks)__  
