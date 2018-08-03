@@ -199,9 +199,9 @@ _70個(64個有用)_
 * マント回転タイマーはルーム簡で保持される。マント回転しながらドアや土管に入ると、移動後に回転を再開する。通常これはあまり役に立たないが、発射後入力を受け付けない斜め土管からの出現時に使うことが出来る。さらに、土管の出入りの時に通常と逆を向くことが可能になる。
 
 <!--
-* When Layer 2 or Layer 3 is scrolling and has interaction, the relative Layer 2 position ($7E0026) gets added to capespins to handle interaction with between them. Normally, this resets back to Mario when it goes back to handle sprites and Layer 1, but if the game is frozen (via $9D), this doesn't happen, and the relative position keeps gets added repeatedly. This causes the cape hitbox  axis of Layer 2/3's movement during the freeze, hitting any blocks or sprites along the way. [More information](http://smwc.me/1228582)
+* When Layer 2 or Layer 3 is scrolling and has interaction, the relative Layer 2 position ($7E0026) gets added to capespins to handle interaction with between them. Normally, this resets back to Mario when it goes back to handle sprites and Layer 1, but if the game is frozen (via $9D), this doesn't happen, and the relative position keeps gets added repeatedly. This causes the cape hitbox  axis of Layer 2/3's movement during the freeze, hitting any blocks or sprites along the way. [More info](http://smwc.me/1228582)
 -->
-* When Layer 2 or Layer 3 is scrolling and has interaction, the relative Layer 2 position ($7E0026) gets added to capespins to handle interaction with between them. Normally, this resets back to Mario when it goes back to handle sprites and Layer 1, but if the game is frozen (via $9D), this doesn't happen, and the relative position keeps gets added repeatedly. This causes the cape hitbox  axis of Layer 2/3's movement during the freeze, hitting any blocks or sprites along the way. [More information](http://smwc.me/1228582)
+* When Layer 2 or Layer 3 is scrolling and has interaction, the relative Layer 2 position ($7E0026) gets added to capespins to handle interaction with between them. Normally, this resets back to Mario when it goes back to handle sprites and Layer 1, but if the game is frozen (via $9D), this doesn't happen, and the relative position keeps gets added repeatedly. This causes the cape hitbox  axis of Layer 2/3's movement during the freeze, hitting any blocks or sprites along the way. [More info](http://smwc.me/1228582)
 
 <!--
 * Mario can turn while flying by pressing X or Y to capespin.
@@ -435,9 +435,9 @@ _148個(127個有用)_
 * Yは独自の当たり判定を持っていて、全てのクリッピングバグが通常必要とされる速度より小さい速度で可能。[More info](http://smwc.me/1025243)
 
 <!--
-* If Mario clips far enough into a wall and dismounts Yoshi there, the game may consider Yoshi to actually be inside the wall, causing him to climb up it.
+* If Mario clips far enough into a wall and dismounts Yoshi there, the game may consider Yoshi to actually be inside the wall, causing him to climb up it. [Video](https://www.youtube.com/watch?v=5Nwcggojnds)
 -->
-* マリオが壁に十分めり込んだ状態でYを降りると、Yは壁の中にいると判定され上昇していく。
+* マリオが壁に十分めり込んだ状態でYを降りると、Yは壁の中にいると判定され上昇していく。 [Video](https://www.youtube.com/watch?v=5Nwcggojnds)
 
 <!--
 * If Mario is riding Yoshi in water while big, you can clip into the right side of blocks occasionally by just swimming into them.
@@ -610,9 +610,9 @@ _148個(127個有用)_
 * If the visible Yoshi is killed while it has an item in its mouth, the next visible Yoshi will spawn with a nonexistant null sprite in its mouth. When spat out, "nothing" will come out of Yoshi's mouth. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites)
 
 <!--
-* Double-Tongue Glitch: If Yoshi spits out his tongue on the frame Mario transforms from a powerup, Yoshi will stick out his tongue twice, regardless of if he swallows anything. As an alternative, this glitch can also occur when taking damage while riding Yoshi without getting knocked off (by munchers/spikes, Wigglers, Dino Rhinos, etc.), in the next level after entering a vertical pipe (by sticking it out the frame Mario enters the pipe), or when Yoshi lays an egg. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites)
+* Double-Tongue Glitch: If Yoshi spits out his tongue on the frame Mario transforms from a powerup, Yoshi will stick out his tongue twice, regardless of if he swallows anything. As an alternative, this glitch can also occur when taking damage while riding Yoshi without getting knocked off (by munchers/spikes, Wigglers, Dino Rhinos, etc.), in the next level after entering a vertical pipe (by sticking it out the frame Mario enters the pipe), or when Yoshi lays an egg. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=8m37s)
 -->
-* Double-Tongue Glitch: If Yoshi spits out his tongue on the frame Mario transforms from a powerup, Yoshi will stick out his tongue twice, regardless of if he swallows anything. As an alternative, this glitch can also occur when taking damage while riding Yoshi without getting knocked off (by munchers/spikes, Wigglers, Dino Rhinos, etc.), in the next level after entering a vertical pipe (by sticking it out the frame Mario enters the pipe), or when Yoshi lays an egg. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites)
+* Double-Tongue Glitch: If Yoshi spits out his tongue on the frame Mario transforms from a powerup, Yoshi will stick out his tongue twice, regardless of if he swallows anything. As an alternative, this glitch can also occur when taking damage while riding Yoshi without getting knocked off (by munchers/spikes, Wigglers, Dino Rhinos, etc.), in the next level after entering a vertical pipe (by sticking it out the frame Mario enters the pipe), or when Yoshi lays an egg. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=8m37s)
 
 <!--
 * If Yoshi swallows a sprite on the first tongue of the above glitch and nothing on the second, he will end up with a null sprite in his mouth.
@@ -635,9 +635,9 @@ _148個(127個有用)_
 * If $019D (part of the stack) is the value 80 and Yoshi has a null sprite in his mouth, then Yoshi will act as having a key in his mouth and will be able to activate keyholes. [Video](https://youtu.be/ymxwjRuN-VQ)
 
 <!--
-* Powerup incrementation: Spitting out a null sprite while on a brown revolving platform will cause unintended effects; one common effect is increasing Mario's powerup status, even past the standard values. Collecting powerups in these additional sprites can have a number of differing effects, from crashing the game to giving you a goal sprite. [More info](http://tasvideos.org/forum/viewtopic.php?p=250970&sid=4b6fef50ca81972d546c027211b3d597#250970) - [Effects](http://pastebin.com/JKQ6iApB) - [Goal item data](https://docs.google.com/spreadsheets/d/1aolxCy4JkgX_fzviDfpVq80AbnrXbR2BOQhWAvy7Ims) - [Video](https://youtu.be/zQFseooBPl0)
+* Powerup incrementation: Spitting out a null sprite while on a brown revolving platform will cause unintended effects; one common effect is increasing Mario's powerup status, even past the standard values. Collecting powerups in these additional sprites can have a number of differing effects, from crashing the game to giving you a goal sprite. [More info](http://tasvideos.org/forum/viewtopic.php?p=250970&sid=4b6fef50ca81972d546c027211b3d597#250970) - [Effects](http://pastebin.com/JKQ6iApB) - [Goal item data](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning) - [Video](https://youtu.be/zQFseooBPl0)
 -->
-* Powerup incrementation: Spitting out a null sprite while on a brown revolving platform will cause unintended effects; one common effect is increasing Mario's powerup status, even past the standard values. Collecting powerups in these additional sprites can have a number of differing effects, from crashing the game to giving you a goal sprite. [More info](http://tasvideos.org/forum/viewtopic.php?p=250970&sid=4b6fef50ca81972d546c027211b3d597#250970) - [Effects](http://pastebin.com/JKQ6iApB) - [Goal item data](https://docs.google.com/spreadsheets/d/1aolxCy4JkgX_fzviDfpVq80AbnrXbR2BOQhWAvy7Ims) - [Video](https://youtu.be/zQFseooBPl0)
+* Powerup incrementation: Spitting out a null sprite while on a brown revolving platform will cause unintended effects; one common effect is increasing Mario's powerup status, even past the standard values. Collecting powerups in these additional sprites can have a number of differing effects, from crashing the game to giving you a goal sprite. [More info](http://tasvideos.org/forum/viewtopic.php?p=250970&sid=4b6fef50ca81972d546c027211b3d597#250970) - [Effects](http://pastebin.com/JKQ6iApB) - [Goal item data](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning) - [Video](https://youtu.be/zQFseooBPl0)
 
 <!--
 * Null sprite overload: Spitting out a null sprite will glitch certain sprites' properties. Slot #3 will usually lose ground interaction, and slot #1 will usually either become burnable or change its interaction completely. [Mo](http://tasvideos.org/forum/viewtopic.php?p=250970#250970)[re](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) [info](https://youtu.be/g25UHjarSCY)
@@ -660,9 +660,9 @@ _148個(127個有用)_
 * Swallowing a springboard at the same time Yoshi is bouncing off it will give him a large boost while bringing the spring with him. This boost can be extended by holding up and/or B, and can even go through solid blocks. It will also give the springboard a slightly glitched graphic when spat back out. [Video](https://www.youtube.com/watch?v=WOMcX1pycWo) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4319)
 
 <!--
-* Eat-canceling an item: If Mario is hit off of Yoshi while an item is stuck to Yoshi's tongue, that item will be dropped off of it while retaining any properties it had while stuck to the tongue. This can allow for a variety of effects, including causing sprites to lose (some) vertical object interaction, moving normally immovable sprites, and more.
+* Eat-canceling an item: If Mario is hit off of Yoshi while an item is stuck to Yoshi's tongue, that item will be dropped off of it while retaining any properties it had while stuck to the tongue. This can allow for a variety of effects, including causing sprites to lose (some) vertical object interaction, moving normally immovable sprites, and more. [Video](https://youtu.be/1SGfYkXoGjg?t=8m05s)
 -->
-* Eat-canceling an item: If Mario is hit off of Yoshi while an item is stuck to Yoshi's tongue, that item will be dropped off of it while retaining any properties it had while stuck to the tongue. This can allow for a variety of effects, including causing sprites to lose (some) vertical object interaction, moving normally immovable sprites, and more.
+* Eat-canceling an item: If Mario is hit off of Yoshi while an item is stuck to Yoshi's tongue, that item will be dropped off of it while retaining any properties it had while stuck to the tongue. This can allow for a variety of effects, including causing sprites to lose (some) vertical object interaction, moving normally immovable sprites, and more. [Video](https://youtu.be/1SGfYkXoGjg?t=8m05s)
 
 <!--
 * If Yoshi has an item on his tongue and you jump off of him as he is about to despawn, the item on Yoshi's tongue will be eat-canceled and warp to Mario's position as he jumps, allowing him to pick up carriable items or doublegrab powerups (shells are an exception; Yoshi will instead bounce off of it). It will also be counted as a new sprite, meaning the original one will respawn as well. Note that Yoshi has to despawn before the sprite for this to work, as it's still stuck to his tongue until then.
@@ -700,9 +700,9 @@ _148個(127個有用)_
 * Item swap: Mario can briefly create a null sprite on Yoshi's tongue by destroying or despawning a sprite while it is stuck to it (it should be noted that burning a sprite and collecting its coin, as well as grabbing a Koopa on Yoshi's tongue as it jumps into a shell, are both valid methods). Doing so will cause the next sprite to spawn in the null sprite's slot to warp to Yoshi's tongue. This can be used for a variety of effects, such as messing with sprites that change properties based on position, since this glitch essentially changes a sprite's spawn position. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#ItemSwap)
 
 <!--
-* Certain sprites have the "give powerup when eaten" flag set despite not being powerups, most notable of which being the Chucks. Depending on Mario's powerup status, using item swap to eat these sprites will give Mario odd sprites in the item box. Two particularly well-known uses are getting a goal sphere from a Clappin' Chuck when Mario has a fireflower, and getting a Lakitu cloud from Chargin' Chucks when small. [More info](http://deanyd.net/smw/index.php?title=Orb) - [Data Table](https://docs.google.com/spreadsheets/d/1C7mjOHs0rcAgd5PJPX5kryznGAYSIKuUpEI7WEvRwA0)
+* Certain sprites have the "give powerup when eaten" flag set despite not being powerups, most notable of which being the Chucks. Depending on Mario's powerup status, using item swap to eat these sprites will give Mario odd sprites in the item box. Two particularly well-known uses are getting a goal sphere from a Clappin' Chuck when Mario has a fireflower, and getting a Lakitu cloud from Chargin' Chucks when small. [More info](http://smwspeedruns.com/index.php/Orb) - [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* Certain sprites have the "give powerup when eaten" flag set despite not being powerups, most notable of which being the Chucks. Depending on Mario's powerup status, using item swap to eat these sprites will give Mario odd sprites in the item box. Two particularly well-known uses are getting a goal sphere from a Clappin' Chuck when Mario has a fireflower, and getting a Lakitu cloud from Chargin' Chucks when small. [More info](http://deanyd.net/smw/index.php?title=Orb) - [Data Table](https://docs.google.com/spreadsheets/d/1C7mjOHs0rcAgd5PJPX5kryznGAYSIKuUpEI7WEvRwA0)
+* Certain sprites have the "give powerup when eaten" flag set despite not being powerups, most notable of which being the Chucks. Depending on Mario's powerup status, using item swap to eat these sprites will give Mario odd sprites in the item box. Two particularly well-known uses are getting a goal sphere from a Clappin' Chuck when Mario has a fireflower, and getting a Lakitu cloud from Chargin' Chucks when small. [More info](http://smwspeedruns.com/index.php/Orb) - [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
 * You can "store" an item swap on an Invisi-Yoshi's tongue by sticking a sprite onto a visible Yoshi's tongue before it's replaced by another Yoshi. When the invisible Yoshi becomes visible again, Yoshi's tongue will spawn with it and grab whatever sprite happens to be in the same slot as the one that you stuck to it before.
@@ -765,9 +765,9 @@ _148個(127個有用)_
 * Suicide swapping a mushroom on the same frame Yoshi swallows a sprite will cause the mushroom to turn into a sprite berry. [Video](https://youtu.be/ujMdmfchozc?t=4m32s)
 
 <!--
-* Stunning a sprite: If Mario spits out a sprite while its stun timer is set, it will spawn an extra sprite once its stun timer hits zero. While this is intended for sprites like the Koopa shell, it works for other sprites, as well. For example, P-switches can spawn a fish if Yoshi spits it out when it turns into a smoke cloud. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites)
+* Stunning a sprite: If Mario spits out a sprite while its stun timer is set, it will spawn an extra sprite once its stun timer hits zero. While this is intended for sprites like the Koopa shell, it works for other sprites, as well. For example, P-switches can spawn a fish if Yoshi spits it out when it turns into a smoke cloud. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=11m04s)
 -->
-* Stunning a sprite: If Mario spits out a sprite while its stun timer is set, it will spawn an extra sprite once its stun timer hits zero. While this is intended for sprites like the Koopa shell, it works for other sprites, as well. For example, P-switches can spawn a fish if Yoshi spits it out when it turns into a smoke cloud. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites)
+* Stunning a sprite: If Mario spits out a sprite while its stun timer is set, it will spawn an extra sprite once its stun timer hits zero. While this is intended for sprites like the Koopa shell, it works for other sprites, as well. For example, P-switches can spawn a fish if Yoshi spits it out when it turns into a smoke cloud. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=11m04s)
 
 <!--
 * Spitting out a stunned Koopa shell on the frame its stun timer is about to run out will cause the Koopa spawned by it to be sent flying as if it were knocked out of the shell.
@@ -780,9 +780,9 @@ _148個(127個有用)_
 * Yoshi can "store" a sprite slot in his mouth, but it gets a bit complicated. First, do the double tongue glitch and pick up a carriable sprite with the first tongue. Then, with the second tongue, pick up the sprite you want to stun, but eat-cancel it before Yoshi swallows it. As a result, Yoshi will have the second sprite slot "in" his mouth, but other sprites can still spawn in that slot and will function as normal. Yoshi can then spit out that sprite (resulting in a glitched version of it), or swallow it (resulting in the sprite vanishing).
 
 <!--
-* With the above glitch, you can also stun sprites that are normally unstunnable. You just have activate the sprite slot's stun timer and then spit it out of Yoshi's mouth while the timer is active. This can create a variety of effects, most notably a Koopa Kid from a sliding blue Koopa, a goal tape (at x=0,y=0) from a Pokey, a keyhole from a Dino Rhino, and a Reznor from horizontally-swimming fishes. [Video](http://youtu.be/GIA0xg0ZWuo) - [More Info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Data Table](http://pastebin.com/AifjaRPF)
+* With the above glitch, you can also stun sprites that are normally unstunnable. You just have activate the sprite slot's stun timer and then spit it out of Yoshi's mouth while the timer is active. This can create a variety of effects, most notably a [Koopa Kid from a sliding blue Koopa](https://youtu.be/1SGfYkXoGjg?t=14m01s), a [goal tape (at x=0,y=0) from a Pokey](https://www.youtube.com/watch?v=dfn94RSdJr0), a [keyhole from a Dino Rhino](https://www.youtube.com/watch?v=ASE9ZXp_gdw), and a [Reznor from horizontally-swimming fishes](https://youtu.be/hboxJ_z-P7E?t=1m49s). [Video](http://youtu.be/GIA0xg0ZWuo) - [More Info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* With the above glitch, you can also stun sprites that are normally unstunnable. You just have activate the sprite slot's stun timer and then spit it out of Yoshi's mouth while the timer is active. This can create a variety of effects, most notably a Koopa Kid from a sliding blue Koopa, a goal tape (at x=0,y=0) from a Pokey, a keyhole from a Dino Rhino, and a Reznor from horizontally-swimming fishes. [Video](http://youtu.be/GIA0xg0ZWuo) - [More Info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Data Table](http://pastebin.com/AifjaRPF)
+* With the above glitch, you can also stun sprites that are normally unstunnable. You just have activate the sprite slot's stun timer and then spit it out of Yoshi's mouth while the timer is active. This can create a variety of effects, most notably a [Koopa Kid from a sliding blue Koopa](https://youtu.be/1SGfYkXoGjg?t=14m01s), a [goal tape (at x=0,y=0) from a Pokey](https://www.youtube.com/watch?v=dfn94RSdJr0), a [keyhole from a Dino Rhino](https://www.youtube.com/watch?v=ASE9ZXp_gdw), and a [Reznor from horizontally-swimming fishes](https://youtu.be/hboxJ_z-P7E?t=1m49s). [Video](http://youtu.be/GIA0xg0ZWuo) - [More Info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
 * When spit out of Yoshi's mouth, stored sprites begin acting like a shell, yet still retain the object interaction of the original sprite. This leads to some odd block interactions for certain sprites, such as Pokeys (five tiles higher) or Piranha Plants (one tile lower), and even affects block duplication for these sprites.
@@ -1590,9 +1590,9 @@ _118個(104個有用)_
 * Capespinning a block at the same time that the game is frozen (via $9D) will cause the block to dispense multiple items, usually filling up every sprite slot available.
 
 <!--
-* Block duplication: Throwing an item into a hittable block in the right spot will cause it to "duplicate" the tile to an adjacent block, either horizontally, upward, or diagonally upward. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4387) - [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#DuplicatingBlocks)
+* Block duplication: Throwing an item into a hittable block in the right spot will cause it to "duplicate" the tile to an adjacent block, either horizontally, upward, or diagonally upward. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4387) - [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#DuplicatingBlocks) - [Video](https://youtu.be/1SGfYkXoGjg?t=41s)
 -->
-* Block duplication: Throwing an item into a hittable block in the right spot will cause it to "duplicate" the tile to an adjacent block, either horizontally, upward, or diagonally upward. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4387) - [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#DuplicatingBlocks)
+* Block duplication: Throwing an item into a hittable block in the right spot will cause it to "duplicate" the tile to an adjacent block, either horizontally, upward, or diagonally upward. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4387) - [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#DuplicatingBlocks) - [Video](https://youtu.be/1SGfYkXoGjg?t=41s)
 
 <!--
 * In levels with a scrolling Layer 2, it's also possible to duplicate downward or even two blocks downward.
@@ -1600,9 +1600,9 @@ _118個(104個有用)_
 * In levels with a scrolling Layer 2, it's also possible to duplicate downward or even two blocks downward.
 
 <!--
-* Duplicating a block into a Yoshi coin and then grabbing the Yoshi coin will turn the block into tile 125; this tile has the potential of spawning a key, Yoshi wings, P-balloon, or shell. Note that if the block you duplicated was a turnblock, you'll have to wait for it to stop turning before collecting the coin.
+* Duplicating a block into a Yoshi coin and then grabbing the Yoshi coin will turn the block into tile 125; this tile has the potential of spawning a key, Yoshi wings, P-balloon, or shell. Note that if the block you duplicated was a turnblock, you'll have to wait for it to stop turning before collecting the coin. [Video](https://youtu.be/1SGfYkXoGjg?t=4m25s)
 -->
-* Duplicating a block into a Yoshi coin and then grabbing the Yoshi coin will turn the block into tile 125; this tile has the potential of spawning a key, Yoshi wings, P-balloon, or shell. Note that if the block you duplicated was a turnblock, you'll have to wait for it to stop turning before collecting the coin.
+* Duplicating a block into a Yoshi coin and then grabbing the Yoshi coin will turn the block into tile 125; this tile has the potential of spawning a key, Yoshi wings, P-balloon, or shell. Note that if the block you duplicated was a turnblock, you'll have to wait for it to stop turning before collecting the coin. [Video](https://youtu.be/1SGfYkXoGjg?t=4m25s)
 
 <!--
 * Block factory: Items can be forced into corners or walls and get stuck inside. If one of the blocks it's stuck between happens to be a hittable block, it's possible that it will create a situation in which the block is rapidly duplicated until the sprite despawns or is removed.
@@ -1618,6 +1618,11 @@ _118個(104個有用)_
 * Mario can fall through the top of block factories regardless of the block being duplicated, and can pass through it in either direction.
 -->
 * Mario can fall through the top of block factories regardless of the block being duplicated, and can pass through it in either direction.
+
+<!--
+* When throwing a carryable sprite upwards, if the sprite registers itself as hitting both the bottom of one block and the side of another at the same time, neither will actually be activated by the hit. This can be done not only at the inner corner between two blocks, but even on an entirely flat ceiling (by throwing the sprite so it enters the ceiling enough to touch the side of an adjacent block).
+-->
+* When throwing a carryable sprite upwards, if the sprite registers itself as hitting both the bottom of one block and the side of another at the same time, neither will actually be activated by the hit. This can be done not only at the inner corner between two blocks, but even on an entirely flat ceiling (by throwing the sprite so it enters the ceiling enough to touch the side of an adjacent block).
 
 <!--
 * Tile 125's shell will only actually come out if an adjacent block knocks it upward.
@@ -2095,6 +2100,11 @@ _278個(180個有用)_
 * Certain sprites will hurt Mario directly even if he's riding Yoshi, rather than knocking him off. These include Wigglers, Dino Torch flames, Fishin Boo's flame, and Mega Moles.
 
 <!--
+* Mario can still be hurt by a Wiggler's segments or a Dino Torch's flames even while the corresponding sprite is on Yoshi's tongue. In fact, combined with the above glitch, Mario can be hurt by the sprite on Yoshi's tongue even while he's still riding Yoshi.
+-->
+* Mario can still be hurt by a Wiggler's segments or a Dino Torch's flames even while the corresponding sprite is on Yoshi's tongue. In fact, combined with the above glitch, Mario can be hurt by the sprite on Yoshi's tongue even while he's still riding Yoshi.
+
+<!--
 * While on the backside of a fence, Mario will still interact with: wall springboards, the Fishin' Boo's flame, the Dino Torch's flame, and Wigglers.
 -->
 * While on the backside of a fence, Mario will still interact with: wall springboards, the Fishin' Boo's flame, the Dino Torch's flame, and Wigglers.
@@ -2188,6 +2198,11 @@ _278個(180個有用)_
 * Hammer Bros will start throwing hammers while they are sinking in lava. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#02DA60)
 -->
 * Hammer Bros will start throwing hammers while they are sinking in lava. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#02DA60)
+
+<!--
+* Hitting a Hammer Bro. platform and then moving it (via sprite slot storage and spitting it out) before the hit animation finishes will cause its movement pattern to change, potentially making it travel extremely high upwards at a very high speed. [Video](https://www.youtube.com/watch?v=N7u-WvMZDv4)
+-->
+* Hitting a Hammer Bro. platform and then moving it (via sprite slot storage and spitting it out) before the hit animation finishes will cause its movement pattern to change, potentially making it travel extremely high upwards at a very high speed. [Video](https://www.youtube.com/watch?v=N7u-WvMZDv4)
 
 <!--
 * If a Podoboo's spawn position is exactly 22 tiles above the lava it ends up in, when the Podoboo jumps out, it will end up jumping significantly higher than it should (approximately 34 tiles above the spawn position).
@@ -3015,6 +3030,11 @@ _278個(180個有用)_
 * Enemies killed so that they fall downward will still interact with very steep slopes on their way down. This glitch can be combined with the Torpedo Ted to get an interesting use out of it, though.
 -->
 * Enemies killed so that they fall downward will still interact with very steep slopes on their way down. This glitch can be combined with the Torpedo Ted to get an interesting use out of it, though.
+
+<!--
+* Playing a sound effect which uses the $1DF9 channel (such as the swim, Yoshi gulp, or powerup noise) on the same frame the "time is running out!" sound plays will cause it to get overwritten, with the music never speeding up as a result.
+-->
+* Playing a sound effect which uses the $1DF9 channel (such as the swim, Yoshi gulp, or powerup noise) on the same frame the "time is running out!" sound plays will cause it to get overwritten, with the music never speeding up as a result.
 
 <!--
 * Pausing the game on the frame the game's music would normally change will cause it to continue playing the song (e.g. right before touching the goal tape)
@@ -3215,9 +3235,9 @@ __(Things that break things)__
 __ぶっこわ(Things that break things)__  
 
 <!--
-_13 recorded glitches_
+_14 recorded glitches_
 -->
-_13個_  
+_14個_  
 
 <!--
 * Transforming into caped Mario while offscreen in an autoscrolling level will softlock the game. [Fix](http://www.smwcentral.net/?p=section&a=details&id=5780)
@@ -3250,29 +3270,29 @@ _13個_
 * Transforming on the same frame that Mario does his victory pose at the end of a bonus game will hardlock the game.
 
 <!--
-* Eating certain sprites via item swap may crash the game.
+* Eating certain sprites via item swap may crash the game. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* Eating certain sprites via item swap may crash the game.
+* Eating certain sprites via item swap may crash the game. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
-* Spitting out a null sprite while on a brown revolving platform may cause the game to crash.
+* Spitting out a null sprite while on a brown revolving platform may cause the game to crash. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* Spitting out a null sprite while on a brown revolving platform may cause the game to crash.
+* Spitting out a null sprite while on a brown revolving platform may cause the game to crash. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
-* Collecting powerups with a powerup status greater than the fireflower may cause the game to crash.
+* Collecting powerups with a powerup status greater than the fireflower may cause the game to crash. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* Collecting powerups with a powerup status greater than the fireflower may cause the game to crash.
+* Collecting powerups with a powerup status greater than the fireflower may cause the game to crash. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
-* Some stunned sprites may crash the game when attempting to spawn an invalid sprite.
+* Some stunned sprites may crash the game when attempting to spawn an invalid sprite. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* Some stunned sprites may crash the game when attempting to spawn an invalid sprite.
+* Some stunned sprites may crash the game when attempting to spawn an invalid sprite. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
-* Sending a directional coin sprite off the left side of a level with Layer 3 may crash the game.
+* Sending a directional coin sprite off the left side of a level with Layer 3 may crash the game. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* Sending a directional coin sprite off the left side of a level with Layer 3 may crash the game.
+* Sending a directional coin sprite off the left side of a level with Layer 3 may crash the game. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
 * Increasing the high bit of the mushroom scale sprite's Y position in a vertical level will crash the game.
