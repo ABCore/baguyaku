@@ -39,9 +39,9 @@ _70個(64個有用)_
 * レイヤー2・3レベルで、同じレイヤーのブロックが上下に配置された1タイルの隙間でデカマリオが立つと、通常左に押されるのとは対称的に、マリオがブロックの中で震える。この状態では、ジャンプしなくても床抜けすることがある。
 
 <!--
-* Smashola: Doing the above through turnblocks while caped and spinjumping may cause Mario to "warp" his way downward very quickly.
+* Smashola: Doing the above through turnblocks while caped and spinjumping may cause Mario to "warp" his way downward very quickly. [Video](https://youtu.be/oyJ7ZTz3HMw)
 -->
-* スマッシュオラ：マントマリオがスピンジャンプでクルクルブロックの中を掘り進む時、ワープしたかのように極めて早く下移動することがある。
+* スマッシュオラ：マントマリオがスピンジャンプでクルクルブロックの中を掘り進む時、ワープしたかのように極めて早く下移動することがある。[Video](https://youtu.be/oyJ7ZTz3HMw)
 
 <!--
 * Walljump: With enough speed, Mario can land on the corners of blocks for a frame - even if they're part of a wall - and jump off of it. As an alternative, this frame can also be used to enter doors or pipes, even if they don't normally have ground. [More info](http://smwc.me/617858) - [Video](https://www.youtube.com/watch?v=yp3Z6d81sX4) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=8815)
@@ -64,9 +64,9 @@ _70個(64個有用)_
 * 坂抜け：上昇中のマリオが坂タイルの角を横切ると、坂を通り抜けられる。[More info](http://smwc.me/617858) - [Video](https://www.youtube.com/watch?v=OmU8Vd5-QYM) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=8816)
 
 <!--
-* Clipping into an upside-down slope will force Mario on top of it. This can also force him inside blocks, killing him.
+* Clipping into an upside-down slope will force Mario on top of it. This can also force him inside blocks, killing him. [Video](https://youtu.be/GxBuYS_DQfc?t=10m50s)
 -->
-* マリオが天地逆さの坂にめり込むと、坂によって下方向に押される。これにより、マリオがブロック内に押し込まれ、圧死することがある。
+* マリオが天地逆さの坂にめり込むと、坂によって下方向に押される。これにより、マリオがブロック内に押し込まれ、圧死することがある。[Video](https://youtu.be/GxBuYS_DQfc?t=10m50s)
 
 <!--
 * Clipping into the bottom corner of a block that is on a ledge may cause Mario to be forced on top of the ledge, killing him inside the block.
@@ -74,9 +74,9 @@ _70個(64個有用)_
 * 下に足場があるブロックの底の角にめり込むと、足場に乗り上げブロックの中で圧死する。
 
 <!--
-* If Mario hits the vertical screen barrier while walking up a slope, he will fall through the slope.
+* If Mario hits the vertical screen barrier while walking up a slope, he will fall through the slope. [Video](https://youtu.be/MySZ8yYvb-w?t=38s)
 -->
-* 画面上部の判定が取られる境界上の坂を登ろうとすると、坂をすり抜けて落ちる。
+* 画面上部の判定が取られる境界上の坂を登ろうとすると、坂をすり抜けて落ちる。[Video](https://youtu.be/MySZ8yYvb-w?t=38s)
 
 <!--
 * Mario will "stick" to the vertical screen barrier when jumping; he won't fall down until his speed actually becomes positive, but he can't rise higher either. [Video](https://twitter.com/Kaizoman666/status/905846914674982912)
@@ -129,9 +129,9 @@ _70個(64個有用)_
 * 横に並んだ音符ブロック列に適切な速さで突っ込むと、跳ねずに通り過ぎることができる。
 
 <!--
-* If Mario is moving fast enough (x-speed of 64-80), then Mario will be unable to jump. Any faster and his jump height will also be significantly higher than usual.
+* If Mario is moving fast enough (x-speed of 64-80), then Mario will be unable to jump. Any faster and his jump height will also be significantly higher than usual. [Gif](https://imgur.com/VrqY93y) - [Video](https://youtu.be/SYTSgrhPsgg?t=26m43s)
 -->
-* マリオのX速度が64-80のとき、ジャンプできない。これより速い速度のときは、通常より高いジャンプが可能。
+* マリオのX速度が64-80のとき、ジャンプできない。これより速い速度のときは、通常より高いジャンプが可能。[Gif](https://imgur.com/VrqY93y) - [Video](https://youtu.be/SYTSgrhPsgg?t=26m43s)
 
 <!--
 * Mario can spinjump off of noteblocks if you press A on the frame that he actually bounces off.
@@ -565,7 +565,7 @@ _148個(127個有用)_
 * It's possible to duplicate sprites near a level entrance by sacrificing Yoshi. Because the spawn region when entering a level (-60 to +A0) is larger than the despawn region for sprites (usually -40 to +30), a sprite can be spawned in a slot and then immediately despawned, entering its index for the sprite load status table to $161A in the process. If Mario enters the level riding a Yoshi that then takes the sprite's slot, that Yoshi will inherit that loading index due to it not being reset during level load. If you then despawn that Yoshi, the game will think it's okay to respawn the original sprite... even if that original sprite is already on-screen, or has even already been permanently killed.
 
 <!--
-* Invisi-Yoshi: Spawning more than one Yoshi onscreen will cause all Yoshis other than the one in the lowest sprite slot to turn invisible and have unusual interaction. [Video](https://youtu.be/uXUHCyOL-AM)
+* Invisi-Yoshi: Spawning more than one Yoshi onscreen will cause all Yoshis other than the one in the **lowest** sprite slot to turn invisible and have unusual interaction. [Video](https://youtu.be/uXUHCyOL-AM)
 -->
 * 透明Y：レベル内でYを複数匹出すと、スロット番号が一番小さいY以外が透明化する。透明Yは普通とは異なる挙動を示す。[Video](https://youtu.be/uXUHCyOL-AM)
 
@@ -595,7 +595,7 @@ _148個(127個有用)_
 * When Mario is in the aforementioned "riding Yoshi" state, getting hit by a cluster or extended sprite will release Mario from the state, and will cause the visible Yoshi to start running. If he was riding an invisi-Yoshi at the time, he will still be riding that Yoshi. It's also worth noting that the visible will always start running at a slower speed than normal when hit by those sprite types.
 
 <!--
-* When there's more than one Yoshi spawned in a level, the eggs laid after eating enough berries will spawn at the Yoshi in the highest sprite slot. Because the visible Yoshi is always the [i]lowest[/i] slot, this means it will end up laid by an invisi-Yoshi.
+* When there's more than one Yoshi spawned in a level, the eggs laid after eating enough berries will spawn at the Yoshi in the **highest** sprite slot. Because the visible Yoshi is always the **lowest** slot, this means it will end up laid by an invisi-Yoshi.
 -->
 * When there's more than one Yoshi spawned in a level, the eggs laid after eating enough berries will spawn at the Yoshi in the highest sprite slot. Because the visible Yoshi is always the [i]lowest[/i] slot, this means it will end up laid by an invisi-Yoshi.
 
@@ -740,9 +740,9 @@ _148個(127個有用)_
 * When spawning a Yoshi from a block while another Yoshi is sinking in lava, Mario will still be able to move around during the new Yoshi's hatching animation. However, $9D will still be set (freezing other sprites in place), meaning any glitches resulting from it can still occur in this time.
 
 <!--
-* Priority swap: If all sprite slots in division 1 are filled, then prioritized sprites such as the goal sprite will have to replace another sprite in order to spawn, and the sprite it replaces can manipulated by abusing priority through sprite permanence. In simple terms, priority sprites will replace the highest non-permanent sprite slot if all of them are filled. If that sprite happens to be stuck to Yoshi's tongue when the priority sprite spawns, the priority sprite will actually warp to Yoshi's tongue, even if it's a stationary sprite like a goal tape. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#ItemSwap)
+* Priority swap: If all sprite slots in division 1 are filled, then prioritized sprites such as the goal sprite will have to replace another sprite in order to spawn, and the sprite it replaces can manipulated by abusing priority through sprite permanence. In simple terms, priority sprites will replace the **highest** non-permanent sprite slot if all of them are filled. If that sprite happens to be stuck to Yoshi's tongue when the priority sprite spawns, the priority sprite will actually warp to Yoshi's tongue, even if it's a stationary sprite like a goal tape. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#ItemSwap)
 -->
-* Priority swap: If all sprite slots in division 1 are filled, then prioritized sprites such as the goal sprite will have to replace another sprite in order to spawn, and the sprite it replaces can manipulated by abusing priority through sprite permanence. In simple terms, priority sprites will replace the highest non-permanent sprite slot if all of them are filled. If that sprite happens to be stuck to Yoshi's tongue when the priority sprite spawns, the priority sprite will actually warp to Yoshi's tongue, even if it's a stationary sprite like a goal tape. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#ItemSwap)
+* Priority swap: If all sprite slots in division 1 are filled, then prioritized sprites such as the goal sprite will have to replace another sprite in order to spawn, and the sprite it replaces can manipulated by abusing priority through sprite permanence. In simple terms, priority sprites will replace the **highest** non-permanent sprite slot if all of them are filled. If that sprite happens to be stuck to Yoshi's tongue when the priority sprite spawns, the priority sprite will actually warp to Yoshi's tongue, even if it's a stationary sprite like a goal tape. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#ItemSwap)
 
 <!--
 * Eat-canceling a goal tape will set its max height to wherever it was dropped, which can lead to some strange side effects. That game still registers its original position as the actual sprite, so touching the goal tape below what would normally be the 1 star mark will actually give a glitched number of bonus stars, even greater than 50.
@@ -1250,9 +1250,9 @@ _118個(104個有用)_
 * If Mario gets between two solid carryable sprites and a wall, he will be pushed into the wall and be crushed. If you're big, it's also possible to spinjump through the floor before he dies.
 
 <!--
-* Mario can jump through ceilings while big if he stands on two solid carryable sprites while they are close enough to said ceiling. Alternatively, you can use Yoshi and a single solid sprite for the same effect. This can [i]also[/i] be done while small and with just a single key or springboard if they are moving upward toward the ceiling as Mario lands on it.
+* Mario can jump through ceilings while big if he stands on two solid carryable sprites while they are close enough to said ceiling. Alternatively, you can use Yoshi and a single solid sprite for the same effect. This can also be done while small and with just a single key or springboard if they are moving upward toward the ceiling as Mario lands on it.
 -->
-* Mario can jump through ceilings while big if he stands on two solid carryable sprites while they are close enough to said ceiling. Alternatively, you can use Yoshi and a single solid sprite for the same effect. This can [i]also[/i] be done while small and with just a single key or springboard if they are moving upward toward the ceiling as Mario lands on it.
+* Mario can jump through ceilings while big if he stands on two solid carryable sprites while they are close enough to said ceiling. Alternatively, you can use Yoshi and a single solid sprite for the same effect. This can also be done while small and with just a single key or springboard if they are moving upward toward the ceiling as Mario lands on it.
 
 <!--
 * If Mario is big, landing on a key close to the ceiling will cause his head to enter the ceiling enough to push Mario leftward, even through solid walls.
@@ -1275,9 +1275,9 @@ _118個(104個有用)_
 * Keyjump: Mario can land on and jump off of a key while it is in midair. Note that if the key is falling too fast, this glitch may not be possible. [Video](https://youtu.be/V9447JWXzaU)
 
 <!--
-* If two keys are spawned at the same time, only the key in the lowest sprite slot will be able to interact with keyholes.
+* If two keys are spawned at the same time, only the key in the **lowest** sprite slot will be able to interact with keyholes.
 -->
-* If two keys are spawned at the same time, only the key in the lowest sprite slot will be able to interact with keyholes.
+* If two keys are spawned at the same time, only the key in the **lowest** sprite slot will be able to interact with keyholes.
 
 <!--
 * If Mario is standing on two keys at the same time, he will be unable to jump until he gets off of one.
@@ -1660,9 +1660,9 @@ _118個(104個有用)_
 * Hitting a block that uses bounce sprites in multiple directions (such as the all-way noteblock) on two sides at once will generate multiple bounce sprites even though there should only be one.
 
 <!--
-* If the sprite in the lowest filled sprite slot with object interaction is inside one of tiles 021-024 or 121-124, then all tiles outside of the level will register as the corresponding tile on Map16 page 0. They won't actually become solid when hit, but they will block Mario from below and spawn any related sprites. Notably, capespinning will briefly interrupt this effect.
+* If the sprite in the **lowest** filled sprite slot with object interaction is inside one of tiles 021-024 or 121-124, then all tiles outside of the level will register as the corresponding tile on Map16 page 0. They won't actually become solid when hit, but they will block Mario from below and spawn any related sprites. Notably, capespinning will briefly interrupt this effect.
 -->
-* If the sprite in the lowest filled sprite slot with object interaction is inside one of tiles 021-024 or 121-124, then all tiles outside of the level will register as the corresponding tile on Map16 page 0. They won't actually become solid when hit, but they will block Mario from below and spawn any related sprites. Notably, capespinning will briefly interrupt this effect.
+* If the sprite in the **lowest** filled sprite slot with object interaction is inside one of tiles 021-024 or 121-124, then all tiles outside of the level will register as the corresponding tile on Map16 page 0. They won't actually become solid when hit, but they will block Mario from below and spawn any related sprites. Notably, capespinning will briefly interrupt this effect.
 
 <!--
 * Mario can pass through invisible coinblocks or noteblocks without hitting them as long as he is being pushed upward by anything other than a jump, including keys, platform sprites, ropes, or another layer.
@@ -1775,6 +1775,11 @@ _118個(104個有用)_
 * Collecting a powerup on the frame a Yoshi egg lands on a block will cause its graphics to glitch briefly.
 -->
 * Collecting a powerup on the frame a Yoshi egg lands on a block will cause its graphics to glitch briefly.
+
+<!--
+* Freezing the game (via $9D) on the frame a Yoshi egg lands on solid ground will cause its graphics to glitch briefly. [Gifs](https://imgur.com/a/R4lOF)
+-->
+* Freezing the game (via $9D) on the frame a Yoshi egg lands on solid ground will cause its graphics to glitch briefly. [Gifs](https://imgur.com/a/R4lOF)
 
 <!--
 * Bringing a carryable sprite into a Mode 7 boss room will cause the graphics to glitch.
@@ -1790,14 +1795,14 @@ _118個(104個有用)_
 # 雑多なバグ(Miscellaneous Glitches)
 
 <!--
-__(Sprites, objects, and levels in-of themselves)__
+__(Sprites, objects, and levels in-of themselves)__ 
 -->
 __スプライト・オブジェクト・レベル(Sprites, objects, and levels in-of themselves)__  
 
 <!--
-_278 recorded glitches, 180 of which are useful._
+_280 recorded glitches, 180 of which are useful._
 -->
-_278個(180個有用)_  
+_280個(180個有用)_  
 
 <!--
 * Sprites will "slide" with inertia across tiles 1D8-1FF. It should be noted that this means if the sprite hits 0 speed while on one of the blocks, it will be unable to move at all unless Mario causes it to. Because the bottom tile of tileset-specific lava is also included in the range mentioned above, sprites can pass through it without being destroyed; only the top of the lava will actually kill it.
@@ -2040,9 +2045,9 @@ _278個(180個有用)_
 * The eating path block sprite can skip over empty tiles without disappearing if there is a solid block in the tile to the right of it.
 
 <!--
-* The eating path block sprite makes some unusual decisions when path finding. When given a choice of up or down, it will fly diagonally downward to the right at high speed. A choice between left and up/down will result in it going right (making it disappear unless the previous glitch is used). A choice between up, right, and down will send it downward, but will briefly accelerate as it changes direction. A choice of up, left, and right will move it slowly downward and to the right, before correcting itself and taking the right path. Finally, a choice of all four directions will send it flying diagonally upward to the right at a very high speed. [Video](https://youtu.be/GIN1To_Nwqg)
+* The eating path block sprite makes some unusual decisions when path finding. When given a choice of up or down, it will fly diagonally downward to the right at high speed (eventually latching back onto a block 16 tiles right and 11 tiles down). A choice between left and up/down will result in it going right (making it disappear unless the previous glitch is used). A choice between up, right, and down will send it downward, but will briefly accelerate as it changes direction; if this occurs 4 times, the block will shoot downwards until it despawns. A choice of up, left, and right will move it slowly downward and to the right, before correcting itself and taking the right path. Finally, a choice of all four directions will send it flying diagonally upward to the right at a very high speed. [Video](https://youtu.be/GIN1To_Nwqg)
 -->
-* The eating path block sprite makes some unusual decisions when path finding. When given a choice of up or down, it will fly diagonally downward to the right at high speed. A choice between left and up/down will result in it going right (making it disappear unless the previous glitch is used). A choice between up, right, and down will send it downward, but will briefly accelerate as it changes direction. A choice of up, left, and right will move it slowly downward and to the right, before correcting itself and taking the right path. Finally, a choice of all four directions will send it flying diagonally upward to the right at a very high speed. [Video](https://youtu.be/GIN1To_Nwqg)
+* The eating path block sprite makes some unusual decisions when path finding. When given a choice of up or down, it will fly diagonally downward to the right at high speed (eventually latching back onto a block 16 tiles right and 11 tiles down). A choice between left and up/down will result in it going right (making it disappear unless the previous glitch is used). A choice between up, right, and down will send it downward, but will briefly accelerate as it changes direction; if this occurs 4 times, the block will shoot downwards until it despawns. A choice of up, left, and right will move it slowly downward and to the right, before correcting itself and taking the right path. Finally, a choice of all four directions will send it flying diagonally upward to the right at a very high speed. [Video](https://youtu.be/GIN1To_Nwqg)
 
 <!--
 * The eating path block sprite makes even unusual decisions when given the choice between paths on Layer 1 and Layer 2. Most setups will send the block flying in some direction.
@@ -2103,6 +2108,11 @@ _278個(180個有用)_
 * Mario can still be hurt by a Wiggler's segments or a Dino Torch's flames even while the corresponding sprite is on Yoshi's tongue. In fact, combined with the above glitch, Mario can be hurt by the sprite on Yoshi's tongue even while he's still riding Yoshi.
 -->
 * Mario can still be hurt by a Wiggler's segments or a Dino Torch's flames even while the corresponding sprite is on Yoshi's tongue. In fact, combined with the above glitch, Mario can be hurt by the sprite on Yoshi's tongue even while he's still riding Yoshi.
+
+<!--
+* Wigglers can be killed by star power if the Wiggler is onscreen and Mario is offscreen one screen above it.
+-->
+* Wigglers can be killed by star power if the Wiggler is onscreen and Mario is offscreen one screen above it.
 
 <!--
 * While on the backside of a fence, Mario will still interact with: wall springboards, the Fishin' Boo's flame, the Dino Torch's flame, and Wigglers.
@@ -2218,6 +2228,11 @@ _278個(180個有用)_
 * The Falling Spike sprite doesn't actually interact with Mario until it starts to fall.
 -->
 * The Falling Spike sprite doesn't actually interact with Mario until it starts to fall.
+
+<!-- 
+* If a room has the castle candle flame cluster sprite, then whatever the last sprite loaded into slot 3 was will appear in the room in state 7 (swallowed by Yoshi). If no sprite has spawned into slot 3 yet, then it will have sprite ID 0 (shell-less green Koopa).
+-->
+* If a room has the castle candle flame cluster sprite, then whatever the last sprite loaded into slot 3 was will appear in the room in state 7 (swallowed by Yoshi). If no sprite has spawned into slot 3 yet, then it will have sprite ID 0 (shell-less green Koopa).
 
 <!--
 * The Mario proximity detection routine for sprites (e.g. for Thwomps, falling spikes, Yoshi eggs, etc) loop across the screen borders.
@@ -2365,14 +2380,29 @@ _278個(180個有用)_
 * Stomping on a Dry Bones that stays on ledges on the the frame it turns around at the edge of the ledge will cause it to fall off the ledge.
 
 <!--
-* The moving Ghost House hole sprite will allow Mario to fall through any solid block as long as he is touching it, not just through the blocks it actually covers.
+* Normally, Mario isn't able to jump through the bottom of a moving ghost house hole (due to it being a pixel too high). Clipping through the ceiling through any method (including just simply spinjumping off Yoshi) will push him far enough in, though.
 -->
-* The moving Ghost House hole sprite will allow Mario to fall through any solid block as long as he is touching it, not just through the blocks it actually covers.
+* Normally, Mario isn't able to jump through the bottom of a moving ghost house hole (due to it being a pixel too high). Clipping through the ceiling through any method (including just simply spinjumping off Yoshi) will push him far enough in, though.
+
+<!--
+* The moving Ghost House hole sprite will allow Mario (and other sprites) to fall through any solid block as long as he is touching it, not just through the blocks it actually covers. When riding Yoshi, his hitbox is large enough to pass through a tile as far as three blocks below the sprite.
+-->
+* The moving Ghost House hole sprite will allow Mario (and other sprites) to fall through any solid block as long as he is touching it, not just through the blocks it actually covers. When riding Yoshi, his hitbox is large enough to pass through a tile as far as three blocks below the sprite.
 
 <!--
 * Certain sprites will not pass through moving Ghost House holes. [List](https://pastebin.com/Gvgea42u)
 -->
 * Certain sprites will not pass through moving Ghost House holes. [List](https://pastebin.com/Gvgea42u)
+
+<!--
+* If a moving ghost house hole is despawned while Mario is interacting with it ($185C has a non-zero value), the flag that makes Mario pass through objects won't be cleared, and you'll pass through all objects in the level as a result. This will not be corrected until a new ghost house hole spawns in the same slot as the original.
+-->
+* If a moving ghost house hole is despawned while Mario is interacting with it ($185C has a non-zero value), the flag that makes Mario pass through objects won't be cleared, and you'll pass through all objects in the level as a result. This will not be corrected until a new ghost house hole spawns in the same slot as the original.
+
+<!--
+* If a moving ghost house hole is despawned while any sprite is interacting with it ($15DC has a non-zero value), the flag that makes the sprite pass through objects won't be cleared, and the sprite will pass through all objects in the level as a result (however, other sprites will still interact with it). This will not be corrected until a new ghost house hole spawns in the same slot as the original.
+-->
+* If a moving ghost house hole is despawned while any sprite is interacting with it ($15DC has a non-zero value), the flag that makes the sprite pass through objects won't be cleared, and the sprite will pass through all objects in the level as a result (however, other sprites will still interact with it). This will not be corrected until a new ghost house hole spawns in the same slot as the original.
 
 <!--
 * If Mario is pushed off of a moving rope mechanism by a block, the game will continue to think he is in front of the sprite and will let him grab onto and jump off of the rope as if it is still there. However, this effect will be broken if he passes in front of another rope sprite, unless he is holding an item. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8784)
@@ -2747,6 +2777,11 @@ _278個(180個有用)_
 * Collecting enough 1-ups from hitting/bouncing off of enough enemies will eventually cause the point counter to loop back to 100 points. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4254)
 
 <!--
+* A byproduct of the above is right when the consecutive enemies stomped counter ([$7E1697](https://www.smwcentral.net/?p=nmap&m=smwram&u=0#7E1697)) loops, a glitched sound effect occurs ($60, since the game tries to read a RTS instruction as a sound fx pointer), and depending on the emulator it keeps playing glitched sounds indefinitely until another sound replaces it or you exit the level. [Video](https://youtu.be/6j9zBwQgmWU)
+-->
+* A byproduct of the above is right when the consecutive enemies stomped counter ([$7E1697](https://www.smwcentral.net/?p=nmap&m=smwram&u=0#7E1697)) loops, a glitched sound effect occurs ($60, since the game tries to read a RTS instruction as a sound fx pointer), and depending on the emulator it keeps playing glitched sounds indefinitely until another sound replaces it or you exit the level. [Video](https://youtu.be/6j9zBwQgmWU)
+
+<!--
 * Bouncing off Wigglers enough will start giving Mario glitched score sprites. [Video](https://youtu.be/7nwktrDawdM) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4441)
 -->
 * Bouncing off Wigglers enough will start giving Mario glitched score sprites. [Video](https://youtu.be/7nwktrDawdM) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4441)
@@ -3020,6 +3055,11 @@ _278個(180個有用)_
 * Getting hurt will reset the bonus coin game cloud's collection counter, meaning taking any damage will make getting the 1-up impossible.
 -->
 * Getting hurt will reset the bonus coin game cloud's collection counter, meaning taking any damage will make getting the 1-up impossible.
+
+<!--
+* Sometimes the graphics for coins from the coin game cloud loops and you can see them in top of the level. [Video](https://youtu.be/-EH1Fbwbtas)
+-->
+* Sometimes the graphics for coins from the coin game cloud loops and you can see them in top of the level. [Video](https://youtu.be/-EH1Fbwbtas)
 
 <!--
 * Having too many extended sprites onscreen can produce some strange graphics effects, particularly on Mario. A few examples of these are displacing his cape several tiles away or erasing parts of hit animations that don't fit into the standard graphical area.
