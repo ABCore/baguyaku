@@ -572,57 +572,57 @@ _148個(127個有用)_
 <!--
 * Dismounting an invisi-Yoshi will cause Mario to warp to whatever its Y-position was when he mounted it. It should be noted that Invisi-Yoshi can still move for a few frames after jumping on him, and can also be sent running if touched with a thrown shell, meaning its Y-position (and where Mario warps) can be changed. Should also be noted that invisi-Yoshi can be landed on mid-fall.
 -->
-* Dismounting an invisi-Yoshi will cause Mario to warp to whatever its Y-position was when he mounted it. It should be noted that Invisi-Yoshi can still move for a few frames after jumping on him, and can also be sent running if touched with a thrown shell, meaning its Y-position (and where Mario warps) can be changed. Should also be noted that invisi-Yoshi can be landed on mid-fall.
+* 透明Yを降りると、透明Yに乗った位置のY座標に瞬間移動する。降りた時、透明Yを少し動かすことが可能。透明Yに敵スプライトが当たると走りだす。これらを利用して透明YのY座標を変えられる。また、落下中の透明Yに乗ることも可能。
 
 <!--
 * If Mario is riding a visible Yoshi when a second Yoshi hatches, Mario will be riding an Invisi-Yoshi but will retain his riding animation and will keep Yoshi's hitbox. He also won't be able to take damage from most enemies.
 -->
-* If Mario is riding a visible Yoshi when a second Yoshi hatches, Mario will be riding an Invisi-Yoshi but will retain his riding animation and will keep Yoshi's hitbox. He also won't be able to take damage from most enemies.
+* 可視Yに乗ってから2匹目のYが孵化すると、Yに乗っているアニメーションのまま、当たり判定のある透明Yに乗っていることになる。この透明Yはほとんどの敵からダメージを受けない。
 
 <!--
 * Dismounting a visible Yoshi in a level with more than one Yoshi spawned when entering the death zone underneath the level will cause Mario to warp to the next visible Yoshi's Y-position, and will receive the same effects described in the previous glitch. However, unlike the previous glitch, Mario will be unable to jump off this Yoshi.
 -->
-* Dismounting a visible Yoshi in a level with more than one Yoshi spawned when entering the death zone underneath the level will cause Mario to warp to the next visible Yoshi's Y-position, and will receive the same effects described in the previous glitch. However, unlike the previous glitch, Mario will be unable to jump off this Yoshi.
+* 透明Yに乗ってから可視Yに乗り、デスゾーンで可視Yを乗り捨てると、透明Yの高さにワープし、前述のバグと同じことが起こる。ただしこの方法だと、透明Yから降りることが出来なくなる。
 
 <!--
 * While Mario is in the state described by the previous two glitches, Yoshi's will be unable to despawn from the level. This mean, if a Yoshi falls off the bottom of the level, it will not be despawned by the death zone, and will instead loop vertically all the way around the level. It should be noted, though, that it takes about 18 minutes for Yoshi to complete this loop.
 -->
-* While Mario is in the state described by the previous two glitches, Yoshi's will be unable to despawn from the level. This mean, if a Yoshi falls off the bottom of the level, it will not be despawned by the death zone, and will instead loop vertically all the way around the level. It should be noted, though, that it takes about 18 minutes for Yoshi to complete this loop.
+* 前2つのバグを起こすと、Yをそのレベルから消すことができない。つまり、Yを画面下に落とし、デスゾーンに侵入してもYは消えない。また、垂直方向はループするため、Yは18分ほどかけて落とし始めた時の同じ高さ(Y座標)に戻ってくる。
 
 <!--
 * When Mario is in the aforementioned "riding Yoshi" state, getting hit by a cluster or extended sprite will release Mario from the state, and will cause the visible Yoshi to start running. If he was riding an invisi-Yoshi at the time, he will still be riding that Yoshi. It's also worth noting that the visible will always start running at a slower speed than normal when hit by those sprite types.
 -->
-* When Mario is in the aforementioned "riding Yoshi" state, getting hit by a cluster or extended sprite will release Mario from the state, and will cause the visible Yoshi to start running. If he was riding an invisi-Yoshi at the time, he will still be riding that Yoshi. It's also worth noting that the visible will always start running at a slower speed than normal when hit by those sprite types.
+* -マリオが前述のY騎乗状態である時、クラスターか拡張スプライトに触れることで騎乗状態を解除して乗っている状態になり、可視Yが走りだす。これらのスプライトに触れる時、別の透明Yにも乗っていると透明Yに騎乗したまま。また、可視Yは通常より遅く走る。
 
 <!--
 * When there's more than one Yoshi spawned in a level, the eggs laid after eating enough berries will spawn at the Yoshi in the **highest** sprite slot. Because the visible Yoshi is always the **lowest** slot, this means it will end up laid by an invisi-Yoshi.
 -->
-* When there's more than one Yoshi spawned in a level, the eggs laid after eating enough berries will spawn at the Yoshi in the highest sprite slot. Because the visible Yoshi is always the [i]lowest[/i] slot, this means it will end up laid by an invisi-Yoshi.
+* 同レベルに複数体のYが読み込まれている時、木の実を10個食べて生まれる卵はスロットが一番大きいYから出てくる。可視Yは常に低いスロットなので、産卵するのは全て透明Y。
 
 <!--
 * Killing the visible Yoshi will cause the next invisi-Yoshi to become visable; if Mario is riding this Yoshi, it will appear one tile below him, allowing him to fall through the ground. Also, if Mario is climbing when the Invisi-Yoshi becomes visible, he'll continue to climb despite riding Yoshi at the same time.
 -->
-* Killing the visible Yoshi will cause the next invisi-Yoshi to become visable; if Mario is riding this Yoshi, it will appear one tile below him, allowing him to fall through the ground. Also, if Mario is climbing when the Invisi-Yoshi becomes visible, he'll continue to climb despite riding Yoshi at the same time.
+* 可視Yを殺すと、次の透明Yが可視化する。もし透明Yに乗っている時に可視Yが消えると、透明Yがマリオの1タイル下に可視化して出現し、床ぬけが出来る。何かを掴んでいる状態でこれが起こると、掴んだままYに騎乗している状態になる。
 
 <!--
 * If the visible Yoshi is killed while it has an item in its mouth, the next visible Yoshi will spawn with a nonexistant null sprite in its mouth. When spat out, "nothing" will come out of Yoshi's mouth. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites)
 -->
-* If the visible Yoshi is killed while it has an item in its mouth, the next visible Yoshi will spawn with a nonexistant null sprite in its mouth. When spat out, "nothing" will come out of Yoshi's mouth. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites)
+* -可視Yが口に何かを含んだ状態で死ぬと、次の可視Yは存在しないヌルスプライトを口に含んだ状態で出現する。それを吐き出しても、Yの口からは何も出てこない。[More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites)
 
 <!--
 * Double-Tongue Glitch: If Yoshi spits out his tongue on the frame Mario transforms from a powerup, Yoshi will stick out his tongue twice, regardless of if he swallows anything. As an alternative, this glitch can also occur when taking damage while riding Yoshi without getting knocked off (by munchers/spikes, Wigglers, Dino Rhinos, etc.), in the next level after entering a vertical pipe (by sticking it out the frame Mario enters the pipe), or when Yoshi lays an egg. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=8m37s)
 -->
-* Double-Tongue Glitch: If Yoshi spits out his tongue on the frame Mario transforms from a powerup, Yoshi will stick out his tongue twice, regardless of if he swallows anything. As an alternative, this glitch can also occur when taking damage while riding Yoshi without getting knocked off (by munchers/spikes, Wigglers, Dino Rhinos, etc.), in the next level after entering a vertical pipe (by sticking it out the frame Mario enters the pipe), or when Yoshi lays an egg. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=8m37s)
+* 舌2回出しバグ・二枚舌バグ：$9Dふフリーズするにに舌を出すと、舌を2回出す。1回目に何かを咥えても2回出る。[More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=8m37s)
 
 <!--
 * If Yoshi swallows a sprite on the first tongue of the above glitch and nothing on the second, he will end up with a null sprite in his mouth.
 -->
-* If Yoshi swallows a sprite on the first tongue of the above glitch and nothing on the second, he will end up with a null sprite in his mouth.
+* 上記のバグで、1回目の舌でスプライトを咥え、2回目の舌で何も咥えなかった場合、口の中はヌルスプライトになる。
 
 <!--
 * When doing the double tongue method of creating a null sprite, any sprite grabbed by the first tongue will no longer respawn, as if it was destroyed.
 -->
-* When doing the double tongue method of creating a null sprite, any sprite grabbed by the first tongue will no longer respawn, as if it was destroyed.
+* 上記の方法でヌルスプライトを作る時、1回目の舌で掴まれたスプライトはリスポンされることはない。
 
 <!--
 * If $019D (part of the stack) is a value from 00 to 0C and Yoshi has a null sprite in his mouth, then Yoshi will get wings or be able to stomp the ground based on $16F5 (score sprite high X position). You can manipulate this value at any time, allowing Yoshi to freely swap out powers.
@@ -632,12 +632,12 @@ _148個(127個有用)_
 <!--
 * If $019D (part of the stack) is the value 80 and Yoshi has a null sprite in his mouth, then Yoshi will act as having a key in his mouth and will be able to activate keyholes. [Video](https://youtu.be/ymxwjRuN-VQ)
 -->
-* If $019D (part of the stack) is the value 80 and Yoshi has a null sprite in his mouth, then Yoshi will act as having a key in his mouth and will be able to activate keyholes. [Video](https://youtu.be/ymxwjRuN-VQ)
+* $019D（スタックの一部）の値が80でYがヌルスプライトを咥えてる状態では、鍵をくわえているように動作する。したがって、鍵穴に反応させることが可能。[Video](https://youtu.be/ymxwjRuN-VQ)
 
 <!--
 * Powerup incrementation: Spitting out a null sprite while on a brown revolving platform will cause unintended effects; one common effect is increasing Mario's powerup status, even past the standard values. Collecting powerups in these additional sprites can have a number of differing effects, from crashing the game to giving you a goal sprite. [More info](http://tasvideos.org/forum/viewtopic.php?p=250970&sid=4b6fef50ca81972d546c027211b3d597#250970) - [Effects](http://pastebin.com/JKQ6iApB) - [Goal item data](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning) - [Video](https://youtu.be/zQFseooBPl0)
 -->
-* Powerup incrementation: Spitting out a null sprite while on a brown revolving platform will cause unintended effects; one common effect is increasing Mario's powerup status, even past the standard values. Collecting powerups in these additional sprites can have a number of differing effects, from crashing the game to giving you a goal sprite. [More info](http://tasvideos.org/forum/viewtopic.php?p=250970&sid=4b6fef50ca81972d546c027211b3d597#250970) - [Effects](http://pastebin.com/JKQ6iApB) - [Goal item data](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning) - [Video](https://youtu.be/zQFseooBPl0)
+* Powerup incrementation：ヌルスプライトを回転する茶色足場の上で吐くと、意図されない効果が発生する。効果の一つとして、マリオのパワーアップ状態の標準値を無視した加算がある。参照の追加スプライトをパワーアップとして取得すると、様々な効果があり、クラッシュしたりゴール玉をストックできたりする。[More info](http://tasvideos.org/forum/viewtopic.php?p=250970&sid=4b6fef50ca81972d546c027211b3d597#250970) - [Effects](http://pastebin.com/JKQ6iApB) - [Goal item data](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning) - [Video](https://youtu.be/zQFseooBPl0)
 
 <!--
 * Null sprite overload: Spitting out a null sprite will glitch certain sprites' properties. Slot #3 will usually lose ground interaction, and slot #1 will usually either become burnable or change its interaction completely. [Mo](http://tasvideos.org/forum/viewtopic.php?p=250970#250970)[re](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) [info](https://youtu.be/g25UHjarSCY)
