@@ -500,6 +500,16 @@ _148個(127個有用)_
 * Yが産んだ卵でブロックを叩ける。
 
 <!--
+* While Yoshi is laying an egg, Mario won't interact with solid blocks, but solid sprites will still push him to the side during those frames. This can result in Mario being pushed into a wall with only a single sprite.
+-->
+* Yが産卵している間、マリははソリッドブロックと作用しないが、ソリッドスプライトはマリオを押す。これにより、マリオはスプライト1つで壁の中に押し込まれる。
+
+<!--
+* Similar to the above, while Yoshi is eating a berry, Mario won't interact with solid blocks, but solid sprites will still push him to the side during those frames. [Video](https://twitter.com/Kaizoman666/status/1054431665546842113)
+-->
+* 上記と同様に、Yが木の実を食べている間も、マリオはソリッドブロックと作用しないが、ソリッドスプライトとは作用する。[Video](https://twitter.com/Kaizoman666/status/1054431665546842113)
+
+<!--
 * If Yoshi eats a powerup as it's rising from a block, Mario will not actually be given any powerups.
 -->
 * ブロックから出てくる最中のパワーアップアイテムをYで食べると、パワーアップできない。
@@ -610,9 +620,9 @@ _148個(127個有用)_
 * -可視Yが口に何かを含んだ状態で死ぬと、次の可視Yは存在しないヌルスプライトを口に含んだ状態で出現する。それを吐き出しても、Yの口からは何も出てこない。[More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites)
 
 <!--
-* Double-Tongue Glitch: If Yoshi spits out his tongue on the frame Mario transforms from a powerup, Yoshi will stick out his tongue twice, regardless of if he swallows anything. As an alternative, this glitch can also occur when taking damage while riding Yoshi without getting knocked off (by munchers/spikes, Wigglers, Dino Rhinos, etc.), in the next level after entering a vertical pipe (by sticking it out the frame Mario enters the pipe), or when Yoshi lays an egg. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=8m37s)
+* Double-Tongue Glitch: If Yoshi spits out his tongue on the frame Mario transforms from a powerup, Yoshi will stick out his tongue twice, regardless of if he swallows anything. As an alternative, this glitch can also occur when taking damage while riding Yoshi without getting knocked off (by munchers/spikes, Wigglers, Dino Rhinos, etc.), in the next level after entering a vertical pipe (by sticking it out the frame Mario enters the pipe), or when Yoshi lays an egg. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=8m37s) - [Fix](https://www.smwcentral.net/?p=nmap&m=smwrom&u=0#01F0BA)
 -->
-* 舌2回出しバグ・二枚舌バグ：$9Dふフリーズするにに舌を出すと、舌を2回出す。1回目に何かを咥えても2回出る。[More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=8m37s)
+* 舌2回出しバグ・二枚舌バグ：$9Dふフリーズするにに舌を出すと、舌を2回出す。1回目に何かを咥えても2回出る。[More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=8m37s) - [Fix](https://www.smwcentral.net/?p=nmap&m=smwrom&u=0#01F0BA)
 
 <!--
 * If Yoshi swallows a sprite on the first tongue of the above glitch and nothing on the second, he will end up with a null sprite in his mouth.
@@ -755,14 +765,9 @@ _148個(127個有用)_
 * If you item swap a sprite that uses extra bits (e.g. the goal tape) when Yoshi is in a higher slot than it, the sprite's extra bits will be modified. The game normally stores the extra bits with the sprite's high Y spawn position (in the format %----EE-Y) before correcting it in the sprite's initilization code; if Yoshi's tongue's code runs before the sprite's does, it will instead use the high Y position from the tongue, affecting the extra bits in the process. NOTE: this glitch will NOT work in hacks that use custom sprites, due to using a specialized table for extra bits. [More Info](http://pastebin.com/XBqrVHyH)
 
 <!--
-* Suicide swap: Yoshi uses $C2 as a flag to decide whether Mario is riding him or not. If Yoshi despawns on the same frame another sprite spawns, and that sprite sets $C2 to 01 on spawn, then the game will think Mario is riding the sprite like a Yoshi and warp it to his position. In addition, when Mario goes to another room or level, the game will spawn him on a Yoshi which will have a different palette or graphic depending on the sprite that was swapped. [More](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#ItemSwap) [info](http://tasvideos.org/forum/viewtopic.php?p=379507#379507) - [Video](http://youtu.be/y8I8f-PDbuc)
+* Yoshification: For one frame after Yoshi despawns, the game will still manage his sprite slot as a Yoshi for one frame afterwards. If a new sprite spawns into his slot on that frame, then there can be a huge variety of effects based on how that new sprite uses its RAM tables that were previously managed by Yoshi. For instance, if it sets $C2 to 01 to spawn (which Yoshi uses as a "mounted" flag), then the game will think Mario is riding that sprite like a Yoshi and warp it to his position. Furthermore, when Mario goes to another room or level, he will suddenly spawn on a new Yoshi (who receives its palette and graphics page from whatever sprite was swapped). [More info](https://www.youtube.com/watch?v=2fLOZrQzDnQ)
 -->
-* Suicide swap: Yoshi uses $C2 as a flag to decide whether Mario is riding him or not. If Yoshi despawns on the same frame another sprite spawns, and that sprite sets $C2 to 01 on spawn, then the game will think Mario is riding the sprite like a Yoshi and warp it to his position. In addition, when Mario goes to another room or level, the game will spawn him on a Yoshi which will have a different palette or graphic depending on the sprite that was swapped. [More](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#ItemSwap) [info](http://tasvideos.org/forum/viewtopic.php?p=379507#379507) - [Video](http://youtu.be/y8I8f-PDbuc)
-
-<!--
-* Suicide swapping a mushroom on the same frame Yoshi swallows a sprite will cause the mushroom to turn into a sprite berry. [Video](https://youtu.be/ujMdmfchozc?t=4m32s)
--->
-* Suicide swapping a mushroom on the same frame Yoshi swallows a sprite will cause the mushroom to turn into a sprite berry. [Video](https://youtu.be/ujMdmfchozc?t=4m32s)
+* Yoshification: For one frame after Yoshi despawns, the game will still manage his sprite slot as a Yoshi for one frame afterwards. If a new sprite spawns into his slot on that frame, then there can be a huge variety of effects based on how that new sprite uses its RAM tables that were previously managed by Yoshi. For instance, if it sets $C2 to 01 to spawn (which Yoshi uses as a "mounted" flag), then the game will think Mario is riding that sprite like a Yoshi and warp it to his position. Furthermore, when Mario goes to another room or level, he will suddenly spawn on a new Yoshi (who receives its palette and graphics page from whatever sprite was swapped). [More info](https://www.youtube.com/watch?v=2fLOZrQzDnQ)
 
 <!--
 * Stunning a sprite: If Mario spits out a sprite while its stun timer is set, it will spawn an extra sprite once its stun timer hits zero. While this is intended for sprites like the Koopa shell, it works for other sprites, as well. For example, P-switches can spawn a fish if Yoshi spits it out when it turns into a smoke cloud. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=11m04s)
@@ -773,6 +778,11 @@ _148個(127個有用)_
 * Spitting out a stunned Koopa shell on the frame its stun timer is about to run out will cause the Koopa spawned by it to be sent flying as if it were knocked out of the shell.
 -->
 * Spitting out a stunned Koopa shell on the frame its stun timer is about to run out will cause the Koopa spawned by it to be sent flying as if it were knocked out of the shell.
+
+<!--
+* Phase pointer manipulation: When a carryable sprite "normalizes" ($1558 reaches 01), $C2 for the sprite will be set equal to the value of $1540 rounded up to the nearest odd number. Because many sprites use $C2 as a phase pointer, this can cause garbage code to run, resulting in a large variety of possible effects. Although only a few sprites use $1558 naturally (such as the Pitchin' Chuck), it can also be set by having a sprite sink in lava and then using Yoshi to spit out the sprite shortly thereafter. [More info](http://tasvideos.org/forum/viewtopic.php?p=476091#476091)
+-->
+* Phase pointer manipulation: When a carryable sprite "normalizes" ($1558 reaches 01), $C2 for the sprite will be set equal to the value of $1540 rounded up to the nearest odd number. Because many sprites use $C2 as a phase pointer, this can cause garbage code to run, resulting in a large variety of possible effects. Although only a few sprites use $1558 naturally (such as the Pitchin' Chuck), it can also be set by having a sprite sink in lava and then using Yoshi to spit out the sprite shortly thereafter. [More info](http://tasvideos.org/forum/viewtopic.php?p=476091#476091)
 
 <!--
 * Yoshi can "store" a sprite slot in his mouth, but it gets a bit complicated. First, do the double tongue glitch and pick up a carriable sprite with the first tongue. Then, with the second tongue, pick up the sprite you want to stun, but eat-cancel it before Yoshi swallows it. As a result, Yoshi will have the second sprite slot "in" his mouth, but other sprites can still spawn in that slot and will function as normal. Yoshi can then spit out that sprite (resulting in a glitched version of it), or swallow it (resulting in the sprite vanishing).
@@ -798,6 +808,11 @@ _148個(127個有用)_
 * If a sprite gives special properties to Yoshi when in his mouth (e.g. blue or yellow shells/Koopas), then storing that sprite in Yoshi's mouth via the stun glitch will also inherit those properties to Yoshi until either the sprite gets overwritten or Yoshi swallows the storage. In the case of wings, the wing graphic will also not show up, nor will the flight sounds play.
 -->
 * If a sprite gives special properties to Yoshi when in his mouth (e.g. blue or yellow shells/Koopas), then storing that sprite in Yoshi's mouth via the stun glitch will also inherit those properties to Yoshi until either the sprite gets overwritten or Yoshi swallows the storage. In the case of wings, the wing graphic will also not show up, nor will the flight sounds play.
+
+<!--
+* If Yoshi has a sprite stored in his mouth, and a Yoshi egg spawns into that sprite slot, then spitting out the egg on the same frame it spawns in will cause it to hatch with a green Koopa rather than a baby Yoshi. [Video](https://cdn.discordapp.com/attachments/167412470862970881/470363716613832734/koopinha-egg_00000.gif)
+-->
+* If Yoshi has a sprite stored in his mouth, and a Yoshi egg spawns into that sprite slot, then spitting out the egg on the same frame it spawns in will cause it to hatch with a green Koopa rather than a baby Yoshi. [Video](https://cdn.discordapp.com/attachments/167412470862970881/470363716613832734/koopinha-egg_00000.gif)
 
 <!--
 * If you kill a Yoshi and then spawn a second one, the new one will inherit the first one's "state" (sticking tongue out, laying an egg, etc.) that it had when it died.
@@ -975,9 +990,9 @@ _148個(127個有用)_
 *  If a berry is located at the very bottom of a subscreen, then picking up the berry with Yoshi's mouth while he's ducking with his tongue out will cause the berry to register as eaten without actually clearing the tile. This can then be repeated infinitely.
 
 <!--
-* Berries don't work correctly in vertical levels. Yoshi will be unable to eat them most of the time, and when he can, they won't disappear; instead, an empty green bush tile will appear a screen below the berry's actual position, and the berry itself can be eaten an unlimited number of times.
+* Berries don't work correctly in vertical levels; they will treat the level data as if it were still in a horizontal format, which results in them not working at all past the top two screens of the level, and even on those screens the interaction point and actual berry will be disconnected, resulting in Yoshi eating berries out of nowhere (leaving behind a green bush tile in its place). [Fix](https://www.smwcentral.net/?p=section&a=details&id=15543)
 -->
-* Berries don't work correctly in vertical levels. Yoshi will be unable to eat them most of the time, and when he can, they won't disappear; instead, an empty green bush tile will appear a screen below the berry's actual position, and the berry itself can be eaten an unlimited number of times.
+* Berries don't work correctly in vertical levels; they will treat the level data as if it were still in a horizontal format, which results in them not working at all past the top two screens of the level, and even on those screens the interaction point and actual berry will be disconnected, resulting in Yoshi eating berries out of nowhere (leaving behind a green bush tile in its place). [Fix](https://www.smwcentral.net/?p=section&a=details&id=15543)
 
 <!--
 * When Yoshi eats a berry by running into it, the game will adjust Mario and Yoshi's position slightly during the freeeze to center him on the block. If the berry is placed close enough to a slope, this can be used to clip them into the slope.
@@ -1050,6 +1065,11 @@ _148個(127個有用)_
 * If a level has a no-Yoshi entrance and Mario enters the level with a Yoshi, then mounts a new Yoshi in the level and dismounts him, he'll lose the Yoshi on the overworld as well. Beating the level without dismounting this new Yoshi will simply replace the original with it.
 
 ---
+
+<!--
+* Mounting Yoshi on the same frame Mario takes damage will cause the game to register the damage without knocking Mario off Yoshi. This can be used to kill Mario while still riding the Yoshi.
+-->
+* Yに乗るにFにダメージを受けると、Yから降ろされることなくダメージ判定が起こる。これにより、Yに乗ったままマリオを殺せる。
 
 <!--
 * Mario can still get knocked off of Yoshi by sprites while in the sliding state, unless the sprite's clipping position is more than 13 pixels below Yoshi's when they make contact.
@@ -1320,14 +1340,20 @@ _118個(104個有用)_
 * If Mario is big and standing up, he'll be unable to jump through the bottoms of springboards. If he's small, ducking, or riding Yoshi, however, this won't happen.
 
 <!--
+* Sprites do not clear the miscellaneous table at $15AC on initialization, which results in it being carried by sprites if they occupy the same sprite slot. Most sprites don't use $15AC for anything noticeable, but notably, shells don't interact with the sides of blocks when set, which means you can prevent a shell from being "pushed aside" on spawn if it's spawning inside a solid block (see [this video](https://cdn.discordapp.com/attachments/167412470862970881/482284837659607041/turn_timer_transfer.gif)). Note: Fixed by default by all sprite tools.
+-->
+* Sprites do not clear the miscellaneous table at $15AC on initialization, which results in it being carried by sprites if they occupy the same sprite slot. Most sprites don't use $15AC for anything noticeable, but notably, shells don't interact with the sides of blocks when set, which means you can prevent a shell from being "pushed aside" on spawn if it's spawning inside a solid block (see [this video](https://cdn.discordapp.com/attachments/167412470862970881/482284837659607041/turn_timer_transfer.gif)). Note: Fixed by default by all sprite tools.
+
+
+<!--
 * If a shell is spinning in a one-tile space, it will become invincible to all quake sprites (including capespins, Yoshi stomps, and hit blocks) until it exits the space.
 -->
 * If a shell is spinning in a one-tile space, it will become invincible to all quake sprites (including capespins, Yoshi stomps, and hit blocks) until it exits the space.
 
 <!--
-* Throwing a shell upwards on the frame it is about to sink in lava will cause it to reset to it is initial state. In other words, it'll suddenly have a Koopa inside it. On the frame the shell touches the lava, Mario can also bounce off of or be damaged by it, as well.
+* If a carryable sprite touches lava for only a single frame (e.g. by throwing the sprite upwards on that frame), it will resulting in $1558 being set for the sprite without killing it. This can have a number of effects on the sprite depending on how it uses $1558; for instance, a Koopa shell will suddenly have a Koopa inside it. On the frame a shell touches the lava, Mario can also bounce off of or be damaged by it as if it were a normal Koopa, as well.
 -->
-* Throwing a shell upwards on the frame it is about to sink in lava will cause it to reset to it is initial state. In other words, it'll suddenly have a Koopa inside it. On the frame the shell touches the lava, Mario can also bounce off of or be damaged by it, as well.
+* If a carryable sprite touches lava for only a single frame (e.g. by throwing the sprite upwards on that frame), it will resulting in $1558 being set for the sprite without killing it. This can have a number of effects on the sprite depending on how it uses $1558; for instance, a Koopa shell will suddenly have a Koopa inside it. On the frame a shell touches the lava, Mario can also bounce off of or be damaged by it as if it were a normal Koopa, as well.
 
 <!--
 * You can perform the above glitch with other carryable sprites by getting said sprite in slot #1 and overloading it. This will have some odd effects on the sprites when they're reset, such giving a key wings or changing a P-switch into a gold switch (acts like a blue switch, though).
@@ -1965,9 +1991,9 @@ _280個(180個有用)_
 * Mario can land on the right corner of a message box or light switch for a frame in manner similar to walljumping, but without the speed requirement.
 
 <!--
-* Being pushed inside a solid sprite (e.g. message box, turnblock bridge, Hammer Bro platform, Bowser statue...) will cause Mario to warp to the nearest side, even through solid blocks. If the camera moves sharply, this may also cause the newly loaded columns of Map16 to have glitched graphics until they're reloaded. Possible ways of doing this include being pushed in by another sprite, jumping fast enough, or wall running via a purple triangle.
+* Being pushed inside a solid sprite (e.g. message box, turnblock bridge, Hammer Bro platform, Bowser statue...) will cause Mario to warp to the nearest side, even through solid blocks. If the camera moves sharply, this may also cause the newly loaded columns of Map16 to have glitched graphics until they're reloaded. Possible ways of doing this include being pushed in by another sprite, jumping fast enough, or wallrunning via a purple triangle.
 -->
-* Being pushed inside a solid sprite (e.g. message box, turnblock bridge, Hammer Bro platform, Bowser statue...) will cause Mario to warp to the nearest side, even through solid blocks. If the camera moves sharply, this may also cause the newly loaded columns of Map16 to have glitched graphics until they're reloaded. Possible ways of doing this include being pushed in by another sprite, jumping fast enough, or wall running via a purple triangle.
+* Being pushed inside a solid sprite (e.g. message box, turnblock bridge, Hammer Bro platform, Bowser statue...) will cause Mario to warp to the nearest side, even through solid blocks. If the camera moves sharply, this may also cause the newly loaded columns of Map16 to have glitched graphics until they're reloaded. Possible ways of doing this include being pushed in by another sprite, jumping fast enough, or wallrunning via a purple triangle.
 
 <!--
 * When being 'warped' by a solid sprite, it's possible to completely pass the screen's spawn region over a sprite, preventing that sprite from spawning at all.
@@ -2410,6 +2436,11 @@ _280個(180個有用)_
 * If Mario is pushed off of a moving rope mechanism by a block, the game will continue to think he is in front of the sprite and will let him grab onto and jump off of the rope as if it is still there. However, this effect will be broken if he passes in front of another rope sprite, unless he is holding an item. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8784)
 
 <!--
+* As an alternative to the above, the "climb anywhere" rope mechanism glitch can also be activated by grabbing onto the very far edge of a rope mechanism (so that Mario immediately falls off) at the same time he interacts with the side of a block, even if the mechanism isn't moving directly into said block. [Video](https://cdn.discordapp.com/attachments/167412470862970881/462505481898950676/smw-climbing-glitch-new_00000.gif)
+-->
+* As an alternative to the above, the "climb anywhere" rope mechanism glitch can also be activated by grabbing onto the very far edge of a rope mechanism (so that Mario immediately falls off) at the same time he interacts with the side of a block, even if the mechanism isn't moving directly into said block. [Video](https://cdn.discordapp.com/attachments/167412470862970881/462505481898950676/smw-climbing-glitch-new_00000.gif)
+
+<!--
 * When climbing upward on a moving rope mechanism, Mario will not interact with the tops of blocks. This can be used to enter solid blocks when the mechanism moving downward or falling.
 -->
 * When climbing upward on a moving rope mechanism, Mario will not interact with the tops of blocks. This can be used to enter solid blocks when the mechanism moving downward or falling.
@@ -2585,14 +2616,14 @@ _280個(180個有用)_
 * Purple triangles will not work correctly in Layer 2 levels; while running sideways, Mario will not be given Layer 1 interaction, causing him to be warped straight downward. Shells may also not be flung correctly. They can work if Layer 1 and 2 overlap, however.
 
 <!--
-* While wall running, Mario will ignore the standard function of whatever he is running up, so long as it is solid some of the time. This means he can run up munchers, any kind of ledge or slope, tile-set specific lava, noteblocks, and even other purple triangles. This effect also lasts for a frame after he reorients at the top, allowing him to jump normally. Additionally, he will also run through any blocks that aren't always solid on his way up the wall, including upside-down slopes, standard lava, and water.
+* While wallrunning, Mario will ignore the standard function of whatever he is running up, so long as it is solid some of the time. This means he can run up munchers, any kind of ledge or slope, tile-set specific lava, noteblocks, and even other purple triangles. This effect also lasts for a frame after he reorients at the top, allowing him to jump normally. Additionally, he will also run through any blocks that aren't always solid on his way up the wall, including upside-down slopes, standard lava, and water.
 -->
-* While wall running, Mario will ignore the standard function of whatever he is running up, so long as it is solid some of the time. This means he can run up munchers, any kind of ledge or slope, tile-set specific lava, noteblocks, and even other purple triangles. This effect also lasts for a frame after he reorients at the top, allowing him to jump normally. Additionally, he will also run through any blocks that aren't always solid on his way up the wall, including upside-down slopes, standard lava, and water.
+* While wallrunning, Mario will ignore the standard function of whatever he is running up, so long as it is solid some of the time. This means he can run up munchers, any kind of ledge or slope, tile-set specific lava, noteblocks, and even other purple triangles. This effect also lasts for a frame after he reorients at the top, allowing him to jump normally. Additionally, he will also run through any blocks that aren't always solid on his way up the wall, including upside-down slopes, standard lava, and water.
 
 <!--
-* Mario will "stick" to any platform sprites while running up walls via a purple triangle, slowing him down to the speed of the platform until it passes by. One notable use of this is that it even applies to the animation at the end of a wall where Mario reorients himself, but his horizontal speed will remain unaffected, which can cause him to clip into the tiles in the next column over. It should be noted that this works with the solid platform sprites as well, but only if Mario enters at a position where he doesn't get warped out of it.
+* Mario will "stick" to any platform sprites while wallrunning, slowing him down to the speed of the platform until it passes by. One notable use of this is that it even applies to the animation at the end of a wall where Mario reorients himself, but his horizontal speed will remain unaffected, which can cause him to clip into the tiles in the next column over. It should be noted that this works with the solid platform sprites as well, but only if Mario enters at a position where he doesn't get warped out of it. [Video](https://cdn.discordapp.com/attachments/167412470862970881/462945193574793216/tes27.gif)
 -->
-* Mario will "stick" to any platform sprites while running up walls via a purple triangle, slowing him down to the speed of the platform until it passes by. One notable use of this is that it even applies to the animation at the end of a wall where Mario reorients himself, but his horizontal speed will remain unaffected, which can cause him to clip into the tiles in the next column over. It should be noted that this works with the solid platform sprites as well, but only if Mario enters at a position where he doesn't get warped out of it.
+* Mario will "stick" to any platform sprites while wallrunning, slowing him down to the speed of the platform until it passes by. One notable use of this is that it even applies to the animation at the end of a wall where Mario reorients himself, but his horizontal speed will remain unaffected, which can cause him to clip into the tiles in the next column over. It should be noted that this works with the solid platform sprites as well, but only if Mario enters at a position where he doesn't get warped out of it. [Video](https://cdn.discordapp.com/attachments/167412470862970881/462945193574793216/tes27.gif)
 
 <!--
 * If Mario starts trying to run up a purple triangle without a wall next to it, he will sometimes move upwards more than he should. If there's a solid block two tiles above the purple triangle, he can pass far enough into it such that jumping will send him straight through. Similarly, if there's a solid block one tile in front of the triangle, he can be pushed into that instead.
@@ -3007,6 +3038,11 @@ _280個(180個有用)_
 * The spots at the bottom of Wendy's bow "jump" when she animates, even though there's no logical reason for them to. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4168)
 
 <!--
+* If you enter Bowser's boss room in a level that used an autoscroll sprite at some point earlier in the level (without spawning any other scroll sprite in the meantime), then touching the edges of the screen in the fight will give Mario a small X speed as if he were still in the autoscroller.
+-->
+* If you enter Bowser's boss room in a level that used an autoscroll sprite at some point earlier in the level (without spawning any other scroll sprite in the meantime), then touching the edges of the screen in the fight will give Mario a small X speed as if he were still in the autoscroller.
+
+<!--
 * Fireballs can cause some of the Bowser battle's blocks to briefly disappear if they're onscreen as Peach descends from Bowser's clown car.
 -->
 * Fireballs can cause some of the Bowser battle's blocks to briefly disappear if they're onscreen as Peach descends from Bowser's clown car.
@@ -3015,6 +3051,11 @@ _280個(180個有用)_
 * If you grab a goal sphere in the Bowser fight and Peach spawns before Mario finishes the walk, the game will immediately fade to the overworld with the credits fade effect.
 -->
 * If you grab a goal sphere in the Bowser fight and Peach spawns before Mario finishes the walk, the game will immediately fade to the overworld with the credits fade effect.
+
+<!--
+* Holding up after beating Bowser will result in Mario having a glitched walking animation during the credits ("claps").
+-->
+* Holding up after beating Bowser will result in Mario having a glitched walking animation during the credits ("claps").
 
 <!--
 * Mode 7 boss interaction loops between subscreens, allowing you to hit bosses that use it if you fly high enough.
@@ -3330,9 +3371,19 @@ _14個_
 * Some stunned sprites may crash the game when attempting to spawn an invalid sprite. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
-* Sending a directional coin sprite off the left side of a level with Layer 3 may crash the game. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
+* Certain results from Yoshification may crash the game, for instance by spawning a sprite that writes a value of 0C+ to $160E (the index of the sprite in Yoshi's mouth) which ultimately corrupts RAM when spat out, or by writing a value of 03+ to $1594 (a value specifying the routine currently used for Yoshi's mouth) which will immediately execute garbage code upon setting. Additional crashes can be obtained by transfering values from Yoshi to the sprite in question, such as writing to $151C (which Yoshi uses as the distance of his tongue) to a flying ? block (which uses it to determine the sprite to spawn), and then hitting the block. [Vid](https://youtu.be/4hKg1J9iuUk)[eos](https://www.youtube.com/watch?v=2fLOZrQzDnQ&feature=youtu.be&t=1h8m49s)
 -->
-* Sending a directional coin sprite off the left side of a level with Layer 3 may crash the game. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
+* Certain results from Yoshification may crash the game, for instance by spawning a sprite that writes a value of 0C+ to $160E (the index of the sprite in Yoshi's mouth) which ultimately corrupts RAM when spat out, or by writing a value of 03+ to $1594 (a value specifying the routine currently used for Yoshi's mouth) which will immediately execute garbage code upon setting. Additional crashes can be obtained by transfering values from Yoshi to the sprite in question, such as writing to $151C (which Yoshi uses as the distance of his tongue) to a flying ? block (which uses it to determine the sprite to spawn), and then hitting the block. [Vid](https://youtu.be/4hKg1J9iuUk)[eos](https://www.youtube.com/watch?v=2fLOZrQzDnQ&feature=youtu.be&t=1h8m49s)
+
+<!--
+* Most results from phase pointer manipulation may crash the game.
+-->
+* Most results from phase pointer manipulation may crash the game.
+
+<!--
+* Sending a directional coin sprite off the left side of a level with Layer 3 may crash the game.
+-->
+* Sending a directional coin sprite off the left side of a level with Layer 3 may crash the game.
 
 <!--
 * Increasing the high bit of the mushroom scale sprite's Y position in a vertical level will crash the game.
@@ -3343,3 +3394,8 @@ _14個_
 * Spawning more than one Big Boo Boss will cause the game to crash or, at the very least, noticeably glitch the screen.
 -->
 * Spawning more than one Big Boo Boss will cause the game to crash or, at the very least, noticeably glitch the screen.
+
+<!--
+* Spawning sprite D2 (stop generator) while the Layer 3 smasher is active will crash the game. [Fix](https://www.smwcentral.net/?p=nmap&m=smwrom&u=0#02D421)
+-->
+* Spawning sprite D2 (stop generator) while the Layer 3 smasher is active will crash the game. [Fix](https://www.smwcentral.net/?p=nmap&m=smwrom&u=0#02D421)
