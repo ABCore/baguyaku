@@ -652,47 +652,48 @@ _148個(127個有用)_
 <!--
 * Null sprite overload: Spitting out a null sprite will glitch certain sprites' properties. Slot #3 will usually lose ground interaction, and slot #1 will usually either become burnable or change its interaction completely. [Mo](http://tasvideos.org/forum/viewtopic.php?p=250970#250970)[re](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) [info](https://youtu.be/g25UHjarSCY)
 -->
-* Null sprite overload: Spitting out a null sprite will glitch certain sprites' properties. Slot #3 will usually lose ground interaction, and slot #1 will usually either become burnable or change its interaction completely. [Mo](http://tasvideos.org/forum/viewtopic.php?p=250970#250970)[re](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) [info](https://youtu.be/g25UHjarSCY)
+* ヌルスプライトオーバーロード：ヌルスプライトを吐き出すと特定のスプライトの性質が変化する。スロット#3は地面判定がなくなり、スロット#1はファイアでコイン化するようになったり相互作用が完全に変化したりする。[Mo](http://tasvideos.org/forum/viewtopic.php?p=250970#250970)[re](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) [info](https://youtu.be/g25UHjarSCY)
 
 <!--
 * Burning a Yoshi (via overload) on the frame Yoshi's tongue timer ($14A3) is equal to #$0C will cause the coin spawned by burning him to turn into a sprite berry.
 -->
-* Burning a Yoshi (via overload) on the frame Yoshi's tongue timer ($14A3) is equal to #$0C will cause the coin spawned by burning him to turn into a sprite berry.
+* Yの舌タイマー（$14A3）が$0CであるFに（オーバーロードを使って）Yを燃やすと、コインが木の実スプライトに変化する。
 
 <!--
 * Unstepping a sprite: Hitting a sprite and swallowing it before it fully disappears will reset it to its initial state.
 -->
-* Unstepping a sprite: Hitting a sprite and swallowing it before it fully disappears will reset it to its initial state.
+* Unstepping a sprite：倒したり、飲み込んだりして、スプライトが完全に消える瞬間にそのスプライトは最初の状態にリセットされる。
 
 <!--
 * Swallowing a springboard at the same time Yoshi is bouncing off it will give him a large boost while bringing the spring with him. This boost can be extended by holding up and/or B, and can even go through solid blocks. It will also give the springboard a slightly glitched graphic when spat back out. [Video](https://www.youtube.com/watch?v=WOMcX1pycWo) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4319)
 -->
-* Swallowing a springboard at the same time Yoshi is bouncing off it will give him a large boost while bringing the spring with him. This boost can be extended by holding up and/or B, and can even go through solid blocks. It will also give the springboard a slightly glitched graphic when spat back out. [Video](https://www.youtube.com/watch?v=WOMcX1pycWo) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4319)
+* ジャンプ台をYが咥えると同時に乗ると、咥えきるまでの間、上方向にブーストを得る。このブーストは↑かB入力で大きくすることができ、ソリッドブロックを抜けられる。ジャンプ台を吐き出すと、表示が縮んだままで出てくる。[Video](https://www.youtube.com/watch?v=WOMcX1pycWo) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4319)
 
 <!--
-* Eat-canceling an item: If Mario is hit off of Yoshi while an item is stuck to Yoshi's tongue, that item will be dropped off of it while retaining any properties it had while stuck to the tongue. This can allow for a variety of effects, including causing sprites to lose (some) vertical object interaction, moving normally immovable sprites, and more. [Video](https://youtu.be/1SGfYkXoGjg?t=8m05s)
+* Eat-canceling an item: If Mario is hit off of Yoshi while an item is stuck to Yoshi's tongue, that item will be dropped off of it while retaining any properties it had while stuck to the tongue. This can allow for a variety of effects, including causing sprites to lose (some) vertical object interaction, moving normally immovable sprites, and more. [Video](https://youtu.be/1SGfYkXoGjg?t=8m05s)****
 -->
-* Eat-canceling an item: If Mario is hit off of Yoshi while an item is stuck to Yoshi's tongue, that item will be dropped off of it while retaining any properties it had while stuck to the tongue. This can allow for a variety of effects, including causing sprites to lose (some) vertical object interaction, moving normally immovable sprites, and more. [Video](https://youtu.be/1SGfYkXoGjg?t=8m05s)
+* 食べキャン：Yが舌でスプライトを掴んでいる最中に攻撃をくらうと、スプライトは舌で掴まれている状態を保持したまま、Yが咥える・食べる動作を中断(食べキャン)する。これにより、スプライトは通常とは異なる挙動を示し、オブジェクトに対する垂直方向の相互作用が失われたりする。食べキャンによって普通動かせないスプライトを動かすことができる。[Video](https://youtu.be/1SGfYkXoGjg?t=8m05s)
 
 <!--
 * If Yoshi has an item on his tongue and you jump off of him as he is about to despawn, the item on Yoshi's tongue will be eat-canceled and warp to Mario's position as he jumps, allowing him to pick up carriable items or doublegrab powerups (shells are an exception; Yoshi will instead bounce off of it). It will also be counted as a new sprite, meaning the original one will respawn as well. Note that Yoshi has to despawn before the sprite for this to work, as it's still stuck to his tongue until then.
 -->
-* If Yoshi has an item on his tongue and you jump off of him as he is about to despawn, the item on Yoshi's tongue will be eat-canceled and warp to Mario's position as he jumps, allowing him to pick up carriable items or doublegrab powerups (shells are an exception; Yoshi will instead bounce off of it). It will also be counted as a new sprite, meaning the original one will respawn as well. Note that Yoshi has to despawn before the sprite for this to work, as it's still stuck to his tongue until then.
+* アイテムを舌で掴んでいる状態のYを画面下で消えように乗り捨てると、アイテムは食べキャンされ、マリオのジャンプする位置に瞬間移動してくる。持ち運べるアイテムなら掴むことができ、パワーアップアイテムなら2個取得することになる。甲羅は例外で、Yが甲羅を踏んで跳ねる。瞬間移動したアイテムは新しいスプライトとして認識され、元のスプライトは再度出現する。
+
 
 <!--
 * Not only does an eat-canceled sprite lose damage interaction with Yoshi, its entire slot does as well, until the next time Yoshi sticks out his tongue.
 -->
-* Not only does an eat-canceled sprite lose damage interaction with Yoshi, its entire slot does as well, until the next time Yoshi sticks out his tongue.
+* 食べキャンされたスプライトはYとの当たり判定がなくなるだけでなく、再びYが舌を出すまで、食べキャンされたスプライトのいたスロットとの判定がなくなったままになる。
 
 <!--
 * Eat-canceled sprites won't interact with sprites in a higher slot than them.
 -->
-* Eat-canceled sprites won't interact with sprites in a higher slot than them.
+* 食べキャンしたスプライトはそれより大きいスロットにあるスプライトと作用しなくなくなる。
 
 <!--
 * If a shell is eat-canceled, the shell will fall through the ground when kicked. Additionally, eat-canceled shells won't knock Mario off of Yoshi, and can also be doublegrabbed without destroying each other.
 -->
-* If a shell is eat-canceled, the shell will fall through the ground when kicked. Additionally, eat-canceled shells won't knock Mario off of Yoshi, and can also be doublegrabbed without destroying each other.
+* 食べキャンされた甲羅を蹴ると地面を通りぬけ、Yに乗ったマリオも素通りする（が、Yの足に反応して踏まれる）。食べキャンされた甲羅同士は相互作用しないので、2個持ちができる。
 
 <!--
 * If a key is eat-canceled, sticking it in just below an inner corner will allow Mario to walk on the key through solid blocks, regardless of his powerup status. This can also be done with springboards, though Mario will be unable to pass all of the way through before being crushed.
@@ -702,62 +703,62 @@ _148個(127個有用)_
 <!--
 * If any carriable sprite is eat-canceled, throwing it upward while it's in a wall will cause it to slowly sink downward. It can still hit blocks as it's sinking.
 -->
-* If any carriable sprite is eat-canceled, throwing it upward while it's in a wall will cause it to slowly sink downward. It can still hit blocks as it's sinking.
+* 食べキャンされた持ち運べるスプライトを壁の中で上向きに投げると、ゆっくり沈んでいく。沈んでいく最中ブロックを叩く。
 
 <!--
 * Item swap: Mario can briefly create a null sprite on Yoshi's tongue by destroying or despawning a sprite while it is stuck to it (it should be noted that burning a sprite and collecting its coin, as well as grabbing a Koopa on Yoshi's tongue as it jumps into a shell, are both valid methods). Doing so will cause the next sprite to spawn in the null sprite's slot to warp to Yoshi's tongue. This can be used for a variety of effects, such as messing with sprites that change properties based on position, since this glitch essentially changes a sprite's spawn position. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#ItemSwap)
 -->
-* Item swap: Mario can briefly create a null sprite on Yoshi's tongue by destroying or despawning a sprite while it is stuck to it (it should be noted that burning a sprite and collecting its coin, as well as grabbing a Koopa on Yoshi's tongue as it jumps into a shell, are both valid methods). Doing so will cause the next sprite to spawn in the null sprite's slot to warp to Yoshi's tongue. This can be used for a variety of effects, such as messing with sprites that change properties based on position, since this glitch essentially changes a sprite's spawn position. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#ItemSwap)
+* アイテムスワップ：舌で掴まれているスプライトを倒すか消すことで、Yの舌の上にヌルスプライトは簡単に作ることができる。スプライトをファイアや銀Pなどでコインにして取ったり、甲羅に入るノコノコを舌で捕まえたりして行える。これを行うと、ヌルスプライトのスロットに次にスポンされるスプライトがYの舌にワープする。これにより、様々な現象を起こすことができ、スプライトの座標に基づいて性質を変えるといったこともできる。このバグのために、スプライトのスポンポジションを変える必要が出てくる。[More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#ItemSwap)
 
 <!--
 * Certain sprites have the "give powerup when eaten" flag set despite not being powerups, most notable of which being the Chucks. Depending on Mario's powerup status, using item swap to eat these sprites will give Mario odd sprites in the item box. Two particularly well-known uses are getting a goal sphere from a Clappin' Chuck when Mario has a fireflower, and getting a Lakitu cloud from Chargin' Chucks when small. [More info](http://smwspeedruns.com/index.php/Orb) - [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* Certain sprites have the "give powerup when eaten" flag set despite not being powerups, most notable of which being the Chucks. Depending on Mario's powerup status, using item swap to eat these sprites will give Mario odd sprites in the item box. Two particularly well-known uses are getting a goal sphere from a Clappin' Chuck when Mario has a fireflower, and getting a Lakitu cloud from Chargin' Chucks when small. [More info](http://smwspeedruns.com/index.php/Orb) - [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
+* 特定のスプライトはパワーアップアイテムではないが、食べるとパワーアップするフラグが設定されている。アイテムスワップを使ってスプライトを食べると、マリオのパワーアップ状態に依存して変なスプライトをアイテムボックスに送ることが出来る。マリオがファイアの状態でその場で跳ねるブルを食べるとゴール玉が得られ、チビの状態でブルを食べるとジュゲムの雲が得られる。[More info](http://smwspeedruns.com/index.php/Orb) - [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
 * You can "store" an item swap on an Invisi-Yoshi's tongue by sticking a sprite onto a visible Yoshi's tongue before it's replaced by another Yoshi. When the invisible Yoshi becomes visible again, Yoshi's tongue will spawn with it and grab whatever sprite happens to be in the same slot as the one that you stuck to it before.
 -->
-* You can "store" an item swap on an Invisi-Yoshi's tongue by sticking a sprite onto a visible Yoshi's tongue before it's replaced by another Yoshi. When the invisible Yoshi becomes visible again, Yoshi's tongue will spawn with it and grab whatever sprite happens to be in the same slot as the one that you stuck to it before.
+* Yの舌でスプライトを掴んでいる時に、別のYを出現させて騎乗中のYを透明Yに変身させると、アイテムスワップをストアできる。透明化したYが可視化すると、掴んでいたスプライトを同じスロットにスポンさせ、ストアする前のように舌で掴む。
 
 <!--
 * If there is no sprite currently in the slot stored to the Invisi-Yoshi's tongue, then it will instead spawn a copy of the last sprite in the slot. Since this counts as a new sprite, it can be used to duplicate any sprite.
 -->
-* If there is no sprite currently in the slot stored to the Invisi-Yoshi's tongue, then it will instead spawn a copy of the last sprite in the slot. Since this counts as a new sprite, it can be used to duplicate any sprite.
+* アイテムスワップがストアされた時のスプライトが現在存在しない場合、そのスプライトのスロットに最後に読み込まれたスプライトを代わりにコピーとしてスポンさせる。これは新しいスプライトとして認識されるので、あらゆるスプライトをダブらせることができる。
 
 <!--
 * If a sprite is stored to invisi-Yoshi's tongue, spitting out the visible Yoshi's tongue a few frames before it despawns will cause a second tongue to spawn on Invisi-Yoshi, resulting in a null sprite.
 -->
-* If a sprite is stored to invisi-Yoshi's tongue, spitting out the visible Yoshi's tongue a few frames before it despawns will cause a second tongue to spawn on Invisi-Yoshi, resulting in a null sprite.
+* 可視Yが透明化する直前数Fの間に舌を出すと、2度目の舌が透明Yから出現し、それで掴まれたスプライトはヌルスプライトになる。
 
 <!--
 * After item swapping, sprites can then be eat-canceled off of Yoshi's tongue. Certain sprites that are never meant to be edible by Yoshi can create some unusual glitches as a result.
 -->
-* After item swapping, sprites can then be eat-canceled off of Yoshi's tongue. Certain sprites that are never meant to be edible by Yoshi can create some unusual glitches as a result.
+* アイテムスワップ後、スプライトはYの舌で食べキャンされる。特定のスプライトはYで食べられなくなり、結果としていくつかのバグを引き起こす。
 
 <!--
 * If Yoshi starts to sink in lava while a sprite is stuck to his tongue, and that sprite is then destroyed, Yoshi will have a null sprite on his tongue and be able to perform an item swap. A difference between this and the normal item swap, however, is that the sprite will remain stuck to Yoshi's tongue while he's sinking, which can be combined with Yoshi's tongue interaction on screen borders to create a few interesting effects. The sprite will also be automatically eat-canceled when Yoshi disappears.
 -->
-* If Yoshi starts to sink in lava while a sprite is stuck to his tongue, and that sprite is then destroyed, Yoshi will have a null sprite on his tongue and be able to perform an item swap. A difference between this and the normal item swap, however, is that the sprite will remain stuck to Yoshi's tongue while he's sinking, which can be combined with Yoshi's tongue interaction on screen borders to create a few interesting effects. The sprite will also be automatically eat-canceled when Yoshi disappears.
+* スプライトを舌で掴んでいるYが溶岩に沈んでいる最中にそのスプライトを消すと、アイテムスワップを行えるヌルスプライトを舌に作ることができる。これは通常のアイテムスワップと異なり、Yが沈んでいる最中、スプライトは舌に固定されたままとなる。これを画面の境界上で行うと、おもしろい現象を数個発生させられる。Yが完全に消えた時、スプライトは自動的に食べキャンされる。
 
 <!--
 * If a Yoshi is sinking in lava and another Yoshi is registered on his tongue (by getting a sprite on his tongue, despawning it, then spawning Yoshi in the same slot), and Yoshi is set to hatch an egg from berries, then standing on the ground so that this egg is spawned will freeze sprites as normal (through $9D) but Mario will still be able to move around.
 -->
-* If a Yoshi is sinking in lava and another Yoshi is registered on his tongue (by getting a sprite on his tongue, despawning it, then spawning Yoshi in the same slot), and Yoshi is set to hatch an egg from berries, then standing on the ground so that this egg is spawned will freeze sprites as normal (through $9D) but Mario will still be able to move around.
+* 1匹目のYが溶岩に沈んでいき、（適当なスプライトを舌に絡めてから消し、同じスロットに新たなYを出現させるなどして）別のYが1匹目のYの舌に登録されて、Yが木の実によって産卵できる状態の時に、産卵するために着地するとスプライトは($9Dで)フリーズするが、マリオは通常通り動ける。[Movie](https://www.youtube.com/watch?v=wZK3xB6KHkE)
 
 <!--
 * When spawning a Yoshi from a block while another Yoshi is sinking in lava, Mario will still be able to move around during the new Yoshi's hatching animation. However, $9D will still be set (freezing other sprites in place), meaning any glitches resulting from it can still occur in this time.
 -->
-* When spawning a Yoshi from a block while another Yoshi is sinking in lava, Mario will still be able to move around during the new Yoshi's hatching animation. However, $9D will still be set (freezing other sprites in place), meaning any glitches resulting from it can still occur in this time.
+* Yが溶岩に沈んでいる最中に別のYをブロックから出現させると、孵化アニメーション中に乗り回すことができる。$9Dはセットされ、他のスプライトはフリーズしているので、$9Dを用いるバグを引き起こせる。
 
 <!--
 * Priority swap: If all sprite slots in division 1 are filled, then prioritized sprites such as the goal sprite will have to replace another sprite in order to spawn, and the sprite it replaces can manipulated by abusing priority through sprite permanence. In simple terms, priority sprites will replace the **highest** non-permanent sprite slot if all of them are filled. If that sprite happens to be stuck to Yoshi's tongue when the priority sprite spawns, the priority sprite will actually warp to Yoshi's tongue, even if it's a stationary sprite like a goal tape. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#ItemSwap)
 -->
-* Priority swap: If all sprite slots in division 1 are filled, then prioritized sprites such as the goal sprite will have to replace another sprite in order to spawn, and the sprite it replaces can manipulated by abusing priority through sprite permanence. In simple terms, priority sprites will replace the **highest** non-permanent sprite slot if all of them are filled. If that sprite happens to be stuck to Yoshi's tongue when the priority sprite spawns, the priority sprite will actually warp to Yoshi's tongue, even if it's a stationary sprite like a goal tape. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#ItemSwap)
+* 優先スワップ：もし分割1の全てのスロットが埋まっていて、ゴールバーなどの他のスプライトと置き換わる優先スプライトが出現する時、どのような状態であれ、優先権によりスプライトが置き換わる。簡単に言えば、全てのスロットが埋まっている時に、優先スプライトが一番IDの大きい非残存スプライトのスロットと置き換わる。もしそのスプライトがYの舌上にあるときに置換が起こると、優先スプライトはゴールバーであれ、Yの舌上に出現する。[More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#ItemSwap)
 
 <!--
 * Eat-canceling a goal tape will set its max height to wherever it was dropped, which can lead to some strange side effects. That game still registers its original position as the actual sprite, so touching the goal tape below what would normally be the 1 star mark will actually give a glitched number of bonus stars, even greater than 50.
 -->
-* Eat-canceling a goal tape will set its max height to wherever it was dropped, which can lead to some strange side effects. That game still registers its original position as the actual sprite, so touching the goal tape below what would normally be the 1 star mark will actually give a glitched number of bonus stars, even greater than 50.
+* 食べキャンしたゴールバーはドロップされた瞬間、最も高い位置にセットされ、いくつか変な現象を引き起こす。ゲームはゴールバーの元の位置を実際の位置として認識するので、通常の場合にボーナススターが1得られるゴールバーの位置に触れると、ボーナススターの値がバグって50以上にもなる。
 
 <!--
 * If you item swap a sprite that uses extra bits (e.g. the goal tape) when Yoshi is in a higher slot than it, the sprite's extra bits will be modified. The game normally stores the extra bits with the sprite's high Y spawn position (in the format %----EE-Y) before correcting it in the sprite's initilization code; if Yoshi's tongue's code runs before the sprite's does, it will instead use the high Y position from the tongue, affecting the extra bits in the process. NOTE: this glitch will NOT work in hacks that use custom sprites, due to using a specialized table for extra bits. [More Info](http://pastebin.com/XBqrVHyH)
