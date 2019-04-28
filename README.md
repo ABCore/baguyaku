@@ -30,13 +30,13 @@ GitHub Pages：訳文にマウスを重ねると、原文がツールチップ�
 
 | English | 訳 | 備考 |
 |:--:|:--:|:--|
-| Baby Yoshi | チビY ||
+| Baby Yoshi | チビY | 助数詞：匹 |
 | fireboll | ファイア | ファイアボール |
 | goal tape | ゴールバー ||
 | powerup | パワーアップアイテム ||
 | quake sprites | 揺れスプライト ||
 | springboard | J台 | ジャンプ台 |
-| Yoshi | Y | |
+| Yoshi | Y | 助数詞：匹 |
 
 #### オブジェクト
 

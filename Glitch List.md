@@ -670,7 +670,7 @@ _148個(127個有用)_
 * ジャンプ台をYが咥えると同時に乗ると、咥えきるまでの間、上方向にブーストを得る。このブーストは↑かB入力で大きくすることができ、ソリッドブロックを抜けられる。ジャンプ台を吐き出すと、表示が縮んだままで出てくる。[Video](https://www.youtube.com/watch?v=WOMcX1pycWo) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4319)
 
 <!--
-* Eat-canceling an item: If Mario is hit off of Yoshi while an item is stuck to Yoshi's tongue, that item will be dropped off of it while retaining any properties it had while stuck to the tongue. This can allow for a variety of effects, including causing sprites to lose (some) vertical object interaction, moving normally immovable sprites, and more. [Video](https://youtu.be/1SGfYkXoGjg?t=8m05s)****
+* Eat-canceling an item: If Mario is hit off of Yoshi while an item is stuck to Yoshi's tongue, that item will be dropped off of it while retaining any properties it had while stuck to the tongue. This can allow for a variety of effects, including causing sprites to lose (some) vertical object interaction, moving normally immovable sprites, and more. [Video](https://youtu.be/1SGfYkXoGjg?t=8m05s)
 -->
 * 食べキャン：Yが舌でスプライトを掴んでいる最中に攻撃をくらうと、スプライトは舌で掴まれている状態を保持したまま、Yが咥える・食べる動作を中断(食べキャン)する。これにより、スプライトは通常とは異なる挙動を示し、オブジェクトに対する垂直方向の相互作用が失われたりする。食べキャンによって普通動かせないスプライトを動かすことができる。[Video](https://youtu.be/1SGfYkXoGjg?t=8m05s)
 
