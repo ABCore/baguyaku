@@ -773,12 +773,12 @@ _148個(127個有用)_
 <!--
 * Stunning a sprite: If Mario spits out a sprite while its stun timer is set, it will spawn an extra sprite once its stun timer hits zero. While this is intended for sprites like the Koopa shell, it works for other sprites, as well. For example, P-switches can spawn a fish if Yoshi spits it out when it turns into a smoke cloud. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=11m04s)
 -->
-* Stunning a sprite: If Mario spits out a sprite while its stun timer is set, it will spawn an extra sprite once its stun timer hits zero. While this is intended for sprites like the Koopa shell, it works for other sprites, as well. For example, P-switches can spawn a fish if Yoshi spits it out when it turns into a smoke cloud. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=11m04s)
+* スタンバグ（Stunning a sprite）：スタンタイマーがセットされたスプライトを吐くと、スタンタイマーが0になる時に新たなスプライトが出現する。吐き出されたスプライトは甲羅のように振る舞い、別のスプライトに作用する。例えば、Pスイッチが煙に変わる時にYがPを吐き出すと、Pスイッチからプクプクが出るような感じ。[More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=11m04s)
 
 <!--
 * Spitting out a stunned Koopa shell on the frame its stun timer is about to run out will cause the Koopa spawned by it to be sent flying as if it were knocked out of the shell.
 -->
-* Spitting out a stunned Koopa shell on the frame its stun timer is about to run out will cause the Koopa spawned by it to be sent flying as if it were knocked out of the shell.
+* スタンタイマーが0になるFに甲羅を吐くと、裸ノコノコが甲羅から飛び出るように口から放たれる。
 
 <!--
 * Phase pointer manipulation: When a carryable sprite "normalizes" ($1558 reaches 01), $C2 for the sprite will be set equal to the value of $1540 rounded up to the nearest odd number. Because many sprites use $C2 as a phase pointer, this can cause garbage code to run, resulting in a large variety of possible effects. Although only a few sprites use $1558 naturally (such as the Pitchin' Chuck), it can also be set by having a sprite sink in lava and then using Yoshi to spit out the sprite shortly thereafter. [More info](http://tasvideos.org/forum/viewtopic.php?p=476091#476091)
@@ -788,27 +788,27 @@ _148個(127個有用)_
 <!--
 * Yoshi can "store" a sprite slot in his mouth, but it gets a bit complicated. First, do the double tongue glitch and pick up a carriable sprite with the first tongue. Then, with the second tongue, pick up the sprite you want to stun, but eat-cancel it before Yoshi swallows it. As a result, Yoshi will have the second sprite slot "in" his mouth, but other sprites can still spawn in that slot and will function as normal. Yoshi can then spit out that sprite (resulting in a glitched version of it), or swallow it (resulting in the sprite vanishing).
 -->
-* Yoshi can "store" a sprite slot in his mouth, but it gets a bit complicated. First, do the double tongue glitch and pick up a carriable sprite with the first tongue. Then, with the second tongue, pick up the sprite you want to stun, but eat-cancel it before Yoshi swallows it. As a result, Yoshi will have the second sprite slot "in" his mouth, but other sprites can still spawn in that slot and will function as normal. Yoshi can then spit out that sprite (resulting in a glitched version of it), or swallow it (resulting in the sprite vanishing).
+* Yはスプライトスロットを口にストアすることができるが、少々手間取る。舌2度出しバグで、1度目の舌で持ち運べるスプライトを掴み、2度目の舌でスタンしたいスプライトをつかんでから食べキャンする。結果的に、Yは2度目の舌で掴んだスプライトをスロットを口の中に保持するが、他のスプライトはそのスロットに読み込まれ通常通り動く。Yは咥えたスプライトをバグったスプライトとして吐き出すか、飲み込んで消失させられる。
 
 <!--
 * With the above glitch, you can also stun sprites that are normally unstunnable. You just have activate the sprite slot's stun timer and then spit it out of Yoshi's mouth while the timer is active. This can create a variety of effects, most notably a [Koopa Kid from a sliding blue Koopa](https://youtu.be/1SGfYkXoGjg?t=14m01s), a [goal tape (at x=0,y=0) from a Pokey](https://www.youtube.com/watch?v=dfn94RSdJr0), a [keyhole from a Dino Rhino](https://www.youtube.com/watch?v=ASE9ZXp_gdw), and a [Reznor from horizontally-swimming fishes](https://youtu.be/hboxJ_z-P7E?t=1m49s). [Video](http://youtu.be/GIA0xg0ZWuo) - [More Info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* With the above glitch, you can also stun sprites that are normally unstunnable. You just have activate the sprite slot's stun timer and then spit it out of Yoshi's mouth while the timer is active. This can create a variety of effects, most notably a [Koopa Kid from a sliding blue Koopa](https://youtu.be/1SGfYkXoGjg?t=14m01s), a [goal tape (at x=0,y=0) from a Pokey](https://www.youtube.com/watch?v=dfn94RSdJr0), a [keyhole from a Dino Rhino](https://www.youtube.com/watch?v=ASE9ZXp_gdw), and a [Reznor from horizontally-swimming fishes](https://youtu.be/hboxJ_z-P7E?t=1m49s). [Video](http://youtu.be/GIA0xg0ZWuo) - [More Info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
+* 上記のバグで、通常スタンしないスプライトをスタンさせられる。そのスプライトのスロットのスタンタイマーは稼働させることができ、タイマーが作動している最中に吐き出すこともできる。これで様々な現象を作り出せる。[スライディングしている青ノコノコからコクッパ](https://youtu.be/1SGfYkXoGjg?t=14m01s)・[サンボからゴールバー(x=0, y=0)](https://www.youtube.com/watch?v=dfn94RSdJr0)・[コライタから鍵穴](https://www.youtube.com/watch?v=ASE9ZXp_gdw)・[横に泳ぐプクプクからブイブイ](https://youtu.be/hboxJ_z-P7E?t=1m49s)などがある。[Video](http://youtu.be/GIA0xg0ZWuo) - [More Info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
 * When spit out of Yoshi's mouth, stored sprites begin acting like a shell, yet still retain the object interaction of the original sprite. This leads to some odd block interactions for certain sprites, such as Pokeys (five tiles higher) or Piranha Plants (one tile lower), and even affects block duplication for these sprites.
 -->
-* When spit out of Yoshi's mouth, stored sprites begin acting like a shell, yet still retain the object interaction of the original sprite. This leads to some odd block interactions for certain sprites, such as Pokeys (five tiles higher) or Piranha Plants (one tile lower), and even affects block duplication for these sprites.
+* Yの口からストアされたスプライトを吐くと、甲羅のような働きをするスプライトが出てくるが、オブジェクトとの相互作用が元のスプライトのままである。これにより、一部のスプライトはブロックに対して変な相互作用を持つ。例えば、そのスプライトでブロックを叩くと、サンボが元の場合は5タイル分高い位置、パックンが元の場合は1タイル分低い位置にブロックが増殖される。
 
 <!--
 * Spitting out a stored sprite when its stun timer is nearly 0 will cause the sprite spawned from it to act as if it was spat out of Yoshi's mouth. For most sprites, this will make the sprite kickable as if it were a flopping fish, but it can have some odd additional effects on certain sprites.
 -->
-* Spitting out a stored sprite when its stun timer is nearly 0 will cause the sprite spawned from it to act as if it was spat out of Yoshi's mouth. For most sprites, this will make the sprite kickable as if it were a flopping fish, but it can have some odd additional effects on certain sprites.
+* ストアされたスプライトをスタンタイマーが0近くの時に吐き出すと、新しいスプライトが吹っ飛んで出てくる。大抵のスプライトは地上のプクプクのように蹴ることが出来るが、一部のスプライトは奇妙な効果がある。
 
 <!--
 * If a sprite gives special properties to Yoshi when in his mouth (e.g. blue or yellow shells/Koopas), then storing that sprite in Yoshi's mouth via the stun glitch will also inherit those properties to Yoshi until either the sprite gets overwritten or Yoshi swallows the storage. In the case of wings, the wing graphic will also not show up, nor will the flight sounds play.
 -->
-* If a sprite gives special properties to Yoshi when in his mouth (e.g. blue or yellow shells/Koopas), then storing that sprite in Yoshi's mouth via the stun glitch will also inherit those properties to Yoshi until either the sprite gets overwritten or Yoshi swallows the storage. In the case of wings, the wing graphic will also not show up, nor will the flight sounds play.
+* Yに特性を与えるスプライト(青・黄色の甲羅/ノコノコ）が口の中にあって、スタンバグを通してそれらをストアすると、スプライトは上書きされるか、Yが飲み込むまで特性は引き継がれる。翼の場合、表示が見えなくなり飛ぶ音は再生されない。
 
 <!--
 * If Yoshi has a sprite stored in his mouth, and a Yoshi egg spawns into that sprite slot, then spitting out the egg on the same frame it spawns in will cause it to hatch with a green Koopa rather than a baby Yoshi. [Video](https://cdn.discordapp.com/attachments/167412470862970881/470363716613832734/koopinha-egg_00000.gif)
@@ -818,27 +818,27 @@ _148個(127個有用)_
 <!--
 * If you kill a Yoshi and then spawn a second one, the new one will inherit the first one's "state" (sticking tongue out, laying an egg, etc.) that it had when it died.
 -->
-* If you kill a Yoshi and then spawn a second one, the new one will inherit the first one's "state" (sticking tongue out, laying an egg, etc.) that it had when it died.
+* Yが死んで、次のYがスポンされると、新しいYは前のYが死んだ時の（舌や卵などの）状態を受け継ぐ。
 
 <!--
 * If Yoshi has a key in its mouth, dying while riding will still let Mario enter any keyholes he passes on his way down.
 -->
-* If Yoshi has a key in its mouth, dying while riding will still let Mario enter any keyholes he passes on his way down.
+* 鍵を咥えているYに乗ったまま死に、死亡モーション中に鍵穴と重なれば鍵ゴールができる。
 
 <!--
 * If a keyhole is in a higher slot than a key, grabbing the key while it's stuck to Yoshi's tongue will allow the tongue to activate keyholes (even through walls). An easy method of doing this is by storing the key's slot to an invisi-Yoshi's tongue.
 -->
-* If a keyhole is in a higher slot than a key, grabbing the key while it's stuck to Yoshi's tongue will allow the tongue to activate keyholes (even through walls). An easy method of doing this is by storing the key's slot to an invisi-Yoshi's tongue.
+* 鍵穴が鍵より大きいスロットにある時、Yの舌に掴まれている鍵をマリオが掴むと鍵穴に反応させられる。透明Yの舌で鍵のスロットをストアさせれば、簡単に行える。
 
 <!--
 * The previous glitch can be combined with the tongue behaviour when Yoshi is offscreen to the right, allowing the activation of distant keyholes. [Gif](https://i.imgur.com/UlCXq1h.gif)
 -->
-* The previous glitch can be combined with the tongue behaviour when Yoshi is offscreen to the right, allowing the activation of distant keyholes. [Gif](https://i.imgur.com/UlCXq1h.gif)
+* 前述のバグは画面右外のYにおける舌の挙動と組み合わせられ、離れた位置にある鍵穴を作用させられる。[Gif](https://i.imgur.com/UlCXq1h.gif)
 
 <!--
 * Hitting a goal tape while a shell is stuck to Yoshi's tongue will make Yoshi act like he has a yellow shell in his mouth during the walk, regardless of what color the shell actually was.
 -->
-* Hitting a goal tape while a shell is stuck to Yoshi's tongue will make Yoshi act like he has a yellow shell in his mouth during the walk, regardless of what color the shell actually was.
+* Yが舌で甲羅を掴んでいる最中にゴールバーに触れると、黄色甲羅を咥えたような状態になる。甲羅の色は何色でもよい。
 
 <!--
 * If Yoshi has the stomp power from yellow shells and he lands on Layer 2, the smoke and quake sprites will not scroll with Layer 2 and will instead spawn at the position it would be at were Layer 2 not scrolling. This occurs both horizontally and vertically.
