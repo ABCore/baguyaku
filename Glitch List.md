@@ -843,42 +843,42 @@ _148個(127個有用)_
 <!--
 * If Yoshi has the stomp power from yellow shells and he lands on Layer 2, the smoke and quake sprites will not scroll with Layer 2 and will instead spawn at the position it would be at were Layer 2 not scrolling. This occurs both horizontally and vertically.
 -->
-* If Yoshi has the stomp power from yellow shells and he lands on Layer 2, the smoke and quake sprites will not scroll with Layer 2 and will instead spawn at the position it would be at were Layer 2 not scrolling. This occurs both horizontally and vertically.
+* Yが黄色甲羅を含んでいる時に出せる砂煙と揺れは、レイヤー2オブジェクに着地する場合、レイヤー2のスクロールしていない設定位置で発生する。これは垂直方向でも水平方向でも起こる。
 
 <!--
 * The quake sprite from Yoshi's stomp power can wrap around the screen from left to right if Mario lands directly next to the screen barrier. [More info](http://smwc.me/1409196)
 -->
-* The quake sprite from Yoshi's stomp power can wrap around the screen from left to right if Mario lands directly next to the screen barrier. [More info](http://smwc.me/1409196)
+* 黄色甲羅を咥えたYの着地時に出る砂煙は、画面横境界近くで発生すると画面左から画面右に瞬間移動する。[More info](http://smwc.me/1409196)
 
 <!--
 * If Yoshi eats a powerup as Mario dies, Mario will "revive" and bounce upward. The speed given varies depending on how far Mario is into the death animation when Yoshi swallows it.
 -->
-* If Yoshi eats a powerup as Mario dies, Mario will "revive" and bounce upward. The speed given varies depending on how far Mario is into the death animation when Yoshi swallows it.
+* マリオが死ぬと同時にYがパワーアップアイテムを食べると、マリオは飛び上がって復活する。上昇時の速さはマリオの死亡アニメーションに依存する。
 
 <!--
 * If the above is done when the time limit for the level reaches 0, the timer will also stay at 0 as if it was set to such when Mario entered the level.
 -->
-* If the above is done when the time limit for the level reaches 0, the timer will also stay at 0 as if it was set to such when Mario entered the level.
+* 上記のバグを時間切れによる死で行うと、時間は0のままになる。その後、そのレベルでは元々時間が0に設定されていたように動作する。
 
 <!--
 * If Yoshi swallows a hundreth coin as Mario is dying, the game will register Mario as dying but will not decrease the life counter. This can be used to "survive" a game over; the game will still show the game over screen, but Mario will reappear on the overworld as normal.
 -->
-* If Yoshi swallows a hundreth coin as Mario is dying, the game will register Mario as dying but will not decrease the life counter. This can be used to "survive" a game over; the game will still show the game over screen, but Mario will reappear on the overworld as normal.
+* マリオが死んでいる最中にYが100枚目のコインを取得すると、マリオは死んだと見なされるが、残機は減らない。これを使えば、ゲームオーバーの画面が表示されてから、OWに戻ることができる。
 
 <!--
 * Layer Switch Glitch: If Yoshi eats a powerup and transforms Mario as he is entering a pipe, Mario will stop entering the pipe and several different effects will occur. Mario will go behind Layer 1 and no longer interact with any sprites except Yoshi and platforms, and his climbing graphic will be glitched. Yoshi will be stuck in his "turning" frame, and while his tongue will still be able to interact with things, it will be invisible and he will be unable to duck. Thirdly, certain sprites which were not burnable before will become burnable, such as Yoshi, sprite coins, powerups, and the goal tape. The opposite is also true, with enemies such as Koopas and shells becoming unburnable. It should be noted that Mario can end up on an invincible Yoshi if he burns Yoshi while he's riding it.
 -->
-* Layer Switch Glitch: If Yoshi eats a powerup and transforms Mario as he is entering a pipe, Mario will stop entering the pipe and several different effects will occur. Mario will go behind Layer 1 and no longer interact with any sprites except Yoshi and platforms, and his climbing graphic will be glitched. Yoshi will be stuck in his "turning" frame, and while his tongue will still be able to interact with things, it will be invisible and he will be unable to duck. Thirdly, certain sprites which were not burnable before will become burnable, such as Yoshi, sprite coins, powerups, and the goal tape. The opposite is also true, with enemies such as Koopas and shells becoming unburnable. It should be noted that Mario can end up on an invincible Yoshi if he burns Yoshi while he's riding it.
+* レイヤー変更：マリオが土管に入っていく最中、Yがパワーアップアイテムを食べてマリオが変身すると、土管に入る動作が中断され、いくつかバグが引き起こされる。マリオはレイヤー1の後ろに表示され、接触判定のあるスプライトがYとプラットフォームのみとなり、金網等を掴んでいる時の表示がバグる。Yはマリオが変身した時の表示で固定されるが、舌は通常と同様に他スプライトを掴んだりできる。また、Yの舌は表示が透明になり、Yは舌を出す時に身をかがめなくなる。三番目に、特定のスプライトが不燃性から可燃性に変化する。例えば、Y・スプライトコイン・パワーアップアイテム・ゴールバーがある。逆に、ノコノコや甲羅といったスプライトがファイアでコインに変わらなくなる。乗っている最中にYをファイアでコインに変えると、無敵Yに騎乗できる。Yが2匹いるときにレイヤー変更をしてから、可視Yに乗ると同時にファイアを当ててコインにすると、無敵Yに乗った状態になる。
 
 <!--
 * If the layer switch glitch is done, Yoshi's tongue will interact strangely with other sprites at some frames, when the camera X position changes 16 pixels. Regardless of the direction that Yoshi faces, the tongue actual hitbox will be stretched to his right.
 -->
-* If the layer switch glitch is done, Yoshi's tongue will interact strangely with other sprites at some frames, when the camera X position changes 16 pixels. Regardless of the direction that Yoshi faces, the tongue actual hitbox will be stretched to his right.
+* レイヤー変更状態の時、カメラのX位置が16ピクセル変わるFにおいて、Yの舌は他スプライトとの判定がおかしくなる。Yの向きに関係なく、舌の当たり判定が右側に発生する。
 
 <!--
 * If Mario is holding an item when he switches layers, the item will become stuck to Mario and he will be unable to let go of it, even if Y and X are released (this also means Yoshi can not be ridden). In addition, if Mario goes to another room, this item will be taken to that room as well, even if he enters through a door; it will appear at whatever position it was at when Mario exited the previous room.
 -->
-* If Mario is holding an item when he switches layers, the item will become stuck to Mario and he will be unable to let go of it, even if Y and X are released (this also means Yoshi can not be ridden). In addition, if Mario goes to another room, this item will be taken to that room as well, even if he enters through a door; it will appear at whatever position it was at when Mario exited the previous room.
+* アイテムを持ちながらレイヤー変更を行うと、アイテムがマリオに張り付いたままになる。XYを離してもアイテムは離れないため、Yに乗れなくなる。ルーム移動すると、持っていたアイテムは移動先に運ばれる。土管の出入りだけでなく、ドアでの移動でも起こり、アイテムの出現位置はドアに入ったときのマリオの座標に準拠する。
 
 <!--
 * If the layer switch glitch is done frame-perfect, Mario will retain sprite interaction and sprites will retain their correct properties, but Yoshi will still glitch and still go behind layers and have glitchy interaction while being ridden. In addition, in this state, if Mario picks up an item, it will be stuck to him as described above.
