@@ -667,7 +667,7 @@ _148個(127個有用)_
 <!--
 * Swallowing a springboard at the same time Yoshi is bouncing off it will give him a large boost while bringing the spring with him. This boost can be extended by holding up and/or B, and can even go through solid blocks. It will also give the springboard a slightly glitched graphic when spat back out. [Video](https://www.youtube.com/watch?v=WOMcX1pycWo) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4319)
 -->
-* ジャンプ台をYが咥えると同時に乗ると、咥えきるまでの間、上方向にブーストを得る。このブーストは↑かB入力で大きくすることができ、ソリッドブロックを抜けられる。ジャンプ台を吐き出すと、表示が縮んだままで出てくる。[Video](https://www.youtube.com/watch?v=WOMcX1pycWo) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4319)
+* ジャンプ台をYが咥えると同時に乗ると、咥えきるまでの間、上方向にブーストを得る。このブーストは上かB入力で大きくすることができ、ソリッドブロックを抜けられる。ジャンプ台を吐き出すと、表示が縮んだままで出てくる。[Video](https://www.youtube.com/watch?v=WOMcX1pycWo) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4319)
 
 <!--
 * Eat-canceling an item: If Mario is hit off of Yoshi while an item is stuck to Yoshi's tongue, that item will be dropped off of it while retaining any properties it had while stuck to the tongue. This can allow for a variety of effects, including causing sprites to lose (some) vertical object interaction, moving normally immovable sprites, and more. [Video](https://youtu.be/1SGfYkXoGjg?t=8m05s)
@@ -883,57 +883,57 @@ _148個(127個有用)_
 <!--
 * If the layer switch glitch is done frame-perfect, Mario will retain sprite interaction and sprites will retain their correct properties, but Yoshi will still glitch and still go behind layers and have glitchy interaction while being ridden. In addition, in this state, if Mario picks up an item, it will be stuck to him as described above.
 -->
-* If the layer switch glitch is done frame-perfect, Mario will retain sprite interaction and sprites will retain their correct properties, but Yoshi will still glitch and still go behind layers and have glitchy interaction while being ridden. In addition, in this state, if Mario picks up an item, it will be stuck to him as described above.
+* レイヤー変更を土管に入るFに行うと、マリオはスプライトとの接触判定を残したままで、スプライトは通常通り動く。Yのみレイヤー1の後ろに表示され、マリオが乗ると通常と異なる判定を持つ。この状態でマリオがアイテムを持つと、アイテムは手前側に表示されたまま、上記のように張り付く。
 
 <!--
 * If Mario is riding Yoshi as he comes out of a pipe downward, holding up will allow Mario to re-enter the pipe immediately.
 -->
-* If Mario is riding Yoshi as he comes out of a pipe downward, holding up will allow Mario to re-enter the pipe immediately.
+* マリオがYに乗った状態で下向き土管から出てくる時、上を押していれば土管にすぐ入り直すことができる。
 
 <!--
 * If Mario is riding Yoshi while big as he comes out of a pipe downward, and there is ground two tiles below the pipe, dismounting Yoshi on the first frame the player gains control will drop Yoshi into the ground.
 -->
-* If Mario is riding Yoshi while big as he comes out of a pipe downward, and there is ground two tiles below the pipe, dismounting Yoshi on the first frame the player gains control will drop Yoshi into the ground.
+* マリオがデカでYに乗った状態で下向き土管から出てくるとき、地面が土管から2マス下にあれば、操作可能になるFにYを降りると、Yは地面を貫通して落ちる。
 
 <!--
 * Dismounting Yoshi repeatedly against a ceiling will let Mario move horizontally (albeit slowly) without moving vertically. This can be used to clip into upside-down slopes.
 -->
-* Dismounting Yoshi repeatedly against a ceiling will let Mario move horizontally (albeit slowly) without moving vertically. This can be used to clip into upside-down slopes.
+* Yに乗った状態で、天井近くでA連打することで、垂直方向には移動せず、ゆっくりだが水平方向に移動できる。これを使って、天井の逆さ坂にめり込める。
 
 <!--
 * Riding a Yoshi into a Mode 7 battle will cause Mario's ground interaction to be one tile higher than it should be. In the Iggy and Larry battles, this doesn't cause any major problems, but in Roy's, Luwig's, Morton's, and Bowser's rooms, Mario will fall through the ground and die if he doesn't jump off.
 -->
-* Riding a Yoshi into a Mode 7 battle will cause Mario's ground interaction to be one tile higher than it should be. In the Iggy and Larry battles, this doesn't cause any major problems, but in Roy's, Luwig's, Morton's, and Bowser's rooms, Mario will fall through the ground and die if he doesn't jump off.
+* モード7バトルにおいてYにに乗ると、マリオの地面との関係が表示より1タイル高くなる。イギー・ラリーのマップでは特に問題はないが、ロイ・ルドウィッグ・モートン・クッパのルームでは、Yから降りないと地面を素通りして落下する。
 
 <!--
 * When Yoshi eat-cancels a Pokey segment, its Y speed constantly increases, causing it to "bounce" if its dropped from a height of y=11 or higher. Yoshi can then eat this bouncing segment infinitely without it actually disappearing, and because it counts as a separate sprite, Mario can turn one Pokey into five individual sprites. Additionally, the segment slowly rises upward at a rate of 8 pixels per bounce, and after about two hours, it'll disappear from looping around the screen.
 -->
-* When Yoshi eat-cancels a Pokey segment, its Y speed constantly increases, causing it to "bounce" if its dropped from a height of y=11 or higher. Yoshi can then eat this bouncing segment infinitely without it actually disappearing, and because it counts as a separate sprite, Mario can turn one Pokey into five individual sprites. Additionally, the segment slowly rises upward at a rate of 8 pixels per bounce, and after about two hours, it'll disappear from looping around the screen.
+* Yで（y=11以上にいる）サンボの体節を食べキャンすると、それのY速度が繰り返し上昇し、バウンドする。体節が消えるまで、何度でもYで食べることができ、それは独立したスプライトとして認識される。サンボ1匹から5個の体節に分けられる。体節はバウンドするたびに8ピクセルずつ上昇し、画面から消えても2時間ほどするとループして戻ってくる。
 
 <!--
 * If Yoshi's tongue comes into contact with part of a pokey while sprite slots are filled, then that part of the Pokey will just completely vanish without being counted as stuck to Yoshi's tongue. This allows Yoshi to very quickly erase the Pokey, as every frame his tongue is in contact with it will cause another segment to disappear.
 -->
-* If Yoshi's tongue comes into contact with part of a pokey while sprite slots are filled, then that part of the Pokey will just completely vanish without being counted as stuck to Yoshi's tongue. This allows Yoshi to very quickly erase the Pokey, as every frame his tongue is in contact with it will cause another segment to disappear.
+* スプライトスロットが埋まっている時に、Yの舌がサンボの一部に触れると、その部分はYの舌に掴まれることなく即座に消える。Yの舌は毎Fサンボの一部を消せるので、素早くサンボ全体を消すことができる。
 
 <!--
 * Holding both left and right at the same time while riding Yoshi will cause him to continously turn back and forth while moving rightward.
 -->
-* Holding both left and right at the same time while riding Yoshi will cause him to continously turn back and forth while moving rightward.
+* Yに乗っている最中に左右同時押しをすると、Yが前と後ろをと交互に振り向きながら右方向に移動していく。
 
 <!--
 * While riding Yoshi, Mario can slide up slopes by holding down and pressing left/right. This will also allow Yoshi to travel across purple triangles without bouncing upward.
 -->
-* While riding Yoshi, Mario can slide up slopes by holding down and pressing left/right. This will also allow Yoshi to travel across purple triangles without bouncing upward.
+* Yに乗っていると、下と左右のどちらかを押すことで坂を登ることができる。これを使うと、ピンクの三角ブロックの上を跳ねずに移動できる。
 
 <!--
 * If Mario jumps off of Yoshi while he is eating Yoshi wings, Mario will still fly up to the Yoshi wings room without a Yoshi.
 -->
-* If Mario jumps off of Yoshi while he is eating Yoshi wings, Mario will still fly up to the Yoshi wings room without a Yoshi.
+* Yが翼を食べた時に乗り捨てていると、Yなしでマリオが上昇してYの翼ステージに移動する。
 
 <!--
 * While in the Yoshi wings room, opening Yoshi's mouth (to stick his tongue out, spit out an item, etc.) will cause his wings to temporarily disappear; you can't fly during that period, but you'll fall faster.
 -->
-* While in the Yoshi wings room, opening Yoshi's mouth (to stick his tongue out, spit out an item, etc.) will cause his wings to temporarily disappear; you can't fly during that period, but you'll fall faster.
+* Yの翼ステージ内で、舌を出したりスプライトを吐き出したりして口を開けると、その間は翼が消える。落下速度は通常より速い。
 
 <!--
 * Taking Yoshi wings or obtaining a bonus game in a room that only uses secondary exits will take Mario to a glitched exit in the bonus game room rather than the room it's supposed to go to. Lunar Magic fixes this by default.
@@ -943,42 +943,42 @@ _148個(127個有用)_
 <!--
 * If Mario is riding on a Yoshi that has a blue shell in its mouth and he slides off of a sprite platform, you'll be unable to control Mario's horizontal movement until he hits something and stops. [Video](https://www.youtube.com/watch?v=v2RjbDKKhVQ)
 -->
-* If Mario is riding on a Yoshi that has a blue shell in its mouth and he slides off of a sprite platform, you'll be unable to control Mario's horizontal movement until he hits something and stops. [Video](https://www.youtube.com/watch?v=v2RjbDKKhVQ)
+* 青甲羅を咥えているYに乗っている最中、プラットフォームスプライトから滑り落ちると、何かにぶつかって止まるまで水平方向に操作できなくなる。[Video](https://www.youtube.com/watch?v=v2RjbDKKhVQ)
 
 <!--
 * When Yoshi has wings from a blue shell and the current level has some form of vertical scrolling enabled, the screen will always scroll upwards to Mario, even if he's not actually riding the Yoshi. This means it'll even scroll up to Mario if he only lands on the ground for a frame, which it normally doesn't do. This effect also persists if Yoshi despawns with the blue shell in his mouth, and will continue until a new Yoshi spawns or a new level is loaded.
 -->
-* When Yoshi has wings from a blue shell and the current level has some form of vertical scrolling enabled, the screen will always scroll upwards to Mario, even if he's not actually riding the Yoshi. This means it'll even scroll up to Mario if he only lands on the ground for a frame, which it normally doesn't do. This effect also persists if Yoshi despawns with the blue shell in his mouth, and will continue until a new Yoshi spawns or a new level is loaded.
+* レベルが垂直方向にスクロールができる設定で、Yが青甲羅を咥えて翼が生えている時、マリオがYに乗っていなくても、マリオに合わせて画面はスクロールする。つまり、マリオが地面に1Fしか足をつけない場合、通常はスクロールしないのにスクロールするようになる。これは青甲羅を咥えたYが消えるか、次の新しいYがスポンするか、新しいレベルが読み込まれるまで続く。
 
 <!--
 * If Invisi-Yoshi exists in a level, swallowing a blue shell with the visible Yoshi will allow flight but will not display wings or play the flight sound effect, nor will the screen automatically follow him vertically.
 -->
-* If Invisi-Yoshi exists in a level, swallowing a blue shell with the visible Yoshi will allow flight but will not display wings or play the flight sound effect, nor will the screen automatically follow him vertically.
+* 透明Yが存在するレベルで可視Yが甲羅を咥えると、翼は表示されず、飛行音もなくなる。上記のバグについて、画面はマリオに合わせたスクロールではなくなる。
 
 <!--
 * If Mario is the "riding Yoshi" state on an Invisi-Yoshi and the visible Yoshi has a shell in its mouth, then the Invisi-Yoshi will receive the effects of that shell as well.
 -->
-* If Mario is the "riding Yoshi" state on an Invisi-Yoshi and the visible Yoshi has a shell in its mouth, then the Invisi-Yoshi will receive the effects of that shell as well.
+* 可視Yが甲羅を咥えていると、各甲羅の効果が騎乗状態の透明Yにも出る。
 
 <!--
 * Landing on Yoshi counts as bouncing on a sprite. Jump off Yoshi enough without touching the ground and the next enemy you hit can give you a 1-up. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#01ED6D)
 -->
-* Landing on Yoshi counts as bouncing on a sprite. Jump off Yoshi enough without touching the ground and the next enemy you hit can give you a 1-up. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#01ED6D)
+* Yに乗ることは、スプライトを踏んだとしてカウントされる。Yに乗った瞬間AでYを離れることを繰り返してから、スプライトを踏むと1upできる。[Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#01ED6D)
 
 <!--
 * If Yoshi's tongue stops touching a berry after it gets stuck to his tongue/mouth (either by turning or ducking), the berry will be eat-canceled as a permanent sprite. This can also be done by baby Yoshi by turning on the frame he comes in contact with the berry, or by passing the berry while he's in the process of eating another sprite.
 -->
-* If Yoshi's tongue stops touching a berry after it gets stuck to his tongue/mouth (either by turning or ducking), the berry will be eat-canceled as a permanent sprite. This can also be done by baby Yoshi by turning on the frame he comes in contact with the berry, or by passing the berry while he's in the process of eating another sprite.
+* 方向転換やかがんだりし、一度触れた木の実からYの舌か口をずらすと、木の実が残存スプライトとして食べキャンされる。これはチビYが木の実と接触する同Fに振り向いたり、別のスプライトを食べている最中に木の実を通過することなどにより起こせる。
 
 <!--
 * If Yoshi runs into a berry on the same frame his tongue picks it up, the game will give two coins.
 -->
-* If Yoshi runs into a berry on the same frame his tongue picks it up, the game will give two coins.
+* 木の実を食べる同Fに舌を出すと、コインを2枚得られる。
 
 <!--
 * You can "store" a berry to Yoshi's tongue by picking up a berry with Yoshi's mouth, but canceling it by sticking out Yoshi's tongue and turning away. You can tell if it was done correctly if the berry doesn't turn into a sprite, but the game still freezes for a frame as if Yoshi ate it. As a result, the next sprite Yoshi swallows will add to his berry count, and can be repeated on a single berry indefinitely. A small additional side effect is that any sprite berries will inherit the palette of the stored berry until it is used. [Video](http://youtu.be/Ses6MZfwpTg)
 -->
-* You can "store" a berry to Yoshi's tongue by picking up a berry with Yoshi's mouth, but canceling it by sticking out Yoshi's tongue and turning away. You can tell if it was done correctly if the berry doesn't turn into a sprite, but the game still freezes for a frame as if Yoshi ate it. As a result, the next sprite Yoshi swallows will add to his berry count, and can be repeated on a single berry indefinitely. A small additional side effect is that any sprite berries will inherit the palette of the stored berry until it is used. [Video](http://youtu.be/Ses6MZfwpTg)
+* Yの口で木の実をピックアップすることで、Yの舌に木の実をストアできるが、Yの舌を出して振り向くことで飲み込むことをキャンセルできる。完璧にこれを行うと、木の実はスプライトに変わらないが、Yが実際に木の実を食べたかのようにフリーズする。結果として、Yが次にスプライトを食べると、木の実カウントが増加する。これは1つの木の実で何度でも行える。他の小さな変わった効果として、スプライト状態になった木の実は木の実がストアされるまで使われていたパレットを引き継ぐ。[Video](http://youtu.be/Ses6MZfwpTg)
 
 <!--
 * If Yoshi has a null sprite in his mouth, passing his mouth by a berry will cause him to store the berry to the null sprite (giving him a berry when he swallows). During certain frames of the swallowing animation, you can also actually eat the berry instantaneously as opposed to storing it.
@@ -993,72 +993,72 @@ _148個(127個有用)_
 <!--
 * Berries don't work correctly in vertical levels; they will treat the level data as if it were still in a horizontal format, which results in them not working at all past the top two screens of the level, and even on those screens the interaction point and actual berry will be disconnected, resulting in Yoshi eating berries out of nowhere (leaving behind a green bush tile in its place). [Fix](https://www.smwcentral.net/?p=section&a=details&id=15543)
 -->
-* Berries don't work correctly in vertical levels; they will treat the level data as if it were still in a horizontal format, which results in them not working at all past the top two screens of the level, and even on those screens the interaction point and actual berry will be disconnected, resulting in Yoshi eating berries out of nowhere (leaving behind a green bush tile in its place). [Fix](https://www.smwcentral.net/?p=section&a=details&id=15543)
+* 縦レベルの木の実は、正常に動作しない。木の実が横レベルのフォーマットとして扱われることが原因である。食べられたとしても、表示とYが食べる位置は異なる。[Fix](https://www.smwcentral.net/?p=section&a=details&id=15543)
 
 <!--
 * When Yoshi eats a berry by running into it, the game will adjust Mario and Yoshi's position slightly during the freeeze to center him on the block. If the berry is placed close enough to a slope, this can be used to clip them into the slope.
 -->
-* When Yoshi eats a berry by running into it, the game will adjust Mario and Yoshi's position slightly during the freeeze to center him on the block. If the berry is placed close enough to a slope, this can be used to clip them into the slope.
+* 移動しながらYが木の実を食べる時、ゲームはフリーズの間に発生するマリオとYの座標のズレを調整しようとし、ブロックにめり込むことがある。坂道に設置された木の実を使って、坂抜けすることもできる。
 
 <!--
 * Dismounting Yoshi while he's eating a berry will cause Mario to normal jump off instead of spinjump, despite still giving an X and Y speed as if he spinjumped.
 -->
-* Dismounting Yoshi while he's eating a berry will cause Mario to normal jump off instead of spinjump, despite still giving an X and Y speed as if he spinjumped.
+* Yが直接木の実を食べている最中にYを降りると、スピンではなく通常のジャンプになる。ただし、X速度・Y速度はスピンの時と同じとなる。
 
 <!--
 * In the Japanese version of SMW, Yoshi is able to eat the jumping dolphins. This is not possible in any other release.
 -->
-* In the Japanese version of SMW, Yoshi is able to eat the jumping dolphins. This is not possible in any other release.
+* 日本語版でのみ、Yは跳ねるイルカを食べられる。
 
 <!--
 * If a Baby Yoshi and adult Yoshi are spawned in the same level, Yoshi's head graphics will glitch and the game will have some strange effects. One effect in particular is that berries will not actually be eaten when Yoshi's head touches them; the game will keep registering him as eating it, but it will never disappear, letting you get an infinite number of berries.
 -->
-* If a Baby Yoshi and adult Yoshi are spawned in the same level, Yoshi's head graphics will glitch and the game will have some strange effects. One effect in particular is that berries will not actually be eaten when Yoshi's head touches them; the game will keep registering him as eating it, but it will never disappear, letting you get an infinite number of berries.
+* YとチビYが同じレベルにスポンされると、Yの頭がバグる。影響の1つとして、Yの頭が木の実に触れても、木の実がなくならない。つまり、木の実を無限に食べられる。
 
 <!--
 * If both Baby Yoshi and Yoshi eat the same item, Yoshi can still spit out the item, but it will have glitched properties. Strange effects can also occur from two Baby Yoshis eating the same items. This can additionally be used to create a null sprite.
 -->
-* If both Baby Yoshi and Yoshi eat the same item, Yoshi can still spit out the item, but it will have glitched properties. Strange effects can also occur from two Baby Yoshis eating the same items. This can additionally be used to create a null sprite.
+* チビYとYが同時にアイテムを食べると、Yはそれを吐き出せるが、そのアイテムの性質が変化する。2匹のチビYが同時に同じアイテムを食べると、ヌルスプライトが生成される。
 
 <!--
 * If Baby Yoshi swallows multiple enemies consecutively, the game may register him swallowing an extra non-existant sprite; this can be used to grow a Baby Yoshi with only three sprites.
 -->
-* If Baby Yoshi swallows multiple enemies consecutively, the game may register him swallowing an extra non-existant sprite; this can be used to grow a Baby Yoshi with only three sprites.
+* チビYが連続して敵を食べると、ゲームは存在しないスプライトを食べたと認識することがある。これにより、チビYをスプライト3体で成長させることができる。
 
 <!--
 * While Baby Yoshi is swallowing a shell, it's actually just temporarily moved to the background rather than having sprite interaction disabled. This means you can use it to kill climbing Net Koopas behind a net from the in front of it.
 -->
-* While Baby Yoshi is swallowing a shell, it's actually just temporarily moved to the background rather than having sprite interaction disabled. This means you can use it to kill climbing Net Koopas behind a net from the in front of it.
+* チビYに咥えられている最中の甲羅は、一時的にスプライトと相互作用しない背景に移動する。これを使うことで、マリオは表にいながらネットの裏側にいる網ノコノコを倒すことが出来る。
 
 <!--
 * If Baby Yoshi grows as he is eating a sprite, that sprite will be eat-canceled. This can also result as a side effect of eating multiple sprites consecutively, meaning, although you need at least three sprites for it, the last sprite may not actually be eaten.
 -->
-* If Baby Yoshi grows as he is eating a sprite, that sprite will be eat-canceled. This can also result as a side effect of eating multiple sprites consecutively, meaning, although you need at least three sprites for it, the last sprite may not actually be eaten.
+* チビYがスプライトを食べている最中に成長すると、そのスプライトは食べキャンされる。複数のスプライトを連続して食べ、成長させるには少なくとも3体必要だが、最後のスプライトが実際には食べられてない。
 
 <!--
 * If Baby Yoshi swallows a non-permanent sprite while far enough offscreen, the sprite will despawn as he is eating it. This will allow said sprite to be allowed to respawn even though it was used to feed Yoshi, making it possible to grow him with just a single enemy. Additionally, this effect can be used to item swap.
 -->
-* If Baby Yoshi swallows a non-permanent sprite while far enough offscreen, the sprite will despawn as he is eating it. This will allow said sprite to be allowed to respawn even though it was used to feed Yoshi, making it possible to grow him with just a single enemy. Additionally, this effect can be used to item swap.
+* チビYが残存スプライトでないスプライトを十分画面外で食べると、そのスプライトは食べられている最中に消える。そのスプライトは再読込でリスポンするので、1匹の敵スプライトでチビYを成長させることができる。これはアイテムスワップにも使える。
 
 <!--
 * If Baby Yoshi grows close enough to a ceiling and Mario lands on the Yoshi while it's still next to it, Mario can jump straight off of Yoshi and through the ceiling (regardless of his size). Alternatively, you can be forced far enough into the ceiling such that Mario can clip through corners where the ceiling and left wall meet, retaining Yoshi in the process.
 -->
-* If Baby Yoshi grows close enough to a ceiling and Mario lands on the Yoshi while it's still next to it, Mario can jump straight off of Yoshi and through the ceiling (regardless of his size). Alternatively, you can be forced far enough into the ceiling such that Mario can clip through corners where the ceiling and left wall meet, retaining Yoshi in the process.
+* チビYが天井近くで成長してそれにマリオが乗れる時、（マリオのパワーアップに依存せず）乗った瞬間に乗り捨てることで天井抜けができる。また、天井近くのYで乗り降りを繰り返すことにより、左に進んでいき、左壁があるならば天井の角にめり込める。
 
 <!--
 * Spawning a throwblock will briefly set the high byte of its X position as the value at the address $(95 + sprite slot) for a frame. If a Baby Yoshi is at the same position within that screen, it will actually register the block and swallow it.
 -->
-* Spawning a throwblock will briefly set the high byte of its X position as the value at the address $(95 + sprite slot) for a frame. If a Baby Yoshi is at the same position within that screen, it will actually register the block and swallow it.
+* ブルブルブロックを持つと、それのX座標の上位バイトが1フレームだけアドレス$(95 + sprite slot)に代入される。もしチビYがブルブルブロックと画面が整数倍ずれた位置に存在すると、そのブルブルブロックを食べる。
 
 <!--
 * Baby Yoshi can swallow sprites as they're rising out of a block. If thrown at the right angle, Baby Yoshi can even hit a block and eat the sprite that comes out of it in a single throw.
 -->
-* Baby Yoshi can swallow sprites as they're rising out of a block. If thrown at the right angle, Baby Yoshi can even hit a block and eat the sprite that comes out of it in a single throw.
+* チビYはブロックから出てくる最中のスプライトを食べることが可能。適切な向きでチビYを投げると、ブロックに当たると同時にスプライトを食べる。
 
 <!--
 * If a level has a no-Yoshi entrance and Mario dies in the level with a Yoshi, he'll keep the Yoshi when he exits to the overworld.
 -->
-* If a level has a no-Yoshi entrance and Mario dies in the level with a Yoshi, he'll keep the Yoshi when he exits to the overworld.
+* Yが入れないレベルでYに乗って死ぬと、OWにYを持ち越せる。
 
 <!--
 * If a level has a no-Yoshi entrance and Mario enters the level with a Yoshi, then mounts a new Yoshi in the level and dismounts him, he'll lose the Yoshi on the overworld as well. Beating the level without dismounting this new Yoshi will simply replace the original with it.
