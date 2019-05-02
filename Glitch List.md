@@ -327,17 +327,17 @@ _70個(64個有用)_
 <!--
 * Mario can survive being crushed by the Layer 3 smashers by alternating A and B every frame.
 -->
-* レイヤー3の槌に潰されても、1F毎にA・Bを交互に押せば圧死しない。
+* レイヤー3の大木に潰されても、1F毎にA・Bを交互に押せば圧死しない。
 
 <!--
 * Mario will "stick" to the bottom of the Layer 3 smashers, making him fall slower if he touches them as they're poking out of the ceiling.
 -->
-* レイヤー3の槌より遅い速度で落下すれば、地面に着地するまで槌の底にくっつける。
+* レイヤー3の大木より遅い速度で落下すれば、地面に着地するまで大木の底にくっつける。
 
 <!--
 * Mario can fly through Layer 3 smashers if he either dives into them at the right angle or gets pushed into them.
 -->
-* 右向きに突っ込むか押し込まれていれば、レイヤー3の槌の中で飛行していられる。
+* 右向きに突っ込むか押し込まれていれば、レイヤー3の大木の中で飛行していられる。
 
 ---
 
@@ -1063,7 +1063,7 @@ _148個(127個有用)_
 <!--
 * If a level has a no-Yoshi entrance and Mario enters the level with a Yoshi, then mounts a new Yoshi in the level and dismounts him, he'll lose the Yoshi on the overworld as well. Beating the level without dismounting this new Yoshi will simply replace the original with it.
 -->
-* If a level has a no-Yoshi entrance and Mario enters the level with a Yoshi, then mounts a new Yoshi in the level and dismounts him, he'll lose the Yoshi on the overworld as well. Beating the level without dismounting this new Yoshi will simply replace the original with it.
+* Yが入れないレベルにYに乗って入場し、レベル内で新しいYに乗ってから降りると、OWのYがいなくなる。新しく乗ったYから降りずにクリアすると、OWのYは新しいYに置換される。
 
 ---
 
@@ -1080,67 +1080,67 @@ _148個(127個有用)_
 <!--
 * Having a Yoshi on the same screen as a Podoboo will glitch Yoshi's head graphics. His body can also be glitched by the splash created by lava.
 -->
-* Having a Yoshi on the same screen as a Podoboo will glitch Yoshi's head graphics. His body can also be glitched by the splash created by lava.
+* Yとバブルが同じ画面内に存在すると、Yの頭の表示がバグる。マグマの飛沫が表示されると、Yの体の表示がバグる。
 
 <!--
 * When riding Yoshi, Mario will not interact with the bottom tile of a Banzai Bill.
 -->
-* When riding Yoshi, Mario will not interact with the bottom tile of a Banzai Bill.
+* Yに乗っていると、マグナムキラーの一番下のタイルの部分との当たり判定がなくなる。
 
 <!--
 * While turning on Yoshi, one of Mario's feet is non-existant and can be seen through.
 -->
-* While turning on Yoshi, one of Mario's feet is non-existant and can be seen through.
+* Yに乗っている間、マリオの片足は表示されていない。
 
 <!--
 * Mario can still be knocked off of Yoshi by a Boo ceiling even when he has a star.
 -->
-* Mario can still be knocked off of Yoshi by a Boo ceiling even when he has a star.
+* マリオはスター状態であっても、Yに乗っている状態で天井テレサに当たると、Yを降ろさせられる。
 
 <!--
 * While Yoshi is laying an egg, you can press X or Y repeatedly while riding him to play his tongue sound.
 -->
-* While Yoshi is laying an egg, you can press X or Y repeatedly while riding him to play his tongue sound.
+* 乗っているYが産卵している間にXYを連打すると、その分舌を出す効果音がずれて再生される。
 
 <!--
 * Attempting to spinjump off Yoshi on the frame he lays an egg will cause the spinjump sound to play, but Mario won't actually dismount.
 -->
-* Attempting to spinjump off Yoshi on the frame he lays an egg will cause the spinjump sound to play, but Mario won't actually dismount.
+* Yが産卵するFにスピンジャンプを試みても、スピンジャンプの音は再生されるが、Yからは降りられない。
 
 <!--
 * If you stick out Yoshi's tongue before Mario hits a goal tape, you can duck or stand up during the walk animation as long as it's out.
 -->
-* If you stick out Yoshi's tongue before Mario hits a goal tape, you can duck or stand up during the walk animation as long as it's out.
+* ヨッシーの舌が出ている最中にマリオがゴールバーに触れると、舌が出ている間はYをしゃがませたりできる。
 
 <!--
 * Yoshi can still duck or even spit out sprites during any period where the game is temporarily frozen from $9D (including keyholes).
 -->
-* Yoshi can still duck or even spit out sprites during any period where the game is temporarily frozen from $9D (including keyholes).
+* Yは（鍵穴を含む）$9Dでゲームが一時的にフリーズしている間、しゃがんだりスプライトを吐き出すことが出来る。
 
 <!--
 * When spawning multiple Yoshis, the newest Yoshi will hatch twice as fast as the last-hatched Yoshi.
 -->
-* When spawning multiple Yoshis, the newest Yoshi will hatch twice as fast as the last-hatched Yoshi.
+* Yを複数出すと、一番新しいYが2倍速で孵化する。
 
 <!--
 * Taking damage on the same frame Yoshi hatches will cause Mario's shrinking animation to speed up.
 -->
-* Taking damage on the same frame Yoshi hatches will cause Mario's shrinking animation to speed up.
+* Yが孵化する同Fにダメージを受けると、マリオの縮むアニメーションが早くなる。
 
 <!--
 * If Mario dies on the same frame Yoshi hatches, the game will continue to function as Mario is dying, rather than freezing as normal. This can lead to some strange effects such as Mario freezing mid-fall, remounting Yoshi even as he dies, or dying a second time due to an enemy or time up.
 -->
-* If Mario dies on the same frame Yoshi hatches, the game will continue to function as Mario is dying, rather than freezing as normal. This can lead to some strange effects such as Mario freezing mid-fall, remounting Yoshi even as he dies, or dying a second time due to an enemy or time up.
+* Yが孵化する同Fに死ぬと、ゲームはフリーズしないで通常通りに動きつつ、死亡アニメーションが続行される。これはいくつか変な現象が発生し、死亡落下中Yに乗り降りができたり、敵に当たる・タイムアップなどで2度死ねる。
 
 <!--
 * Yoshi's tongue turns invisible while entering a pipe, but will still pull sprites around. However, it will behave strangely as a result of the tongue not actually being drawn.
 -->
-* Yoshi's tongue turns invisible while entering a pipe, but will still pull sprites around. However, it will behave strangely as a result of the tongue not actually being drawn.
+* Yの舌を出しながら土管に入ると、舌の表示が透明に変わり、舌は判定位置が狂いながらもスプライトを掴める。
 
 <!--
 * If Mario dies on Yoshi while Yoshi has his tongue out, Yoshi's head may briefly loop to the top of the screen when they fall off the bottom of the level.
 -->
-* If Mario dies on Yoshi while Yoshi has his tongue out, Yoshi's head may briefly loop to the top of the screen when they fall off the bottom of the level.
+* マリオが舌を出しているYに乗りながら死に、レベルの底に落ちていくと、Yの頭の表示が少し画面上部にループする。
 
 <!--
 * Yoshi can lick the brown revolving platform by sticking his tongue out to the right side of its base. It won't actually do anything besides make a noise, though.
@@ -1155,22 +1155,22 @@ _148個(127個有用)_
 <!--
 * If Yoshi eats the directional coin sprite, the music will never change back.
 -->
-* If Yoshi eats the directional coin sprite, the music will never change back.
+* Yがコントロールコインを食べると、音楽が戻らなくなる。
 
 <!--
 * Occasionally, eat-canceled berries may take the place of powerup graphics.
 -->
-* Occasionally, eat-canceled berries may take the place of powerup graphics.
+* 時々、食べキャンされた木の実のグラがパワーアップアイテムに入れ替わる。
 
 <!--
 * Collecting a green berry after the music speeds up from time running out will increase the timer while keeping the music at its speed; the effect can then be repeated indefinitely. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4938)
 -->
-* Collecting a green berry after the music speeds up from time running out will increase the timer while keeping the music at its speed; the effect can then be repeated indefinitely. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4938)
+* 緑色の木の実を使って、タイムを100以上から99以下に何度もすると、その度に音楽が早くなっていく。[Fix](http://www.smwcentral.net/?p=section&a=details&id=4938)
 
 <!--
 * If Yoshi's head eats a green berry while Yoshi is ducking and sticking out his tongue, his head's graphic will glitch slightly.
 -->
-* If Yoshi's head eats a green berry while Yoshi is ducking and sticking out his tongue, his head's graphic will glitch slightly.
+* 緑の木の実を食べる時に舌を出すと、Yの頭の表示がバグる。
 
 <!--
 * If Baby Yoshi is eating a sprite offscreen, turning while carrying an item in a higher slot than him will cause the sprite's tilemap to mess up.
@@ -3324,52 +3324,52 @@ _14個_
 <!--
 * Transforming into caped Mario while offscreen in an autoscrolling level will softlock the game. [Fix](http://www.smwcentral.net/?p=section&a=details&id=5780)
 -->
-* Transforming into caped Mario while offscreen in an autoscrolling level will softlock the game. [Fix](http://www.smwcentral.net/?p=section&a=details&id=5780)
+* 強制スクロールステージの画面外でマントに変身すると、ソフトロックされる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=5780)
 
 <!--
 * Screen scrolling an autoscroller sprite onto the screen will softlock the game. [Fix](https://www.smwcentral.net/?p=section&a=details&id=15711)
 -->
-* Screen scrolling an autoscroller sprite onto the screen will softlock the game. [Fix](https://www.smwcentral.net/?p=section&a=details&id=15711)
+* 強制スクロールスプライトを読み込むようにLRスクロールすると、ソフトロックされる。[Fix](https://www.smwcentral.net/?p=section&a=details&id=15711)
 
 <!--
 * Swallowing a berry on the same frame Mario collects a powerup or takes damage will softlock the game while giving Mario an infinite supply of coins. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8770)
 -->
-* Swallowing a berry on the same frame Mario collects a powerup or takes damage will softlock the game while giving Mario an infinite supply of coins. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8770)
+* 木の実を食べると同時にパワーアップアイテムをとったりダメージを受けると、ソフトロックされ無限にコインを取得し続ける。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8770)
 
 <!--
 * Swallowing a berry while dying will hardlock the game. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8770)
 -->
-* Swallowing a berry while dying will hardlock the game. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8770)
+* 死亡中に木の実を食べると、ハードロックされる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8770)
 
 <!--
 * Spawning a Podoboo without sprite buoyancy enabled will hardlock the game.
 -->
-* Spawning a Podoboo without sprite buoyancy enabled will hardlock the game.
+* バブルがスプライトの浮力設定がないレベルでスポンすると、ハードロックされる。
 
 <!--
 * Transforming on the same frame that Mario does his victory pose at the end of a bonus game will hardlock the game.
 -->
-* Transforming on the same frame that Mario does his victory pose at the end of a bonus game will hardlock the game.
+* ルーレットステージ終了時のピースをするFに変身すると、ハードロックされる。
 
 <!--
 * Eating certain sprites via item swap may crash the game. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* Eating certain sprites via item swap may crash the game. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
+* アイテムスワップを使って特定のスプライトを食べると、クラッシュする。[Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
 * Spitting out a null sprite while on a brown revolving platform may cause the game to crash. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* Spitting out a null sprite while on a brown revolving platform may cause the game to crash. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
+* 茶色の回転する足場の上でヌルスプライトを吐くと、クラッシュする。[Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
 * Collecting powerups with a powerup status greater than the fireflower may cause the game to crash. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* Collecting powerups with a powerup status greater than the fireflower may cause the game to crash. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
+* ファイアフラワー以上のパワーアップ状態になるアイテムをとると、クラッシュする。[Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
 * Some stunned sprites may crash the game when attempting to spawn an invalid sprite. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* Some stunned sprites may crash the game when attempting to spawn an invalid sprite. [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
+* 一部のスタンされたスプライトが無効なスプライトを生成しようとすると、ゲームがクラッシュする。[Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
 * Certain results from Yoshification may crash the game, for instance by spawning a sprite that writes a value of 0C+ to $160E (the index of the sprite in Yoshi's mouth) which ultimately corrupts RAM when spat out, or by writing a value of 03+ to $1594 (a value specifying the routine currently used for Yoshi's mouth) which will immediately execute garbage code upon setting. Additional crashes can be obtained by transfering values from Yoshi to the sprite in question, such as writing to $151C (which Yoshi uses as the distance of his tongue) to a flying ? block (which uses it to determine the sprite to spawn), and then hitting the block. [Vid](https://youtu.be/4hKg1J9iuUk)[eos](https://www.youtube.com/watch?v=2fLOZrQzDnQ&feature=youtu.be&t=1h8m49s)
@@ -3384,19 +3384,19 @@ _14個_
 <!--
 * Sending a directional coin sprite off the left side of a level with Layer 3 may crash the game.
 -->
-* Sending a directional coin sprite off the left side of a level with Layer 3 may crash the game.
+* レイヤー3レベルでコントロールコインが画面左端に侵入すると、クラッシュする。
 
 <!--
 * Increasing the high bit of the mushroom scale sprite's Y position in a vertical level will crash the game.
 -->
-* Increasing the high bit of the mushroom scale sprite's Y position in a vertical level will crash the game.
+* 縦ステージで天秤キノコのY座標の上位ビットが上昇し続けると、クラッシュする。
 
 <!--
 * Spawning more than one Big Boo Boss will cause the game to crash or, at the very least, noticeably glitch the screen.
 -->
-* Spawning more than one Big Boo Boss will cause the game to crash or, at the very least, noticeably glitch the screen.
+* ボステレサが2匹以上読み込まれると、クラッシュするか画面がバグる。
 
 <!--
 * Spawning sprite D2 (stop generator) while the Layer 3 smasher is active will crash the game. [Fix](https://www.smwcentral.net/?p=nmap&m=smwrom&u=0#02D421)
 -->
-* Spawning sprite D2 (stop generator) while the Layer 3 smasher is active will crash the game. [Fix](https://www.smwcentral.net/?p=nmap&m=smwrom&u=0#02D421)
+* レイヤー3の大木が稼働中にスプライトD2（stop generator）がスポンすると、クラッシュする。[Fix](https://www.smwcentral.net/?p=nmap&m=smwrom&u=0#02D421)

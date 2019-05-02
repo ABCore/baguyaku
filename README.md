@@ -31,6 +31,7 @@ GitHub Pages：訳文にマウスを重ねると、原文がツールチップ�
 | English | 訳 | 備考 |
 |:--:|:--:|:--|
 | Baby Yoshi | チビY | 助数詞：匹 |
+| directional coin | コントロールコイン ||
 | feather | 羽根 ||
 | fireboll | ファイア | ファイアボール |
 | goal tape | ゴールバー ||
@@ -52,4 +53,5 @@ GitHub Pages：訳文にマウスを重ねると、原文がツールチップ�
 
 | English | 訳 | 備考 |
 |:--:|:--:|:--|
+| Layer 3 smasher | レイヤー3の大木 ||
 | screen side exit | 画面横出口 ||
