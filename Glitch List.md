@@ -196,7 +196,7 @@ _70個(64個有用)_
 <!--
 * The capespin timer isn't cleared inbetween rooms, so capespinning prior to entering a door/pipe will cause Mario to start the next room with a capespin. Normally this isn't very useful, but one advantage is that it applies to even diagonal pipes, which normally don't allow input for a brief period after being fired. Additionally, it can be used to enter and exit pipes while facing the opposite direction you normally would.
 -->
-* マント回転タイマーはルーム簡で保持される。マント回転しながらドアや土管に入ると、移動後に回転を再開する。通常これはあまり役に立たないが、発射後入力を受け付けない斜め土管からの出現時に使うことが出来る。さらに、土管の出入りの時に通常と逆を向くことが可能になる。
+* マント回転タイマーはルーム簡で保持される。マント回転しながらドアや土管に入ると、移動後に回転を再開する。通常これはあまり役に立たないが、発射後入力を受け付けない斜め土管からの出現時に使うことができる。さらに、土管の出入りの時に通常と逆を向くことが可能になる。
 
 <!--
 * When Layer 2 or Layer 3 is scrolling and has interaction, the relative Layer 2 position ($7E0026) gets added to capespins to handle interaction with between them. Normally, this resets back to Mario when it goes back to handle sprites and Layer 1, but if the game is frozen (via $9D), this doesn't happen, and the relative position keeps gets added repeatedly. This causes the cape hitbox  axis of Layer 2/3's movement during the freeze, hitting any blocks or sprites along the way. [More info](http://smwc.me/1228582)
@@ -211,7 +211,7 @@ _70個(64個有用)_
 <!--
 * Fast diving: Mario's flying "frame" will increase or decrease every time a direction is tapped, allowing his speed to increase faster than simply holding it down. With this in mind, you can rapidly press one direction to dive quickly or build big air faster.
 -->
-* ファストダイビング：飛行中、進行方向への入力で毎F速度が増減する。単純な押しっぱではなく、調整して入力することで、通常より早く最速になることが出来る。また、1F毎に進行方向へ入力すると、早くダイブの姿勢になり、ビッグエアを得られる。
+* ファストダイビング：飛行中、進行方向への入力で毎F速度が増減する。単純な押しっぱではなく、調整して入力することで、通常より早く最速になることができる。また、1F毎に進行方向へ入力すると、早くダイブの姿勢になり、ビッグエアを得られる。
 
 <!--
 * Air cancel: You can cancel an air catch through a number of ways, including spinning around, hitting a ceiling, or reversing your speed. If you manage to do this, it can be used to decrease the height given by an air catch (useful for tight passages), or it can be used to catch air while maintaining big air.
@@ -221,7 +221,7 @@ _70個(64個有用)_
 <!--
 * Infinite air catch: Based off the above, you can catch big air with a low X speed, use <+B to slow Mario down, and then reverse his speed to cancel the catch. This will give him a significant Y-speed boost while maintaining big air, which can then be repeated an infinite number of times. [More](http://smwc.me/617858) [info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#PerpetualAirCatch)
 -->
-* ∞エアキャッチ(無限上昇)：上記に基づくと、小さいX速度でビッグエアを得られ、<+Bを使ってX速度を小さくし、X速度を反転させると上昇キャンセルができる。この操作は大きいY加速を得つつも、ビッグエアを保持でき、さらに何回でも繰り返すことが出来る。[More](http://smwc.me/617858) [info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#PerpetualAirCatch)
+* ∞エアキャッチ(無限上昇)：上記に基づくと、小さいX速度でビッグエアを得られ、<+Bを使ってX速度を小さくし、X速度を反転させると上昇キャンセルができる。この操作は大きいY加速を得つつも、ビッグエアを保持でき、さらに何回でも繰り返すことができる。[More](http://smwc.me/617858) [info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#PerpetualAirCatch)
 
 <!--
 * Mario can "stick" to ceilings if he catches air close enough to it. Simple hold the opposite direction to Mario's direction and he won't start to fall downward. Big air can also be maintained through this glitch.
@@ -262,7 +262,7 @@ _70個(64個有用)_
 <!--
 * The item in the item box can be released even while the game is frozen with $9D.
 -->
-* アイテムボックスのアイテムは、$9Dでフリーズしていても出すことが出来る。
+* アイテムボックスのアイテムは、$9Dでフリーズしていても出すことができる。
 
 <!--
 * Shooting a fireball at a moving conveyor belt or rope slope will warp the fireball five blocks upward if the slope is moving downward, and ten blocks upward if it is moving upward. The opposite height changes will occur if the fireball hits the slope while moving downward in parallel with it.
@@ -277,7 +277,7 @@ _70個(64個有用)_
 <!--
 * Fireballs and silver P-switches can't kill sprites in slot #A or #B.
 -->
-* ファイアと銀Pは、スロット#Aor#Bのスプライトを倒すことが出来ない。
+* ファイアと銀Pは、スロット#Aor#Bのスプライトを倒すことができない。
 
 <!--
 * Mario can kill many sprites that would normally be unkillable by sliding into them, often resulting in a glitched death sprite. Similarly, you can also get some glitched sprites with star power, capespins, and quake sprites as well.
@@ -452,7 +452,7 @@ _148個(127個有用)_
 <!--
 * If a Yoshi is one tile below the top of a ledge, Mario can land on him if he clips far enough into the top of the block while Yoshi is bouncing upward.
 -->
-* Yが1タイル分下に位置していても、Yが一番跳ねた時ならば、床を貫通してYに乗ることが出来る。
+* Yが1タイル分下に位置していても、Yが一番跳ねた時ならば、床を貫通してYに乗ることができる。
 
 <!--
 * Landing on Yoshi at the right angle next to a solid block may clip Mario inside the block.
@@ -542,7 +542,7 @@ _148個(127個有用)_
 <!--
 * Non-carryable sprites that get eaten by Yoshi are actually erased one frame prior to his tongue fully retracting, allowing you to pick up a second sprite if Yoshi's head passes by it. One well-known use of this is for quickly eating Pokey segments.
 -->
-* 持ち運べないスプライトがYに食べられる時、舌が完全に引っ込む1F前にそのスプライトは消える。その際、Yの頭が別のスプライトと重なっていれば、2番目のスプライトを舌で掴むことが出来る。よく知られた例として、サンボの高速食いがある。
+* 持ち運べないスプライトがYに食べられる時、舌が完全に引っ込む1F前にそのスプライトは消える。その際、Yの頭が別のスプライトと重なっていれば、2番目のスプライトを舌で掴むことができる。よく知られた例として、サンボの高速食いがある。
 
 <!--
 * If Yoshi is despawned with a sprite in his mouth, that sprite will persist despite no longer "existing". It's impossible to despawn the sprite in this state, so the slot essentially becomes useless.
@@ -592,7 +592,7 @@ _148個(127個有用)_
 <!--
 * Dismounting a visible Yoshi in a level with more than one Yoshi spawned when entering the death zone underneath the level will cause Mario to warp to the next visible Yoshi's Y-position, and will receive the same effects described in the previous glitch. However, unlike the previous glitch, Mario will be unable to jump off this Yoshi.
 -->
-* 透明Yに乗ってから可視Yに乗り、デスゾーンで可視Yを乗り捨てると、透明Yの高さにワープし、前述のバグと同じことが起こる。ただしこの方法だと、透明Yから降りることが出来なくなる。
+* 透明Yに乗ってから可視Yに乗り、デスゾーンで可視Yを乗り捨てると、透明Yの高さにワープし、前述のバグと同じことが起こる。ただしこの方法だと、透明Yから降りることができなくなる。
 
 <!--
 * While Mario is in the state described by the previous two glitches, Yoshi's will be unable to despawn from the level. This mean, if a Yoshi falls off the bottom of the level, it will not be despawned by the death zone, and will instead loop vertically all the way around the level. It should be noted, though, that it takes about 18 minutes for Yoshi to complete this loop.
@@ -612,7 +612,7 @@ _148個(127個有用)_
 <!--
 * Killing the visible Yoshi will cause the next invisi-Yoshi to become visable; if Mario is riding this Yoshi, it will appear one tile below him, allowing him to fall through the ground. Also, if Mario is climbing when the Invisi-Yoshi becomes visible, he'll continue to climb despite riding Yoshi at the same time.
 -->
-* 可視Yを殺すと、次の透明Yが可視化する。もし透明Yに乗っている時に可視Yが消えると、透明Yがマリオの1タイル下に可視化して出現し、床ぬけが出来る。何かを掴んでいる状態でこれが起こると、掴んだままYに騎乗している状態になる。
+* 可視Yを殺すと、次の透明Yが可視化する。もし透明Yに乗っている時に可視Yが消えると、透明Yがマリオの1タイル下に可視化して出現し、床ぬけができる。何かを掴んでいる状態でこれが起こると、掴んだままYに騎乗している状態になる。
 
 <!--
 * If the visible Yoshi is killed while it has an item in its mouth, the next visible Yoshi will spawn with a nonexistant null sprite in its mouth. When spat out, "nothing" will come out of Yoshi's mouth. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites)
@@ -713,7 +713,7 @@ _148個(127個有用)_
 <!--
 * Certain sprites have the "give powerup when eaten" flag set despite not being powerups, most notable of which being the Chucks. Depending on Mario's powerup status, using item swap to eat these sprites will give Mario odd sprites in the item box. Two particularly well-known uses are getting a goal sphere from a Clappin' Chuck when Mario has a fireflower, and getting a Lakitu cloud from Chargin' Chucks when small. [More info](http://smwspeedruns.com/index.php/Orb) - [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 -->
-* 特定のスプライトはパワーアップアイテムではないが、食べるとパワーアップするフラグが設定されている。アイテムスワップを使ってスプライトを食べると、マリオのパワーアップ状態に依存して変なスプライトをアイテムボックスに送ることが出来る。マリオがファイアの状態でその場で跳ねるブルを食べるとゴール玉が得られ、チビの状態でブルを食べるとジュゲムの雲が得られる。[More info](http://smwspeedruns.com/index.php/Orb) - [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
+* 特定のスプライトはパワーアップアイテムではないが、食べるとパワーアップするフラグが設定されている。アイテムスワップを使ってスプライトを食べると、マリオのパワーアップ状態に依存して変なスプライトをアイテムボックスに送ることができる。マリオがファイアの状態でその場で跳ねるブルを食べるとゴール玉が得られ、チビの状態でブルを食べるとジュゲムの雲が得られる。[More info](http://smwspeedruns.com/index.php/Orb) - [Data Table](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning)
 
 <!--
 * You can "store" an item swap on an Invisi-Yoshi's tongue by sticking a sprite onto a visible Yoshi's tongue before it's replaced by another Yoshi. When the invisible Yoshi becomes visible again, Yoshi's tongue will spawn with it and grab whatever sprite happens to be in the same slot as the one that you stuck to it before.
@@ -803,7 +803,7 @@ _148個(127個有用)_
 <!--
 * Spitting out a stored sprite when its stun timer is nearly 0 will cause the sprite spawned from it to act as if it was spat out of Yoshi's mouth. For most sprites, this will make the sprite kickable as if it were a flopping fish, but it can have some odd additional effects on certain sprites.
 -->
-* ストアされたスプライトをスタンタイマーが0近くの時に吐き出すと、新しいスプライトが吹っ飛んで出てくる。大抵のスプライトは地上のプクプクのように蹴ることが出来るが、一部のスプライトは奇妙な効果がある。
+* ストアされたスプライトをスタンタイマーが0近くの時に吐き出すと、新しいスプライトが吹っ飛んで出てくる。大抵のスプライトは地上のプクプクのように蹴ることができるが、一部のスプライトは奇妙な効果がある。
 
 <!--
 * If a sprite gives special properties to Yoshi when in his mouth (e.g. blue or yellow shells/Koopas), then storing that sprite in Yoshi's mouth via the stun glitch will also inherit those properties to Yoshi until either the sprite gets overwritten or Yoshi swallows the storage. In the case of wings, the wing graphic will also not show up, nor will the flight sounds play.
@@ -1028,7 +1028,7 @@ _148個(127個有用)_
 <!--
 * While Baby Yoshi is swallowing a shell, it's actually just temporarily moved to the background rather than having sprite interaction disabled. This means you can use it to kill climbing Net Koopas behind a net from the in front of it.
 -->
-* チビYに咥えられている最中の甲羅は、一時的にスプライトと相互作用しない背景に移動する。これを使うことで、マリオは表にいながらネットの裏側にいる網ノコノコを倒すことが出来る。
+* チビYに咥えられている最中の甲羅は、一時的にスプライトと相互作用しない背景に移動する。これを使うことで、マリオは表にいながらネットの裏側にいる網ノコノコを倒すことができる。
 
 <!--
 * If Baby Yoshi grows as he is eating a sprite, that sprite will be eat-canceled. This can also result as a side effect of eating multiple sprites consecutively, meaning, although you need at least three sprites for it, the last sprite may not actually be eaten.
@@ -1115,7 +1115,7 @@ _148個(127個有用)_
 <!--
 * Yoshi can still duck or even spit out sprites during any period where the game is temporarily frozen from $9D (including keyholes).
 -->
-* Yは（鍵穴を含む）$9Dでゲームが一時的にフリーズしている間、しゃがんだりスプライトを吐き出すことが出来る。
+* Yは（鍵穴を含む）$9Dでゲームが一時的にフリーズしている間、しゃがんだりスプライトを吐き出すことができる。
 
 <!--
 * When spawning multiple Yoshis, the newest Yoshi will hatch twice as fast as the last-hatched Yoshi.
@@ -1198,17 +1198,17 @@ _118個(104個有用)_
 <!--
 * Items can get stuck in walls, and will spasm while inside.
 -->
-* Items can get stuck in walls, and will spasm while inside.
+* アイテムは壁の中に押しこむことができ、壁中のアイテムは痙攣する。
 
 <!--
 * Items stuck in walls can be moved around by scrolling the screen on the right frames.
 -->
-* Items stuck in walls can be moved around by scrolling the screen on the right frames.
+* 壁中で痙攣しているアイテムは、$9Dでフリーズする度にずれていく。正確なFで行えば、任意の方向にずらしていける。
 
 <!--
 * Items can be forced through solid blocks by entering it far enough before releasing. [Video](https://www.youtube.com/watch?v=YkyZZiAAR2o)
 -->
-* Items can be forced through solid blocks by entering it far enough before releasing. [Video](https://www.youtube.com/watch?v=YkyZZiAAR2o)
+* アイテムをソリッドブロックに充分めり込ませて離すと、貫通させられる。[Video](https://www.youtube.com/watch?v=YkyZZiAAR2o)
 
 <!--
 * If an object is tossed high enough off the top of the screen, it will despawn.
@@ -1218,107 +1218,106 @@ _118個(104個有用)_
 <!--
 * Items will not interact with blocks if they are 8 or more pixels offscreen on the left side or 12 or more pixels offscreen on the right. When even a pixel offscreen on the left, the hit animation will also not appear.
 -->
-* Items will not interact with blocks if they are 8 or more pixels offscreen on the left side or 12 or more pixels offscreen on the right. When even a pixel offscreen on the left, the hit animation will also not appear.
+* アイテムは左側が8ピクセル以上または右側が12ピクセル以上画面外にあるブロックに作用しない。ブロックの左側が少しでも画面外にあると、ヒットアニメーションが表示されない。
 
 <!--
 * Items can fall through slope corners if they're moving fast enough at the right angle. Shells can also do this occasionally just by riding up the slope.
 -->
-* Items can fall through slope corners if they're moving fast enough at the right angle. Shells can also do this occasionally just by riding up the slope.
+* 充分な速度で移動している最中にアイテムを坂の角で離すと、通り抜けることがある。甲羅の場合、通り抜けずに坂の上に乗り上げることがある。
 
 <!--
 * Taking a pipe exit to a normal entrance while holding onto an item will cause Mario to release the item upon entering the level, spawning it at whatever position the pipe exit was in the previous one.
 -->
-* Taking a pipe exit to a normal entrance while holding onto an item will cause Mario to release the item upon entering the level, spawning it at whatever position the pipe exit was in the previous one.
+* アイテムを持ったまま土管に入り、出口が土管でないレベルに移動すると、土管に入り終わった時の座標にアイテムが出現する。
 
 <!--
 * Double-grabbing: Mario can pick up two items at once if they're the right distance apart. Due to oddities in the way springboards are handled, you can grab more sprites at the same time if at least one of them is a springboard. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4252)
 -->
-* Double-grabbing: Mario can pick up two items at once if they're the right distance apart. Due to oddities in the way springboards are handled, you can grab more sprites at the same time if at least one of them is a springboard. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4252)
+* 2個持ち：適度に離れた2つのアイテムを一度に持つことができる。ジャンプ台は他のアイテムと性質が異なるため、ジャンプ台複数個とジャンプ台以外のアイテム（多くて2個）で同時持ちできる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=4252)
 
 <!--
 * Although shells, throwblocks, Goombas, and Bob-ombs usually kill each other when doublegrabbed (unless they're eat-canceled), they can safely be held together if Mario enters a pipe at the same time. They will kill each other on exit, however.
 -->
-* Although shells, throwblocks, Goombas, and Bob-ombs usually kill each other when doublegrabbed (unless they're eat-canceled), they can safely be held together if Mario enters a pipe at the same time. They will kill each other on exit, however.
+* 甲羅・ブルブルブロック・クリボン・ボム兵などを食べキャンされていない2つで同時持ちしようとすると、相殺するが、同時持ちするFに土管入ると、相殺を防ぐことができる。しかし、結局移動後に相殺する。
 
 <!--
 * Shells, throwblocks, Goombas, and Bob-ombs can actually overlap without killing each other, so long as they have zero Y speed and aren't in a carried/kicked state. The easiest way to do this is by placing one on top of a tile, then dropping the other into the tile so it gets pushed on top. Once overlapping, the sprite in the lower slot can be recovered by grabbing it while facing away from the other sprite.
 -->
-* Shells, throwblocks, Goombas, and Bob-ombs can actually overlap without killing each other, so long as they have zero Y speed and aren't in a carried/kicked state. The easiest way to do this is by placing one on top of a tile, then dropping the other into the tile so it gets pushed on top. Once overlapping, the sprite in the lower slot can be recovered by grabbing it while facing away from the other sprite.
+* 甲羅・ブルブルブロック・クリボン・ボム兵はY速度が0かつ持たれたり蹴られている状態でなければ、相殺せずに重なることができる。片方を1タイル上に乗せて、もう一方をそのタイルに押し込んで持ち上がらせることで、簡単に行える。一度重なっても、下位スロットのスプライトはもう片方のスプライトの反対側から掴むことで取ることができる。
 
 <!--
 * Items can also be carried while Mario has a P-balloon by grabbing both on the same frame.
 -->
-* Items can also be carried while Mario has a P-balloon by grabbing both on the same frame.
+* Pバルーンとアイテムに同時に触れると、風船状態でアイテムを持ち運べる。
 
 <!--
 * Items can be carried while climbing, sliding, or flying by simply grabbing the item without getting off, jumping, or stopping flight. Note that the one exception to this rule is the moving rope mechanism, which Mario will fall off of when grabbing an item. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4252)
 -->
-* Items can be carried while climbing, sliding, or flying by simply grabbing the item without getting off, jumping, or stopping flight. Note that the one exception to this rule is the moving rope mechanism, which Mario will fall off of when grabbing an item. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4252)
+* ツタや金網を掴んでいる最中、坂を滑っている最中、飛行中などにアイテムに掴むと、動作を続けながら持ち運べる。動くロープ中にアイテムをとると、アイテムを掴みロープを離す。[Fix](http://www.smwcentral.net/?p=section&a=details&id=4252)
 
 <!--
 * Carried sprites won't actually flip to the other sides of nets with Mario, but the game will still let him hold it through the fence.
 -->
-* Carried sprites won't actually flip to the other sides of nets with Mario, but the game will still let him hold it through the fence.
+* 持ち運ばれているスプライトはマリオと一緒に金網の裏側に行くことはないが、掴まれたままである。
 
 <!--
 * Items can be released while flying without stopping flight by letting go of Y for a single frame some time after catching air.
 -->
-* Items can be released while flying without stopping flight by letting go of Y for a single frame some time after catching air.
+* 物持ち飛行中、上昇後の数F間の1FだけX(Y)を離すと、アイテムを離して飛行を維持できる。
 
 <!--
 * If Mario gets between two solid carryable sprites and a wall, he will be pushed into the wall and be crushed. If you're big, it's also possible to spinjump through the floor before he dies.
 -->
-* If Mario gets between two solid carryable sprites and a wall, he will be pushed into the wall and be crushed. If you're big, it's also possible to spinjump through the floor before he dies.
+* マリオが2つの持ち運べるソリッドスプライトと壁に挟まれると、壁に押し込まれ潰される。もしマリオがデカなら、死ぬ前にスピンジャンプをすることで床抜けができる。
 
 <!--
 * Mario can jump through ceilings while big if he stands on two solid carryable sprites while they are close enough to said ceiling. Alternatively, you can use Yoshi and a single solid sprite for the same effect. This can also be done while small and with just a single key or springboard if they are moving upward toward the ceiling as Mario lands on it.
 -->
-* Mario can jump through ceilings while big if he stands on two solid carryable sprites while they are close enough to said ceiling. Alternatively, you can use Yoshi and a single solid sprite for the same effect. This can also be done while small and with just a single key or springboard if they are moving upward toward the ceiling as Mario lands on it.
+* 2つの持ち運べるソリッドスプライトが天井に充分近い位置で、それの上にマリオが乗っている時、ジャンプで天井を抜けられる。Yに乗っていれば、1つのソリッドスプライトでもできる。天井近くまで上昇する鍵かジャンプ台に乗ることでも行える。
 
 <!--
 * If Mario is big, landing on a key close to the ceiling will cause his head to enter the ceiling enough to push Mario leftward, even through solid walls.
 -->
-* If Mario is big, landing on a key close to the ceiling will cause his head to enter the ceiling enough to push Mario leftward, even through solid walls.
+* マリオがデカで、天井に近い高さにある鍵に乗ると、頭が天井に入りマリオが左向きに押される。
 
 <!--
 * Mario can enter through doors and pipes while he is standing on any solid sprite.
 -->
-* Mario can enter through doors and pipes while he is standing on any solid sprite.
+* ソリッドスプライトに乗っている間、ドアと土管に入ることができる。
 
 <!--
 * Any of the solid carryable sprites are able to damage a Pokey on the frame they are thrown.
 -->
-* Any of the solid carryable sprites are able to damage a Pokey on the frame they are thrown.
+* どの持ち運べるソリッドスプライトでも、投げるFはサンボにダメージを与えられる。
 
 <!--
 * Keyjump: Mario can land on and jump off of a key while it is in midair. Note that if the key is falling too fast, this glitch may not be possible. [Video](https://youtu.be/V9447JWXzaU)
 -->
-* Keyjump: Mario can land on and jump off of a key while it is in midair. Note that if the key is falling too fast, this glitch may not be possible. [Video](https://youtu.be/V9447JWXzaU)
+* 鍵ジャンプ：マリオは宙に浮いている鍵に乗り、持ってジャンプできる。鍵の落下速度が大きいと、できなくなる。[Video](https://youtu.be/V9447JWXzaU)
 
 <!--
 * If two keys are spawned at the same time, only the key in the **lowest** sprite slot will be able to interact with keyholes.
 -->
-* If two keys are spawned at the same time, only the key in the **lowest** sprite slot will be able to interact with keyholes.
+* 2つ以上の鍵がスポンしている場合、鍵穴に反応するのはスロットIDが一番小さい鍵のみ。
 
 <!--
 * If Mario is standing on two keys at the same time, he will be unable to jump until he gets off of one.
 -->
-* If Mario is standing on two keys at the same time, he will be unable to jump until he gets off of one.
+* 重なっている2つの鍵の上に立つと、ジャンプができなくなる。
 
 <!--
 * Mario is unable to walk in a one-tile space below keys, even if he's small or ducking.
 -->
-* Mario is unable to walk in a one-tile space below keys, even if he's small or ducking.
+* 鍵の1タイル下のスペースは、マリオがチビでもしゃがんでも通り抜けられない。
 
 <!--
 * P-switch jump: Mario can land on and jump off of a P-switch on the first frame he hits the top of it. [Video](https://www.youtube.com/watch?v=ThUu-lWmuiQ) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4330)
 -->
-* P-switch jump: Mario can land on and jump off of a P-switch on the first frame he hits the top of it. [Video](https://www.youtube.com/watch?v=ThUu-lWmuiQ) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4330)
-
+* Pジャンプ：Pスイッチを踏むFにジャンプできる。[Video](https://www.youtube.com/watch?v=ThUu-lWmuiQ) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4330)
 <!--
 * Carrying a silver P-switch through a pipe will make it act like a blue P-switch in the next room. Note that if another sprite in a lower slot is doublegrabbed on top of the silver P-switch, this glitch will not take effect. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#02AC18)
 -->
-* Carrying a silver P-switch through a pipe will make it act like a blue P-switch in the next room. Note that if another sprite in a lower slot is doublegrabbed on top of the silver P-switch, this glitch will not take effect. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#02AC18)
+* 銀Pスイッチを持って土管でルーム移動すると、効果が青Pスイッチに変化する。銀Pスイッチより下位のスロットのスプライトと2個持ちして土管移動すると、このバグは起こらない。[Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#02AC18)
 
 <!--
 * If a pressed P-switch despawns before it disappears in a cloud of smoke, then the switch will respawn as if it was not pressed.
