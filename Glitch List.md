@@ -1322,38 +1322,37 @@ _118個(104個有用)_
 <!--
 * If a pressed P-switch despawns before it disappears in a cloud of smoke, then the switch will respawn as if it was not pressed.
 -->
-* If a pressed P-switch despawns before it disappears in a cloud of smoke, then the switch will respawn as if it was not pressed.
+* 潰れたPが煙になって消える前に、画面下などで潰れた状態のまま消すと、潰れてないPが再び出現する。
 
 <!--
 * Mario will still bounce off of a springboard even if it moves out from beneath him.
 -->
-* Mario will still bounce off of a springboard even if it moves out from beneath him.
+* ジャンプ台に一度乗れば、マリオはジャンプ台から離れてもジャンプする。
 
 <!--
 * Springboards will disable Mario's interaction with both blocks and sprites while he is stuck on it, allowing him to fall through corners or platform sprites. You can also be pushed through ceilings due to this, if Mario throws up a springboard and is able to land on it as it is rising. This can most easily be done in any 2-3 tile high space. [Video](https://www.youtube.com/watch?v=8u0aCd83jso)
 -->
-* Springboards will disable Mario's interaction with both blocks and sprites while he is stuck on it, allowing him to fall through corners or platform sprites. You can also be pushed through ceilings due to this, if Mario throws up a springboard and is able to land on it as it is rising. This can most easily be done in any 2-3 tile high space. [Video](https://www.youtube.com/watch?v=8u0aCd83jso)
+* ジャンプ台に乗っている間、マリオはブロック・スプライトを貫通できる。足場スプライトを通り抜けたり、ブロックの角にめり込めたりする。もし投げ上げたジャンプ台に乗ることができたら、マリオもジャンプ台と共に上昇する。これは高さ2-3マスが一番やりやすい。[Video](https://www.youtube.com/watch?v=8u0aCd83jso)
 
 <!--
 * If Mario is big and standing up, he'll be unable to jump through the bottoms of springboards. If he's small, ducking, or riding Yoshi, however, this won't happen.
 -->
-* If Mario is big and standing up, he'll be unable to jump through the bottoms of springboards. If he's small, ducking, or riding Yoshi, however, this won't happen.
+* マリオがデカの時、ジャンプ台を通過することができない。チビ・しゃがんでいる・Yに乗っている時は通過できる。
 
 <!--
 * Sprites do not clear the miscellaneous table at $15AC on initialization, which results in it being carried by sprites if they occupy the same sprite slot. Most sprites don't use $15AC for anything noticeable, but notably, shells don't interact with the sides of blocks when set, which means you can prevent a shell from being "pushed aside" on spawn if it's spawning inside a solid block (see [this video](https://cdn.discordapp.com/attachments/167412470862970881/482284837659607041/turn_timer_transfer.gif)). Note: Fixed by default by all sprite tools.
 -->
 * Sprites do not clear the miscellaneous table at $15AC on initialization, which results in it being carried by sprites if they occupy the same sprite slot. Most sprites don't use $15AC for anything noticeable, but notably, shells don't interact with the sides of blocks when set, which means you can prevent a shell from being "pushed aside" on spawn if it's spawning inside a solid block (see [this video](https://cdn.discordapp.com/attachments/167412470862970881/482284837659607041/turn_timer_transfer.gif)). Note: Fixed by default by all sprite tools.
 
-
 <!--
 * If a shell is spinning in a one-tile space, it will become invincible to all quake sprites (including capespins, Yoshi stomps, and hit blocks) until it exits the space.
 -->
-* If a shell is spinning in a one-tile space, it will become invincible to all quake sprites (including capespins, Yoshi stomps, and hit blocks) until it exits the space.
+* 甲羅が1タイル分のスペースで回転している場合、全ての揺れスプライト（マント・Yの砂煙・ブロック）に反応しなくなる。
 
 <!--
 * If a carryable sprite touches lava for only a single frame (e.g. by throwing the sprite upwards on that frame), it will resulting in $1558 being set for the sprite without killing it. This can have a number of effects on the sprite depending on how it uses $1558; for instance, a Koopa shell will suddenly have a Koopa inside it. On the frame a shell touches the lava, Mario can also bounce off of or be damaged by it as if it were a normal Koopa, as well.
 -->
-* If a carryable sprite touches lava for only a single frame (e.g. by throwing the sprite upwards on that frame), it will resulting in $1558 being set for the sprite without killing it. This can have a number of effects on the sprite depending on how it uses $1558; for instance, a Koopa shell will suddenly have a Koopa inside it. On the frame a shell touches the lava, Mario can also bounce off of or be damaged by it as if it were a normal Koopa, as well.
+* 持ち運べるスプライトを洞窟の溶岩に（触れたFに上投げするなどして）1Fだけ触れさせると、スプライトは死なずに$1558がセットされる。スプライトの$1558をどう使うかに寄って、様々な現象が起こる。例えば、甲羅が洞窟の溶岩に触れると、中身がセットされて通常のノコノコに戻る。
 
 <!--
 * You can perform the above glitch with other carryable sprites by getting said sprite in slot #1 and overloading it. This will have some odd effects on the sprites when they're reset, such giving a key wings or changing a P-switch into a gold switch (acts like a blue switch, though).
