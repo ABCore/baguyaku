@@ -1367,37 +1367,37 @@ _118個(104個有用)_
 <!--
 * If you restun a shell with a Koopa inside (by way of capespin/block hit/etc) just as the Koopa jumps out, the shell will end up restunning with another Koopa still inside, resulting in two Koopas overall.
 -->
-* If you restun a shell with a Koopa inside (by way of capespin/block hit/etc) just as the Koopa jumps out, the shell will end up restunning with another Koopa still inside, resulting in two Koopas overall.
+* 中身入りの甲羅からノコノコが飛び出ると同時に（マント回転やブロックなどで）甲羅を攻撃すると、甲羅は別のノコノコを内部に生じさせて跳ね上がる。結果として2体のノコノコが生じる。
 
 <!--
 * Portable disco shell: If a Koopa enters a shell, releasing or throwing the shell upward on the frame the Koopa would normally appear will cause the Koopa to disappear and retain its shell form. If the Koopa that entered it was yellow, though, then throwing this shell will turn it into a disco shell.
 -->
-* Portable disco shell: If a Koopa enters a shell, releasing or throwing the shell upward on the frame the Koopa would normally appear will cause the Koopa to disappear and retain its shell form. If the Koopa that entered it was yellow, though, then throwing this shell will turn it into a disco shell.
+* 持ち運び無敵甲羅：裸ノコノコが甲羅に入って、当たり判定が発生するFにその甲羅を上投げすると、中のノコノコが消え、甲羅は元の状態のままとなる。ただし、黄色甲羅でこれを行ってから横投げしたり蹴ったりすると、無敵甲羅になる。
 
 <!--
 * Repeating the portable disco shell glitch with the same shell 255 times will cause the next yellow Koopa to enter the shell to get rejected immediately from it as if it were knocked out of the shell.
 -->
-* Repeating the portable disco shell glitch with the same shell 255 times will cause the next yellow Koopa to enter the shell to get rejected immediately from it as if it were knocked out of the shell.
+* 持ち運び無敵甲羅のバグを255回繰り返した後、次の裸黄ノコノコがその甲羅に入ろうとすると、即座に甲羅から吹っ飛んで出てくる。
 
 <!--
 * If another Koopa (other than a yellow one) enters the portable disco shell, the Koopa that is created will basically act like a normal yellow Koopa, but will act like a disco shell when bounced on. This Koopa can also be turned back into a portable disco shell by capespinning it. This new disco shell is unique in that it can be stopped at any time with a capespin, rather than being destroyed like a normal disco shell would. [Video](https://youtu.be/cN2d57Y6p8A)
 -->
-* If another Koopa (other than a yellow one) enters the portable disco shell, the Koopa that is created will basically act like a normal yellow Koopa, but will act like a disco shell when bounced on. This Koopa can also be turned back into a portable disco shell by capespinning it. This new disco shell is unique in that it can be stopped at any time with a capespin, rather than being destroyed like a normal disco shell would. [Video](https://youtu.be/cN2d57Y6p8A)
+* 黄色以外の裸ノコノコが持ち運べる無敵甲羅に入ると、通常の黄ノコノコのように行動する。特殊な点は踏んだ時に、無敵甲羅を踏んだようにマリオが跳ねる。このノコノコはマントの回転を当てると、持ち運びできる甲羅になり、この甲羅が無敵状態になってもマントの回転で止めることができる。[Video](https://youtu.be/cN2d57Y6p8A)
 
 <!--
 * Capespinning the special disco shell described above can also give a few unused colors of shells, such as gold, grey, brown, sky blue, teal, or pink. These colors will either act like a blue or yellow shell when eaten by Yoshi or when a Koopa enters them.
 -->
-* Capespinning the special disco shell described above can also give a few unused colors of shells, such as gold, grey, brown, sky blue, teal, or pink. These colors will either act like a blue or yellow shell when eaten by Yoshi or when a Koopa enters them.
+* 無敵甲羅をマントの回転で止めると、通常使われない色の甲羅にできる。例えば、金・茶・空・青緑・桃色がある。これらの色の甲羅をYが咥えたり、ノコノコが入ると、青色か黄色の甲羅として動作する。
 
 <!--
 * If a blue Koopa kicks a portable disco shell (thereby activating it), the speed of the shell will be much greater than it normally moves at.
 -->
-* If a blue Koopa kicks a portable disco shell (thereby activating it), the speed of the shell will be much greater than it normally moves at.
+* 裸青ノコノコが持ち運べる無敵甲羅を蹴ると、無敵甲羅の速度が通常より大きくなる。
 
 <!--
 * If a Koopa tries to flip over a shell in a higher slot than it, it will usually be killed by the shell in the process.
 -->
-* If a Koopa tries to flip over a shell in a higher slot than it, it will usually be killed by the shell in the process.
+* 裸ノコノコが自分よりスロットIDの大きい甲羅をひっくり返すとき、通常その過程で自滅する。
 
 <!--
 * Blue Koopas can catch thrown Bob-Ombs, but only when they're either in a lower slot or on the ground on the frame they register interaction. However, the Koopa won't slide or stop the Bob-Omb's movement, causing it to be kicked from inside or behind the Koopa. It can even fly straight through him or make him turn around to face it.
@@ -1407,7 +1407,7 @@ _118個(104個有用)_
 <!--
 * When catching a dropped throwblock, blue Koopas won't clear the throwblock's X speed, which can cause it to bounce inside the Koopa. If it bounces far enough, it can actually kill the Koopa after it kicks it.
 -->
-* When catching a dropped throwblock, blue Koopas won't clear the throwblock's X speed, which can cause it to bounce inside the Koopa. If it bounces far enough, it can actually kill the Koopa after it kicks it.
+* 下入力しながら手放されたブルブルブロックは青ノコノコによってX速度をリセットされず、青ノコノコを貫通する。十分な速度で行えば、青ノコノコは自分の後ろにあるブルブルブロックを蹴り、自分で死ぬ。
 
 <!--
 * If a shell bounces far enough into a blue Koopa, the Koopa will be killed by the shell as soon as it kicks it. This can also be forced by screenscrolling as the Koopa is catching the shell.
