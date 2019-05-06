@@ -1412,27 +1412,27 @@ _118個(104個有用)_
 <!--
 * If a shell bounces far enough into a blue Koopa, the Koopa will be killed by the shell as soon as it kicks it. This can also be forced by screenscrolling as the Koopa is catching the shell.
 -->
-* If a shell bounces far enough into a blue Koopa, the Koopa will be killed by the shell as soon as it kicks it. This can also be forced by screenscrolling as the Koopa is catching the shell.
+* 甲羅が青ノコノコに十分めり込んでいると、青ノコノコは甲羅を蹴った直後に甲羅で死ぬ。これはノコノコが甲羅をキャッチしている最中、画面スクロールによっても引き起こされる。
 
 <!--
 * If a shell is registered by a blue Koopa but does not actually stop (due to bouncing off of a wall or otherwise), then the Koopa will be "dragged" along with the shell until the shell is either stopped or despawns.
 -->
-* If a shell is registered by a blue Koopa but does not actually stop (due to bouncing off of a wall or otherwise), then the Koopa will be "dragged" along with the shell until the shell is either stopped or despawns.
+* 裸青ノコノコが動いている甲羅を一度捉えると、甲羅が止まるか消えるまで、ノコノコは甲羅に押されてスライドする。
 
 <!--
 * If Mario grabs a shell that a blue Koopa is about to kick, and then lets go or throws it upwards before the Koopa kicks, the shell will still be kicked by the Koopa even if it's not actually touching it.
 -->
-* If Mario grabs a shell that a blue Koopa is about to kick, and then lets go or throws it upwards before the Koopa kicks, the shell will still be kicked by the Koopa even if it's not actually touching it.
+* 裸青ノコノコが蹴ろうとしている甲羅は動かせ、蹴られるFに掴んだり横投げなどをしていなければ、ノコノコは甲羅が離れていたとしても蹴る。
 
 <!--
 * Screen scrolling as a blue Koopa catches a shell that has a Koopa inside will cause the Koopa to be flung out of the shell.
 -->
-* Screen scrolling as a blue Koopa catches a shell that has a Koopa inside will cause the Koopa to be flung out of the shell.
+* 青ノコノコが中身入り甲羅をキャッチしている時に画面スクロールすると、中身が飛び出てくる。
 
 <!--
 * While any Koopa is in their kicking animation (including to flip a shell over), they will not be affected by gravity and won't move with the layer they're standing on. When on a scrolling Layer 2, this can cause them to end up inside the layer, as well.
 -->
-* While any Koopa is in their kicking animation (including to flip a shell over), they will not be affected by gravity and won't move with the layer they're standing on. When on a scrolling Layer 2, this can cause them to end up inside the layer, as well.
+* 全てのノコノコは甲羅を蹴る（ひっくり返すのも含む）アニメーション中、重力と自分が立っているレイヤーの移動を無理する。レイヤー2のスクロール中にこれが起こると、めりこむことがある。
 
 <!--
 * If a blue Koopa and a dropped carryable item have opposite "facing" directions ($157C), then the item will warp in front of the blue Koopa when it touches it, regardless of their relative positions to each other. Note that the "facing" direction of a carryable sprite is not the direction it's actually moving in; instead, it's the last horizontal direction the sprite was moving in when in a non-carryable status (alternatively, it can be inverted by bumping off a wall).
@@ -1442,57 +1442,57 @@ _118個(104個有用)_
 <!--
 * If a thrown Koopa/Buzzy Beetle shell (or stunned Spiny/Yellow Parakoopa) is caught by a blue Koopa and Mario grabs said shell from it before it is kicked, then when the shell returns to normal status (i.e. a normal Koopa/beetle), the sprite will immediately die when touched. [Vid](https://twitter.com/nathanisbored1/status/910402559994503168)[eos](https://twitter.com/Kaizoman666/status/910549944704077824)
 -->
-* If a thrown Koopa/Buzzy Beetle shell (or stunned Spiny/Yellow Parakoopa) is caught by a blue Koopa and Mario grabs said shell from it before it is kicked, then when the shell returns to normal status (i.e. a normal Koopa/beetle), the sprite will immediately die when touched. [Vid](https://twitter.com/nathanisbored1/status/910402559994503168)[eos](https://twitter.com/Kaizoman666/status/910549944704077824)
+* 投げられたノコノコやメット（/スタンしたトゲメット/黄色パタパタ)が青ノコノコにキャッチされ、蹴られる前にマリオが掴み、それから通常の状態（普通のノコノコ/メット等）に戻してから触れると、そのスプライトは即死する。[Vid](https://twitter.com/nathanisbored1/status/910402559994503168)[eos](https://twitter.com/Kaizoman666/status/910549944704077824)
 
 <!--
 * Yellow Koopas will jump as if a shell was thrown at them so long as a shell is thrown in close proximity to them, even if it's being thrown away from them or bouncing off of a wall.
 -->
-* Yellow Koopas will jump as if a shell was thrown at them so long as a shell is thrown in close proximity to them, even if it's being thrown away from them or bouncing off of a wall.
+* 黄ノコノコはとても近い距離で甲羅が投げられてもジャンプする。壁で反射した甲羅でもジャンプする。
 
 <!--
 * Yellow Koopas will also jump if any other carriable sprite is thrown next to them, so long as they are in close enough proximity on the frame the sprite is thrown.
 -->
-* Yellow Koopas will also jump if any other carriable sprite is thrown next to them, so long as they are in close enough proximity on the frame the sprite is thrown.
+* 黄色ノコノコは近くで他の持ち運べるスプライトが投げられるとジャンプする。
 
 <!--
 * If you capespin or bounce a shell that a yellow Koopa enters before it turns into a disco shell, then the Koopa will instead change colors to whatever color the shell is.
 -->
-* If you capespin or bounce a shell that a yellow Koopa enters before it turns into a disco shell, then the Koopa will instead change colors to whatever color the shell is.
+* 黄ノコノコが甲羅に入り無敵甲羅に変わる前に、マントの回転を当てたり甲羅を跳ねさせると、ノコノコは甲羅の色に変化する。
 
 <!--
 * Shells will ignore the bottoms of blocks while they are spinning.
 -->
-* Shells will ignore the bottoms of blocks while they are spinning.
+* 動いている甲羅は、ブロックの底部に接触判定を持たない。
 
 <!--
 * Carrying a buzzy beetle shell or a shell that has a Koopa inside it through a pipe will cause the Koopa/Beetle to never emerge from the shell. Note that if a sprite in a higher slot is doublegrabbed on top of the shell, this glitch will not take effect.
 -->
-* Carrying a buzzy beetle shell or a shell that has a Koopa inside it through a pipe will cause the Koopa/Beetle to never emerge from the shell. Note that if a sprite in a higher slot is doublegrabbed on top of the shell, this glitch will not take effect.
+* メットやノコノコが入った甲羅を持って土管移動すると、ただの甲羅の状態のままになる。もし甲羅よりスロットIDが大きいスプライトと2個持ちして移動したら、このバグは発生しない。
 
 <!--
 * Throwing a Goomba upwards as Mario is colliding with a wall may cause it to warp upwards several tiles.
 -->
-* Throwing a Goomba upwards as Mario is colliding with a wall may cause it to warp upwards several tiles.
+* クリボンを壁に密着して上投げすると、数タイル分上に瞬間移動することがある。
 
 <!--
 * Landing on a Goomba, Bob-Omb, or Koopa while flying will squish it with a glitched graphic rather than the regular actions they take.
 -->
-* Landing on a Goomba, Bob-Omb, or Koopa while flying will squish it with a glitched graphic rather than the regular actions they take.
+* クリボン・ボム兵・ノコノコを飛行中に踏み潰すと、通常とは異なるバグった表示になる。
 
 <!--
 * Shells, throwblocks, Goombas, and Bob-ombs can destroy sprites that would normally be undestroyable (e.g. Thwomps, Thwimps) so long as they are in a higher sprite slot than the sprite.
 -->
-* Shells, throwblocks, Goombas, and Bob-ombs can destroy sprites that would normally be undestroyable (e.g. Thwomps, Thwimps) so long as they are in a higher sprite slot than the sprite.
+* 甲羅・ブルブルブロック・クリボン・ボム兵は通常倒せないスプライト(ドッスンやコトン)などであっても、スプライトIDがそれらより大きいと倒すことができる。
 
 <!--
 * Dropping or kicking a shell or Goomba on the frame that an enemy is about to collide with it will destroy the other sprite without destroying the shell/goomba, and will give 1000 points as if they actually had collided.
 -->
-* Dropping or kicking a shell or Goomba on the frame that an enemy is about to collide with it will destroy the other sprite without destroying the shell/goomba, and will give 1000 points as if they actually had collided.
+* 甲羅・クリボンを離す・蹴ることを敵に接触するFに行うと、甲羅・クリボンを死なせずに敵を倒すことができる。これを行うと、ぶつけた時のように1000点入る。
 
 <!--
 * Flying ? blocks will destroy shells, Bob-Ombs, Goombas, and throwblocks if Mario runs into the block while holding them.
 -->
-* Flying ? blocks will destroy shells, Bob-Ombs, Goombas, and throwblocks if Mario runs into the block while holding them.
+* 飛んでいる？ブロックは掴んでいる甲羅・ボム兵・クリボン・ブルブルブロックで触れると叩ける。
 
 <!--
 * Throwing a carryable sprite at a flying ? block will zero its Y speed upon hitting it. Alternatively, its X speed will be zeroed if it is thrown up at the block. And if it's dropped on top of the block, it will fall through while still hitting the block.
