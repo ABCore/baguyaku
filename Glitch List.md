@@ -1497,77 +1497,77 @@ _118個(104個有用)_
 <!--
 * Throwing a carryable sprite at a flying ? block will zero its Y speed upon hitting it. Alternatively, its X speed will be zeroed if it is thrown up at the block. And if it's dropped on top of the block, it will fall through while still hitting the block.
 -->
-* Throwing a carryable sprite at a flying ? block will zero its Y speed upon hitting it. Alternatively, its X speed will be zeroed if it is thrown up at the block. And if it's dropped on top of the block, it will fall through while still hitting the block.
+* 持ち運べるスプライトを飛んでいる？ブロックに当てるとY速度またはX速度が0になる。スプライトがブロックの上に落下すると、ブロックに引っかかかりながら落ちていく。
 
 <!--
 * Flying ? blocks will invert the X speed of throwblocks when hit, essentially bouncing the block back in the previous direction, rather than making them break.
 -->
-* Flying ? blocks will invert the X speed of throwblocks when hit, essentially bouncing the block back in the previous direction, rather than making them break.
+* 飛んでいる？ブロックにブルブルブロックを当てると、壊れることなくX速度が反転する。
 
 <!--
 * The bottom of flying ? blocks are also treated the same as the sides of it, meaning the X speed of sprites thrown upward at it will still invert.
 -->
-* The bottom of flying ? blocks are also treated the same as the sides of it, meaning the X speed of sprites thrown upward at it will still invert.
+* 飛んでいる？ブロックの底面は側面と同様に扱われており、下からスプライトが当たると、X速度が反転する。
 
 <!--
 * If Mario collects a star while holding an item that would normally be destroyed by star power, that item will not be destroyed unless Mario lets go of it and touches it again.
 -->
-* If Mario collects a star while holding an item that would normally be destroyed by star power, that item will not be destroyed unless Mario lets go of it and touches it again.
+* スターを取ってからアイテムを掴もうとすると、スター状態のためアイテムは倒される。事前にアイテムを掴んでいる状態でスターを取れば、アイテムを離さない限りアイテムは倒されない。
 
 <!--
 * Mario can pick up a throwblock on the same frame he jumps off of it.
 -->
-* Mario can pick up a throwblock on the same frame he jumps off of it.
+* ブルブルブロックの上でジャンプすると同時にそれを掴むことができる。
 
 <!--
 * Dropping a throwblock just as it's about to disappear will extend its timer a short time.
 -->
-* Dropping a throwblock just as it's about to disappear will extend its timer a short time.
+* 掴んでいるブルブルブロックが消えるFに放すと、消えるまでの時間が少し追加される。
 
 <!--
 * If sprite slots 0-9 are filled, Mario will be unable to pick up throwblocks.
 -->
-* If sprite slots 0-9 are filled, Mario will be unable to pick up throwblocks.
+* スプライトスロット#0-#9が埋まっていたら、ブルブルブロックを新しく掴めない。
 
 <!--
 * Throwblocks will bounce backward when thrown at a very steep vertical slope. You can even make it bounce back and forth infinitely if you throw it between two of them.
 -->
-* Throwblocks will bounce backward when thrown at a very steep vertical slope. You can even make it bounce back and forth infinitely if you throw it between two of them.
+* ブルブルブロックはとても急な坂にぶつかると、逆向きに跳ね返る。向かい合わせにもとても急な坂があれば、ずっと反射させられる。
 
 <!--
 * Landing on the very top of a very steep slope for a frame will boost Mario's speed, allowing him to get up to 51 speed without a cape. Normally, the slope would slow Mario to 32 when going down it.
 -->
-* Landing on the very top of a very steep slope for a frame will boost Mario's speed, allowing him to get up to 51 speed without a cape. Normally, the slope would slow Mario to 32 when going down it.
+* とても急な坂の頂上に乗るとマリオを加速させられ、マントなしで速度51にすることが可能である。通常は速度32まで減速させられる。
 
 <!--
 * Mario can spinjump off of throwblocks after they're thrown.
 -->
-* Mario can spinjump off of throwblocks after they're thrown.
+* 投げたブルブルブロックをスピンで踏むことができる。
 
 <!--
 * Mario can spinjump off of throwblocks on the frame they shatter from hitting a block.
 -->
-* Mario can spinjump off of throwblocks on the frame they shatter from hitting a block.
+* ブルブルブロックがブロックにあたって粉々になるFにスピンで踏むことができる。
 
 <!--
 * Mario can spinjump off of throwblocks on the frame they turn into a cloud puff from their timer running out.
 -->
-* Mario can spinjump off of throwblocks on the frame they turn into a cloud puff from their timer running out.
+* ブルブルブロックが時間切れで雲になるFにスピンで踏むことができる。
 
 <!--
 * Carrying a throwblock, Goomba, or Bob-omb through a pipe will make it never run out of time. However, if you double grab the sprite with another sprite in a higher slot, this glitch will not take effect.
 -->
-* Carrying a throwblock, Goomba, or Bob-omb through a pipe will make it never run out of time. However, if you double grab the sprite with another sprite in a higher slot, this glitch will not take effect.
+* ブルブルブロックを持って土管を通ると、時間経過で消滅しなくなる。クリボンだと復活しなくなり、ボム兵は爆発しなくなる。ただし、スロットIDが高位の別のスプライトと2個持ちしていると、このバグは発生しない。
 
 <!--
 * Horizontally kicking a Goomba, Bob-omb, or Mechakoopa will reset their stun timer; this can also cause the Bob-omb to change palettes if you kick it while it's flashing.
 -->
-* Horizontally kicking a Goomba, Bob-omb, or Mechakoopa will reset their stun timer; this can also cause the Bob-omb to change palettes if you kick it while it's flashing.
+* クリボン・ボム兵・メカクッパを横に蹴るとスタンタイマーがリセットされる。光っているボム兵を蹴れば、カラーパレットを変えることができる。
 
 <!--
 * Releasing a Bob-omb, or kicking it upward, at the last frame before exploding will also reset its stun time, but to a lower value of 0x40; it also triggers the explosion sound.
 -->
-* Releasing a Bob-omb, or kicking it upward, at the last frame before exploding will also reset its stun time, but to a lower value of 0x40; it also triggers the explosion sound.
+* ボム兵が爆発する直前のFに離したり上に蹴り上げると、スタンタイマーがリセットされて下位の値が0x40になる。これによって爆発音が鳴る。
 
 <!--
 * It's possible to bounce off Bob-ombs, Goombs, and Mechakoopas a frame before their stun timers run out. This is most notable with Bob-ombs, since you can't normally bounce off them again after they're stunned for the first time.
@@ -1577,17 +1577,17 @@ _118個(104個有用)_
 <!--
 * When Mario grabs a sprite, its X and Y speed doesn't get reset; this instead happens when he throws or drops it. However, sprites that hop out of Mario's hands on their own, such as Goombas, Buzzy Beetles, or MechaKoopas, don't get their speeds reset. One use of this is allowing Mario to bounce off the sprite in mid-air without needing to let go of it.
 -->
-* When Mario grabs a sprite, its X and Y speed doesn't get reset; this instead happens when he throws or drops it. However, sprites that hop out of Mario's hands on their own, such as Goombas, Buzzy Beetles, or MechaKoopas, don't get their speeds reset. One use of this is allowing Mario to bounce off the sprite in mid-air without needing to let go of it.
+* マリオがスプライトを掴むとき、それのXY速度はリセットされない。これはマリオがスプライトを蹴るか離した時には生じないが、マリオの手からひとりでに離れるスプライト（クリボン・メット・メカクッパ）では有用であり、空中でスプライトを離さなくても踏むことができる。
 
 <!--
 * For a few frames after being thrown, a Goomba will destroy other sprites without being destroyed as well.
 -->
-* For a few frames after being thrown, a Goomba will destroy other sprites without being destroyed as well.
+* 投げられてから数Fの間のクリボンは、死なずに敵を倒せる。
 
 <!--
 * Explosions from Bob-ombs can still be spinjumped on, as well as capespinned and killed. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4693)
 -->
-* Explosions from Bob-ombs can still be spinjumped on, as well as capespinned and killed. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4693)
+* ボム兵の爆発でスピンジャンプすることができる。この爆発はマントの回転で倒せる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=4693)
 
 <!--
 * Explosions from Bob-ombs won't disappear as long as they are offscreen, beyond the despawn region. This can make them occupy a slot persistently.
@@ -1597,7 +1597,7 @@ _118個(104個有用)_
 <!--
 * Mechakoopas will pass through the bottoms of solid blocks while active. In other words, you can just throw it up as it's about to reactivate to send it through the roof.
 -->
-* Mechakoopas will pass through the bottoms of solid blocks while active. In other words, you can just throw it up as it's about to reactivate to send it through the roof.
+* メカクッパが動いているときはソリッドブロックの底面を無視する。つまり、再稼働するときにメカクッパを上投げすると、ソリッドブロックを貫通していく。
 
 <!--
 * Hittable blocks will always bounce sprites away from Mario when hit, regardless of which side of the block Mario is actually on.
