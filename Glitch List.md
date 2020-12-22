@@ -4,6 +4,12 @@ permalink: /GlitchList/
 ---
 
 <!--
+- [Physics-Related Glitches](#physics-related-glitches)
+- [Yoshi-Related Glitches](#yoshi-related-glitches)
+- [Item and Object Glitches](#item-and-object-glitches)
+- [Miscellaneous Glitches](#miscellaneous-glitches)
+- [Locks and Crashes](#locks-and-crashes)
+
 # Physics-Related Glitches  
 -->
 # 物理的バグ(Physics-Related Glitches)  
@@ -260,6 +266,11 @@ _70個(64個有用)_
 * Pバルーンのタイマーは、$9Dでフリーズしている間も減り続ける。
 
 <!--
+* If Mario is holding a P-balloon and its slot is overwritten, by another sprite coming out of a block or by Yoshi swallowing it, then the P-balloon animation will remain forever and the player won't be able to control Mario, causing pratically a softlock. This can be avoided if Mario gets hurt, dies or touches a goal tape, for instance. [Video](https://youtu.be/aiJ4dDPdIQU?t=980)
+-->
+* バルーン状態のときにブロックからのスプライトの出現やYなどによってPバルーンのスロットが上書きされると、Pパルーンのアニメーションが維持され、プレイヤーはマリオを操作できなくなる。この状態は、ダメージをくらったり、死んだり、ゴールテープにふれると即座に解除される。[Video](https://youtu.be/aiJ4dDPdIQU?t=980)
+
+<!--  
 * The item in the item box can be released even while the game is frozen with $9D.
 -->
 * アイテムボックスのアイテムは、$9Dでフリーズしていても出すことができる。
@@ -370,6 +381,11 @@ _70個(64個有用)_
 * If Mario finishes a capespin during the goal walk, the cape's hitbox will persist even after the spin at whatever position he stopped at.
 -->
 * マント回転しながらゴールバーを切ると、マント回転の当たり判定がゴールした瞬間の位置に存在し続ける。
+
+<!-- 
+* Capespinning below a horizontal level makes the cape try to hit the next row of blocks in the next screen. If a block is high enough in the next screen, then it can get hit. [Video](https://www.youtube.com/watch?v=ZAwkqZ8vjnI)
+-->
+* 水平レベルのマント回転は、次の画面の次の行に当たり判定を生じさせられる。ブロックが次の画面の十分高い位置にあるときに、叩ける。 [Video](https://www.youtube.com/watch?v=ZAwkqZ8vjnI)
 
 ---
 ---
@@ -648,6 +664,16 @@ _148個(127個有用)_
 * Powerup incrementation: Spitting out a null sprite while on a brown revolving platform will cause unintended effects; one common effect is increasing Mario's powerup status, even past the standard values. Collecting powerups in these additional sprites can have a number of differing effects, from crashing the game to giving you a goal sprite. [More info](http://tasvideos.org/forum/viewtopic.php?p=250970&sid=4b6fef50ca81972d546c027211b3d597#250970) - [Effects](http://pastebin.com/JKQ6iApB) - [Goal item data](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning) - [Video](https://youtu.be/zQFseooBPl0)
 -->
 * Powerup incrementation：ヌルスプライトを回転する茶色足場の上で吐くと、意図されない効果が発生する。効果の一つとして、マリオのパワーアップ状態の標準値を無視した加算がある。参照の追加スプライトをパワーアップとして取得すると、様々な効果があり、クラッシュしたりゴール玉をストックできたりする。[More info](http://tasvideos.org/forum/viewtopic.php?p=250970&sid=4b6fef50ca81972d546c027211b3d597#250970) - [Effects](http://pastebin.com/JKQ6iApB) - [Goal item data](http://smwspeedruns.com/index.php/Unintended_Sprite_Spawning) - [Video](https://youtu.be/zQFseooBPl0)
+
+<!--
+* Spitting out a null sprite as Mario mounts on Yoshi and lands on a Rotating gray platform whose slot is higher than Yoshi's causes a similar effect of the previous glitch. However, it corrupts $15E9 (Sprite index for the current sprite that is being processed). Therefore, the game can process the main sprite loop with an index much higher than #$0B, as high as #$7E depending on Yoshi's position. This can have innumerous effects, because every sprite table is read/written incorrectly during this frame. [Video](https://www.youtube.com/watch?v=052UZbhIgtI)
+-->
+* マリオがYに騎乗しながら回転する灰色足場スプライトに乗っているときにヌルスプライトを吐くと、前述のバグと似たような効果が生じる。$15E9（現在処理しているスプライトのインデックス）が破損し、メインスプライトのループが#$7Eなどの#$0Bより大きい値で実行される。これはYの位置に依存する。このFにそれぞれのスプライトテーブルがに不正に読み書きされるため、多数の効果がある。 [Video](https://www.youtube.com/watch?v=052UZbhIgtI)
+
+<!--  
+* The previous glitch can be used to corrupt $00CE, the pointer to level's sprite data. With correct values, we can spawn most sprites in the level based on the current joypad values, for example. [Video](https://www.youtube.com/watch?v=hOgU3Je7pjE)
+ -->
+* The previous glitch can be used to corrupt $00CE, the pointer to level's sprite data. With correct values, we can spawn most sprites in the level based on the current joypad values, for example. [Video](https://www.youtube.com/watch?v=hOgU3Je7pjE)
 
 <!--
 * Null sprite overload: Spitting out a null sprite will glitch certain sprites' properties. Slot #3 will usually lose ground interaction, and slot #1 will usually either become burnable or change its interaction completely. [Mo](http://tasvideos.org/forum/viewtopic.php?p=250970#250970)[re](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) [info](https://youtu.be/g25UHjarSCY)
@@ -989,6 +1015,11 @@ _148個(127個有用)_
 *  If a berry is located at the very bottom of a subscreen, then picking up the berry with Yoshi's mouth while he's ducking with his tongue out will cause the berry to register as eaten without actually clearing the tile. This can then be repeated infinitely.
 -->
 *  If a berry is located at the very bottom of a subscreen, then picking up the berry with Yoshi's mouth while he's ducking with his tongue out will cause the berry to register as eaten without actually clearing the tile. This can then be repeated infinitely.
+
+<!--
+* As with the cape, Yoshi's tongue below horizontal level will try to swallow berry tiles in the next row of blocks in the next screen. If a berry is high enough in the next screen, then it can be grabbed by the tongue.
+-->
+* As with the cape, Yoshi's tongue below horizontal level will try to swallow berry tiles in the next row of blocks in the next screen. If a berry is high enough in the next screen, then it can be grabbed by the tongue.
 
 <!--
 * Berries don't work correctly in vertical levels; they will treat the level data as if it were still in a horizontal format, which results in them not working at all past the top two screens of the level, and even on those screens the interaction point and actual berry will be disconnected, resulting in Yoshi eating berries out of nowhere (leaving behind a green bush tile in its place). [Fix](https://www.smwcentral.net/?p=section&a=details&id=15543)
