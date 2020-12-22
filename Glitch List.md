@@ -268,7 +268,7 @@ _70個(64個有用)_
 <!--
 * If Mario is holding a P-balloon and its slot is overwritten, by another sprite coming out of a block or by Yoshi swallowing it, then the P-balloon animation will remain forever and the player won't be able to control Mario, causing pratically a softlock. This can be avoided if Mario gets hurt, dies or touches a goal tape, for instance. [Video](https://youtu.be/aiJ4dDPdIQU?t=980)
 -->
-* バルーン状態のときにブロックからのスプライトの出現やYなどによってPバルーンのスロットが上書きされると、Pパルーンのアニメーションが維持され、プレイヤーはマリオを操作できなくなる。この状態は、ダメージをくらったり、死んだり、ゴールテープにふれると即座に解除される。[Video](https://youtu.be/aiJ4dDPdIQU?t=980)
+* バルーン状態のときにブロックからのスプライトの出現やYなどによってPバルーンのスロットが上書きされると、Pパルーンのアニメーションが維持され、プレイヤーはマリオを操作できなくなる。この状態は、ダメージをくらったり、死んだり、ゴールバーにふれると即座に解除される。[Video](https://youtu.be/aiJ4dDPdIQU?t=980)
 
 <!--  
 * The item in the item box can be released even while the game is frozen with $9D.
@@ -1633,7 +1633,7 @@ _118個(104個有用)_
 <!--
 * Hittable blocks will always bounce sprites away from Mario when hit, regardless of which side of the block Mario is actually on.
 -->
-* Hittable blocks will always bounce sprites away from Mario when hit, regardless of which side of the block Mario is actually on.
+* 叩けるブロックは常にスプライトをマリオから遠ざける向きに飛ばす。これはマリオがブロックに対してどちら側にいるかは関係ない。
 
 <!--
 * Hitting a block twice within its activation frames will cause it to dispense two items.
