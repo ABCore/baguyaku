@@ -48,6 +48,7 @@ GitHub Pages：訳文にマウスを重ねると、原文がツールチップ�
 | conveyor belt | コンベア ||
 | muncher | ブラパ | ブラックパックン |
 | throwblock | ブルブルブロック ||
+| Yoshi coin | ドラゴンコイン ||
 
 #### その他
 

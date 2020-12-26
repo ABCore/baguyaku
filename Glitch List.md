@@ -112,7 +112,7 @@ _70個(64個有用)_
 <!--
 * If Mario has 99 lives and he gets a life through any means, his life counter will briefly increase past 99 for a frame. Exiting a level on that frame (via start+select or a screen side exit) will then display a glitched value for his life counter on the overworld. Entering a new level will fix it, however.
 -->
-* 残機が99の時に残機を1増やすと、1Fだけ残機が99を越えて値が増える。そのFにステージを出る（Start+Select/画面横出口)と、OW上での残機表示がバグる。これは新しいレベルに入ると治る。
+* 残機が99の時に残機を1増やすと、1Fだけ残機が99を越えて値が増える。そのFにステージを出る（Start+Select/画面横出口）と、OW上での残機表示がバグる。これは新しいレベルに入ると治る。
 
 <!--
 * It's possible to completely prevent any sprite from spawning so long as the spawn region of the screen can be passed over it (a distance of just over 16 pixels). Because the spawn routine only runs every other frame, this means that you can have up to three frames to do this (the last frame of which can be gotten from pausing the game breifly to realign the frame counter). Two verified methods of doing so are using a rope mechanism to drag Mario during those frame, and using a fast-spinning revolving platform. If moving fast enough, it may also be possible without the use of any sprites. [More info](http://tasvideos.org/forum/viewtopic.php?p=464958#464958)
@@ -633,12 +633,12 @@ _148個(127個有用)_
 <!--
 * If the visible Yoshi is killed while it has an item in its mouth, the next visible Yoshi will spawn with a nonexistant null sprite in its mouth. When spat out, "nothing" will come out of Yoshi's mouth. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites)
 -->
-* -可視Yが口に何かを含んだ状態で死ぬと、次の可視Yは存在しないヌルスプライトを口に含んだ状態で出現する。それを吐き出しても、Yの口からは何も出てこない。[More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites)
+* 可視Yが口に何かを含んだ状態で死ぬと、次の可視Yは存在しないヌルスプライトを口に含んだ状態で出現する。それを吐き出しても、Yの口からは何も出てこない。[More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites)
 
 <!--
 * Double-Tongue Glitch: If Yoshi spits out his tongue on the frame Mario transforms from a powerup, Yoshi will stick out his tongue twice, regardless of if he swallows anything. As an alternative, this glitch can also occur when taking damage while riding Yoshi without getting knocked off (by munchers/spikes, Wigglers, Dino Rhinos, etc.), in the next level after entering a vertical pipe (by sticking it out the frame Mario enters the pipe), or when Yoshi lays an egg. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=8m37s) - [Fix](https://www.smwcentral.net/?p=nmap&m=smwrom&u=0#01F0BA)
 -->
-* 舌2回出しバグ・二枚舌バグ：$9Dふフリーズするにに舌を出すと、舌を2回出す。1回目に何かを咥えても2回出る。[More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=8m37s) - [Fix](https://www.smwcentral.net/?p=nmap&m=smwrom&u=0#01F0BA)
+* 舌2回出しバグ・二枚舌バグ：$9DでフリーズするFに舌を出すと、舌を2回出す。1回目に何かを咥えても2回出る。[More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=8m37s) - [Fix](https://www.smwcentral.net/?p=nmap&m=smwrom&u=0#01F0BA)
 
 <!--
 * If Yoshi swallows a sprite on the first tongue of the above glitch and nothing on the second, he will end up with a null sprite in his mouth.
@@ -1638,42 +1638,42 @@ _118個(104個有用)_
 <!--
 * Hitting a block twice within its activation frames will cause it to dispense two items.
 -->
-* Hitting a block twice within its activation frames will cause it to dispense two items.
+* ブロックがアクティブである間に2度叩くと、中身が2回でる。
 
 <!--
 * Capespinning a block at the same time that the game is frozen (via $9D) will cause the block to dispense multiple items, usually filling up every sprite slot available.
 -->
-* Capespinning a block at the same time that the game is frozen (via $9D) will cause the block to dispense multiple items, usually filling up every sprite slot available.
+* ゲームが（$9Dで）フリーズしている時、マント回転でブロックを叩くと、スプライトスロットが埋まりきるまで中身が出てくる。
 
 <!--
 * Block duplication: Throwing an item into a hittable block in the right spot will cause it to "duplicate" the tile to an adjacent block, either horizontally, upward, or diagonally upward. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4387) - [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#DuplicatingBlocks) - [Video](https://youtu.be/1SGfYkXoGjg?t=41s)
 -->
-* Block duplication: Throwing an item into a hittable block in the right spot will cause it to "duplicate" the tile to an adjacent block, either horizontally, upward, or diagonally upward. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4387) - [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#DuplicatingBlocks) - [Video](https://youtu.be/1SGfYkXoGjg?t=41s)
+* ブロック増殖：投げられるアイテムを上投げでブロックの特定の位置に当てると、横・上・斜め上のいずれかのタイルにブロックが複製される。 [Fix](http://www.smwcentral.net/?p=section&a=details&id=4387) - [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#DuplicatingBlocks) - [Video](https://youtu.be/1SGfYkXoGjg?t=41s)
 
 <!--
 * In levels with a scrolling Layer 2, it's also possible to duplicate downward or even two blocks downward.
 -->
-* In levels with a scrolling Layer 2, it's also possible to duplicate downward or even two blocks downward.
+* レイヤー2がスクロールするレベル内では、レイヤー2のブロックを下方向に増殖できる。2タイル下にも可能。
 
 <!--
 * Duplicating a block into a Yoshi coin and then grabbing the Yoshi coin will turn the block into tile 125; this tile has the potential of spawning a key, Yoshi wings, P-balloon, or shell. Note that if the block you duplicated was a turnblock, you'll have to wait for it to stop turning before collecting the coin. [Video](https://youtu.be/1SGfYkXoGjg?t=4m25s)
 -->
-* Duplicating a block into a Yoshi coin and then grabbing the Yoshi coin will turn the block into tile 125; this tile has the potential of spawning a key, Yoshi wings, P-balloon, or shell. Note that if the block you duplicated was a turnblock, you'll have to wait for it to stop turning before collecting the coin. [Video](https://youtu.be/1SGfYkXoGjg?t=4m25s)
+* ドラゴンコインの下部を上書きするようにブロック増殖してから、ドラゴンコインの上部をとると、下部がタイル125番になる。このタイルはX座標によって鍵・Yの羽・Pバルーン・甲羅を出す。クルクルブロックでこれを行う場合、コインを取るのはクルクルブロックの回転が止まってから。 [Video](https://youtu.be/1SGfYkXoGjg?t=4m25s)
 
 <!--
 * Block factory: Items can be forced into corners or walls and get stuck inside. If one of the blocks it's stuck between happens to be a hittable block, it's possible that it will create a situation in which the block is rapidly duplicated until the sprite despawns or is removed.
 -->
-* Block factory: Items can be forced into corners or walls and get stuck inside. If one of the blocks it's stuck between happens to be a hittable block, it's possible that it will create a situation in which the block is rapidly duplicated until the sprite despawns or is removed.
+* ブロック工場（高速増殖）：アイテムは壁の内部などに押し込めることが可能。壁の中等で痙攣しているアイテムがブロックを叩いた時、ブロックが高速で増殖され続けることがある。一度増殖されると、アイテムがそこから消えるまで増殖は止まらない。
 
 <!--
 * The above can have a few strange effects on other hittable blocks; bounce sprites may get overwritten so that the blocks turn into an invisible solid block, or they won't spawn for a frame and will dispense two items at once, or won't spawn at all and can dispense an item without being registered as hit. If a noteblock's bounce sprite gets overwritten while you're bouncing on it, Mario will also fall through it. These effects can also be created without block factory by spawning more than four bounce sprites before any of their animations finish.
 -->
-* The above can have a few strange effects on other hittable blocks; bounce sprites may get overwritten so that the blocks turn into an invisible solid block, or they won't spawn for a frame and will dispense two items at once, or won't spawn at all and can dispense an item without being registered as hit. If a noteblock's bounce sprite gets overwritten while you're bouncing on it, Mario will also fall through it. These effects can also be created without block factory by spawning more than four bounce sprites before any of their animations finish.
+* 高速増殖中に別のブロックを叩くと通常と異なる挙動になる。ブロックが透明になったり、アイテムが2個同時に出てきたり、ブロックをアイテムで叩いても当たったことにならないことがある。音符ブロックを上から踏んでいる時に透明化すると、マリオが音符ブロックを貫通して下にすり抜ける。これらの挙動は高速増殖中でなくても、4つ以上のブロックが叩かれて跳ねているアニメーションの最中に行ってもできる。
 
 <!--
 * Mario can fall through the top of block factories regardless of the block being duplicated, and can pass through it in either direction.
 -->
-* Mario can fall through the top of block factories regardless of the block being duplicated, and can pass through it in either direction.
+* 高速増殖中のブロックの上部分を通り抜けることができる。そこから左右に通り抜けられる。
 
 <!--
 * When throwing a carryable sprite upwards, if the sprite registers itself as hitting both the bottom of one block and the side of another at the same time, neither will actually be activated by the hit. This can be done not only at the inner corner between two blocks, but even on an entirely flat ceiling (by throwing the sprite so it enters the ceiling enough to touch the side of an adjacent block).
@@ -1683,17 +1683,17 @@ _118個(104個有用)_
 <!--
 * Tile 125's shell will only actually come out if an adjacent block knocks it upward.
 -->
-* Tile 125's shell will only actually come out if an adjacent block knocks it upward.
+* タイル125番の甲羅は隣接したブロックが叩かれると出現する。
 
 <!--
 * Mario can still hit blocks while moving downward, so long as he enters the lower corner of the block enough.
 -->
-* Mario can still hit blocks while moving downward, so long as he enters the lower corner of the block enough.
+* マリオは落下しながらでもブロックの下の角に十分近い軌道を通れば、ブロックを叩ける。
 
 <!--
 * If a block overwrites a rotating turnblock (e.g. by vine, duplication, etc.), then the turnblock will reappear once it stops rotating.
 -->
-* If a block overwrites a rotating turnblock (e.g. by vine, duplication, etc.), then the turnblock will reappear once it stops rotating.
+* 回転しているクルクルブロックをツタやブロック増殖などで上書きしても、回転が止まるFにクルクルブロックが再出現する。
 
 <!--
 * Turnblocks can be copied from Layer 1 to Layer 2 or vice-versa by interupting their bounce sprite (even during the rotating animation) with one from a block on the destination layer.
@@ -1703,7 +1703,7 @@ _118個(104個有用)_
 <!--
 * If there is a coin on top of a block when Mario hits it, the coin will become a solid, invisible block. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#029347)
 -->
-* If there is a coin on top of a block when Mario hits it, the coin will become a solid, invisible block. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#029347)
+* コインが上にあるブロックを叩くと、コインの所が透明なソリッドブロックになる。 [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#029347)
 
 <!--
 * If a coin is placed 16 screens away from a block and one tile higher than it, then bouncing off the top or side of this block (e.g. with noteblocks or the side-bounce turnblock) will give Mario a coin and create an invisible solid block on top. This occurs regardless of which side of the blocks the coins are actually on. However, the exact position of the coin needed for the glitch may vary depending on what screen it is on.
