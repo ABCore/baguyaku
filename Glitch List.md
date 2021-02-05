@@ -4,11 +4,11 @@ permalink: /GlitchList/
 ---
 
 <!--
-- [Physics-Related Glitches](#physics-related-glitches)
-- [Yoshi-Related Glitches](#yoshi-related-glitches)
-- [Item and Object Glitches](#item-and-object-glitches)
-- [Miscellaneous Glitches](#miscellaneous-glitches)
-- [Locks and Crashes](#locks-and-crashes)
+- [物理的バグ(Physics-Related Glitches)](#物理的バグphysics-related-glitches)
+- [ヨッシー関係のバグ(Yoshi-Related Glitches)](#ヨッシー関係のバグyoshi-related-glitches)
+- [アイテムとオブジェクトのバグ(Item and Object Glitches)](#アイテムとオブジェクトのバグitem-and-object-glitches)
+- [雑多なバグ(Miscellaneous Glitches)](#雑多なバグmiscellaneous-glitches)
+- [ロックとクラッシュ(Locks and Crashes)](#ロックとクラッシュlocks-and-crashes)
 
 # Physics-Related Glitches  
 -->
@@ -1708,12 +1708,12 @@ _118個(104個有用)_
 <!--
 * If a coin is placed 16 screens away from a block and one tile higher than it, then bouncing off the top or side of this block (e.g. with noteblocks or the side-bounce turnblock) will give Mario a coin and create an invisible solid block on top. This occurs regardless of which side of the blocks the coins are actually on. However, the exact position of the coin needed for the glitch may vary depending on what screen it is on.
 -->
-* If a coin is placed 16 screens away from a block and one tile higher than it, then bouncing off the top or side of this block (e.g. with noteblocks or the side-bounce turnblock) will give Mario a coin and create an invisible solid block on top. This occurs regardless of which side of the blocks the coins are actually on. However, the exact position of the coin needed for the glitch may vary depending on what screen it is on.
+* コインが（音符ブロックや側面から触れるとバウンドするクルクルブロックなどの）ブロックから16画面離れて1タイル高い位置に配置されているとき、ブロックの上面か側面でバウンドすると、コインを1枚得られ、ブロックの1タイル上に透明なソリッドブロックが生成される。
 
 <!--
 * Hitting a block that uses bounce sprites in multiple directions (such as the all-way noteblock) on two sides at once will generate multiple bounce sprites even though there should only be one.
 -->
-* Hitting a block that uses bounce sprites in multiple directions (such as the all-way noteblock) on two sides at once will generate multiple bounce sprites even though there should only be one.
+* 複数の方向にバウンススプライトを発生させるブロック（全方向に反応する音符ブロックなど）の左右両方の側面を同時に叩くと、バウンススプライトが複数個発生する。
 
 <!--
 * If the sprite in the **lowest** filled sprite slot with object interaction is inside one of tiles 021-024 or 121-124, then all tiles outside of the level will register as the corresponding tile on Map16 page 0. They won't actually become solid when hit, but they will block Mario from below and spawn any related sprites. Notably, capespinning will briefly interrupt this effect.
@@ -1723,32 +1723,32 @@ _118個(104個有用)_
 <!--
 * Mario can pass through invisible coinblocks or noteblocks without hitting them as long as he is being pushed upward by anything other than a jump, including keys, platform sprites, ropes, or another layer.
 -->
-* Mario can pass through invisible coinblocks or noteblocks without hitting them as long as he is being pushed upward by anything other than a jump, including keys, platform sprites, ropes, or another layer.
+* 透明なコインブロック・音符ブロックはジャンプ以外の方法で下から通過すれば反応しない。鍵・足場になるスプライト・ロープ・別レイヤーの足場などの方法がある。
 
 <!--
 * Bonus game coinblocks will always register a correct hit if a shell, Goomba, or Bob-omb is knocked into it by a capespin or bounced by another block.
 -->
-* Bonus game coinblocks will always register a correct hit if a shell, Goomba, or Bob-omb is knocked into it by a capespin or bounced by another block.
+* ボーナスゲームのコインブロックは甲羅・クリボン・ボム兵をマント回転か別のブロックのバウンドで当てたら、必ず○になる。
 
 <!--
 * In a bonus game room, hitting a coinblock that isn't in one of the positions used by the original bonus game may cause additional brown blocks to spawn.
 -->
-* In a bonus game room, hitting a coinblock that isn't in one of the positions used by the original bonus game may cause additional brown blocks to spawn.
+* ボーナスルームで、正しい位置に配置されてないコインブロックをたたくと、複数のプンプンブロックが出現することがある。
 
 <!--
 * If a coinblock is placed within the top 4 rows of the bonus room, it will cause Mario to immitate a P-balloon when hit, except the P-balloon neither wears off nor can be controlled; Mario will only move with whatever inertia he had when the block was hit.
 -->
-* If a coinblock is placed within the top 4 rows of the bonus room, it will cause Mario to immitate a P-balloon when hit, except the P-balloon neither wears off nor can be controlled; Mario will only move with whatever inertia he had when the block was hit.
+* ボーナスルームで画面上から4タイル以内の高さに配置されたコインブロックを叩くと、マリオがPバルーンをとったかのような挙動をする。ただし操作は不可能。マリオはブロックを叩いた時の速度で慣性移動する。
 
 <!--
 * If a coinblock is placed within the bottom 4 rows of a bonus room, it will cause Mario's graphics to severely mess up when hit, as well as make him lose interaction with sprites.
 -->
-* If a coinblock is placed within the bottom 4 rows of a bonus room, it will cause Mario's graphics to severely mess up when hit, as well as make him lose interaction with sprites.
+* ボーナスルームで画面下から4タイル以内に配置されたコインブロックを叩くと、マリオの表示がひどくバグり、またスプライトとの接触判定がなくなる。
 
 <!--
 * All multi-coinblocks function using the same timer to determine whether they continue giving coins or turn into a used block. This means hitting one, waiting a bit, and then hitting another will immediately turn it into a used block; the original one, meanwhile, will restart the timer when hit again rather than doing the same. Notably, double-hitting a single block can cause that timer to reset without turning any blocks into brown blocks.
 -->
-* All multi-coinblocks function using the same timer to determine whether they continue giving coins or turn into a used block. This means hitting one, waiting a bit, and then hitting another will immediately turn it into a used block; the original one, meanwhile, will restart the timer when hit again rather than doing the same. Notably, double-hitting a single block can cause that timer to reset without turning any blocks into brown blocks.
+* 全ての複数コインブロックは、同じタイマー($7E186B )を使用している。いずれかのブロックが叩かれると、タイマーが00からFFになり1F毎に1減少し、値が01になるまではブロックを叩けばコインがでる。01になってブロックを叩くとそのブロックがプンプンブロックに変化し、値は00になる。1つのブロックを同時に２回叩くと、プンプンブロックにならずにタイマーをリセットできる。
 
 <!--
 * Releasing an item from the item box will cause it to continue cycling vertically throughout the level until Mario collects it. Its interaction will even loop every two horizontal screens as well, so you can grab even if you can't see it.
@@ -1758,29 +1758,29 @@ _118個(104個有用)_
 <!--
 * In vertical levels, permanent sprites will loop around vertically around the level. It takes about 400 in-game seconds for the sprite to make a complete loop, though. They can potentially also loop horizontally in horizontal levels, too, but only if they don't fall off the bottom of the screen.
 -->
-* In vertical levels, permanent sprites will loop around vertically around the level. It takes about 400 in-game seconds for the sprite to make a complete loop, though. They can potentially also loop horizontally in horizontal levels, too, but only if they don't fall off the bottom of the screen.
+* 縦ステージでは、残存スプライトは垂直方向にループしている。一周するのにTIME400ほどかかる。横ステージでもスプライトが画面下に落ちなければ、水平方向でループする。
 
 <!--
 * In certain levels, objects will fall slower when off the top of the level, as if they are in water. The cause is unknown, but sprite buoyancy is likely related.
 -->
-* In certain levels, objects will fall slower when off the top of the level, as if they are in water. The cause is unknown, but sprite buoyancy is likely related.
+* 一部のレベルでは、画面上部ではオブジェクトが浮力を持ったかのようにゆっくり落ちる。原因は不明。
 
 ---
 
 <!--
 * Finishing a boss battle while holding a carryable sprite will cause the sprite to disappear, but Mario will continue to act like he's holding it.
 -->
-* Finishing a boss battle while holding a carryable sprite will cause the sprite to disappear, but Mario will continue to act like he's holding it.
+* ボス戦が終わるときに持ち運べるアイテムを掴んでいると、スプライトは消えるが、マリオは掴んだ表示のままとなる。
 
 <!--
 * If you're standing on something after a boss battle ends, Mario will continue to stand there even if he shouldn't normally. For example, walljumping, P-switchjumping, keyjumping, or grabbing a throwblock all work, even though normally Mario would fall.
 -->
-* If you're standing on something after a boss battle ends, Mario will continue to stand there even if he shouldn't normally. For example, walljumping, P-switchjumping, keyjumping, or grabbing a throwblock all work, even though normally Mario would fall.
+* ボスバトルが終わるFに通常立てない場所立っていると、マリオはそこに立ち続ける。例えば、壁・Pスイッチ・鍵の上がある。終わる瞬間に足場のブルブルブロックを持ってジャンプできるが、マリオは落ちる。
 
 <!--
 * The game will register a bubble as being hit for every frame that a shell or throwblock touches it.
 -->
-* The game will register a bubble as being hit for every frame that a shell or throwblock touches it.
+* 泡に甲羅・ブルブルブロックを当てると、毎Fヒットする。
 
 <!--
 * If a Koopa starts to jump into a shell while in the water and exits the water midway through the jump, the animation won't line up and it'll end up walking slightly further than it should.
@@ -1790,32 +1790,32 @@ _118個(104個有用)_
 <!--
 * If a shell, throwblock, Goomba or Bob-omb hit the very top of a Pokey's head, Pokey's head won't actually be hit, but a head graphics will still fall down.
 -->
-* If a shell, throwblock, Goomba or Bob-omb hit the very top of a Pokey's head, Pokey's head won't actually be hit, but a head graphics will still fall down.
+* 甲羅・ブルブルブロック・クリボン・ボム兵をサンボの頭に当てると、倒せるわけではないが、頭のグラフィックが落ちていく。
 
 <!--
 * If sprite buoyancy is enabled in a level, grabbing a throwblock will show the water splash graphic regardless of if it's actually in water.
 -->
-* If sprite buoyancy is enabled in a level, grabbing a throwblock will show the water splash graphic regardless of if it's actually in water.
+* スプライトの浮力があるレベルでブルブルブロックを掴むと、水中でなくても水しぶきの表示が発生する。
 
 <!--
 * When swimming with a carryable sprite in a level with sprite buoyancy, pressing against a wall will cause the game to think the sprite has exited the water and will display a splash graphic. Likewise, turning away from the wall will cause the game to treat it as entering the water again, also displaying one.
 -->
-* When swimming with a carryable sprite in a level with sprite buoyancy, pressing against a wall will cause the game to think the sprite has exited the water and will display a splash graphic. Likewise, turning away from the wall will cause the game to treat it as entering the water again, also displaying one.
+* スプライトの浮力があるレベルで持ち運べるスプライトを、壁に押し付けたり反転させたりする度に水しぶきが表示される。これはスプライトが水中に出入りしていると認識されるため。
 
 <!--
 * Grabbing an item on the frame Mario enters a pipe will cause him to enter the pipe without turning. You can also occasionally exit the pipe backward, as well.
 -->
-* Grabbing an item on the frame Mario enters a pipe will cause him to enter the pipe without turning. You can also occasionally exit the pipe backward, as well.
+* マリオが土管に入るFにアイテムを掴むと、振り返らずに土管に入っていく。
 
 <!--
 * Releasing of a pressed P-switch off the right side edge of a level will cause its graphics to briefly loop to the left side of the screen.
 -->
-* Releasing of a pressed P-switch off the right side edge of a level will cause its graphics to briefly loop to the left side of the screen.
+* 潰れたPスイッチが画面右にあると、画面左にループして表示される。
 
 <!--
 * Turning while holding a Mechakoopa will cause Mario's head to disappear briefly.
 -->
-* Turning while holding a Mechakoopa will cause Mario's head to disappear briefly.
+* メカクッパを持って振り返る間、マリオの頭部の表示が消える。
 
 <!--
 * Hitting a block above the screen will cause it to dispense whatever is inside and stop giving items like usual, but its graphics won't change.
@@ -1825,22 +1825,17 @@ _118個(104個有用)_
 <!--
 * Hitting a block off the sides of the screen will cause it to not register being hit.
 -->
-* Hitting a block off the sides of the screen will cause it to not register being hit.
-
-<!--
-* Collecting a powerup on the frame a Yoshi egg lands on a block will cause its graphics to glitch briefly.
--->
-* Collecting a powerup on the frame a Yoshi egg lands on a block will cause its graphics to glitch briefly.
+* 画面横の外のブロックを叩いても、叩いたと認識されない。
 
 <!--
 * Freezing the game (via $9D) on the frame a Yoshi egg lands on solid ground will cause its graphics to glitch briefly. [Gifs](https://imgur.com/a/R4lOF)
 -->
-* Freezing the game (via $9D) on the frame a Yoshi egg lands on solid ground will cause its graphics to glitch briefly. [Gifs](https://imgur.com/a/R4lOF)
+* Yが産んだ卵がソリッドな地面につくFに（$9Dで）フリーズすると、卵の表示がバグる。[Gifs](https://imgur.com/a/R4lOF)
 
 <!--
 * Bringing a carryable sprite into a Mode 7 boss room will cause the graphics to glitch.
 -->
-* Bringing a carryable sprite into a Mode 7 boss room will cause the graphics to glitch.
+* 持ち運べるスプライトをモード7のボス部屋に持ち込むとグラフィックがバグる。
 
 ---
 ---
