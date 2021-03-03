@@ -1858,112 +1858,112 @@ _280個(180個有用)_
 <!--
 * Sprites will "slide" with inertia across tiles 1D8-1FF. It should be noted that this means if the sprite hits 0 speed while on one of the blocks, it will be unable to move at all unless Mario causes it to. Because the bottom tile of tileset-specific lava is also included in the range mentioned above, sprites can pass through it without being destroyed; only the top of the lava will actually kill it.
 -->
-* Sprites will "slide" with inertia across tiles 1D8-1FF. It should be noted that this means if the sprite hits 0 speed while on one of the blocks, it will be unable to move at all unless Mario causes it to. Because the bottom tile of tileset-specific lava is also included in the range mentioned above, sprites can pass through it without being destroyed; only the top of the lava will actually kill it.
+* スプライトはタイル1D8-1FF上を通るとき慣性移動する。スプライトが速さが0でこれらのタイル上にいるとき、マリオが何かするまでスプライトは動けない。特定のタイルセット用の溶岩の底タイルは上記の効果を持つため、スプライトは死なずに慣性移動する。スプライトが死ぬのは溶岩の上面タイルだけ。
 
 <!--
 * If enough sprites are close enough together, they can push each other off of or through blocks.
 -->
-* If enough sprites are close enough together, they can push each other off of or through blocks.
+* 複数のスプライトが密集して存在すると、それぞれが押し合ってブロックにめりこんだり貫通したりする。
 
 <!--
 * Quake sprites can be overwritten by spawning more than 4 within a very short time. Because they don't actually destroy sprites until a few frames after spawning, this can actually prevent them from interacting entirely. As an alternative, spitting out a null sprite will also overwrite slot 2.
 -->
-* Quake sprites can be overwritten by spawning more than 4 within a very short time. Because they don't actually destroy sprites until a few frames after spawning, this can actually prevent them from interacting entirely. As an alternative, spitting out a null sprite will also overwrite slot 2.
+* 揺れスプライトは短時間に4体以上出現すると上書きされる。揺れスプライトは出現後数Fはスプライトを倒さないので、これを利用することで揺れを完全に妨げることができる。代わりとして、ヌルスプライトを吐くとスロット2が上書きされる。
 
 <!--
 * Screen scrolling on the frame that Mario touches a shell-less Koopa (other than blue) will cause him to kick and kill it.
 -->
-* Screen scrolling on the frame that Mario touches a shell-less Koopa (other than blue) will cause him to kick and kill it.
+* LRスクロールするFにマリオが青色でない裸ノコノコに触れると、蹴り殺す。
 
 <!--
 * Freezing the game (via $9D) on the frame that a shell-less red or blue Koopa touches the corner of a block will cause it to fall downward past that corner.
 -->
-* Freezing the game (via $9D) on the frame that a shell-less red or blue Koopa touches the corner of a block will cause it to fall downward past that corner.
+* 裸の赤・青ノコノコがブロックの角に触れる時、($9Dで)フリーズさせるとノコノコが角で振り返らず落下する。
 
 <!--
 * Koopas standing on a conveyor platform will continue to be moved while the game is frozen (via $9D).
 -->
-* Koopas standing on a conveyor platform will continue to be moved while the game is frozen (via $9D).
+* （$9Dで）フリーズさせている間、動く足場に乗っているノコノコが動き続ける。
 
 <!--
 * If Mario knocks a Koopa out of its shell, lets it re-enter, and then knocks it out once more, the game will register that Koopa as a new sprite. This means, if the shell is then despawned, the Koopa will respawn, even if the shell-less Koopa you knocked out isn't. This means you can get an infinite number of shell-less Koopas from a single Koopa.
 -->
-* If Mario knocks a Koopa out of its shell, lets it re-enter, and then knocks it out once more, the game will register that Koopa as a new sprite. This means, if the shell is then despawned, the Koopa will respawn, even if the shell-less Koopa you knocked out isn't. This means you can get an infinite number of shell-less Koopas from a single Koopa.
+* ノコノコを甲羅から出して再び入れて、もう一度出すと、出てきた裸ノコノコは新しいスプライトとして認識される。つまり、甲羅を倒さずず消すとノコノコが再び現れる。これを利用すれば、裸ノコノコを一体のノコノコから何体でも出現させられる。
 
 <!--
 * If a Koopa has just entered a Koopa shell, setting $15D0 (flag for being on Yoshi's tongue) for a sprite in the same slot the Koopa was in will cause the Koopa inside the shell to vanish without actually emerging.
 -->
-* If a Koopa has just entered a Koopa shell, setting $15D0 (flag for being on Yoshi's tongue) for a sprite in the same slot the Koopa was in will cause the Koopa inside the shell to vanish without actually emerging.
+* 裸ノコノコが甲羅が入りノコノコになる前に、裸ノコノコと同じスロット同じスロットのスプライトの$15D0（Yの舌上にあるかのフラグ）がセットされると、甲羅内部のノコノコが消える。
 
 <!--
 * If a shell-less Koopa is jumping into a shell, and that shell despawns and is replaced by any other sprite overlapping with the Koopa, then the Koopa will enter the sprite and set two misc addresses for the sprite ($1558 to #$10, $160E to the ID of the Koopa). This can cause various effects depending on the sprite. [More Info](http://pastebin.com/ga1DUtmh) - [Video](https://youtu.be/Gj88xkSiAXI)
 -->
-* If a shell-less Koopa is jumping into a shell, and that shell despawns and is replaced by any other sprite overlapping with the Koopa, then the Koopa will enter the sprite and set two misc addresses for the sprite ($1558 to #$10, $160E to the ID of the Koopa). This can cause various effects depending on the sprite. [More Info](http://pastebin.com/ga1DUtmh) - [Video](https://youtu.be/Gj88xkSiAXI)
+* 裸ノコノコが甲羅に入ろうとジャンプしている最中、甲羅が消えて裸ノコノコとかち合う位置に別のスプライトが読み込まれると、裸ノコノコがそのスプライトに入り、スプライトの2つのアドレス（$1558に#$10、$160EにノコノコのID）がセットされる。これはスプライトによって幾つか変な効果を引き起こす。[More Info](http://pastebin.com/ga1DUtmh) - [Video](https://youtu.be/Gj88xkSiAXI)
 
 <!--
 * Koopas sliding from being knocked out of a shell will clear their X speed and temporarily reset their animation graphic if the game freezes with $9D.
 -->
-* Koopas sliding from being knocked out of a shell will clear their X speed and temporarily reset their animation graphic if the game freezes with $9D.
+* 甲羅から飛び出たノコノコは$9Dでフリーズさせると、X速度が0になり、フリーズ中は表示がリセットされる。
 
 <!--
 * Sliding blue Koopas will only register the top of solid blocks; they'll pass right through the sides and bottom.
 -->
-* Sliding blue Koopas will only register the top of solid blocks; they'll pass right through the sides and bottom.
+* 滑る青ノコノコはソリッドブロックの上面しか認識しない。ソリッドブロックの左右と底面は素通りする。
 
 <!--
 * During the brief period after a Sliding Blue Koopa comes to a stop (before it starts walking as a normal Blue Koopa), it will no longer update it's position or interact with blocks, so removing the ground from below it will cause it to just float in midair for a bit.
 -->
-* During the brief period after a Sliding Blue Koopa comes to a stop (before it starts walking as a normal Blue Koopa), it will no longer update it's position or interact with blocks, so removing the ground from below it will cause it to just float in midair for a bit.
+* 滑る青ノコノコが止まってから通常の青ノコノコとして歩き始めるまで、位置やブロックとの相互作用を更新しないので、僅かな時間地面がなくても空中に浮く。
 
 <!--
 * Sliding Blue Koopas will constantly bounce when trying to slide upwards on a slope.
 -->
-* Sliding Blue Koopas will constantly bounce when trying to slide upwards on a slope.
+* 滑る青ノコノコは坂を登っていく時、跳ねながら登っていく。
 
 <!--
 * If a blue Koopa is prepared to kick a sprite, and that sprite despawns and is replaced by another carryable sprite (i.e. in sprite status 9) within horizontal proximity of the blue Koopa, then the blue Koopa will kick that instead. If not a shell, this also sets that sprite's stun timer. [Vi](https://youtu.be/RNdl6zkoC00)[de](https://youtu.be/HjLO7A6NYX8)[os](https://youtu.be/JBvdsC9TFRE)
 -->
-* If a blue Koopa is prepared to kick a sprite, and that sprite despawns and is replaced by another carryable sprite (i.e. in sprite status 9) within horizontal proximity of the blue Koopa, then the blue Koopa will kick that instead. If not a shell, this also sets that sprite's stun timer. [Vi](https://youtu.be/RNdl6zkoC00)[de](https://youtu.be/HjLO7A6NYX8)[os](https://youtu.be/JBvdsC9TFRE)
+* 青ノコノコがスプライトを蹴る準備できた時に、そのスプライトが消えて、青ノコノコに近い水平位置の別の持ち運べるスプライトに置換されると、青ノコノコは代わりにそのスプライトを蹴る。甲羅ではない場合、スプライトのスタンタイマーがセットされる。[Vi](https://youtu.be/RNdl6zkoC00)[de](https://youtu.be/HjLO7A6NYX8)[os](https://youtu.be/JBvdsC9TFRE)
 
 <!--
 * Screen scrolling while a yellow Koopa is jumping will allow it to pass through solid blocks on the way up.
 -->
-* Screen scrolling while a yellow Koopa is jumping will allow it to pass through solid blocks on the way up.
+* 黄色ノコノコがジャンプするときに、LRスクロールをするとソリッドブロックを下から上に通り抜ける。
 
 <!--
 * Yellow Koopas can still jump over shells while sliding. Combine this with the fact that sliding Koopas don't register the bottom of blocks, and you have a way to move a yellow Koopa upward through solid tiles.
 -->
-* Yellow Koopas can still jump over shells while sliding. Combine this with the fact that sliding Koopas don't register the bottom of blocks, and you have a way to move a yellow Koopa upward through solid tiles.
+* 黄色ノコノコは動いている甲羅が近づくとジャンプする。これを上記のバグと組み合わせれば、黄色ノコノコをソリッドブロックを数タイル分上方向に上抜けさせられる。
 
 <!--
 * The net-climbing Koopas will only actually hit small Mario if his feet are touching them. This means Mario can just hang off the bottom of the net to avoid them.
 -->
-* The net-climbing Koopas will only actually hit small Mario if his feet are touching them. This means Mario can just hang off the bottom of the net to avoid them.
+* 金網ノコノコとチビマリオが当たるのは、マリオが金網ノコノコの足に触れたとき。金網の下端にぶら下がることで、金網ノコノコを避けられる。
 
 <!--
 * Green net-climbing Koopas will not despawn off the top of the screen in vertical levels, essentially being treated as a permanent sprite. They'll still despawn below the screen, however.
 -->
-* Green net-climbing Koopas will not despawn off the top of the screen in vertical levels, essentially being treated as a permanent sprite. They'll still despawn below the screen, however.
+* 金網に捕まる緑ノコノコは縦ステージにおいて、画面上で消失せず残存スプライトとして扱われるが、画面下で消える。
 
 <!--
 * It's possible to jump off the climbing net door during a few frames before it actually starts turning after being hit. Mario will still switch layers despite no longer being on the sprite, and grabbing onto something (even off the gate) will cause him to still be pulled around. Unfortunately, he still interacts with objects during it.
 -->
-* It's possible to jump off the climbing net door during a few frames before it actually starts turning after being hit. Mario will still switch layers despite no longer being on the sprite, and grabbing onto something (even off the gate) will cause him to still be pulled around. Unfortunately, he still interacts with objects during it.
+* 回転金網を叩いてから数Fはスプライトが作動してマリオが奥側に行くまでの猶予が有り、その間にジャンプすることが可能。スプライトに重なっていない位置でも、何かに掴んでいなくても奥側に行くことになるが、地形に依存し、オブジェクトとは相互作用し続ける。
 
 <!--
 * Getting pushed off the net gate sprite by a solid sprite (including two carriable sprites) right at the start of its rotation will cause Mario's X speed to rapidly start increasing in that direction. This will continue as long as he holds a net, eventually overflowing his speed and rebounding unless he lets go. [Video](https://twitter.com/Kaizoman666/status/755102882345656321)
 -->
-* Getting pushed off the net gate sprite by a solid sprite (including two carriable sprites) right at the start of its rotation will cause Mario's X speed to rapidly start increasing in that direction. This will continue as long as he holds a net, eventually overflowing his speed and rebounding unless he lets go. [Video](https://twitter.com/Kaizoman666/status/755102882345656321)
+* 回転金網が回転を始める時に、（2つの持ち運べるスプライトを含む）ソリッドスプライトによってマリオが押し出されると、押し出されるX方向に急加速される。この加速は金網を掴んでいる間発生し続け、離さなければ速度がオーバーフローし、逆方向に跳ね飛ばされる。[Video](https://twitter.com/Kaizoman666/status/755102882345656321)
 
 <!--
 * The net gate boost described above can also be gotten without items, by jumping off the gate just before it starts turning and then grabbing another fence further to the side. This boost is less significant, however.
 -->
-* The net gate boost described above can also be gotten without items, by jumping off the gate just before it starts turning and then grabbing another fence further to the side. This boost is less significant, however.
+* 上記の回転金網による加速はアイテムなしでも可能。回転が始まる前にジャンプして、回転軸の反対側にある金網に掴まればできる。しかし、この方法の加速は上記に比べ小さい。
 
 <!--
 * Feathers will not despawn offscreen unless they are falling. By way of an item swap, it is even possible to turn a falling feather into a permanent, still one.
 -->
-* Feathers will not despawn offscreen unless they are falling. By way of an item swap, it is even possible to turn a falling feather into a permanent, still one.
+* 羽は画面下に落ちない限り消えない。落ちる羽であってもアイテムスワップによって残存スプライトにできる。
 
 <!--
 * Touching an invisible mushroom on the frame Mario's speed inverts will cause it to fly in the opposite directly than it normally would.
@@ -1973,17 +1973,17 @@ _280個(180個有用)_
 <!--
 * Stars push themselves far enough through blocks before bouncing off of them that Mario can collect a star through a corner between two blocks.
 -->
-* Stars push themselves far enough through blocks before bouncing off of them that Mario can collect a star through a corner between two blocks.
+* スターは跳ねる力が強く、ブロック中に存在すると登っていく。マリオは斜めに配置されたブロックの窪みからスターをとることができる。
 
 <!--
 * The roulette item sprite will still change while the game is frozen with $9D.
 -->
-* The roulette item sprite will still change while the game is frozen with $9D.
+* ルーレットアイテムスプライトはゲームが$9Dでフリーズしている最中も変化する。
 
 <!--
 * The block containing a roulette sprite doesn't actually have to be hit in order for it to start rising out. Instead, a nearby block, capespin, net punch, or Yoshi stomp will suffice, so long as their quake sprite comes into contact with the roulette sprite.
 -->
-* The block containing a roulette sprite doesn't actually have to be hit in order for it to start rising out. Instead, a nearby block, capespin, net punch, or Yoshi stomp will suffice, so long as their quake sprite comes into contact with the roulette sprite.
+*ルーレットアイテムスプライトは、近くのブロックが叩かれたり、マント回転・金網パンチ・Yの砂煙などの揺れスプライトに反応して出る。
 
 <!--
 * The roulette sprite won't interact with the sides or bottoms of solid blocks for a brief period of time after being spawned out of its block, causing it to bounce up on top of them if it does hit any blocks.
@@ -1998,22 +1998,22 @@ _280個(180個有用)_
 <!--
 * Messages from a message box or display message sprite will erase whatever Layer 3 the level had; this includes water or smashers.
 -->
-* Messages from a message box or display message sprite will erase whatever Layer 3 the level had; this includes water or smashers.
+* メッセージブロックかメッセージを表示するスプライトによってメッセージが表示されると、水や大木などのレイヤー3レベルが消える。
 
 <!--
 * If Layer 3 water is replaced by a message box, the water will still have interaction at the bottom of the level.
 -->
-* If Layer 3 water is replaced by a message box, the water will still have interaction at the bottom of the level.
+* レイヤー3の水がメッセージボックスで消されても、画面下のわずかな部分だけ水が残る。
 
 <!--
 * Hitting a message box and then taking a screen exit will display that message in the next room instead.
 -->
-* Hitting a message box and then taking a screen exit will display that message in the next room instead.
+* メッセージブロックを叩いてからマップ移動すると、移動先でメッセージが表示させられる。
 
 <!--
 * Mario can land on the right corner of a message box or light switch for a frame in manner similar to walljumping, but without the speed requirement.
 -->
-* Mario can land on the right corner of a message box or light switch for a frame in manner similar to walljumping, but without the speed requirement.
+* 壁ジャンプをする時のように、メッセージボックス・ライトブロックの角に1Fだけ乗ることができる。ただし速さは不要。
 
 <!--
 * Being pushed inside a solid sprite (e.g. message box, turnblock bridge, Hammer Bro platform, Bowser statue...) will cause Mario to warp to the nearest side, even through solid blocks. If the camera moves sharply, this may also cause the newly loaded columns of Map16 to have glitched graphics until they're reloaded. Possible ways of doing this include being pushed in by another sprite, jumping fast enough, or wallrunning via a purple triangle.
@@ -2023,17 +2023,17 @@ _280個(180個有用)_
 <!--
 * When being 'warped' by a solid sprite, it's possible to completely pass the screen's spawn region over a sprite, preventing that sprite from spawning at all.
 -->
-* When being 'warped' by a solid sprite, it's possible to completely pass the screen's spawn region over a sprite, preventing that sprite from spawning at all.
+* スプライトの押し出しなどによる瞬間移動によって、スプライトの読み込み位置を完全に素通りすると、スプライトが出現しない。
 
 <!--
 * Hitting a message box that isn't set to contain a message box will cause it to instead load the Yellow Switch Palace message. If $1DF5 is non-zero, the level will automatically end and activate the Yellow Switch shortly after the message box appears; else, exiting the level by any other means (dying, goal tape, start+select, etc.) will achieve the same effect, although this will not count as beating the level. This is fixed by default by Lunar Magic. [Video](https://www.youtube.com/watch?v=EFjXb-xhWAg)
 -->
-* Hitting a message box that isn't set to contain a message box will cause it to instead load the Yellow Switch Palace message. If $1DF5 is non-zero, the level will automatically end and activate the Yellow Switch shortly after the message box appears; else, exiting the level by any other means (dying, goal tape, start+select, etc.) will achieve the same effect, although this will not count as beating the level. This is fixed by default by Lunar Magic. [Video](https://www.youtube.com/watch?v=EFjXb-xhWAg)
+* メッセージがセットされていないメッセージボックスを叩くと、黄色スイッチ宮殿のメッセージが代わりに読み込まれる。もし$1DF5の値が0以外だと、メッセージボックスが短時間出現した後、レベルが自動で終わり、黄色ブロックがONになる。値が0だと、死んだりゴールしたりスタート+セレクトなどの方法でレベルを終えた後、同様の効果が得られる。これによりレベルをクリアしたことにはならない。この挙動はLMにデフォルトで修正される。[Video](https://www.youtube.com/watch?v=EFjXb-xhWAg)
 
 <!--
 * For a brief period of time after hitting a flying ? block (even if it's been already "hit"), sprites can pass through it.
 -->
-* For a brief period of time after hitting a flying ? block (even if it's been already "hit"), sprites can pass through it.
+* 飛んでいる？ブロックが叩かれた後少しの間（既に叩かれていたとしても）、スプライトはブロックをすり抜ける。
 
 <!--
 * If Mario touches the bottom of a solid sprite while the sprite is either touching the top border of the visible screen from above or crossing it, he will be warped to its nearest side, with the same effects as the above. This glitch works even if the screen is scrolling.
@@ -2048,17 +2048,17 @@ _280個(180個有用)_
 <!--
 * If a turnblock bridge is touching (but not crossing) the top of the vertical screen border from below, Mario will not interact with the top or sides of it.
 -->
-* If a turnblock bridge is touching (but not crossing) the top of the vertical screen border from below, Mario will not interact with the top or sides of it.
+* 上部が画面上にある縦に伸びたクルクルブロックは、上部と側部の接触判定を持たない。
 
 <!--
 * Turnblock bridges can push Mario into and through solid blocks if it expands while he is standing on it.
 -->
-* Turnblock bridges can push Mario into and through solid blocks if it expands while he is standing on it.
+* 上下方向に伸びるクルクルブロックは、それに乗っているマリオをソリッドブロックの中に押しこめる。
 
 <!--
 * Activating the unused orange platform (sprite 5E) will also activate flying turnblock platforms. However, they'll move in the oppose direction that they're supposed to, and will horizontally move very slowly. If the flying turnblock platform is already activated when the unused orange platform is landed on, the turnblock platform will suddenly slow down horizontally.
 -->
-* Activating the unused orange platform (sprite 5E) will also activate flying turnblock platforms. However, they'll move in the oppose direction that they're supposed to, and will horizontally move very slowly. If the flying turnblock platform is already activated when the unused orange platform is landed on, the turnblock platform will suddenly slow down horizontally.
+* 使われていないオレンジ足場(5E)を作動させると、翼の生えた灰色足場(C1)も作動し始めるが、本来進む方向とは逆に進み、横速度がとてもゆっくりになる。灰色足場が作動中にオレンジ足場を作動させると、横速度が急にゆっくりになる。
 
 <!--
 * When more than two flying turnblock platforms are activated at once, they don't always move in the directions Lunar Magic claims they'll go. The directions each platform will move in also varies depending on which platform you land on; sometimes they even all move in one direction, even if they're not meant to. The game even gets confused when reversing the directions of the platforms; they don't always change direction when they're supposed to.
@@ -2068,177 +2068,177 @@ _280個(180個有用)_
 <!--
 * Landing on multiple moving platform sprites at the same time will cause their effects on Mario's position to stack. This means if Mario lands on two platforms moving right, he'll slide across them to the right.
 -->
-* Landing on multiple moving platform sprites at the same time will cause their effects on Mario's position to stack. This means if Mario lands on two platforms moving right, he'll slide across them to the right.
+* 複数の動いている足場スプライトに同時に乗った時、マリオはそれぞれのスプライトの作用を受ける。例えば、マリオが右方向に動く2つの足場スプライトに乗ると、マリオは右方向に滑っていく。
 
 <!--
 * Any non-solid solid block will be overwritten when a tile-replacing sprite passes over it (e.g. vine, mushroom scale, growing/shrinking pipe, etc.). This includes ropes, ledges, and rotating turnblocks (however, the latter will return to a turnblock after its spin timer runs out).
 -->
-* Any non-solid solid block will be overwritten when a tile-replacing sprite passes over it (e.g. vine, mushroom scale, growing/shrinking pipe, etc.). This includes ropes, ledges, and rotating turnblocks (however, the latter will return to a turnblock after its spin timer runs out).
+* ソリッドブロックでないタイルは全て、ツタ・キノコ足場・伸び縮みする土管などのタイルを上書きするスプライトによって上書きされる。足場や回り続けるクルクルブロックなども含む。ただし叩いたクルクルブロックを上書きしても、クルクルブロックで再上書きされる。
 
 <!--
 * When a vine sprite is spawned, it will always overwrite the block directly above it with a vine, even if it's a solid block.
 -->
-* When a vine sprite is spawned, it will always overwrite the block directly above it with a vine, even if it's a solid block.
+* ツタ生成スプライトが出現したとき、そのスプライトの1マス上はソリッドブロックであっても上書きされる。
 
 <!--
 * The creating/eating block will immediately stop its path when another creating/eating block is spawned. It will resume movement when another brown block is touched.
 -->
-* The creating/eating block will immediately stop its path when another creating/eating block is spawned. It will resume movement when another brown block is touched.
+* 動くプンプンブロックは別のプンプンブロックが読み込まれるとすぐに動きを停止する。オブジェクトのプンプンブロックが踏まれると動きを再開する。
 
 <!--
 * If a block is hit and bounces as the creating/eating path block sprite is about to eat it, it will be skipped over without being eaten.
 -->
-* If a block is hit and bounces as the creating/eating path block sprite is about to eat it, it will be skipped over without being eaten.
+* 動くプンプンブロックがブロックを通る直前に、そのブロックを叩いて跳ねさせると、上書きされない。
 
 <!--
 * The eating path block sprite can skip over empty tiles without disappearing if there is a solid block in the tile to the right of it.
 -->
-* The eating path block sprite can skip over empty tiles without disappearing if there is a solid block in the tile to the right of it.
+* 動くプンプンブロックは空きタイルを、そのタイルの右側にソリッドブロックが配置されていれば、消えることなく通り抜けることができる。
 
 <!--
 * The eating path block sprite makes some unusual decisions when path finding. When given a choice of up or down, it will fly diagonally downward to the right at high speed (eventually latching back onto a block 16 tiles right and 11 tiles down). A choice between left and up/down will result in it going right (making it disappear unless the previous glitch is used). A choice between up, right, and down will send it downward, but will briefly accelerate as it changes direction; if this occurs 4 times, the block will shoot downwards until it despawns. A choice of up, left, and right will move it slowly downward and to the right, before correcting itself and taking the right path. Finally, a choice of all four directions will send it flying diagonally upward to the right at a very high speed. [Video](https://youtu.be/GIN1To_Nwqg)
 -->
-* The eating path block sprite makes some unusual decisions when path finding. When given a choice of up or down, it will fly diagonally downward to the right at high speed (eventually latching back onto a block 16 tiles right and 11 tiles down). A choice between left and up/down will result in it going right (making it disappear unless the previous glitch is used). A choice between up, right, and down will send it downward, but will briefly accelerate as it changes direction; if this occurs 4 times, the block will shoot downwards until it despawns. A choice of up, left, and right will move it slowly downward and to the right, before correcting itself and taking the right path. Finally, a choice of all four directions will send it flying diagonally upward to the right at a very high speed. [Video](https://youtu.be/GIN1To_Nwqg)
+* 動くプンプンブロックは与えられた経路によって変な動きをしたりする。上下なら高速で斜め右下に吹っ飛ぶ（16タイル右11タイル下にブロックがあると、それに反応し後退する）。上下左なら、右に進む（上下のバグを使わない限り消える）。上下右なら下に1タイル素早く進む。これが4回起こると、画面下に向かって落ちていく。上左右ならゆっくり右下に進む。上下左右なら高速で右上に吹っ飛ぶ。 [Video](https://youtu.be/GIN1To_Nwqg)
 
 <!--
 * The eating path block sprite makes even unusual decisions when given the choice between paths on Layer 1 and Layer 2. Most setups will send the block flying in some direction.
 -->
-* The eating path block sprite makes even unusual decisions when given the choice between paths on Layer 1 and Layer 2. Most setups will send the block flying in some direction.
+* 動くプンプンブロックはレイヤー1とレイヤー2のブロックが進む方向にある時、普通でない動きをする。大抵は吹っ飛ぶ。
 
 <!--
 * If a block gets hit as an eating path block sprite passes over it, the block will respawn after the bounce sprite animation is finished, even though the path block should have deleted it. Notable in that it can cause the eating path sprite to backtrack.
 -->
-* If a block gets hit as an eating path block sprite passes over it, the block will respawn after the bounce sprite animation is finished, even though the path block should have deleted it. Notable in that it can cause the eating path sprite to backtrack.
+* 動くプンプンブロックが通過する時ブロックが叩かれると、バウンススプライトのアニメーションが終わってから、そのブロックが再出現する。動くプンプンブロックはそれを認識して引き返すことがある。
 
 <!--
 * Plantaporting: If there is a wall springboard at either y=12 or y=13, falling in a pit directly beneath it will warp Mario on top of it.
 -->
-* Plantaporting: If there is a wall springboard at either y=12 or y=13, falling in a pit directly beneath it will warp Mario on top of it.
+* プランタポーティング:緑のバネがY座標12・13に配置してあるとき、バネの下の辺りに落ちると、マリオがバネの位置に瞬間移動する。
 
 <!--
 * If a wall springboard is crossing the edge of the screen, its interaction will loop to the other side. In order for it to work, however, the base sphere of it has to be fully onscreen.
 -->
-* If a wall springboard is crossing the edge of the screen, its interaction will loop to the other side. In order for it to work, however, the base sphere of it has to be fully onscreen.
+* 緑のバネが画面端にかぶっている時、判定が逆側の画面端にループする。本来の判定の部分も正常に機能する。
 
 <!--
 * Mario can not be crushed by solid blocks while he is standing on a wall springboard. This can be used to drop him through solid blocks or through ceilings.
 -->
-* Mario can not be crushed by solid blocks while he is standing on a wall springboard. This can be used to drop him through solid blocks or through ceilings.
+* 緑のバネに乗っているときは、ソリッドブロックの中で圧死しない。これを利用してソリッドブロックや床や天井を抜けられる。
 
 <!--
 * Similar to the plantaporting, if a Wiggler is placed at y=13 or any position above, Mario can bounce off of it by falling into a pit directly beneath.
 -->
-* Similar to the plantaporting, if a Wiggler is placed at y=13 or any position above, Mario can bounce off of it by falling into a pit directly beneath.
+* y=13以上の高さに配置されたハナチャンの下の位置に落ちると、マリオはハナチャンを踏むことできる。
 
 <!--
 * Landing on a Wiggler as its head is turning on a corner can cause it to become stuck on the corner, or occasionally will fall off the edge. If it's on a ledge, it will always fall down.
 -->
-* Landing on a Wiggler as its head is turning on a corner can cause it to become stuck on the corner, or occasionally will fall off the edge. If it's on a ledge, it will always fall down.
+* 崖で反転する瞬間のハナチャンを踏むと、ハナチャンが崖の位置で固定されたり崖から落ちることがある。
 
 <!--
 * Although Mario can not be killed by the segments of a falling Wiggler, each of them can still be jumped on.
 -->
-* Although Mario can not be killed by the segments of a falling Wiggler, each of them can still be jumped on.
+* 落下中のハナチャンの胴体に触れてもマリオは死なず、踏むことはできる。
 
 <!--
 * Wigglers can't be killed by a Bob-omb being bumped into them, but will still turn around when touching one. This can be used to push a Wiggler off the edge of a ledge or into walls.
 -->
-* Wigglers can't be killed by a Bob-omb being bumped into them, but will still turn around when touching one. This can be used to push a Wiggler off the edge of a ledge or into walls.
+* ハナチャンはマリオに押し出されたボム兵に触れても死なず、向きを変える。これを使うことで、ハナチャンを崖から落としたり、壁に押し込めることができる。
 
 <!--
 * If a Wiggler gets pushed inside a block, it will either be pushed into the ground (if on top of a ledge) or shot 33 tiles into the air (if on top of a solid block), ignoring all solid tiles in the way.
 -->
-* If a Wiggler gets pushed inside a block, it will either be pushed into the ground (if on top of a ledge) or shot 33 tiles into the air (if on top of a solid block), ignoring all solid tiles in the way.
+*ハナチャンはブロック中に押し込まれると、ソリッドブロック以外の上にいる場合は床下に抜ける。ソリッドブロックの上にいる場合は33タイル上に間のソリッドブロックを素通りして急上昇する。
 
 <!--
 * Certain sprites will hurt Mario directly even if he's riding Yoshi, rather than knocking him off. These include Wigglers, Dino Torch flames, Fishin Boo's flame, and Mega Moles.
 -->
-* Certain sprites will hurt Mario directly even if he's riding Yoshi, rather than knocking him off. These include Wigglers, Dino Torch flames, Fishin Boo's flame, and Mega Moles.
+* 一部のスプライトはYに乗っているマリオをYから降ろさせずに直接ダメージを与える。ハナチャンやチビライタの炎、スプークの炎やインディなど。
 
 <!--
 * Mario can still be hurt by a Wiggler's segments or a Dino Torch's flames even while the corresponding sprite is on Yoshi's tongue. In fact, combined with the above glitch, Mario can be hurt by the sprite on Yoshi's tongue even while he's still riding Yoshi.
 -->
-* Mario can still be hurt by a Wiggler's segments or a Dino Torch's flames even while the corresponding sprite is on Yoshi's tongue. In fact, combined with the above glitch, Mario can be hurt by the sprite on Yoshi's tongue even while he's still riding Yoshi.
+* ハナチャンやチビライタはYの舌につかまっていても、マリオはハナチャンの断片やチビライタの炎からダメージを食らうことができる。上記のバグと組み合わせて、Yに騎乗したまま、舌で掴んだスプライトによって直接ダメージを食らうことができる。
 
 <!--
 * Wigglers can be killed by star power if the Wiggler is onscreen and Mario is offscreen one screen above it.
 -->
-* Wigglers can be killed by star power if the Wiggler is onscreen and Mario is offscreen one screen above it.
+* マリオがスター状態でハナチャンが画面内にいるとき、マリオがハナチャンより1画面分上の画面外の位置にいくとハナチャンを倒せる。
 
 <!--
 * While on the backside of a fence, Mario will still interact with: wall springboards, the Fishin' Boo's flame, the Dino Torch's flame, and Wigglers.
 -->
-* While on the backside of a fence, Mario will still interact with: wall springboards, the Fishin' Boo's flame, the Dino Torch's flame, and Wigglers.
+* マリオが金網の裏にいても、緑のバネ・スプークの炎・チビライタの炎・ハナチャンなどと接触判定をもつ。
 
 <!--
 * If a sprite is on top of a growing/shrinking pipe as it is expanding, the sprite will end up stuck inside.
 -->
-* If a sprite is on top of a growing/shrinking pipe as it is expanding, the sprite will end up stuck inside.
+* スプライトが伸び縮みする土管の上にいると、伸びた時内部に固定される。
 
 <!--
 * Killing a growing/shrinking pipe (by using a null sprite to mess with its properties) will cause it to act strangely; it will still try to act like normal and spawn pipe tiles, but it'll move horizontally at the same time. If Mario strays too far from it, it'll stop its normal functionality and fall off the bottom of the screen.
 -->
-* Killing a growing/shrinking pipe (by using a null sprite to mess with its properties) will cause it to act strangely; it will still try to act like normal and spawn pipe tiles, but it'll move horizontally at the same time. If Mario strays too far from it, it'll stop its normal functionality and fall off the bottom of the screen.
+* ヌルスプライトを用いた性質変更で伸び縮みする土管を倒すと、奇妙な動作をする。通常と同じように土管タイルをスポンしようとするが、土管は水平方向に移動する。もしマリオが土管から離れすぎると、土管は伸び縮みは止め、画面下に落ちる。
 
 <!--
 * Mushroom scales and growing/shrinking pipes will overwrite any tiles they pass over, regardless of whether they are solid or not.
 -->
-* Mushroom scales and growing/shrinking pipes will overwrite any tiles they pass over, regardless of whether they are solid or not.
+* きのこ足場と伸び縮みする土管はソリッドであろうとなかろうと、あらゆるタイルを上書きする。
 
 <!--
 * Mushroom scales will "lock" their position every 8 tiles.
 -->
-* Mushroom scales will "lock" their position every 8 tiles.
+* きのこ足場は8タイル毎にロックされる。
 
 <!--
 * Flying red coins can be burned.
 -->
-* Flying red coins can be burned.
+* 飛んでいる赤コインは可燃性。
 
 <!--
 * Burning a Lakitu with a fireball rather than jumping on him will cause its cloud to never disappear.
 -->
-* Burning a Lakitu with a fireball rather than jumping on him will cause its cloud to never disappear.
+* 雲に乗っているジュゲムをファイアで燃やすと、マリオが乗るまで雲は消えない。
 
 <!--
 * If a priority swap replaces Lakitu, its cloud will never disappear.
 -->
-* If a priority swap replaces Lakitu, its cloud will never disappear.
+* スプライト優先度によるスロット上書きでジュゲムを消すと、雲が消えなくなる。
 
 <!--
 * Pressing both A and B at the same time while riding in a Lakitu cloud will cause Mario to spinjump out of it.
 -->
-* Pressing both A and B at the same time while riding in a Lakitu cloud will cause Mario to spinjump out of it.
+* 雲に乗っている時に、同時にABを押すとスピンジャンプをして雲から出る。
 
 <!--
 * Pressing both up and down at the same time while in a Lakitu cloud will cause Mario to duck while moving upward. If you press up against a ceiling and then release down, Mario will get his head stuck in the ceiling and be pushed leftward.
 -->
-* Pressing both up and down at the same time while in a Lakitu cloud will cause Mario to duck while moving upward. If you press up against a ceiling and then release down, Mario will get his head stuck in the ceiling and be pushed leftward.
+* 雲に乗っている時に、上下を同時押しすると、マリオがしゃがみながら上昇していく。デカでこれをして、天井にくっついてからボタンを離すと、頭が天井にめりこみ、マリオが左に押されていく。
 
 <!--
 * Landing in a Lakitu cloud on the same frame that Mario would enter a wall far enough to walljump will push Mario inside and through the wall.
 -->
-* Landing in a Lakitu cloud on the same frame that Mario would enter a wall far enough to walljump will push Mario inside and through the wall.
+* 壁にひっかかれる速度で雲に乗ると、壁を貫通できる。
 
 <!--
 * Lakitu's Cloud will not despawn offscreen, so it can loop across the level in any direction.
 -->
-* Lakitu's Cloud will not despawn offscreen, so it can loop across the level in any direction.
+* 雲は画面外で消えないため、そのレベル内でどの方向でもループする。
 
 <!--
 * Since Lakitu and his cloud are separate sprites, having enough slots filled will cause only the Lakitu to spawn. Instead of flying around and throwing spinies, though, he'll just float in midair.
 -->
-* Since Lakitu and his cloud are separate sprites, having enough slots filled will cause only the Lakitu to spawn. Instead of flying around and throwing spinies, though, he'll just float in midair.
+* 雲に乗っているジュゲムは2つのスプライトに分けられている。出現するときに2スロット余っていないと、ジュゲムのみが位置が固定された状態で出現する。
 
 <!--
 * Killing a Lakitu with a capespin, quake sprite, or net punch will cause whatever sprite is in slot 9 to have its stun timer set to 31.
 -->
-* Killing a Lakitu with a capespin, quake sprite, or net punch will cause whatever sprite is in slot 9 to have its stun timer set to 31.
+* ジュゲムをマント回転・揺れスプライト・金網パンチなどで倒すと、スロット#9のスタンタイマーが31に設定される。
 
 <!--
 * If Lakitu spawns without its cloud, killing it by jumping on top of it will cause whatever sprite is in slot 0 to have its stun timer set to 31. If Lakitu has already spawned previously in the level, it will instead stun whatever slot Lakitu's cloud was last in.
 -->
-* If Lakitu spawns without its cloud, killing it by jumping on top of it will cause whatever sprite is in slot 0 to have its stun timer set to 31. If Lakitu has already spawned previously in the level, it will instead stun whatever slot Lakitu's cloud was last in.
+* ジュゲムが雲なしに出現した時、ジャンプで踏んで倒すと、スロット#0のスタンタイマーが31にセットされる。もしそのレベル内で既に別のジュゲムが出現していた場合、雲が最後にあったスロットのスタンタイマーがセットされる。
 
 <!--
 * Mario can still collect the Fishin' Lakitu's 1-up while dying. [Fix](http://www.smwcentral.net/?p=section&a=details&id=6108)
