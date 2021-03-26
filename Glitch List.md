@@ -1888,7 +1888,7 @@ _280個(180個有用)_
 <!--
 * If Mario knocks a Koopa out of its shell, lets it re-enter, and then knocks it out once more, the game will register that Koopa as a new sprite. This means, if the shell is then despawned, the Koopa will respawn, even if the shell-less Koopa you knocked out isn't. This means you can get an infinite number of shell-less Koopas from a single Koopa.
 -->
-* ノコノコを甲羅から出して再び入れて、もう一度出すと、出てきた裸ノコノコは新しいスプライトとして認識される。つまり、甲羅を倒さずず消すとノコノコが再び現れる。これを利用すれば、裸ノコノコを一体のノコノコから何体でも出現させられる。
+* ノコノコを甲羅から出して再び入れて、もう一度出すと、出てきた裸ノコノコは新しいスプライトとして認識される。つまり、甲羅を倒さず消すとノコノコが再び現れる。これを利用すれば、裸ノコノコを一体のノコノコから何体でも出現させられる。
 
 <!--
 * If a Koopa has just entered a Koopa shell, setting $15D0 (flag for being on Yoshi's tongue) for a sprite in the same slot the Koopa was in will cause the Koopa inside the shell to vanish without actually emerging.
@@ -2243,22 +2243,22 @@ _280個(180個有用)_
 <!--
 * Mario can still collect the Fishin' Lakitu's 1-up while dying. [Fix](http://www.smwcentral.net/?p=section&a=details&id=6108)
 -->
-* Mario can still collect the Fishin' Lakitu's 1-up while dying. [Fix](http://www.smwcentral.net/?p=section&a=details&id=6108)
+* マリオは死亡中にジュゲムが吊るしている1upをとることができる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=6108)
 
 <!--
 * Lakitus will run into issues if there is more than one cloud spawned at a time. Both clouds will end up spawning spinies, while the Lakitu will only actually be present in the one with a higher slot. Killing the Lakitu will only destroy the cloud he was originally meant to spawn in, rather than the one he's actually in. [Video](https://twitter.com/Kaizoman666/status/824102759377104896)
 -->
-* Lakitus will run into issues if there is more than one cloud spawned at a time. Both clouds will end up spawning spinies, while the Lakitu will only actually be present in the one with a higher slot. Killing the Lakitu will only destroy the cloud he was originally meant to spawn in, rather than the one he's actually in. [Video](https://twitter.com/Kaizoman666/status/824102759377104896)
+* アッパレはアッパレ用の足場スプライトが同時に2つ以上存在するとバグを引き起こす。ハンマーと当たり判定は元の足場にくっついたままだが、アッパレの表示はスロットが小さい方に付随する。アッパレの有無に関わらず、どちらの足場スプライトを叩いてしまえばアッパレを倒せる。[Video](https://twitter.com/Kaizoman666/status/824102759377104896)
 
 <!--
 * Hammer Bros. will run into issues if there is more than one flying platform spawned at a time. The hammers and sprite hitbox will remain attached to the original platform, but the Bro's graphics will end up on the platform with the lowest sprite slot. Hitting any platform will kill the Hammer Bro, regardless of whether he is on it or not.
 -->
-* Hammer Bros. will run into issues if there is more than one flying platform spawned at a time. The hammers and sprite hitbox will remain attached to the original platform, but the Bro's graphics will end up on the platform with the lowest sprite slot. Hitting any platform will kill the Hammer Bro, regardless of whether he is on it or not.
+* アッパレはアッパレ用の足場スプライトが同時に2つ以上存在するとバグを引き起こす。ハンマーと当たり判定は元の足場にくっついたままだが、アッパレの表示はスロットが小さい方に付随する。アッパレの有無に関わらず、どちらの足場スプライトを叩けばアッパレを倒せる。
 
 <!--
 * Hammer Bros will start throwing hammers while they are sinking in lava. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#02DA60)
 -->
-* Hammer Bros will start throwing hammers while they are sinking in lava. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#02DA60)
+* アッパレは溶岩に沈んでる最中、ハンマーを投げる。[Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#02DA60)
 
 <!--
 * Hitting a Hammer Bro. platform and then moving it (via sprite slot storage and spitting it out) before the hit animation finishes will cause its movement pattern to change, potentially making it travel extremely high upwards at a very high speed. [Video](https://www.youtube.com/watch?v=N7u-WvMZDv4)
@@ -2268,17 +2268,17 @@ _280個(180個有用)_
 <!--
 * If a Podoboo's spawn position is exactly 22 tiles above the lava it ends up in, when the Podoboo jumps out, it will end up jumping significantly higher than it should (approximately 34 tiles above the spawn position).
 -->
-* If a Podoboo's spawn position is exactly 22 tiles above the lava it ends up in, when the Podoboo jumps out, it will end up jumping significantly higher than it should (approximately 34 tiles above the spawn position).
+* バブルの配置座標が溶岩から丁度22タイル上の時にバブルが飛び上がると、本来の位置より高く（出現位置から約34タイル上）まで上昇する。
 
 <!--
 * Freezing the game (via $9D) while the Falling Spike is falling will cause its Y speed to reset.
 -->
-* Freezing the game (via $9D) while the Falling Spike is falling will cause its Y speed to reset.
+* $9Dでフリーズさせると落下する棘のY速度がリセットされる。
 
 <!--
 * The Falling Spike sprite doesn't actually interact with Mario until it starts to fall.
 -->
-* The Falling Spike sprite doesn't actually interact with Mario until it starts to fall.
+* 落下する棘は落下を始めるまでマリオとの判定がない。
 
 <!-- 
 * If a room has the castle candle flame cluster sprite, then whatever the last sprite loaded into slot 3 was will appear in the room in state 7 (swallowed by Yoshi). If no sprite has spawned into slot 3 yet, then it will have sprite ID 0 (shell-less green Koopa).
@@ -2288,102 +2288,103 @@ _280個(180個有用)_
 <!--
 * The Mario proximity detection routine for sprites (e.g. for Thwomps, falling spikes, Yoshi eggs, etc) loop across the screen borders.
 -->
-* The Mario proximity detection routine for sprites (e.g. for Thwomps, falling spikes, Yoshi eggs, etc) loop across the screen borders.
+* マリオが近づくと反応するスプライト（ドッスン・落下する棘・ヨッシーの卵など）の判定は画面端でループする。
 
 <!--
 * Thwomps will only interact with blocks that their left side touches.
 -->
-* Thwomps will only interact with blocks that their left side touches.
+* ドッスンは左側にあるブロックにしか反応しない。
 
 <!--
 * When Thwomps hit a very steep slope, they shift slightly to the side.
 -->
-* When Thwomps hit a very steep slope, they shift slightly to the side.
+* ドッスンはとても急な坂に着地すると、少し横にずれる。
 
 <!--
 * Thwomps will lock their position every 16 tiles, preventing them from rising back up if they fall too far. Similarly, a Thwomp can get pushed up above its spawn position if it lands on a slope or a slightly offset Layer 2, which will cause it to rise up to the next lock position instead.
 -->
-* Thwomps will lock their position every 16 tiles, preventing them from rising back up if they fall too far. Similarly, a Thwomp can get pushed up above its spawn position if it lands on a slope or a slightly offset Layer 2, which will cause it to rise up to the next lock position instead.
+* ドッスンは固定位置を16タイル毎に更新する。坂や動くレイヤー2に着地し、ドッスンが出現位置より上にずらされると、次の固定位置まで上昇していく。
 
 <!--
 * While rising back to their original position, Thwomps will ignore any blocks in the way.
 -->
-* While rising back to their original position, Thwomps will ignore any blocks in the way.
+* ドッスンは元の高さに戻るとき、道中にあるブロックを無視する。
 
 <!--
 * Thwimps can jump through corners where two solid blocks touch diagonally.
 -->
-* Thwimps can jump through corners where two solid blocks touch diagonally.
+* コトンは斜めに配置された2つのソリッドブロックの間を抜けられる。
 
 <!--
 * If a Thwimp jumps into a wall, it will lodge itself into the side of the wall to land on it.
 -->
-* If a Thwimp jumps into a wall, it will lodge itself into the side of the wall to land on it.
+* コトンの軌道に壁があると、壁に着地する。
 
 <!--
 * Mario can pass through the bottom half of the grey castle block sprite so long as he has no upwards Y speed. As a side effect, it also won't force small Mario or a ducking big Mario into walls.
 -->
-* Mario can pass through the bottom half of the grey castle block sprite so long as he has no upwards Y speed. As a side effect, it also won't force small Mario or a ducking big Mario into walls.
+* 城の灰色の左右に動く足場スプライトの下半分はマリオの上向きY速度がない場合素通りできる。
 
 <!--
 * Hitting the grey castle block sprite from below when $C2 is 0 (where the block will be stationary before moving left) will cause it to immediately start moving left.
 -->
-* Hitting the grey castle block sprite from below when $C2 is 0 (where the block will be stationary before moving left) will cause it to immediately start moving left.
+* 城の灰色の左右に動く足場スプライトを$C2が0のとき（64往復後の静止状態）に叩くと、即座に左に動き始める。
 
 <!--
 * Mario can fit between two Wooden Spike sprites without being hurt, even if they're directly next to each other.
 -->
-* Mario can fit between two Wooden Spike sprites without being hurt, even if they're directly next to each other.
+* マリオは隣接した上下移動する木のトゲの間をダメージを受けずにめり込むことができる。
 
 <!--
 * Mario doesn't actually have to be touching the spike part of a wooden spike to take damage; the entire interior will hurt him.
 -->
-* Mario doesn't actually have to be touching the spike part of a wooden spike to take damage; the entire interior will hurt him.
+* マリオは上下移動する木のトゲのトゲ部分に触れてもダメージは受けない。木のトゲの内部に触れるとダメージをくらう。
 
 <!--
 * Mario can vertically pass through a Wooden Spike sprite without being pushed out, so long as he enters them directly through the top/bottom (but he will take damage in the process).
 -->
-* Mario can vertically pass through a Wooden Spike sprite without being pushed out, so long as he enters them directly through the top/bottom (but he will take damage in the process).
+* マリオは上下移動する木のトゲを上下どちらの方向にでも貫通して移動できる。ただし基本的にはダメージをくらう。
 
 <!--
 * The Hopping flame's remnants normally don't hurt Mario when they're flickering, but freezing the game (via $9D) will still cause him to get hurt by them.
 -->
-* The Hopping flame's remnants normally don't hurt Mario when they're flickering, but freezing the game (via $9D) will still cause him to get hurt by them.
+* バウンドファイアの火の粉は点滅を開始すると、普通はマリオにダメージを与えないが、$9Dでフリーズするとダメージを与える。
 
 <!--
 * The Sumo Bro's lightning will continue falling even if the game is frozen by $9D. During a screen scroll, it will not interact with solid objects during that time either.
 -->
-* The Sumo Bro's lightning will continue falling even if the game is frozen by $9D. During a screen scroll, it will not interact with solid objects during that time either.
+* K.K.の雷は$9Dでフリーズしている間も落下し続ける。フリーズ中、雷はソリッドオブジェクトとの判定を持たない。
 
 <!--
 * The Sumo Bro's lightning will infinitely loop vertically until they hit a block. Will takes some time to fall, though.
 -->
-* The Sumo Bro's lightning will infinitely loop vertically until they hit a block. Will takes some time to fall, though.
+* K.K.の雷はソリッドオブジェクトに当たるまで、垂直方向でループし続ける。
 
 <!--
 * If the first division is filled, the flames from Sumo Bro's lightning will spawn in strange positions.
 -->
 * If the first division is filled, the flames from Sumo Bro's lightning will spawn in strange positions.
+* スプライトスロットの分割1が埋まっていると、K.K.の雷による炎が通常と異なる位置に出現する。
 
 <!--
 * The Sumo Bro's flames may occasionally borrow graphics from other onscreen sprites. If the sprite is in slot 0, it will often actually warp to the position to the flame. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4242)
 -->
-* The Sumo Bro's flames may occasionally borrow graphics from other onscreen sprites. If the sprite is in slot 0, it will often actually warp to the position to the flame. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4242)
+* K.K.の雷による炎は時折、画面内の別スプライトから表示を借りる。もしそのスプライトがスロット0ならば、表示だけではなくスプライト本体も炎の位置に瞬間移動する。 [Fix](http://www.smwcentral.net/?p=section&a=details&id=4242)
 
 <!--
 * If a Sumo Bro walks off a ledge, it will fly in that direction until it lands on something. This can also lodge it into walls.
 -->
-* If a Sumo Bro walks off a ledge, it will fly in that direction until it lands on something. This can also lodge it into walls.
+* K.K.が崖を踏み外すと、足場にたどり着くまで滑空する。壁にめり込むこともある。
 
 <!--
 * Touching one of the three-platform sprite on the frame it spawns (by scrolling the screen all the way over and sticking to the side of the screen) will cause Mario to be warped leftward. This will send him through solid blocks, as well as still leave him with the ability to jump. [Vid](http://i.imgur.com/4SXCGtL.gif)[eos](https://twitter.com/Kaizoman666/status/805900722680328192)
 -->
-* Touching one of the three-platform sprite on the frame it spawns (by scrolling the screen all the way over and sticking to the side of the screen) will cause Mario to be warped leftward. This will send him through solid blocks, as well as still leave him with the ability to jump. [Vid](http://i.imgur.com/4SXCGtL.gif)[eos](https://twitter.com/Kaizoman666/status/805900722680328192)
+* 回転する3つの足場スプライトが読み込まれるFに（画面をスクロールしたりして画面を片方に寄せるなどして）それに触れると、マリオが左方向に瞬間移動する。ソリッドブロックを貫通し、ジャンプできる状態で瞬間移動する。[Vid](http://i.imgur.com/4SXCGtL.gif)[eos](https://twitter.com/Kaizoman666/status/805900722680328192)
 
 <!--
 * Freezing the game with $9D on the frame one of the middle three flames from the Sumo Bros' lightning spawns will cause all of the other flames to spawn at once, and additionally may spawn a few extra ones as well. Of note, one of these extra flames can spawn 12 tiles to the right of where the lightning originally hit. [More info](http://smwc.me/1237494)
 -->
-* Freezing the game with $9D on the frame one of the middle three flames from the Sumo Bros' lightning spawns will cause all of the other flames to spawn at once, and additionally may spawn a few extra ones as well. Of note, one of these extra flames can spawn 12 tiles to the right of where the lightning originally hit. [More info](http://smwc.me/1237494)
+* K.K.の雷の中心三本の炎が発生するFで$9Dでフリーズさせると、全ての炎が同時に出現し、さらにもう数本追加で出現する。余剰炎の一本は雷が発火した地点から12タイル右に生成される。[More info](http://smwc.me/1237494)
 
 <!--
 * When touching a revolving brown platform without actually being on it, some timers will decrease twice as fast. These include $1490 (star power timer), $18AC (Yoshi swallow timer), $18AE (waiting to stick Yoshi's tongue out timer), and $151C (Yoshi's tongue extension distance).
@@ -2393,42 +2394,42 @@ _280個(180個有用)_
 <!--
 * Mario can pass through any solid blocks while riding a revolving brown platform, though he'll still be pushed left and killed if he ends up fully surrounded.
 -->
-* Mario can pass through any solid blocks while riding a revolving brown platform, though he'll still be pushed left and killed if he ends up fully surrounded.
+* マリオは回転する茶色足場に乗ってる間はあらゆるソリッドブロックの中を通り抜けられるが、四方の接触判定があると、左に押され圧死する。
 
 <!--
 * Jumping on a dolphin as it is rising quickly may cause Mario to fall through it. Though less useful, this can also occur with revolving brown platforms.
 -->
-* Jumping on a dolphin as it is rising quickly may cause Mario to fall through it. Though less useful, this can also occur with revolving brown platforms.
+* イルカが上昇している時にジャンプをすると、イルカを通り抜けて落ちることができる。意味は無いが、回転する茶色足場でも可能。
 
 <!--
 * In certain levels, dolphins will treat the area offscreen above the level as water, which in turn causes them to jump infinitely upwards until they eventually loop and despawn at the bottom.
 -->
-* In certain levels, dolphins will treat the area offscreen above the level as water, which in turn causes them to jump infinitely upwards until they eventually loop and despawn at the bottom.
+* 一部のレベルでは画面上がイルカにとって水中判定になっており、画面下にループし消えるまで、画面上でジャンプし続ける。
 
 <!--
 * Once a dolphin touches lava, its timer to jump will be set. As soon as that timer runs out, the dolphin will perform the jump, even if it's no longer actually in water.
 -->
-* Once a dolphin touches lava, its timer to jump will be set. As soon as that timer runs out, the dolphin will perform the jump, even if it's no longer actually in water.
+* イルカは一回溶岩に触れると、ジャンプするタイマーがセットされる。そのタイマーが0になると、水中でなくてもジャンプをする。
 
 <!--
 * Skull rafts can travel through solid blocks, as they only acknowledge the tops of blocks.
 -->
-* Skull rafts can travel through solid blocks, as they only acknowledge the tops of blocks.
+* ドクロリフトはソリッドブロックの上も移動する。
 
 <!--
 * If a skull raft encounters a left facing very steep slope, it will get stuck and become unable to progress. Running onto the raft in this state can potentially clip Mario through the slope, as well.
 -->
-* If a skull raft encounters a left facing very steep slope, it will get stuck and become unable to progress. Running onto the raft in this state can potentially clip Mario through the slope, as well.
+* ドクロリフトがとても急な坂にぶち当たると、坂にはまって進まなくなる。この状態のドクロ足場に走って乗ると、坂を抜けられることがある。
 
 <!--
 * Torpedo Teds and Fishbones will still act like they're alive when killed; you can still be hurt by it or spinjump off of it. You can't kill it a second time, though, unless you have a star. [Fix](http://www.smwcentral.net/?p=section&a=details&id=11522)
 -->
-* Torpedo Teds and Fishbones will still act like they're alive when killed; you can still be hurt by it or spinjump off of it. You can't kill it a second time, though, unless you have a star. [Fix](http://www.smwcentral.net/?p=section&a=details&id=11522)
+* トーピードとフィッシュボーンは一度倒されても、生きているように行動し続ける。一度倒してもスピンジャンプしたりダメージを受けたりする。通常は一度しか倒せないが、スターであれば何度でも倒せる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=11522)
 
 <!--
 * Stomping on a Dry Bones that stays on ledges on the the frame it turns around at the edge of the ledge will cause it to fall off the ledge.
 -->
-* Stomping on a Dry Bones that stays on ledges on the the frame it turns around at the edge of the ledge will cause it to fall off the ledge.
+* カロンを崖で振り向くFに踏むと、カロンが崖から落ちる。
 
 <!--
 * Normally, Mario isn't able to jump through the bottom of a moving ghost house hole (due to it being a pixel too high). Clipping through the ceiling through any method (including just simply spinjumping off Yoshi) will push him far enough in, though.
@@ -2443,37 +2444,37 @@ _280個(180個有用)_
 <!--
 * Certain sprites will not pass through moving Ghost House holes. [List](https://pastebin.com/Gvgea42u)
 -->
-* Certain sprites will not pass through moving Ghost House holes. [List](https://pastebin.com/Gvgea42u)
+* 特定のスプライトはお化け屋敷の動く穴を通り抜けない。[List](https://pastebin.com/Gvgea42u)
 
 <!--
 * If a moving ghost house hole is despawned while Mario is interacting with it ($185C has a non-zero value), the flag that makes Mario pass through objects won't be cleared, and you'll pass through all objects in the level as a result. This will not be corrected until a new ghost house hole spawns in the same slot as the original.
 -->
-* If a moving ghost house hole is despawned while Mario is interacting with it ($185C has a non-zero value), the flag that makes Mario pass through objects won't be cleared, and you'll pass through all objects in the level as a result. This will not be corrected until a new ghost house hole spawns in the same slot as the original.
+* お化け屋敷の動く穴がマリオと触れている間（$185Cが0以外の値の時）に消えると、そのフラグの値が変化しなくなる。フラグの値が0以外の時、マリオはオブジェクトとの判定がなくなる。これはお化け屋敷の動く穴が消えたのと同じスロットに新たに出現するまで治らない。
 
 <!--
 * If a moving ghost house hole is despawned while any sprite is interacting with it ($15DC has a non-zero value), the flag that makes the sprite pass through objects won't be cleared, and the sprite will pass through all objects in the level as a result (however, other sprites will still interact with it). This will not be corrected until a new ghost house hole spawns in the same slot as the original.
 -->
-* If a moving ghost house hole is despawned while any sprite is interacting with it ($15DC has a non-zero value), the flag that makes the sprite pass through objects won't be cleared, and the sprite will pass through all objects in the level as a result (however, other sprites will still interact with it). This will not be corrected until a new ghost house hole spawns in the same slot as the original.
+* お化け屋敷の動く穴がスプライトと触れている間（$15DCが0以外の値の時）に消えると、そのフラグの値が変化しなくなる。フラグの値が0以外の時、そのスプライトはオブジェクトとの判定がなくなる。これはお化け屋敷の動く穴が消えたのと同じスロットに新たに出現するまで治らない。
 
 <!--
 * If Mario is pushed off of a moving rope mechanism by a block, the game will continue to think he is in front of the sprite and will let him grab onto and jump off of the rope as if it is still there. However, this effect will be broken if he passes in front of another rope sprite, unless he is holding an item. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8784)
 -->
-* If Mario is pushed off of a moving rope mechanism by a block, the game will continue to think he is in front of the sprite and will let him grab onto and jump off of the rope as if it is still there. However, this effect will be broken if he passes in front of another rope sprite, unless he is holding an item. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8784)
+* 月歩:マリオがロープを掴んでいる最中、プロックに押されると、マリオは常にそのスプライトの前にいると認識されるようになり、どこにいてもそこにロープがあるように掴んでりジャンプしたりできる。この効果は別のロープスプライトの前にアイテムを持ってない状態で、通りかからない限り解除されない。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8784)
 
 <!--
 * As an alternative to the above, the "climb anywhere" rope mechanism glitch can also be activated by grabbing onto the very far edge of a rope mechanism (so that Mario immediately falls off) at the same time he interacts with the side of a block, even if the mechanism isn't moving directly into said block. [Video](https://cdn.discordapp.com/attachments/167412470862970881/462505481898950676/smw-climbing-glitch-new_00000.gif)
 -->
-* As an alternative to the above, the "climb anywhere" rope mechanism glitch can also be activated by grabbing onto the very far edge of a rope mechanism (so that Mario immediately falls off) at the same time he interacts with the side of a block, even if the mechanism isn't moving directly into said block. [Video](https://cdn.discordapp.com/attachments/167412470862970881/462505481898950676/smw-climbing-glitch-new_00000.gif)
+* 上記のバグはロープスプライトの掴んだ瞬間離れてしまうような端っこを掴むと同時にブロックの側面に触れることでも起こすことができる。これはロープスプライトがブロックの方向に動かない場合でも行える。[Video](https://cdn.discordapp.com/attachments/167412470862970881/462505481898950676/smw-climbing-glitch-new_00000.gif)
 
 <!--
 * When climbing upward on a moving rope mechanism, Mario will not interact with the tops of blocks. This can be used to enter solid blocks when the mechanism moving downward or falling.
 -->
-* When climbing upward on a moving rope mechanism, Mario will not interact with the tops of blocks. This can be used to enter solid blocks when the mechanism moving downward or falling.
+* ロープを掴んで上向きに登ると、マリオはブロックの上面との判定を持たない。ロープスプライトが下向きに移動中か落下中になら、ソリッドブロックにめり込める。
 
 <!--
 * If you press up in front of a moving rope mechanism for a single frame or land on the ground while holding it, Mario will be "pulled" by the rope even though he isn't holding it. This can also be used to retain a spinjump when jumping off of the rope. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8785)
 -->
-* If you press up in front of a moving rope mechanism for a single frame or land on the ground while holding it, Mario will be "pulled" by the rope even though he isn't holding it. This can also be used to retain a spinjump when jumping off of the rope. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8785)
+* マリオが地面に足がついた状態でロープの前で1Fだけ上入力をすると、掴んでいないのにロープに引っ張られる。またスピンジャンプ中に1Fだけ上とAかBを入力をすると、スピンを維持したまま再びジャンプする。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8785)
 
 <!--
 * Mario can be slightly offset while riding on a moving rope mechanism if he grabs on and holds the direction opposite to the direction the rope is in (though offsetting vertically without a block to assist Mario is only possible while big). This can let Mario fit in gaps that normally would not be possible while riding the rope.
@@ -2488,42 +2489,42 @@ _280個(180個有用)_
 <!--
 * Pressing left and right at the same time will cause the directional coins to, oddly, move upwards.
 -->
-* Pressing left and right at the same time will cause the directional coins to, oddly, move upwards.
+* 同時に左右入力をすると、コントロールコインは上方向に進む。
 
 <!--
 * The directional coin sprite does not become solid if a P-switch is pressed, even though its graphics do. This can cause Mario to be crushed by the blocks it creates, since he doesn't get pushed out of the way. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8751)
 -->
-* The directional coin sprite does not become solid if a P-switch is pressed, even though its graphics do. This can cause Mario to be crushed by the blocks it creates, since he doesn't get pushed out of the way. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8751)
+* コントロールコインは青Pが押されて茶色ブロック表示になっても、ソリッドにはならない。コントロールコインはマリオを外に押し出されないので、マリオは圧死することができる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8751)
 
 <!--
 * The directional coin sprite will immediately terminate if the game is frozen (via $9D) on a frame it's set to generate a coin.
 -->
-* The directional coin sprite will immediately terminate if the game is frozen (via $9D) on a frame it's set to generate a coin.
+* コントロールコインはコインを生成するFに（$9Dで）ゲームがフリーズすると消える。
 
 <!--
 * In Layer 2 and Layer 3 levels, the directional coin sprite will act strangely with Layer 1 tiles. When touching the side or bottom of a tile, it will completely overwrite the tile without stopping. If touching the tile from above, however, it will interact with the block, but will not terminate like it normally does. With solid tiles, this causes the trail to become "stuck" as it tries to move down into the tile but is forced on top of it. This extends to conveyors, which will push the trail to the side, although the sprite will not spawn coins while being moved and will remain stuck even after falling off the end. A similar result occurs for very steep slopes, although on right-facing slopes, it will briefly become un-stuck as it's pushed down. Very steep slopes are also special in that approaching their 'lower' tile from the side will still cause the sprite to get stuck, although it won't even move down the slope.
 -->
-* In Layer 2 and Layer 3 levels, the directional coin sprite will act strangely with Layer 1 tiles. When touching the side or bottom of a tile, it will completely overwrite the tile without stopping. If touching the tile from above, however, it will interact with the block, but will not terminate like it normally does. With solid tiles, this causes the trail to become "stuck" as it tries to move down into the tile but is forced on top of it. This extends to conveyors, which will push the trail to the side, although the sprite will not spawn coins while being moved and will remain stuck even after falling off the end. A similar result occurs for very steep slopes, although on right-facing slopes, it will briefly become un-stuck as it's pushed down. Very steep slopes are also special in that approaching their 'lower' tile from the side will still cause the sprite to get stuck, although it won't even move down the slope.
+* レイヤー2・3レベルでは、コントロールコインはレイヤー1タイルとの判定がおかしくなる。タイルの下から触れると、止まらずにコインで完全に上書きする。タイルに上から触れるとブロックとの判定を持つが、通常とは違って消えない。タイルがソリッドならば、くっついてるように位置が固定される。これはコンベアでも起こり、スプライトはコンベアの進行方向に徐々にずれていくが、コインを生成しない。端まで行くと動かせないまま下に進んでいく。近いことが右を向いたとても急な坂でも起こるが、頂点のタイル(1CC)に当たる度にと固定状態が短時間だけ解除される。とても急な坂の頂点ではないタイルに触れると、操作できないまま坂に沿って移動していく。
 
 <!--
 * Mario can bounce off of Rexes while walking up slopes, regardless of how steep the slope is.
 -->
-* Mario can bounce off of Rexes while walking up slopes, regardless of how steep the slope is.
+* 傾斜によらず坂を登っているドラボンに対面する方向から突っ込んだら踏める。
 
 <!--
 * The sea urchin sprites have a tendency to not work correctly with slopes, and occasionally will get stuck inside them, unable to move. The very steep slopes can also cause the urchins to start moving twice as fast as they normally do, and can sometimes cause them to move diagonally instead of in a straight direction.
 -->
-* The sea urchin sprites have a tendency to not work correctly with slopes, and occasionally will get stuck inside them, unable to move. The very steep slopes can also cause the urchins to start moving twice as fast as they normally do, and can sometimes cause them to move diagonally instead of in a straight direction.
+* ウニラは坂に対して正常に作動せず、内側に引きこまれ抜け出せなくなることがある。とても急な坂の場合、ウニラが2倍の速さで動いたり、斜め方向に動いたりする。
 
 <!--
 * Rip van Fish can force their way through the sides of blocks if they swim into it for long enough.
 -->
-* Rip van Fish can force their way through the sides of blocks if they swim into it for long enough.
+* グースカはブロックの横にめり込んでいく。時間をかければ、ブロックを貫通させられる。
 
 <!--
 * Rip Van Fish completely ignores Layer 2, even if sprites are set to interact with it.
 -->
-* Rip Van Fish completely ignores Layer 2, even if sprites are set to interact with it.
+* スプライトがレイヤー2と反応する設定のとき、グースカはレイヤー2を完全に無視する。
 
 <!--
 * When flopping out of water, the standard fish sprites have a small chance of clipping inside a block upon hitting its side. This will cause the fish to either climb up the wall or clip straight through it.
@@ -2538,37 +2539,37 @@ _280個(180個有用)_
 <!--
 * If a Whistling Chuck that wakes up fish is hit by a shell in a lower sprite slot on the frame he starts whistling, then he will summon Super Koopas as well. [Video](https://youtu.be/E6MGW_yNyi8)
 -->
-* If a Whistling Chuck that wakes up fish is hit by a shell in a lower sprite slot on the frame he starts whistling, then he will summon Super Koopas as well. [Video](https://youtu.be/E6MGW_yNyi8)
+* 口笛を吹くブルが口笛を吹くFに下位のスロットのスプライトで倒すと、マントノコノコが現れるようになる。[Video](https://youtu.be/E6MGW_yNyi8)
 
 <!--
 * When smashing through blocks, Chargin' Chucks will only check the bottom block of a wall; this means that the block on top will be broken, regardless of what type of block it actually is.
 -->
-* When smashing through blocks, Chargin' Chucks will only check the bottom block of a wall; this means that the block on top will be broken, regardless of what type of block it actually is.
+* 走るブルは上下2ブロックを破壊するが、チェックするのは下のブロックのみ。つまり下が破壊できるブロックなら、上のタイルは何であれ一緒に破壊できる。
 
 <!--
 * For 30 frames after the Clappin' Chuck claps, it won't be killable by capespins or quake sprites.
 -->
-* For 30 frames after the Clappin' Chuck claps, it won't be killable by capespins or quake sprites.
+* その場で跳ねるブルが跳ねた後30Fは、マント回転などの揺れスプライトなどによって倒されない。
 
 <!--
 * Jumping Bowser statues and Ninjis are able to jump through solid blocks. [Fix (Ninji)](http://www.smwcentral.net/?p=section&a=details&id=8786)
 -->
-* Jumping Bowser statues and Ninjis are able to jump through solid blocks. [Fix (Ninji)](http://www.smwcentral.net/?p=section&a=details&id=8786)
+* ジャンプするクッパ石像とハックンはソリッドブロックを貫通してジャンプしていく。[Fix (Ninji)](http://www.smwcentral.net/?p=section&a=details&id=8786)
 
 <!--
 * You can prevent a Bowser statue's fireball from being fired by freezing the game (via $9D) during it's spawn frames.
 -->
-* You can prevent a Bowser statue's fireball from being fired by freezing the game (via $9D) during it's spawn frames.
+* クッパ石像が炎を吐くFに$9Dでフリーズしていると、炎を吐かない。
 
 <!--
 * If a normal Bowser Statue is hit from below, it'll start shooting fireballs.
 -->
-* If a normal Bowser Statue is hit from below, it'll start shooting fireballs.
+* ただのクッパ石像を下から叩くと、炎を出すようになる。
 
 <!--
 * Hitting the Boo Block from below when it's semi-solid will cause it to immediately become fully solid.
 -->
-* Hitting the Boo Block from below when it's semi-solid will cause it to immediately become fully solid.
+* ブロックに変身するテレサが半分ブロックになっている時に下から叩くと、即座にブロックに変身し終える。
 
 <!--
 * Boo rings have two slots for their data, but the first slot of data will only be used by the first boo ring spawned; all others will use the second slot. Since two rings can be spawned at a time, this causes the data from any two rings spawned more than six tiles apart after the first one to overlap. This means, if they're rotating in the same direction, the resulting ring will move at double speed. If they're in opposite directions, it'll instead be completely motionless.
@@ -2578,27 +2579,27 @@ _280個(180個有用)_
 <!--
 * If a sprite is in slot #0 while a Boo ceiling generator is active, the game will warp the sprite around the level, as if it were one of the ghosts that make up the ceiling.
 -->
-* If a sprite is in slot #0 while a Boo ceiling generator is active, the game will warp the sprite around the level, as if it were one of the ghosts that make up the ceiling.
+* 天井テレサジェネレーターが動作している状態では、スロット#0にあるスプライトが天井テレサの出現位置に瞬間移動する。
 
 <!--
 * The reappearing Boo generator will only interact with Mario on the screen the ghosts actually because visible; this mean if you travel more than a screen before they disappear, he can swim straight through them.
 -->
-* The reappearing Boo generator will only interact with Mario on the screen the ghosts actually because visible; this mean if you travel more than a screen before they disappear, he can swim straight through them.
+* 出たり消えたりを繰り返すテレサは画面内に出現したテレサのみマリオと判定を持つ。つまり、テレサが消える前にマリオが1画面以上移動すると、テレサを素通りできる。
 
 <!--
 * The Big Boo Boss can be hurt by any carriable sprite, though for springboards it will only do so on the first frame it is released.
 -->
-* The Big Boo Boss can be hurt by any carriable sprite, though for springboards it will only do so on the first frame it is released.
+* ボスレテサはすべての持ち運べるスプライトでダメージを与えられる。ジャンプ台は離したFしか判定がない。
 
 <!--
 * All large 64x64 sprites, such as Banzai Bills, Big Boos, green gas bubbles, and even Bowser, will lose interaction with Mario if they pass even a pixel past the left border of the level.
 -->
-* All large 64x64 sprites, such as Banzai Bills, Big Boos, green gas bubbles, and even Bowser, will lose interaction with Mario if they pass even a pixel past the left border of the level.
+* 全ての64*64の大きいスプライト、マグナムキラー・アトミックテレサ・緑の大きなガス球・クッパなどは1ピクセルでも画面左にあると、マリオとの判定がなくなる。
 
 <!--
 * When entering a room of a level, sprites will spawn facing where Mario was when he exited in the previous room, causing them to move in different directions depending on where he was. Notably, this also applies to the No-Yoshi entrance cutscenes. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4560)
 -->
-* When entering a room of a level, sprites will spawn facing where Mario was when he exited in the previous room, causing them to move in different directions depending on where he was. Notably, this also applies to the No-Yoshi entrance cutscenes. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4560)
+* マリオがレベルに入った時、スプライトはマリオが直前の部屋でいた位置を向く。マリオがいた場所次第で、スプライトを異なる方向に進む。ヨッシーを降りる入場シーンでもこれは発生する。[Fix](http://www.smwcentral.net/?p=section&a=details&id=4560)
 
 <!--
 * Each item memory bit covers an entire vertical column (or horizontal row in vertical levels) within a subscreen. This means that, if item memory is enabled, setting the bit for a block (e.g. a coin, 1-up block, Yoshi coin, etc.) will also affect all of the other blocks in the subscreen's column/row once the level is reloaded.
@@ -2608,42 +2609,42 @@ _280個(180個有用)_
 <!--
 * When a coin is collected and permanently erased from a level, reloading the room will replace the spot the coin filled with whatever block was placed "below" it in Z-order. The same occurs with Yoshi coins, and collecting all five of them will permanently erase the coins even if item memory is untracked.
 -->
-* When a coin is collected and permanently erased from a level, reloading the room will replace the spot the coin filled with whatever block was placed "below" it in Z-order. The same occurs with Yoshi coins, and collecting all five of them will permanently erase the coins even if item memory is untracked.
+* コインがマリオに取られてそのレベルから恒久的に取り除かれた後、レベルを再読み込みすると、コインのあった位置にコインより下のZオーダーに設置されていたブロックが出現する。同様のことはドラゴンコインでも発生する。
 
 <!--
 * If a Yoshi coin is placed across a screen border, collecting it will cause the coin to graphically glitch and give Mario either constant supply of lives or coins, with the level of effect varying based on his Y position within the coin. It will also erase the two tiles 14 blocks below it, looping to the next screen if necessary. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8774)
 -->
-* If a Yoshi coin is placed across a screen border, collecting it will cause the coin to graphically glitch and give Mario either constant supply of lives or coins, with the level of effect varying based on his Y position within the coin. It will also erase the two tiles 14 blocks below it, looping to the next screen if necessary. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8774)
+* TBL（Top-Bottom-Line:LMでF2押して見える線）にまたがって配置されたドラゴンコインをとると、色々なことが起きる。コインの表示がばぐり、残機かコインが増え、コインの14タイル下（次ページにループする）が空になる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8774)
 
 <!--
 * Certain sprites, such as P-switches, will not sink in tileset-specific lava, instead landing on top of it as if it were a solid tiles. Fireballs are also included in this list, and will bounce across the top of the lava.
 -->
-* Certain sprites, such as P-switches, will not sink in tileset-specific lava, instead landing on top of it as if it were a solid tiles. Fireballs are also included in this list, and will bounce across the top of the lava.
+* Pスイッチなどの特定のスプライトは、ソリッドタイルの上にあるかのように洞窟溶岩に沈まない。ファイアもこれに当てはまり、溶岩の上で跳ねる。
 
 <!--
 * Sprites will not sink in sloped tileset-specific lava tiles. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4199)
 -->
-* Sprites will not sink in sloped tileset-specific lava tiles. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4199)
+* スプライトは坂の溶岩タイルに沈まない。[Fix](http://www.smwcentral.net/?p=section&a=details&id=4199)
 
 <!--
 * Under the right conditions, a room of a level will act like normal, but all the sprites in the room will act like they're in water. [Video and more info](https://youtu.be/_MMlw8A3RiY)
 -->
-* Under the right conditions, a room of a level will act like normal, but all the sprites in the room will act like they're in water. [Video and more info](https://youtu.be/_MMlw8A3RiY)
+* リンク先の条件下では、スプライトが水中にいるように動く。[Video and more info](https://youtu.be/_MMlw8A3RiY)
 
 <!--
 * Oddly, Sunken Ghost Ship (level 018) is hardcoded to not reset the "boss beaten" flag. As a result, beating a boss in the level will cause a few strange effects in the next level Mario enters, so long as the overworld isn't reloaded in-between. One effect is that Mario will freeze in place after hitting a goal tape or sphere rather than doing a goal walk, as if a boss had beaten. A stranger effect, however, is that Yoshi will use incorrect animation frames and will behave particularly oddly. [More](https://pastebin.com/XkB8cyg0) [info](http://pastebin.com/YnNEuvYE)
 -->
-* Oddly, Sunken Ghost Ship (level 018) is hardcoded to not reset the "boss beaten" flag. As a result, beating a boss in the level will cause a few strange effects in the next level Mario enters, so long as the overworld isn't reloaded in-between. One effect is that Mario will freeze in place after hitting a goal tape or sphere rather than doing a goal walk, as if a boss had beaten. A stranger effect, however, is that Yoshi will use incorrect animation frames and will behave particularly oddly. [More](https://pastebin.com/XkB8cyg0) [info](http://pastebin.com/YnNEuvYE)
+* ラムネ海溝の沈没船（レベル018）はハードコードされており、ボス撃破フラグがリセットされないようになっている。このレベルでボスを倒すと、OWが再読込されない限り、マリオが次に入ったレベルで幾つか奇妙な効果が引き起こされる。マリオがゴールバーやゴール玉に触れると歩かず、ボスを倒したときのようにその場でマリオが静止する。他には、ヨッシーのアニメーションが正しくないものになり、挙動もおかしくなる。[More](https://pastebin.com/XkB8cyg0) [info](http://pastebin.com/YnNEuvYE)
 
 <!--
 * Purple triangles will not work correctly in Layer 2 levels; while running sideways, Mario will not be given Layer 1 interaction, causing him to be warped straight downward. Shells may also not be flung correctly. They can work if Layer 1 and 2 overlap, however.
 -->
-* Purple triangles will not work correctly in Layer 2 levels; while running sideways, Mario will not be given Layer 1 interaction, causing him to be warped straight downward. Shells may also not be flung correctly. They can work if Layer 1 and 2 overlap, however.
+* レイヤー2レベルでは、三角ブロックが正常に作動しない。マリオが三角ブロックで壁走りをしようとすると、真下にワープする。甲羅は三角ブロックで跳ねなくなる。これらはレイヤー1と2が重なっていると正常に作動するようになる。
 
 <!--
 * While wallrunning, Mario will ignore the standard function of whatever he is running up, so long as it is solid some of the time. This means he can run up munchers, any kind of ledge or slope, tile-set specific lava, noteblocks, and even other purple triangles. This effect also lasts for a frame after he reorients at the top, allowing him to jump normally. Additionally, he will also run through any blocks that aren't always solid on his way up the wall, including upside-down slopes, standard lava, and water.
 -->
-* While wallrunning, Mario will ignore the standard function of whatever he is running up, so long as it is solid some of the time. This means he can run up munchers, any kind of ledge or slope, tile-set specific lava, noteblocks, and even other purple triangles. This effect also lasts for a frame after he reorients at the top, allowing him to jump normally. Additionally, he will also run through any blocks that aren't always solid on his way up the wall, including upside-down slopes, standard lava, and water.
+* 壁走り中、マリオはオブジェクトの通常の性質を無理することがある。ブラパ・全ての種類の坂・特定の溶岩・音符ブロック・三角ブロックも壁走りできる。この効果は頂点でマリオが水平になる前の斜めっている最中まで続く。走行中、天地逆さの坂・水・溶岩などのソリッドではないあらゆるブロックを貫通できる。
 
 <!--
 * Mario will "stick" to any platform sprites while wallrunning, slowing him down to the speed of the platform until it passes by. One notable use of this is that it even applies to the animation at the end of a wall where Mario reorients himself, but his horizontal speed will remain unaffected, which can cause him to clip into the tiles in the next column over. It should be noted that this works with the solid platform sprites as well, but only if Mario enters at a position where he doesn't get warped out of it. [Video](https://cdn.discordapp.com/attachments/167412470862970881/462945193574793216/tes27.gif)
@@ -2653,47 +2654,47 @@ _280個(180個有用)_
 <!--
 * If Mario starts trying to run up a purple triangle without a wall next to it, he will sometimes move upwards more than he should. If there's a solid block two tiles above the purple triangle, he can pass far enough into it such that jumping will send him straight through. Similarly, if there's a solid block one tile in front of the triangle, he can be pushed into that instead.
 -->
-* If Mario starts trying to run up a purple triangle without a wall next to it, he will sometimes move upwards more than he should. If there's a solid block two tiles above the purple triangle, he can pass far enough into it such that jumping will send him straight through. Similarly, if there's a solid block one tile in front of the triangle, he can be pushed into that instead.
+* 隣に壁がない三角ブロックで走り上がろうとすると、まるで壁があるかのように1マス分空中を駆け上がる時がある。三角ブロックの2マス上にソリッドブロックがある時、前述の駆け上がりでソリッドブロックにめり込んだ時にジャンプすると、天井抜けができる。同様に1マス上にソリッドブロックがあると、それの中に押し込められる。
 
 <!--
 * Dying in a bonus game will produce a glitched GAME OVER message. In addition, the next time Mario enters the level he came from, he will spawn at the midpoint.
 -->
-* Dying in a bonus game will produce a glitched GAME OVER message. In addition, the next time Mario enters the level he came from, he will spawn at the midpoint.
+* ルーレットステージで死ぬとGAME OVERの表示がバグり、再びそのステージに入ると中間位置から開始される。
 
 <!--
 * Trying to take a screen exit in a Yoshi wings room will reset the room.
 -->
-* Trying to take a screen exit in a Yoshi wings room will reset the room.
+* Yの翼ステージ内でレベル移動すると、再びYの翼ステージになる。
 
 <!--
 * If you hit a goal tape in a Yoshi wings room and are given a bonus game, the game will reset the Yoshi wings room rather than sending you to the bonus game room or overworld. If you touch a goal tape again after this happens, the goal walk will be skipped and the room will be immediately reset.
 -->
-* If you hit a goal tape in a Yoshi wings room and are given a bonus game, the game will reset the Yoshi wings room rather than sending you to the bonus game room or overworld. If you touch a goal tape again after this happens, the goal walk will be skipped and the room will be immediately reset.
+* Yの翼ステージでゴールバーを切り100スター貯めると、Yの翼ステージを再び開始する。この状況で再びゴールバーを切ると、瞬間的に再びYの翼ステージが開始する。
 
 <!--
 * During the goal walk, the screen freezes in place. If you scroll the screen left before the walk begins, Mario will end up running into the right-side screen barrier, stopping him earlier than normal. If screen exits are enabled, he'll end up even walking offscreen (and consequently exiting to the overworld) despite not technically being the edge of a level.
 -->
-* During the goal walk, the screen freezes in place. If you scroll the screen left before the walk begins, Mario will end up running into the right-side screen barrier, stopping him earlier than normal. If screen exits are enabled, he'll end up even walking offscreen (and consequently exiting to the overworld) despite not technically being the edge of a level.
+* ゴール後の歩いている最中、画面はある地点でフリーズする。もし画面を充分左にスクロールさせていると、最終的にマリオは画面の右端にぶつかる。もしSide ExitがONで普通では画面端に触れられないレベルでも、この方法でSide Exitを利用できる。
 
 <!--
 * Mario can jump over the goal tape if he's high enough off the top of the screen for his Y position to loop.
 -->
-* Mario can jump over the goal tape if he's high enough off the top of the screen for his Y position to loop.
+* ゴールバーの上を十分高い位置で通り過ぎれば、ゴールせずに通り抜けられる。
 
 <!--
 * Mario can jump off of a switch palace switch on the frame he lands on it. You can also extend the time Mario continues to move before freezing by hitting both the switch and a goal tape at the same time.
 -->
-* Mario can jump off of a switch palace switch on the frame he lands on it. You can also extend the time Mario continues to move before freezing by hitting both the switch and a goal tape at the same time.
+* スイッチ宮殿のスイッチを踏むFにジャンプすることができる。スイッチを踏むのと同時にゴールバーに触れると、操作できないまま動き、メッセージが遅れて出現する。
 
 <!--
 * If Mario activates a switch palace switch but exits the level before the message appears (via dying or side exit), then the switch will count as being hit but the level's event will not be set (meaning you can reenter it).
 -->
-* If Mario activates a switch palace switch but exits the level before the message appears (via dying or side exit), then the switch will count as being hit but the level's event will not be set (meaning you can reenter it).
+* スイッチを踏み、メッセージが出る前に（死ぬ・画面横から出るなどで）レベルから出ると、スイッチは押されたが、そのレベルのイベントは終わってないと認識される。つまり再びスイッチ宮殿に入れる。
 
 <!--
 * Keyholes will still function during the goal walk. If Yoshi has a key in his mouth during it, it can actually be activated (thus activating the secret exit on the overworld instead of the normal).
 -->
-* Keyholes will still function during the goal walk. If Yoshi has a key in his mouth during it, it can actually be activated (thus activating the secret exit on the overworld instead of the normal).
+* 鍵穴はゴール後の歩いている最中も有効。たとえば、Yが鍵を咥えていたら鍵ゴールが可能で、通常のゴールではなく鍵ゴール扱いになる。
 
 <!--
 * Keyholes will still function when exiting or entering a pipe, so carrying a key through the pipe can activate it.
