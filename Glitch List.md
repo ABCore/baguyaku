@@ -2699,52 +2699,52 @@ _280個(180個有用)_
 <!--
 * Keyholes will still function when exiting or entering a pipe, so carrying a key through the pipe can activate it.
 -->
-* Keyholes will still function when exiting or entering a pipe, so carrying a key through the pipe can activate it.
+* 鍵穴は土管の出入り中も有効。鍵を持ったまま土管に入ると、鍵ゴールできる。
 
 <!--
 * Activating the end of a level in the intro level will reset the room upon fadeout.
 -->
-* Activating the end of a level in the intro level will reset the room upon fadeout.
+* オープニングでレベルを終える（ゴール等）と、フェードアウトしてから再びオープニングが始まる。
 
 <!--
 * Dying or hitting a goal point on the title screen will cause the game to reload the title screen level as an actual level, allowing you to play through it. Although doors will take you to other rooms still, "completing" this level with a goal point will simply loop it back. [Fix (for death)](http://www.smwcentral.net/?p=section&a=details&id=4528)
 -->
-* Dying or hitting a goal point on the title screen will cause the game to reload the title screen level as an actual level, allowing you to play through it. Although doors will take you to other rooms still, "completing" this level with a goal point will simply loop it back. [Fix (for death)](http://www.smwcentral.net/?p=section&a=details&id=4528)
+* タイトルで死んだりゴールすると、タイトルのレベルでプレイできるようになる。ドアなどで別のレベルに移動しても、非デモ化する。移動先でクリアしたり死ぬと、再びタイトルのレベルに戻される。[Fix (for death)](http://www.smwcentral.net/?p=section&a=details&id=4528)
 
 <!--
 * If Mario exits the title screen level via a side exit (be it in the recording or playable version), he'll spawn near [0,0] on the main overworld.
 -->
-* If Mario exits the title screen level via a side exit (be it in the recording or playable version), he'll spawn near [0,0] on the main overworld.
+* タイトルのレベルをSide Exitで抜けると、OWの[0,0]あたりに出現する。
 
 <!--
 * Hitting a message box or spawning the display message sprite in the title screen (be it in the recording or playable version) will take Mario to the main overworld near [0,8]. If it's hit while on the recorded title screen, it will also glitch the graphics temporarily.
 -->
-* Hitting a message box or spawning the display message sprite in the title screen (be it in the recording or playable version) will take Mario to the main overworld near [0,8]. If it's hit while on the recorded title screen, it will also glitch the graphics temporarily.
+* タイトルでメッセージボックスかメッセージスプライトでメッセージを表示させると、マリオはOWの[0,8]付近に現れる。タイトルが再読み込みされている最中にメッセージが出ると、表示が一部バグる。
 
 <!--
 * Receiving the intro message from a message box rather than a display message sprite will place Mario at an incorrect tile of the main map. Luigi, however, will still spawn in the correct position. This effect will also occur if you take a screen exit from the intro.
 -->
-* Receiving the intro message from a message box rather than a display message sprite will place Mario at an incorrect tile of the main map. Luigi, however, will still spawn in the correct position. This effect will also occur if you take a screen exit from the intro.
+* オープニング中、メッセージスプライトではなくメッセージボックスでメッセージを表示させると、マリオはOWで設定していない位置に出現するが、ルイージは設定した位置に出現する。これはSide Exitでレベルを終えても起こる。
 
 <!--
 * Dying in the intro or title level will take away one of Mario's lives without giving him a game over; this can cause his life counter to decrease to 0 and loop around to glitched numbers. If Mario's life counter ever hits zero, though, completing the intro level will just return him to the title screen rather than taking him to the overworld.
 -->
-* Dying in the intro or title level will take away one of Mario's lives without giving him a game over; this can cause his life counter to decrease to 0 and loop around to glitched numbers. If Mario's life counter ever hits zero, though, completing the intro level will just return him to the title screen rather than taking him to the overworld.
+* オープニングやタイトルでマリオが死ぬと、マリオを操作できるようになる。操作できるようになってから、残機0で死ぬと、ループしてバグった値になる。残機が0以下のときにオープニングレベルを終えても、OWに行かずにタイトル画面になる。
 
 <!--
 * Dying in the intro level will always take Mario back to the level's primary entrance, even if he hit a midpoint.
 -->
-* Dying in the intro level will always take Mario back to the level's primary entrance, even if he hit a midpoint.
+* オープニングで中間を取ってから死んでも、開始位置は必ず初期位置になる。
 
 <!--
 * If Mario enters a room with an incorrect FG initial position, he may be killed by the vertical screen borders.
 -->
-* If Mario enters a room with an incorrect FG initial position, he may be killed by the vertical screen borders.
+* レベルに設定されている開始位置が正しくないFG位置だと、レベルを開始しても死ぬ。
 
 <!--
 * Entering a room with Layer 2 horizontal scrolling set to "none" will cause it to inherit the Layer 2 X position from the previous room. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4263)
 -->
-* Entering a room with Layer 2 horizontal scrolling set to "none" will cause it to inherit the Layer 2 X position from the previous room. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4263)
+* レイヤー2の水平スクロール設定が「なし」に設定されているレベルに入ると、入る前のレベルのレイヤー2のX位置を受け継ぐ。[Fix](http://www.smwcentral.net/?p=section&a=details&id=4263)
 
 <!--
 * The long sideways Layer 2 scroll sprite has some odd effects when used in horizontal levels. Placing it at Y=0 will cause it to act like a leftward conveyor. Y=1 to Y=3 will cause Mario to shake when standing on layer 2, and Y=4 will cause both Layer 1 and Mario to constantly shake. Y=5 and below will for the most part either crash or hardlock the game.
@@ -2754,7 +2754,7 @@ _280個(180個有用)_
 <!--
 * Any of the Layer 2 scroll sprites intended for vertical levels will kill Mario upon spawning if Mario isn't already spawning on the same screen they are.
 -->
-* Any of the Layer 2 scroll sprites intended for vertical levels will kill Mario upon spawning if Mario isn't already spawning on the same screen they are.
+* 全てのレイヤー2スクロールスプライトは縦ステージで使われると、マリオは出現位置がどこであれ死ぬようになる。
 
 <!--
 * Wrong warp: Taking a screen exit 256 times will reload the level from the overworld. The issue with this, however, is that the space of RAM meant for overworld data gets overwritten by level data during level load. This cause the game to try to loading the tile in the level data where the level would be in the overworld data as the translevel number to spawn Mario into. Not only does this potentially allow you to warp to any level in the game (even unused ones), it also can cause some strange effects, such the level getting used as a No-Yoshi entrance in places not meant for one. It should be noted, however, that the No-Yoshi entrance prevents a level from being warped to, as it will load the correct level after being run. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4254) - [Video](https://www.youtube.com/watch?v=v_iv_9QJ6lQ) - [Diagram](http://i.imgur.com/ZcNDrAA.png)
@@ -2764,17 +2764,17 @@ _280個(180個有用)_
 <!--
 * When placed next to a screen border, both the screen exit on that screen and the one the door is touching can be accessed depending on Mario's position. Similarly for pipes.
 -->
-* When placed next to a screen border, both the screen exit on that screen and the one the door is touching can be accessed depending on Mario's position. Similarly for pipes.
+* ページの境目に配置されたマップ移動を利用するとき、マリオの位置でどちらの移動先か決まる。
 
 <!--
 * Screen exits are inherited from the previous sublevel, meaning that a door will send you to whatever the last loaded exit on a screen was; it only sends Mario to level 0 if no exit has been loaded yet. This means a room can technically have multiple screen exits on the same screen in vanilla SMW, depending on what level you enter the room from.
 -->
-* Screen exits are inherited from the previous sublevel, meaning that a door will send you to whatever the last loaded exit on a screen was; it only sends Mario to level 0 if no exit has been loaded yet. This means a room can technically have multiple screen exits on the same screen in vanilla SMW, depending on what level you enter the room from.
+* 移動設定は前のレベルのを引き継ぐ。つまり、ドア等は最後に読み込まれた移動先にマリオを届け、移動先が一度も読み込まれてないとマリオをレベル0か100に移動する。この仕様によりバニラハックでも、前のレベルに依存する複雑で多岐にわたるレベル移動にすることが可能。
 
 <!--
 * Layer 3 tide interaction with most floating platforms is broken and may cause them to float infinitely upward. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8773)
 -->
-* Layer 3 tide interaction with most floating platforms is broken and may cause them to float infinitely upward. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8773)
+* レイヤー3の潮流はほとんどの浮かぶ足場との関係が壊れており、足場が無限に上昇し続ける。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8773)
 
 <!--
 * If a level has Layer 3 tides active and is less than 3 screens long, then sprites anywhere on the screen can occasionally register themselves as being in water. In 1- or 2-screen rooms, the effect will occur longer and more often the further left the screen is; in 3-screen rooms, it will only occur right of the screen when the screen is all the way at the left edge of the level.
@@ -2784,17 +2784,17 @@ _280個(180個有用)_
 <!--
 * If a level has Layer 3 tides active and the water is high enough, Mario won't register himself as being in water at the very bottom of the screen.
 -->
-* If a level has Layer 3 tides active and the water is high enough, Mario won't register himself as being in water at the very bottom of the screen.
+* レイヤー3の潮流のあるレベルで水面が高い位置にあると、画面下でマリオの水中判定がなくなる。
 
 <!--
 * If a level has Layer 3 tides active and the water is low enough, sprites will register themselves as being in water if they go high enough on the top of the screen.
 -->
-* If a level has Layer 3 tides active and the water is low enough, sprites will register themselves as being in water if they go high enough on the top of the screen.
+* レイヤー3の潮流のあるレベルで水面が低い位置にあると、高所にいるスプライトが水中判定になる。
 
 <!--
 * Floating platforms only check for water touching their leftmost tile.
 -->
-* Floating platforms only check for water touching their leftmost tile.
+* 浮かぶ足場は水との接触を一番左のタイルで判定している。
 
 <!--
 * If a sprite has a spawn index of 65 or more (i.e. it's the 65th sprite from the left side of the level), then its "killed" status won't be reset when moving between sublevels. Hence, if you kill the 65th sprite in one room, the 65th sprite in any other room of that level will never spawn.
@@ -2809,7 +2809,7 @@ _280個(180個有用)_
 <!--
 * The ability to side-screen-exit is carried across sublevels.
 -->
-* The ability to side-screen-exit is carried across sublevels.
+* Side Exitはレベルを移動しても有効。
 
 ---
 
