@@ -2816,7 +2816,7 @@ _280個(180個有用)_
 <!--
 * If Mario enters a room with an incorrect BG initial position, the background may glitch when scrolled too far down or up. Automatically fixed by Lunar Magic 1.70+. [Alt. fix](http://www.smwcentral.net/?p=section&a=details&id=4246)
 -->
-* If Mario enters a room with an incorrect BG initial position, the background may glitch when scrolled too far down or up. Automatically fixed by Lunar Magic 1.70+. [Alt. fix](http://www.smwcentral.net/?p=section&a=details&id=4246)
+* 開始位置が正しくないBG位置だと、背景が上下にスクロールしたときバグる。LM1.70以降は自動で修正される。[Alt. fix](http://www.smwcentral.net/?p=section&a=details&id=4246)
 
 <!--
 * If Mario enters a room too far to the right, the level will display past the screen borders for a bit before snapping back and glitching some of the Map16 graphics until they are reloaded. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8752)
@@ -2826,12 +2826,12 @@ _280個(180個有用)_
 <!--
 * Collecting enough silver coins produced by a silver P-switch will start giving Mario glitched 5-up and coin score sprites. [Fix (for 5-up)](http://www.smwcentral.net/?p=section&a=details&id=4418)
 -->
-* Collecting enough silver coins produced by a silver P-switch will start giving Mario glitched 5-up and coin score sprites. [Fix (for 5-up)](http://www.smwcentral.net/?p=section&a=details&id=4418)
+* 大量の銀コインを集めると、5UPとコインスコアスプライトの表示がバグる。[Fix (for 5-up)](http://www.smwcentral.net/?p=section&a=details&id=4418)
 
 <!--
 * Collecting enough 1-ups from hitting/bouncing off of enough enemies will eventually cause the point counter to loop back to 100 points. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4254)
 -->
-* Collecting enough 1-ups from hitting/bouncing off of enough enemies will eventually cause the point counter to loop back to 100 points. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4254)
+* 多くの敵を踏んで大量の1upを集めると、ポイントカウンターが100点に戻る。[Fix](http://www.smwcentral.net/?p=section&a=details&id=4254)
 
 <!--
 * A byproduct of the above is right when the consecutive enemies stomped counter ([$7E1697](https://www.smwcentral.net/?p=nmap&m=smwram&u=0#7E1697)) loops, a glitched sound effect occurs ($60, since the game tries to read a RTS instruction as a sound fx pointer), and depending on the emulator it keeps playing glitched sounds indefinitely until another sound replaces it or you exit the level. [Video](https://youtu.be/6j9zBwQgmWU)
@@ -2841,17 +2841,17 @@ _280個(180個有用)_
 <!--
 * Bouncing off Wigglers enough will start giving Mario glitched score sprites. [Video](https://youtu.be/7nwktrDawdM) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4441)
 -->
-* Bouncing off Wigglers enough will start giving Mario glitched score sprites. [Video](https://youtu.be/7nwktrDawdM) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4441)
+* ハナチャンを連続して何匹も踏むと、スコアスプライトの表示がバグる。[Video](https://youtu.be/7nwktrDawdM) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4441)
 
 <!--
 * Generating enough score sprites in a short enough time can cause early ones to get overwritten, preventing the value for it from actually being added.
 -->
-* Generating enough score sprites in a short enough time can cause early ones to get overwritten, preventing the value for it from actually being added.
+* スコアスプライトが短時間に大量生成されると、先に生成されたものから上書きされていき、実際のスコア値が加算されない。
 
 <!--
 * Despawning a score sprite offscreen before it's processed will cause the value for it to not actually be added.
 -->
-* Despawning a score sprite offscreen before it's processed will cause the value for it to not actually be added.
+* スコアスプライトが画面外で消えると、スコアは加算されない。
 
 <!--
 * Most score sprites don't set whether they were on Layer 1 or 2, but score sprites spawned from the spinning coin sprites do. As a result, if that score sprite is spawned on Layer 2, almost any score sprites that later take the same slot will also be considered to be on Layer 2 (causing the sprite to spawn offset on that layer).
@@ -2871,37 +2871,37 @@ _280個(180個有用)_
 <!--
 * Bullet Bills make no sound when spawning directly into the level, even though Banzai Bills do. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8755)
 -->
-* Bullet Bills make no sound when spawning directly into the level, even though Banzai Bills do. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8755)
+* レベルに直接配置されたキラーに出現音はない。マグナムキラーはある。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8755)
 
 <!--
 * Message boxes will not display any letters in transparent levels.
 -->
-* Message boxes will not display any letters in transparent levels.
+* メッセージブロックはレイヤー2がレイヤー1の裏にあっても見れるレベルでは、文字を表示できない。
 
 <!--
 * If multiple flying ? blocks are active ($1564 is set) at the same time, then all of them except the one in the highest slot will briefly turn invisible.
 -->
-* If multiple flying ? blocks are active ($1564 is set) at the same time, then all of them except the one in the highest slot will briefly turn invisible.
+* 複数の飛んでいるブロックが同時に動いている（$1564がセットされている）と、一番スロットが大きい一つ以外、少しの間透明になる。
 
 <!--
 * If Mario is holding B and climbing downward or in a Lakitu cloud / P-balloon, touching a wall springboard will cause the bounce sound to be repeatedly played despite Mario never actually bouncing off of it.
 -->
-* If Mario is holding B and climbing downward or in a Lakitu cloud / P-balloon, touching a wall springboard will cause the bounce sound to be repeatedly played despite Mario never actually bouncing off of it.
+* マリオがBおしっぱで網などを掴んで下移動したり雲やPバルーン状態で緑のバネにひっかかると、ジャンプしないがジャンプ音が繰り返される。
 
 <!--
 * If there is an offscreen P-switch or key in slot 0, its graphics will "stick" to a Lakitu's cloud.
 -->
-* If there is an offscreen P-switch or key in slot 0, its graphics will "stick" to a Lakitu's cloud.
+* もしスロット#0のPスイッチまたは鍵が画面外にあるとき、そのグラフィックはジュゲムの雲に固定される。
 
 <!--
 * The Lakitu Cloud's face always appears on top of Mario, even when he's not in the cloud.
 -->
-* The Lakitu Cloud's face always appears on top of Mario, even when he's not in the cloud.
+* ジュゲムの雲の顔はマリオが乗っていなくても、常に手前に表示される。
 
 <!--
 * While the Lakitu Cloud is just slightly off the right side of the screen, its face will loop to the left side of the screen.
 -->
-* While the Lakitu Cloud is just slightly off the right side of the screen, its face will loop to the left side of the screen.
+* ジュゲムの雲が僅かでも画面右にめりこむと、顔が画面左にループする。
 
 <!--
 * Yoshi's head, and carried sprites, will turn invisible when in their turning state while Mario is in a cloud. This includes the improper turning state Yoshi has as a result of the layer-switch glitch.
@@ -2911,152 +2911,152 @@ _280個(180個有用)_
 <!--
 * The net tiles cleared by the climbing net door will improperly update if the sprite is placed across a screen or subscreen border. However, this only affects VRAM and not the actual tiles, so their interaction isn't changed. This can also occur if the screen scrolls far enough before the sprite redraws the gate tiles, though with the same issue.
 -->
-* The net tiles cleared by the climbing net door will improperly update if the sprite is placed across a screen or subscreen border. However, this only affects VRAM and not the actual tiles, so their interaction isn't changed. This can also occur if the screen scrolls far enough before the sprite redraws the gate tiles, though with the same issue.
+* 画面境界やサブスクリーン境界に配置された回転金網によって、間違った画面修正が行われる。これはVRAMのみに作用するため、実体は変わらない。これは再描写の時、十分な画面スクロールによっても発生する。
 
 <!--
 * Turning from a net gate carries between levels, although you have to be holding a net at the start of the next room for it to have any effect. Unfortunately, it will not move Mario to the back side of the net there.
 -->
-* Turning from a net gate carries between levels, although you have to be holding a net at the start of the next room for it to have any effect. Unfortunately, it will not move Mario to the back side of the net there.
+* 回転金網の回転はレベル間でも保持されるが、レベル移動後に金網を掴む必要がある。移動後のレベルで金網の裏側に行くことはない。
 
 <!--
 * If a Wiggler is flashing, then killing it won't make it actually die until it stops flashing. The same glitch occurs if Yoshi tries to eat it the Wiggler while flashing.
 -->
-* If a Wiggler is flashing, then killing it won't make it actually die until it stops flashing. The same glitch occurs if Yoshi tries to eat it the Wiggler while flashing.
+* ハナチャンが光っていると、輝き終えるまで殺しても死なない。これと同じことがヨッシーの舌で食べようとしたときに起きる。
 
 <!--
 * The hitbox for the extended sprite flower spawned when Wiggler is first bounced on is severely and unusually disjointed from its actual graphic.
 -->
-* The hitbox for the extended sprite flower spawned when Wiggler is first bounced on is severely and unusually disjointed from its actual graphic.
+* ハナチャンを踏んだときに拡張スプライトである頭部の花の当たり判定は実際の表示とはバラバラ。
 
 <!--
 * Mario can still land on a Wiggler even after dying. [Fix](http://www.smwcentral.net/?p=section&a=details&id=6031)
 -->
-* Mario can still land on a Wiggler even after dying. [Fix](http://www.smwcentral.net/?p=section&a=details&id=6031)
+* マリオは死亡中にハナチャンを踏むことができる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=6031)
 
 <!--
 * If a Spike Top walks off a ledge, it will get stuck moving in a circle.
 -->
-* If a Spike Top walks off a ledge, it will get stuck moving in a circle.
+* トゲメットが地面の崖に達すると、その場で円状に回り続ける。
 
 <!--
 * Spike Tops are able to walk down a sloped ledge, though it will do so strangely. Moving up slopes works fine, though.
 -->
-* Spike Tops are able to walk down a sloped ledge, though it will do so strangely. Moving up slopes works fine, though.
+* トゲメットは斜めの坂を移動できるが、奇妙な進み方をする。上り坂は正常に登れる。
 
 <!--
 * If a Spike Top is surrounded by four blocks, it will start to quickly spin in a circle.
 -->
-* If a Spike Top is surrounded by four blocks, it will start to quickly spin in a circle.
+* トゲメットが4つのブロックに囲まれると、高速で回転する。
 
 <!--
 * Spike Tops can not be killed with a cape smash while they're on the side or bottom of a block, as they aren't considered as on the ground.
 -->
-* Spike Tops can not be killed with a cape smash while they're on the side or bottom of a block, as they aren't considered as on the ground.
+* 壁の側面か底面にいるトゲメットはマント地震で倒されない。
 
 <!--
 * After beating the Special World, Buzzy Beetles won't shake when they're about to return to normal.
 -->
-* After beating the Special World, Buzzy Beetles won't shake when they're about to return to normal.
+* スペシャルコースをクリアすると、メットが復活する時に震えなくなる。
 
 <!--
 * The bottom half of the vertical jumping dolphins loops vertically every 16 blocks.
 -->
-* The bottom half of the vertical jumping dolphins loops vertically every 16 blocks.
+* 縦にジャンプするイルカは垂直方向16タイル毎に、下半分がループする。
 
 <!--
 * Clappin' Chucks will bounce strangely when on Layer 2 that is moving downward.
 -->
-* Clappin' Chucks will bounce strangely when on Layer 2 that is moving downward.
+* その場で跳ねるブルはレイヤー2が下向きに移動しているとき、奇妙な跳ね方をする。
 
 <!--
 * If the Sumo Bro's lightning tries to spawn fire over a screen barrier while Mario is dying, it may create glitched fire graphics on the opposite side of the screen.
 -->
-* If the Sumo Bro's lightning tries to spawn fire over a screen barrier while Mario is dying, it may create glitched fire graphics on the opposite side of the screen.
+* マリオが死んでいる最中、K.K.の雷が画面端をまたいで発火すると、反対側にバグった炎の表示が発生する。
 
 <!--
 * Sprites graphics will not display at any scanline with too many sprite tiles written at once.
 -->
-* Sprites graphics will not display at any scanline with too many sprite tiles written at once.
+* スプライトのグラは多量のスプライトタイルが存在すると、異なる走査線上でも描写されなくなる。
 
 <!--
 * The three-platform sprite (E0) does not spawn correctly in vertical levels, and will still try to spawn as if it's a horizontal level. [Fix](http://smwc.me/1186807)
 -->
-* The three-platform sprite (E0) does not spawn correctly in vertical levels, and will still try to spawn as if it's a horizontal level. [Fix](http://smwc.me/1186807)
+* 回る3つの足場スプライト（E0）は縦ステージでは正常に出現しない。[Fix](http://smwc.me/1186807)
 
 <!--
 * When sinking in lava, sprites will slide through objects when moving leftwards (they'll be stopped while going right). May be potentially useful when combined with Yoshi.
 -->
-* When sinking in lava, sprites will slide through objects when moving leftwards (they'll be stopped while going right). May be potentially useful when combined with Yoshi.
+* スプライトは溶岩に沈んいく最中スライドする。左向きに速度を持っていると壁を貫通する。（右向きだと壁で止まる）。Yと組み合わせられる。
 
 <!--
 * Sprites that fall offscreen when killed will still interact with blocks while falling (interestlingly, this includes interaction with lava). This even applies to sprites such as Banzai Bills, Super Koopas, Torpedo Teds, and Bullet Bills, despite them not normally having block interaction. Banzai Bills and Super Koopas are particularly odd in that with lava, they will revert to their normal animations while sinking and additionally receive a sudden increase in speed to the side. [Fix](https://www.smwcentral.net/?p=section&a=details&id=14638)
 -->
-* Sprites that fall offscreen when killed will still interact with blocks while falling (interestlingly, this includes interaction with lava). This even applies to sprites such as Banzai Bills, Super Koopas, Torpedo Teds, and Bullet Bills, despite them not normally having block interaction. Banzai Bills and Super Koopas are particularly odd in that with lava, they will revert to their normal animations while sinking and additionally receive a sudden increase in speed to the side. [Fix](https://www.smwcentral.net/?p=section&a=details&id=14638)
+* 倒されて画面下に落ちていくスプライトはブロックや溶岩と接触判定を持つ。これはマグナムキラー・マントガメ・キラーなどの通常ブロックとの判定を持たないスプライトも当てはまる。マグナムキラーとマントガメは溶岩に対して特殊で、浸かると通常時の表示に戻り、加速しながらスライドして落ちていく。[Fix](https://www.smwcentral.net/?p=section&a=details&id=14638)
 
 <!--
 * Sprites that don't have gravity applied to them (e.g. Banzai Bills, super Koopas, etc.) normally won't sink in lava; however, if they're killed and are falling offscreen, they are actually given gravity and will sink in lava. If this happens, the sprite will temporarily revert to its normal animation while continuing to move in its horizontal direction of movement (sometimes even speeding up), though Mario can still not interact with it.
 -->
-* Sprites that don't have gravity applied to them (e.g. Banzai Bills, super Koopas, etc.) normally won't sink in lava; however, if they're killed and are falling offscreen, they are actually given gravity and will sink in lava. If this happens, the sprite will temporarily revert to its normal animation while continuing to move in its horizontal direction of movement (sometimes even speeding up), though Mario can still not interact with it.
+* 重力が働かないスプライト（マグナムキラー・コクッパ等）は通常溶岩に落ちて沈むことはない。それらのスプライトが倒されて画面下に落ちていく最中、重力が働き溶岩に沈む。これが起こると、スプライトは一時的に通常のアニメーションになり、（時々速度を上げ）水平方向に移動する。この状態のスプライトはマリオと当たり判定を持たない。
 
 <!--
 * The Rip Van Fish will center vertically on tiles if it falls on them while asleep. This can cause it to "bounce" if it lands on a slope or similar block.
 -->
-* The Rip Van Fish will center vertically on tiles if it falls on them while asleep. This can cause it to "bounce" if it lands on a slope or similar block.
+* 眠って落ちていくグースカはY座標を触れたタイルの中央に合わせようとする。坂のタイルに触れるとバウンドすることがある。
 
 <!--
 * Reflecting Podoboos will display a glitched graphic while sinking in lava. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#07F4C7)
 -->
-* Reflecting Podoboos will display a glitched graphic while sinking in lava. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#07F4C7)
+* 反射するバブルは溶岩に沈んでいる最中、表示がバグる。[Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#07F4C7)
 
 <!--
 * If you kill Reznor fast enough, a stray Reznor sprite will appear on the screen, sinking in non-existant lava.
 -->
-* If you kill Reznor fast enough, a stray Reznor sprite will appear on the screen, sinking in non-existant lava.
+* ブイブイを素早く倒すと、存在しない溶岩に沈み、表示が画面上に残り続ける。
 
 <!--
 * Making a smoke cloud from a fireball in Reznor's room when $010F is set to 00 will cause part of one of the Reznor platforms to disappear for a frame.
 -->
-* Making a smoke cloud from a fireball in Reznor's room when $010F is set to 00 will cause part of one of the Reznor platforms to disappear for a frame.
+* $010Fが00の時、ブイブイの部屋でファイアから煙雲が出ると、ブイブイの足場の一部が1Fだけ非表示になる。
 
 <!--
 * Screen scrolling will cause Reznor's wheel to temporarily dislocate until the screen finishes moving.
 -->
-* Screen scrolling will cause Reznor's wheel to temporarily dislocate until the screen finishes moving.
+* ブイブイの背景の車輪は画面スクロールすると、スクロールし終えるまで一時的に表示がずれる。
 
 <!--
 * Scrolling the screen on the frame Reznor spawns a fireball will cause him to duplicate that fireball into all of the remaining extended sprite slots. Not particularly useful, though it might prevent him from spawning another fireball for a bit.
 -->
-* Scrolling the screen on the frame Reznor spawns a fireball will cause him to duplicate that fireball into all of the remaining extended sprite slots. Not particularly useful, though it might prevent him from spawning another fireball for a bit.
+* ブイブイがファイアを生成するFに画面をスクロールさせると、空いている拡張スプライトスロットを全て埋めるようにファイボールを重複させる。特に使えるわけではないが、少しの間だけ別のファイアの生成を防げる。
 
 <!--
 * Ludwig will not actually start fighting until the screen passes a certain point, so you can kill him with fireballs before he even attacks by just not letting it scroll that far. Alternatively, you can scroll the screen the opposite way, so you can get right up next to him without actually starting the fight.
 -->
-* Ludwig will not actually start fighting until the screen passes a certain point, so you can kill him with fireballs before he even attacks by just not letting it scroll that far. Alternatively, you can scroll the screen the opposite way, so you can get right up next to him without actually starting the fight.
+* ルドウィッグは画面が特定の位置を通過すると戦い始める。右スクロールを用いれば戦闘を開始させずに、ファイアを当てて倒せる。逆に左スクロールを用いれば、戦闘を開始させずにルドウィッグの隣にまで行ける。
 
 <!--
 * Ludwig's fireballs can't hit Mario for a few frames after being fired, allowing you to stand right next to him without risk. [Video](https://twitter.com/Kaizoman666/status/811481990188953600)
 -->
-* Ludwig's fireballs can't hit Mario for a few frames after being fired, allowing you to stand right next to him without risk. [Video](https://twitter.com/Kaizoman666/status/811481990188953600)
+* ルドウィッグの炎は発生数Fはダメージ判定がないため、ルドウィッグの隣に立っていれば、ダメージを受けない。[Video](https://twitter.com/Kaizoman666/status/811481990188953600)
 
 <!--
 * If you hit Ludwig during the flipping of his jump attack, he'll continue to be diagonal during his hit animation.
 -->
-* If you hit Ludwig during the flipping of his jump attack, he'll continue to be diagonal during his hit animation.
+* 空中で回転しているルドウィッグを踏むと、斜めの踏まれた表示のまま落下する。
 
 <!--
 * Morton, Roy, and Ludwig just force Mario downwards if touched while Mario is moving upwards, rather than directly hurting him. As such, you can survive inside the bosses so long as you jump often enough.
 -->
-* Morton, Roy, and Ludwig just force Mario downwards if touched while Mario is moving upwards, rather than directly hurting him. As such, you can survive inside the bosses so long as you jump often enough.
+* モートン・ロイ・ルドウィッグは上昇中のマリオに触れると、マリオを下向きに押し出す。マリオはこれらのボスに重なっていても、ジャンプしていればダメージを受けない。
 
 <!--
 * After hitting Roy, if you run against his walls as they move inward, Mario will to be pushed by them and will instead end up inside the wall.
 -->
-* After hitting Roy, if you run against his walls as they move inward, Mario will to be pushed by them and will instead end up inside the wall.
+* ロイを踏んだ後の壁が迫り来る時、マリオが壁に密着して壁の方向に進もうとしていると、壁にめり込める。
 
 <!--
 * Cape diving into Iggy/Lemmy's platform when it's rotated at it's near its maximum degrees leftwards will cause Mario to warp strangely on top of the platform, likely sending Mario either directly on top of Iggy's position and hurting him, or briefly sending him into the lava where he immediately dies.
 -->
-* Cape diving into Iggy/Lemmy's platform when it's rotated at it's near its maximum degrees leftwards will cause Mario to warp strangely on top of the platform, likely sending Mario either directly on top of Iggy's position and hurting him, or briefly sending him into the lava where he immediately dies.
+* イギー・レミーの足場が最も急な角度あたりの時にマント飛行で飛び込むと、マリオは足場の頂点と同じ高さに変に瞬間移動したり、ボスの座標に直接瞬間移動してダメージを受けたり、即死する場所にあるマグマに直接瞬間移動する。
 
 <!--
 * The spots at the bottom of Wendy's bow "jump" when she animates, even though there's no logical reason for them to. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4168)
@@ -3066,22 +3066,22 @@ _280個(180個有用)_
 <!--
 * If you enter Bowser's boss room in a level that used an autoscroll sprite at some point earlier in the level (without spawning any other scroll sprite in the meantime), then touching the edges of the screen in the fight will give Mario a small X speed as if he were still in the autoscroller.
 -->
-* If you enter Bowser's boss room in a level that used an autoscroll sprite at some point earlier in the level (without spawning any other scroll sprite in the meantime), then touching the edges of the screen in the fight will give Mario a small X speed as if he were still in the autoscroller.
+* オートスクロールスプライトがありオートスクロールをしている最中のレベルからクッパのレベルに移動すると、画面端に触れるとマリオがX速度を持つ。
 
 <!--
 * Fireballs can cause some of the Bowser battle's blocks to briefly disappear if they're onscreen as Peach descends from Bowser's clown car.
 -->
-* Fireballs can cause some of the Bowser battle's blocks to briefly disappear if they're onscreen as Peach descends from Bowser's clown car.
+* クッパ戦でクッパを倒して、ピーチが降りてくるときにファイアが表示されていると、地面の表示が欠ける。
 
 <!--
 * If you grab a goal sphere in the Bowser fight and Peach spawns before Mario finishes the walk, the game will immediately fade to the overworld with the credits fade effect.
 -->
-* If you grab a goal sphere in the Bowser fight and Peach spawns before Mario finishes the walk, the game will immediately fade to the overworld with the credits fade effect.
+* クッパ戦で、ピーチが現れてからマリオが歩き終わる前に、ゴール玉をとると、クレジットのフェードアウトエフェクトでOWに戻る。
 
 <!--
 * Holding up after beating Bowser will result in Mario having a glitched walking animation during the credits ("claps").
 -->
-* Holding up after beating Bowser will result in Mario having a glitched walking animation during the credits ("claps").
+* クッパを倒したあと上を押していると、クレジットの最中の歩行アニメーション中にグラがばぐる。
 
 <!--
 * Mode 7 boss interaction loops between subscreens, allowing you to hit bosses that use it if you fly high enough.
@@ -3091,17 +3091,17 @@ _280個(180個有用)_
 <!--
 * Spawning a Koopa Kid that uses Mode 7 in a room where Mode 7 is already active will cause the room to glitch in unusual ways. [Video](https://youtu.be/Dm-Y_TK1vkg)
 -->
-* Spawning a Koopa Kid that uses Mode 7 in a room where Mode 7 is already active will cause the room to glitch in unusual ways. [Video](https://youtu.be/Dm-Y_TK1vkg)
+* モード7が既に稼働している部屋でモード7を使うコクッパが出現すると、部屋がバグる。[Video](https://youtu.be/Dm-Y_TK1vkg)
 
 <!--
 * Normally, after completing certain castles, the overworld music doesn't load while Mario walks to the next level. However, dying after the boss is beaten will still cause the music to not play, without moving Mario to the next level.
 -->
-* Normally, after completing certain castles, the overworld music doesn't load while Mario walks to the next level. However, dying after the boss is beaten will still cause the music to not play, without moving Mario to the next level.
+* 通常、城を攻略した後OWの音楽はマリオが次のレベルへ歩き出すまで読み込まれない。コクッパを倒した後に死ぬと、OWの音楽が流れなくなる。ルイージがマリオと同じマップにいる場合、ルイージに切り替わっても音楽は流れない。
 
 <!--
 * Most non-standard sprite types (e.g. smoke/score sprites) will loop their graphics over screen borders. [Fix (smoke)](http://www.smwcentral.net/?p=section&a=details&id=4548)
 -->
-* Most non-standard sprite types (e.g. smoke/score sprites) will loop their graphics over screen borders. [Fix (smoke)](http://www.smwcentral.net/?p=section&a=details&id=4548)
+* ほんとの標準のタイプではないスプライト（煙やスコア）などは画面の境界でループする。[Fix (smoke)](http://www.smwcentral.net/?p=section&a=details&id=4548)
 
 <!--
 * Destroying certain extended sprites with a star will cause their graphics to move slightly or have glitched graphics based on their orientation for a frame.
@@ -3111,202 +3111,202 @@ _280個(180個有用)_
 <!--
 * Hitting a directional coin block while Mario has star power will cause the music to be overwritten by the directional coins; however, if the coins end before the star does, the music will continue to play for the directional coin path until Mario's star power ends as well.
 -->
-* Hitting a directional coin block while Mario has star power will cause the music to be overwritten by the directional coins; however, if the coins end before the star does, the music will continue to play for the directional coin path until Mario's star power ends as well.
+* スター中にコントロールコインブロックを叩くと、音楽がコントロールコインのに上書きされる。スターより先にコントロールコインがなくなると、音楽はスターが切れるまでコントロールコインのが流れる。
 
 <!--
 * Freezing the game by eating a berry on the same frame that the bonus coin game cloud spawns a coin will cause it to spawn several of its remaining coins at once. Not especially useful, though, since they're counted as extended sprites and therefore won't cause most sprites to despawn, but it is a way of getting the cloud's coins to spawn earlier than normal.
 -->
-* Freezing the game by eating a berry on the same frame that the bonus coin game cloud spawns a coin will cause it to spawn several of its remaining coins at once. Not especially useful, though, since they're counted as extended sprites and therefore won't cause most sprites to despawn, but it is a way of getting the cloud's coins to spawn earlier than normal.
+* コインを出す雲がコインを出すFに木の実を食べてフリーズさせると、雲は後に出すコインを一度に全て出し切る。コインは拡張スプライトなのでスプライト制限を引き起こせるわけではないが、雲のコインを通常より早く入手できる。
 
 <!--
 * Getting hurt will reset the bonus coin game cloud's collection counter, meaning taking any damage will make getting the 1-up impossible.
 -->
-* Getting hurt will reset the bonus coin game cloud's collection counter, meaning taking any damage will make getting the 1-up impossible.
+* コインを出す雲の取得カウンターはダメージを食らうとリセットされる。したがって途中で1回でもダメージを食らうと、1upはできない。
 
 <!--
 * Sometimes the graphics for coins from the coin game cloud loops and you can see them in top of the level. [Video](https://youtu.be/-EH1Fbwbtas)
 -->
-* Sometimes the graphics for coins from the coin game cloud loops and you can see them in top of the level. [Video](https://youtu.be/-EH1Fbwbtas)
+* コインを出す雲のコインの表示はループすることがあり、レベルの上部で見ることが出来る。[Video](https://youtu.be/-EH1Fbwbtas)
 
 <!--
 * Having too many extended sprites onscreen can produce some strange graphics effects, particularly on Mario. A few examples of these are displacing his cape several tiles away or erasing parts of hit animations that don't fit into the standard graphical area.
 -->
-* Having too many extended sprites onscreen can produce some strange graphics effects, particularly on Mario. A few examples of these are displacing his cape several tiles away or erasing parts of hit animations that don't fit into the standard graphical area.
+* 画面内に多くの拡張スプライトがいると、主にマリオのグラフィック表示に変なことが起こりやすくなる。マントのタイルが幾つか欠けたり、通常の表示領域外のダメージアニメーションの一部が消えたりする。
 
 <!--
 * Enemies killed so that they fall downward will still interact with very steep slopes on their way down. This glitch can be combined with the Torpedo Ted to get an interesting use out of it, though.
 -->
-* Enemies killed so that they fall downward will still interact with very steep slopes on their way down. This glitch can be combined with the Torpedo Ted to get an interesting use out of it, though.
+* 倒されて落下中の敵はとても急な坂に作用する。トーピードで行うと面白い。
 
 <!--
 * Playing a sound effect which uses the $1DF9 channel (such as the swim, Yoshi gulp, or powerup noise) on the same frame the "time is running out!" sound plays will cause it to get overwritten, with the music never speeding up as a result.
 -->
-* Playing a sound effect which uses the $1DF9 channel (such as the swim, Yoshi gulp, or powerup noise) on the same frame the "time is running out!" sound plays will cause it to get overwritten, with the music never speeding up as a result.
+* タイムアップするFに$1DF9チャンネルを使う効果音（泳ぎ・Yの飲み込み・パワーアップ音など）が流れると、値が上書きされる。結果的に音楽の速度が上がらなくなる。
 
 <!--
 * Pausing the game on the frame the game's music would normally change will cause it to continue playing the song (e.g. right before touching the goal tape)
 -->
-* Pausing the game on the frame the game's music would normally change will cause it to continue playing the song (e.g. right before touching the goal tape)
+* 音楽が変わるFにポーズをすると、前の音楽が続く。例えば、ゴールバーに触れる寸前。
 
 <!--
 * Taking damage on the frame Mario enters a pipe will cause the shrinking animation to be skipped.
 -->
-* Taking damage on the frame Mario enters a pipe will cause the shrinking animation to be skipped.
+* マリオが土管に入るFにダメージを受けると、入っていくアニメーションが省略される。
 
 <!--
 * Dying on the frame Mario takes a screen exit will cause the next room's music to be replaced by the death theme. Can also be done in the intro level on the frame the message appears.
 -->
-* Dying on the frame Mario takes a screen exit will cause the next room's music to be replaced by the death theme. Can also be done in the intro level on the frame the message appears.
+* 画面が変わるFに死ぬと次のレベルの音楽が死亡時に流れる音楽に置換される。オープニングでメッセージが現れるFでも可能。
 
 <!--
 * Dying in a level that has the time set to 0 will cause the game to display the TIME UP! message instead of simply fading to the overworld. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8772)
 -->
-* Dying in a level that has the time set to 0 will cause the game to display the TIME UP! message instead of simply fading to the overworld. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8772)
+* TIMEが0に設定されたレベルで死ぬと、TIME UP! と表示されてからOWに戻る。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8772)
 
 <!--
 * Dying during the goal walk will glitch the circle effect and not count as completing the level.
 -->
-* Dying during the goal walk will glitch the circle effect and not count as completing the level.
+* ゴールして歩いている最中に死ぬと、円のエフェクトがバグる。レベルをクリアしたことにはならない。
 
 <!--
 * Blocks or sprites that move Mario quickly (e.g. noteblocks) will cause the parts of the goal walk circle to not be redrawn as he moves.
 -->
-* Blocks or sprites that move Mario quickly (e.g. noteblocks) will cause the parts of the goal walk circle to not be redrawn as he moves.
+* ゴール後、マリオがブロックまたはスプライト（音符ブロックなど）によって動かされると、円のエフェクトがバグる。
 
 <!--
 * Ending a level via goal tape offscreen will cause the circle effect to loop to the wrong screen, occasionally glitching overworld palettes as well. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8783)
 -->
-* Ending a level via goal tape offscreen will cause the circle effect to loop to the wrong screen, occasionally glitching overworld palettes as well. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8783)
+* 画面外でゴールバーを切ると、円のエフェクトが上下でループする。この状態でOWに戻ると、OWのパレットがバグることがある。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8783)
 
 <!--
 * If Mario finishes a level while climbing, he will continue to climb during the goal walk, even during the thumbs-up pose.
 -->
-* If Mario finishes a level while climbing, he will continue to climb during the goal walk, even during the thumbs-up pose.
+* 金網など掴んでいる状態でゴールすると、掴んだまま右に進んでいく。
 
 <!--
 * If Mario is touching the top of a moving platform while holding onto a fence or vine, he will be "pulled" by the platform while still climbing.
 -->
-* If Mario is touching the top of a moving platform while holding onto a fence or vine, he will be "pulled" by the platform while still climbing.
+* マリオが金網や蔦を掴んで下を押している最中に動く足場スプライトの上部に触れていると、足場スプライトに引っ張られる。
 
 <!--
 * In vertical levels, the goal tape will stop Mario as if it were a goal sphere, instead of activating the goal walk.
 -->
-* In vertical levels, the goal tape will stop Mario as if it were a goal sphere, instead of activating the goal walk.
+* 縦ステージでゴールバーを切ると、ゴール玉のように動きが止まる。
 
 <!--
 * Hitting a goal tape after defeating a Koopa Kid will cause bonus stars to be added to the counter, but even if you pass 100, there won't be a bonus game.
 -->
-* Hitting a goal tape after defeating a Koopa Kid will cause bonus stars to be added to the counter, but even if you pass 100, there won't be a bonus game.
+* コクッパを倒した後にゴールバーを切ると、ボーナススターが追加されていくが、100になってもボーナスゲームにはならない。
 
 <!--
 * Keys, throwblocks, and powerups (except 1-ups) will simply disappear when hitting the goal tape, instead of turning into a coin.
 -->
-* Keys, throwblocks, and powerups (except 1-ups) will simply disappear when hitting the goal tape, instead of turning into a coin.
+* 鍵とパワーアップアイテムはマリオがゴールバーを切ると、コインにならずに消える。
 
 <!--
 * Ending a level via keyhole while offscreen may cause the game's palettes to glitch and the keyhole animation to loop.
 -->
-* Ending a level via keyhole while offscreen may cause the game's palettes to glitch and the keyhole animation to loop.
+* 画面外で鍵ゴールすると、鍵穴のエフェクトがループし、パレットがバグる。
 
 <!--
 * The flashing color of Yoshi coins will not fade to black on level end.
 -->
-* The flashing color of Yoshi coins will not fade to black on level end.
+* ドラゴンコインの輝きはレベルが終わるときの暗転時にも光っている。
 
 <!--
 * The bonus game 1ups will keep moving even if the game is frozen with $9D.
 -->
-* The bonus game 1ups will keep moving even if the game is frozen with $9D.
+* ボーナスゲームの1upキノコは$9Dでフリーズしている間も動き続ける。
 
 <!--
 * If a Yoshi coin on Layer 2 is placed across a screen border on an odd-numbered screen, collecting it will cause some tiles in Layer 3's graphics to become corrupted (specifically the digits 0 to 7) depending on the x position within the screen where it is collected.
 -->
-* If a Yoshi coin on Layer 2 is placed across a screen border on an odd-numbered screen, collecting it will cause some tiles in Layer 3's graphics to become corrupted (specifically the digits 0 to 7) depending on the x position within the screen where it is collected.
+* レイヤー2の奇数画面の境界にまたがって配置されたYコインを取得すると、YコインのX座標に依存してレイヤー3の幾つかのタイルが数字の0から7に侵食される。
 
 <!--
 * In addition to Yoshi coins, other multi-tile objects that change mess up over screen borders as well, including switch palace switches and fence gates. The former isn't particularly useful, however, and the latter only updates VRAM, not the actual tiles.
 -->
-* In addition to Yoshi coins, other multi-tile objects that change mess up over screen borders as well, including switch palace switches and fence gates. The former isn't particularly useful, however, and the latter only updates VRAM, not the actual tiles.
+* Yコインに加え、他の複数タイルのオブジェクトは画面境界上でごちゃごちゃになる。宮殿スイッチは特に有用ではない。金網はVRAM上のタイルだけ誤った更新がなされるが、実際のタイルはそのまま。
 
 <!--
 * Scrolling the screen far enough to the right or left before flipping a fence gate will cause some of the tiles for the gate to appear on that edge of the screen. Unfortunately not useful since it is only the VRAM and not the actual tiles being updated.
 -->
-* Scrolling the screen far enough to the right or left before flipping a fence gate will cause some of the tiles for the gate to appear on that edge of the screen. Unfortunately not useful since it is only the VRAM and not the actual tiles being updated.
+* 回転金網が回転する前に画面を左右どちらかに大きくスクロールさせると、金網の幾つかのタイルが画面端に表示される。残念にもVRAMのみの更新なので、実際のタイルはそのまま。
 
 <!--
 * Yoshi Wings may occasionally steal graphics from other sprites while flying offscreen, causing them to look like they're weirdly flying across the screen. Unfortunately, the interaction doesn't come along with it. [Video](https://www.youtube.com/watch?v=yNdTFyxjP9A&feature=youtu.be&t=5m)
 -->
-* Yoshi Wings may occasionally steal graphics from other sprites while flying offscreen, causing them to look like they're weirdly flying across the screen. Unfortunately, the interaction doesn't come along with it. [Video](https://www.youtube.com/watch?v=yNdTFyxjP9A&feature=youtu.be&t=5m)
+* Yの翼は画面外を飛んでいる最中、他のスプライトの表示を時折パクり、その表示が画面を奇妙にまたいで飛んでいるように見える。残念だが、その表示との接触判定はない。[Video](https://www.youtube.com/watch?v=yNdTFyxjP9A&feature=youtu.be&t=5m)
 
 <!--
 * Crossing a screen border in a vertical level can cause pipe palettes to "split" between to colors. This can also happen in horizontal levels with vertically scrolling Layer 2 if it crosses over the vertical screen barier to the next screen.
 -->
-* Crossing a screen border in a vertical level can cause pipe palettes to "split" between to colors. This can also happen in horizontal levels with vertically scrolling Layer 2 if it crosses over the vertical screen barier to the next screen.
+* 縦ステージで画面の境界を通過すると、土管のパレットを分割させられる。横ステージでもレイヤー2が縦方向にスクロールする場合、起こることがある。
 
 <!--
 * The inside of the pipes used in the Lemmy and Wendy battles are non-solid.
 -->
-* The inside of the pipes used in the Lemmy and Wendy battles are non-solid.
+* レミーとウェンディのレベルの土管の内部はソリッドではない。
 
 <!--
 * Mario will not move with Layer 2 objects, resulting in him sliding across horizontally moving objects. The same occurs when climbing, as well; Mario won't move with the vine/net he's holding onto, which can also allow him to pass into and through solid layer 2 blocks if they're directly above the vine/net.
 -->
-* Mario will not move with Layer 2 objects, resulting in him sliding across horizontally moving objects. The same occurs when climbing, as well; Mario won't move with the vine/net he's holding onto, which can also allow him to pass into and through solid layer 2 blocks if they're directly above the vine/net.
+* マリオはレイヤー2オブジェクトと連動して移動しないので、レイヤー2が水平移動するとき、マリオが滑る。同様のことが網などを掴んでいる時にも起こる。これを利用するとツタなどの1マス上に配置されたソリッドブロックを貫通できる。
 
 <!--
 * When the On/Off-switch-controlled Layer 2 sprite hits its lowest level, all sound effects that use $7E1DFC (including spinjumps, coins, and fireballs) will be replaced by the "smash" sound. [Fix](http://www.smwcentral.net/?p=section&a=details&id=11314)
 -->
-* When the On/Off-switch-controlled Layer 2 sprite hits its lowest level, all sound effects that use $7E1DFC (including spinjumps, coins, and fireballs) will be replaced by the "smash" sound. [Fix](http://www.smwcentral.net/?p=section&a=details&id=11314)
+* ON/OFFスイッチで制御されるレイヤー2スプライトがレベルの一番下にくっついてる時、$7E1DFCで鳴る効果音（スピンジャンプ・コイン・ファイア）が全てスマッシュの音に置換される。[Fix](http://www.smwcentral.net/?p=section&a=details&id=11314)
 
 <!--
 * When an autoscrolling level passes the screen limit for the level, its graphics (but not interaction) will loop.
 -->
-* When an autoscrolling level passes the screen limit for the level, its graphics (but not interaction) will loop.
+* オートスクロールのレベルでマップ端までスクロールすると、実体はないグラフィックがループする。
 
 <!--
 * If Mario finishes a level with more than 400 seconds left, the end-of-level score counter won't add correctly. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8894)
 -->
-* If Mario finishes a level with more than 400 seconds left, the end-of-level score counter won't add correctly. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8894)
+* TIME400以上でレベルを終えると、スコアが正しく追加されない。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8894)
 
 <!--
 * If the timer goes above 999 (by way of green berries or just directly setting that way), then it will use letters (or other unintended tiles) until it goes below 999 again. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4435)
 -->
-* If the timer goes above 999 (by way of green berries or just directly setting that way), then it will use letters (or other unintended tiles) until it goes below 999 again. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4435)
+* （緑木の実やそう設定することで）TIME999以上になると、再び999になるまで数字ではない文字が使われる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=4435)
 
 <!--
 * If the exit counter goes above 99, additional numbers will be in hexadecimal. In vanilla SMW, this can only be done in the Japanese version; any other version stops counting when the star appears. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4697)
 -->
-* If the exit counter goes above 99, additional numbers will be in hexadecimal. In vanilla SMW, this can only be done in the Japanese version; any other version stops counting when the star appears. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4697)
+* ゴールカウンターが99を超えると、16進数が使われる。無改造でこれが行えるのは日本版のみ。他の国の場合、99が上限で星が現れる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=4697)
 
 <!--
 * Sprites other than standard powerup sprites will have glitched graphics when in the item box. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4199) - [More info](https://docs.google.com/spreadsheets/d/1XGzqHuZUoSqhyDk3QcSC0X7mGsA5af7HyQKFYc-busM/edit#gid=0)
 -->
-* Sprites other than standard powerup sprites will have glitched graphics when in the item box. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4199) - [More info](https://docs.google.com/spreadsheets/d/1XGzqHuZUoSqhyDk3QcSC0X7mGsA5af7HyQKFYc-busM/edit#gid=0)
+* 通常のパワーアップアイテム以外がアイテムボックスに入ると、表示がバグる。[Fix](http://www.smwcentral.net/?p=section&a=details&id=4199) - [More info](https://docs.google.com/spreadsheets/d/1XGzqHuZUoSqhyDk3QcSC0X7mGsA5af7HyQKFYc-busM/edit#gid=0)
 
 <!--
 * If you pause the game on the overworld while passing a jumping fish, the fish will repeatedly jump in place until you unpause.
 -->
-* If you pause the game on the overworld while passing a jumping fish, the fish will repeatedly jump in place until you unpause.
+* OWでプクプクが跳ねた時にポーズすると、ポーズを解除するまで跳ね続ける。
 
 <!--
 * Entering a level while an overworld fish is mid-jump will have the fish wait and resume its fall after you exit the level.
 -->
-* Entering a level while an overworld fish is mid-jump will have the fish wait and resume its fall after you exit the level.
+* OWでプクプクが空中に飛び出している最中にレベルに入り、レベルを終えるとプクプクがレベルに入った時の位置から動きを再開する。
 
 <!--
 * Obtaining the secret exit in a level set to activate event 77 will cause garbage event data to be loaded on the overworld.
 -->
-* Obtaining the secret exit in a level set to activate event 77 will cause garbage event data to be loaded on the overworld.
+* イベント77をセットしたレベルで別ゴールをすると、OWにイベントデータのゴミがロードされる。
 
 <!--
 * If an overworld sprite is placed in the Yoshi's Island or lower Donut Plains area on the main map, then the title screen will have some extra garbage tiles. [Diagram](http://media.smwcentral.net/Diagrams/TitleScreenGarbageImage.png) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=8975)
 -->
-* If an overworld sprite is placed in the Yoshi's Island or lower Donut Plains area on the main map, then the title screen will have some extra garbage tiles. [Diagram](http://media.smwcentral.net/Diagrams/TitleScreenGarbageImage.png) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=8975)
+* OWスプライトをヨッシーアイランドまたはドーナツ平野の下側に配置すると、タイトル画面に余分なタイルが表示されるようになる。[Diagram](http://media.smwcentral.net/Diagrams/TitleScreenGarbageImage.png) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=8975)
 
 <!--
 * The S in the ______ START! message uses palette 8 instead of palette A like the other letters. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4168)
 -->
-* The S in the ______ START! message uses palette 8 instead of palette A like the other letters. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4168)
+* START!のSだけパレット8が使われている。他の文字はパレットA。[Fix](http://www.smwcentral.net/?p=section&a=details&id=4168)
 
 <!--
 * Loading a level that has a No-Yoshi entrance (by way of the 256 exit glitch or otherwise) when the entrance has already been run will prevent the cutscene from displaying, but will still function as normal, preventing both Yoshi and warps.
@@ -3321,12 +3321,12 @@ _280個(180個有用)_
 <!--
 * Collecting a star or dying on the title screen will cause the music to change to the special world's theme. [Fix (for death)](http://www.smwcentral.net/?p=section&a=details&id=4528)
 -->
-* Collecting a star or dying on the title screen will cause the music to change to the special world's theme. [Fix (for death)](http://www.smwcentral.net/?p=section&a=details&id=4528)
+* タイトル画面中、スターをとったり死ぬと、スペシャルワールドの音楽に変わる。[Fix (for death)](http://www.smwcentral.net/?p=section&a=details&id=4528)
 
 <!--
 * Pressing a P-switch on the title screen will cause the music to disappear completely until the switch's timer runs out, after which it will be replaced by the main overworld music.
 -->
-* Pressing a P-switch on the title screen will cause the music to disappear completely until the switch's timer runs out, after which it will be replaced by the main overworld music.
+* タイトル画面中、Pスイッチを押すと、Pスイッチのタイマーが切れるまで音楽がなくなる。その後、OWの音楽に変わる。
 
 ---
 ---
