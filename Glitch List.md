@@ -117,7 +117,7 @@ _70個(64個有用)_
 <!--
 * It's possible to completely prevent any sprite from spawning so long as the spawn region of the screen can be passed over it (a distance of just over 16 pixels). Because the spawn routine only runs every other frame, this means that you can have up to three frames to do this (the last frame of which can be gotten from pausing the game breifly to realign the frame counter). Two verified methods of doing so are using a rope mechanism to drag Mario during those frame, and using a fast-spinning revolving platform. If moving fast enough, it may also be possible without the use of any sprites. [More info](http://tasvideos.org/forum/viewtopic.php?p=464958#464958)
 -->
-* It's possible to completely prevent any sprite from spawning so long as the spawn region of the screen can be passed over it (a distance of just over 16 pixels). Because the spawn routine only runs every other frame, this means that you can have up to three frames to do this (the last frame of which can be gotten from pausing the game breifly to realign the frame counter). Two verified methods of doing so are using a rope mechanism to drag Mario during those frame, and using a fast-spinning revolving platform. If moving fast enough, it may also be possible without the use of any sprites. [More info](http://tasvideos.org/forum/viewtopic.php?p=464958#464958)
+* スクリーンのスプライトを出現させる領域（16ピクセルほどの狭さ）をスキップすることでスプライトの出現を完全に防ぐことができる。スプライト出現のルーチンが1Fおきに呼び出されるので、ポーズでフレームカウンターを調整による1Fとおまけ1F（More infoに詳細）が得られるから、このバグは最大3F連続して起こせる。確認済みで有用な2つの方法があり、ロープでマリオをそのフレームの内に加速させること、あるいは高速で回転する足場を使うことである。スピードが十分あればスプライトの援助なしでもバグが発生することはある。[More info](http://tasvideos.org/forum/viewtopic.php?p=464958#464958)
 
 <!--
 * If vertical scrolling is enabled in a level, you can prevent the screen from scrolling by jumping off of the ground the frame that Mario lands on it.
@@ -578,17 +578,17 @@ _148個(127個有用)_
 <!--
 * Yoshi's tongue will have unusual interaction when Yoshi's body OAM is completely offscreen. Regardless of the direction he faces, the actual hitbox will occasionally be stretched far to the right in the same fashion as in the layer switch glitch.
 -->
-* Yoshi's tongue will have unusual interaction when Yoshi's body OAM is completely offscreen. Regardless of the direction he faces, the actual hitbox will occasionally be stretched far to the right in the same fashion as in the layer switch glitch.
+* Yの胴体のOAMが完全に画面外だと舌に変な接触判定がおかしくなる。向いている方向に関係なく、レイヤー変更バグと同じように実際の当たり判定が遥か右側に伸ばされることがたまにある。
 
 <!--
 * It's possible to duplicate sprites that remain on Yoshi's mouth by using the previous glitch to catch it while Mario kicks the sprite, in such a way that it reaches the despawn region. After that, the sprite will be in Yoshi's mouth and reappear in original position within the level. This technique can also be done if Mario jumps off Yoshi while he releases the tongue and goes offscreen with the sprite.
 -->
-* It's possible to duplicate sprites that remain on Yoshi's mouth by using the previous glitch to catch it while Mario kicks the sprite, in such a way that it reaches the despawn region. After that, the sprite will be in Yoshi's mouth and reappear in original position within the level. This technique can also be done if Mario jumps off Yoshi while he releases the tongue and goes offscreen with the sprite.
+* マリオがスプライトの消える領域まで蹴ったスプライトを前のバグを使ってYの舌でキャッチすると、スプライトを複製することができる。これによってスプライトがYに咥えられていると同時に元の出現位置にも再出現する。Yの舌を出してスプライトが画面外にいくようにYを乗り捨てて行うことも出来る。
 
 <!--
 * It's possible to duplicate sprites near a level entrance by sacrificing Yoshi. Because the spawn region when entering a level (-60 to +A0) is larger than the despawn region for sprites (usually -40 to +30), a sprite can be spawned in a slot and then immediately despawned, entering its index for the sprite load status table to $161A in the process. If Mario enters the level riding a Yoshi that then takes the sprite's slot, that Yoshi will inherit that loading index due to it not being reset during level load. If you then despawn that Yoshi, the game will think it's okay to respawn the original sprite... even if that original sprite is already on-screen, or has even already been permanently killed.
 -->
-* It's possible to duplicate sprites near a level entrance by sacrificing Yoshi. Because the spawn region when entering a level (-60 to +A0) is larger than the despawn region for sprites (usually -40 to +30), a sprite can be spawned in a slot and then immediately despawned, entering its index for the sprite load status table to $161A in the process. If Mario enters the level riding a Yoshi that then takes the sprite's slot, that Yoshi will inherit that loading index due to it not being reset during level load. If you then despawn that Yoshi, the game will think it's okay to respawn the original sprite... even if that original sprite is already on-screen, or has even already been permanently killed.
+* レベルに入ったときにYに騎乗しているとYを犠牲にしてスプライトを複製することができる。レベルに入ったときのスプライトの出現領域（-60から+A0）は消滅領域（大体-40から+30）より広いため、スプライトが出現したらすぐに消滅させられて、sprite load status tableへのインデックスを$161Aに登録できる。sprite load status tableへのインデックスはレベルのロードの際リセットされないため、Yに乗ったままレベルがロードされてYが消滅したスプライトの枠を乗っ取れば、インデックスも一緒に引き継ぐ。結果として、そのYが消滅したら元のスプライトがまだ画面上に存在しても、あるいはすでに倒されていても、改めて出現可能になる。
 
 <!--
 * Invisi-Yoshi: Spawning more than one Yoshi onscreen will cause all Yoshis other than the one in the **lowest** sprite slot to turn invisible and have unusual interaction. [Video](https://youtu.be/uXUHCyOL-AM)
@@ -653,7 +653,7 @@ _148個(127個有用)_
 <!--
 * If $019D (part of the stack) is a value from 00 to 0C and Yoshi has a null sprite in his mouth, then Yoshi will get wings or be able to stomp the ground based on $16F5 (score sprite high X position). You can manipulate this value at any time, allowing Yoshi to freely swap out powers.
 -->
-* If $019D (part of the stack) is a value from 00 to 0C and Yoshi has a null sprite in his mouth, then Yoshi will get wings or be able to stomp the ground based on $16F5 (score sprite high X position). You can manipulate this value at any time, allowing Yoshi to freely swap out powers.
+* $019D（スタックの一部）が00から0Cまでの値でヌルスプライトを含んだYは$16F5（スコアスプライトのhigh X position）の値次第で羽を生やしたり砂煙を起こしたりできる。$16F5はいつでも簡単に操ることができるためYの能力は自由に切り替えられる。
 
 <!--
 * If $019D (part of the stack) is the value 80 and Yoshi has a null sprite in his mouth, then Yoshi will act as having a key in his mouth and will be able to activate keyholes. [Video](https://youtu.be/ymxwjRuN-VQ)
@@ -673,7 +673,7 @@ _148個(127個有用)_
 <!--  
 * The previous glitch can be used to corrupt $00CE, the pointer to level's sprite data. With correct values, we can spawn most sprites in the level based on the current joypad values, for example. [Video](https://www.youtube.com/watch?v=hOgU3Je7pjE)
  -->
-* The previous glitch can be used to corrupt $00CE, the pointer to level's sprite data. With correct values, we can spawn most sprites in the level based on the current joypad values, for example. [Video](https://www.youtube.com/watch?v=hOgU3Je7pjE)
+* 前のバグでレベルのスプライトデータへのポインターである$CEを乱すことができる。例えば、コントローラーのボタン状態によってスプライトを出現させるように設定できる。[Video](https://www.youtube.com/watch?v=hOgU3Je7pjE)
 
 <!--
 * Null sprite overload: Spitting out a null sprite will glitch certain sprites' properties. Slot #3 will usually lose ground interaction, and slot #1 will usually either become burnable or change its interaction completely. [Mo](http://tasvideos.org/forum/viewtopic.php?p=250970#250970)[re](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#NullSprites) [info](https://youtu.be/g25UHjarSCY)
@@ -789,12 +789,12 @@ _148個(127個有用)_
 <!--
 * If you item swap a sprite that uses extra bits (e.g. the goal tape) when Yoshi is in a higher slot than it, the sprite's extra bits will be modified. The game normally stores the extra bits with the sprite's high Y spawn position (in the format %----EE-Y) before correcting it in the sprite's initilization code; if Yoshi's tongue's code runs before the sprite's does, it will instead use the high Y position from the tongue, affecting the extra bits in the process. NOTE: this glitch will NOT work in hacks that use custom sprites, due to using a specialized table for extra bits. [More Info](http://pastebin.com/XBqrVHyH)
 -->
-* If you item swap a sprite that uses extra bits (e.g. the goal tape) when Yoshi is in a higher slot than it, the sprite's extra bits will be modified. The game normally stores the extra bits with the sprite's high Y spawn position (in the format %----EE-Y) before correcting it in the sprite's initilization code; if Yoshi's tongue's code runs before the sprite's does, it will instead use the high Y position from the tongue, affecting the extra bits in the process. NOTE: this glitch will NOT work in hacks that use custom sprites, due to using a specialized table for extra bits. [More Info](http://pastebin.com/XBqrVHyH)
+* Yがより大きい番号のスロットにいてextra bitsを使うスプライト（例えばゴールバー）をアイテムスワップすると、extra bitsが変更される。これはextra bitsは普段スプライトのhigh Y positioと一緒に（%—-EE-Yのフォーマットで）一旦保存されてから、スプライト初期化コードであるべき場所に移されるためで、つまりスプライトのコードよりもYの舌の処理が起動すると代わりに舌のhigh Y positioが使用されてextra bitsに影響が出る。[More Info](http://pastebin.com/XBqrVHyH)
 
 <!--
 * Yoshification: For one frame after Yoshi despawns, the game will still manage his sprite slot as a Yoshi for one frame afterwards. If a new sprite spawns into his slot on that frame, then there can be a huge variety of effects based on how that new sprite uses its RAM tables that were previously managed by Yoshi. For instance, if it sets $C2 to 01 to spawn (which Yoshi uses as a "mounted" flag), then the game will think Mario is riding that sprite like a Yoshi and warp it to his position. Furthermore, when Mario goes to another room or level, he will suddenly spawn on a new Yoshi (who receives its palette and graphics page from whatever sprite was swapped). [More info](https://www.youtube.com/watch?v=2fLOZrQzDnQ)
 -->
-* Yoshification: For one frame after Yoshi despawns, the game will still manage his sprite slot as a Yoshi for one frame afterwards. If a new sprite spawns into his slot on that frame, then there can be a huge variety of effects based on how that new sprite uses its RAM tables that were previously managed by Yoshi. For instance, if it sets $C2 to 01 to spawn (which Yoshi uses as a "mounted" flag), then the game will think Mario is riding that sprite like a Yoshi and warp it to his position. Furthermore, when Mario goes to another room or level, he will suddenly spawn on a new Yoshi (who receives its palette and graphics page from whatever sprite was swapped). [More info](https://www.youtube.com/watch?v=2fLOZrQzDnQ)
+* ヨッシー化（Yoshification）：Yが消滅した直後の1Fは、そのスプライトスロットがYとして処理され続ける。このF内に別のスプライトが同じスロットに出現したら、そのスプライトが以前Yに支配されているRAMをどう使用するかによってありとあらゆる作用が発現する。例えば、Yが「乗られている」フラグとして使う$C2をスプライトが出現するために01に設定すると、スプライトがYのように乗られているとされてマリオの位置に瞬間移動させられる。また、別のレベルに移行するとマリオがスワップされたアイテムのパレットとグラフィックページを持つ新しいYに乗ったままレベルに入る。[More info](https://www.youtube.com/watch?v=2fLOZrQzDnQ)
 
 <!--
 * Stunning a sprite: If Mario spits out a sprite while its stun timer is set, it will spawn an extra sprite once its stun timer hits zero. While this is intended for sprites like the Koopa shell, it works for other sprites, as well. For example, P-switches can spawn a fish if Yoshi spits it out when it turns into a smoke cloud. [More info](http://tasvideos.org/GameResources/SNES/SuperMarioWorld.html#StunnedSprites) - [Video](https://youtu.be/1SGfYkXoGjg?t=11m04s)
@@ -809,7 +809,7 @@ _148個(127個有用)_
 <!--
 * Phase pointer manipulation: When a carryable sprite "normalizes" ($1558 reaches 01), $C2 for the sprite will be set equal to the value of $1540 rounded up to the nearest odd number. Because many sprites use $C2 as a phase pointer, this can cause garbage code to run, resulting in a large variety of possible effects. Although only a few sprites use $1558 naturally (such as the Pitchin' Chuck), it can also be set by having a sprite sink in lava and then using Yoshi to spit out the sprite shortly thereafter. [More info](http://tasvideos.org/forum/viewtopic.php?p=476091#476091)
 -->
-* Phase pointer manipulation: When a carryable sprite "normalizes" ($1558 reaches 01), $C2 for the sprite will be set equal to the value of $1540 rounded up to the nearest odd number. Because many sprites use $C2 as a phase pointer, this can cause garbage code to run, resulting in a large variety of possible effects. Although only a few sprites use $1558 naturally (such as the Pitchin' Chuck), it can also be set by having a sprite sink in lava and then using Yoshi to spit out the sprite shortly thereafter. [More info](http://tasvideos.org/forum/viewtopic.php?p=476091#476091)
+* 段階ポインター操作（Phase pointer manipulation）：持ち運べるスプライトが「通常段階」に戻る（つまり$1558が01に達する）と$C2が奇数まで切り上げた$1540の値に設定される。$C2を段階ポインターとして使うスプライトが多いため、これによってゴミコードに移ってあらゆる作用が発現する。$1558を通常の動作で使うスプライト（例えば野球ボールを投げるブル）は少ないが、溶岩に沈んでいくスプライトをYに吐かせることでも行える。[More info](http://tasvideos.org/forum/viewtopic.php?p=476091#476091)
 
 <!--
 * Yoshi can "store" a sprite slot in his mouth, but it gets a bit complicated. First, do the double tongue glitch and pick up a carriable sprite with the first tongue. Then, with the second tongue, pick up the sprite you want to stun, but eat-cancel it before Yoshi swallows it. As a result, Yoshi will have the second sprite slot "in" his mouth, but other sprites can still spawn in that slot and will function as normal. Yoshi can then spit out that sprite (resulting in a glitched version of it), or swallow it (resulting in the sprite vanishing).
@@ -834,12 +834,12 @@ _148個(127個有用)_
 <!--
 * If a sprite gives special properties to Yoshi when in his mouth (e.g. blue or yellow shells/Koopas), then storing that sprite in Yoshi's mouth via the stun glitch will also inherit those properties to Yoshi until either the sprite gets overwritten or Yoshi swallows the storage. In the case of wings, the wing graphic will also not show up, nor will the flight sounds play.
 -->
-* Yに特性を与えるスプライト(青・黄色の甲羅/ノコノコ）が口の中にあって、スタンバグを通してそれらをストアすると、スプライトは上書きされるか、Yが飲み込むまで特性は引き継がれる。翼の場合、表示が見えなくなり飛ぶ音は再生されない。
+* Yに特性を与えるスプライト（青・黄色の甲羅/ノコノコ）が口の中にあって、スタンバグを通してそれらをストアすると、スプライトは上書きされるか、Yが飲み込むまで特性は引き継がれる。翼の場合、表示が見えなくなり飛ぶ音は再生されない。
 
 <!--
 * If Yoshi has a sprite stored in his mouth, and a Yoshi egg spawns into that sprite slot, then spitting out the egg on the same frame it spawns in will cause it to hatch with a green Koopa rather than a baby Yoshi. [Video](https://cdn.discordapp.com/attachments/167412470862970881/470363716613832734/koopinha-egg_00000.gif)
 -->
-* If Yoshi has a sprite stored in his mouth, and a Yoshi egg spawns into that sprite slot, then spitting out the egg on the same frame it spawns in will cause it to hatch with a green Koopa rather than a baby Yoshi. [Video](https://cdn.discordapp.com/attachments/167412470862970881/470363716613832734/koopinha-egg_00000.gif)
+* Yがスプライトを含んでいる間その枠に卵が出現した、ちょうどそのFの内に卵を吐くと、チビYの代わりに裸緑ノコノコが孵る。[Video](https://cdn.discordapp.com/attachments/167412470862970881/470363716613832734/koopinha-egg_00000.gif)
 
 <!--
 * If you kill a Yoshi and then spawn a second one, the new one will inherit the first one's "state" (sticking tongue out, laying an egg, etc.) that it had when it died.
@@ -964,7 +964,7 @@ _148個(127個有用)_
 <!--
 * Taking Yoshi wings or obtaining a bonus game in a room that only uses secondary exits will take Mario to a glitched exit in the bonus game room rather than the room it's supposed to go to. Lunar Magic fixes this by default.
 -->
-* Taking Yoshi wings or obtaining a bonus game in a room that only uses secondary exits will take Mario to a glitched exit in the bonus game room rather than the room it's supposed to go to. Lunar Magic fixes this by default.
+* Secondary exitしかないレベルでYの翼を取ったりかボーナスゲームに行くと、正常な行先ではなくバグったボーナスゲームに移動してしまう。Lunar Magicはこのバグを自動的に修正する。
 
 <!--
 * If Mario is riding on a Yoshi that has a blue shell in its mouth and he slides off of a sprite platform, you'll be unable to control Mario's horizontal movement until he hits something and stops. [Video](https://www.youtube.com/watch?v=v2RjbDKKhVQ)
@@ -1009,12 +1009,12 @@ _148個(127個有用)_
 <!--
 * If Yoshi has a null sprite in his mouth, passing his mouth by a berry will cause him to store the berry to the null sprite (giving him a berry when he swallows). During certain frames of the swallowing animation, you can also actually eat the berry instantaneously as opposed to storing it.
 -->
-* If Yoshi has a null sprite in his mouth, passing his mouth by a berry will cause him to store the berry to the null sprite (giving him a berry when he swallows). During certain frames of the swallowing animation, you can also actually eat the berry instantaneously as opposed to storing it.
+* Yがヌルスプライトを含んだまま口を木の実に重ねると、木の実がヌルスプライトに保存される。（つまり、それを飲み込むときに木の実として加算される。）飲み込むアニメーション中、木の実を保存せず一気に飲み込むFがある。
 
 <!--
 *  If a berry is located at the very bottom of a subscreen, then picking up the berry with Yoshi's mouth while he's ducking with his tongue out will cause the berry to register as eaten without actually clearing the tile. This can then be repeated infinitely.
 -->
-*  If a berry is located at the very bottom of a subscreen, then picking up the berry with Yoshi's mouth while he's ducking with his tongue out will cause the berry to register as eaten without actually clearing the tile. This can then be repeated infinitely.
+* 木の実がサブスクリーンの下端にある場合、Yがそれを舌を出したまま口で直接飲むと、木の実自体が消されずに「飲まれた」かのように加算される。これは何度でも繰り返せる。
 
 <!--
 * As with the cape, Yoshi's tongue below horizontal level will try to swallow berry tiles in the next row of blocks in the next screen. If a berry is high enough in the next screen, then it can be grabbed by the tongue.
@@ -1106,7 +1106,7 @@ _148個(127個有用)_
 <!--
 * Mario can still get knocked off of Yoshi by sprites while in the sliding state, unless the sprite's clipping position is more than 13 pixels below Yoshi's when they make contact.
 -->
-* Mario can still get knocked off of Yoshi by sprites while in the sliding state, unless the sprite's clipping position is more than 13 pixels below Yoshi's when they make contact.
+* Yに乗ったまま滑っている状態でも、接触するスプライトの位置が14ピクセル以上Yのより下ではない限り、Yから落とされることは可能である。
 
 <!--
 * Having a Yoshi on the same screen as a Podoboo will glitch Yoshi's head graphics. His body can also be glitched by the splash created by lava.
@@ -1176,12 +1176,12 @@ _148個(127個有用)_
 <!--
 * Yoshi can lick the brown revolving platform by sticking his tongue out to the right side of its base. It won't actually do anything besides make a noise, though.
 -->
-* Yoshi can lick the brown revolving platform by sticking his tongue out to the right side of its base. It won't actually do anything besides make a noise, though.
+* 茶色の回転足場の付け根の右側をYの舌で舐めることができる。効果は音が鳴るだけ。
 
 <!--
 * Yoshi can lick the side-exit-enabled sprite by licking the center of the screen, three tiles from the bottom. It won't actually do anything besides make a noise, though.
 -->
-* Yoshi can lick the side-exit-enabled sprite by licking the center of the screen, three tiles from the bottom. It won't actually do anything besides make a noise, though.
+* 画面の下端より3タイルほど上、画面の中央辺りにヨッシーの舌を当てることでside-exit-enabledスプライトを舐めることができる。効果は音が鳴るだけ。
 
 <!--
 * If Yoshi eats the directional coin sprite, the music will never change back.
@@ -1206,7 +1206,7 @@ _148個(127個有用)_
 <!--
 * If Baby Yoshi is eating a sprite offscreen, turning while carrying an item in a higher slot than him will cause the sprite's tilemap to mess up.
 -->
-* If Baby Yoshi is eating a sprite offscreen, turning while carrying an item in a higher slot than him will cause the sprite's tilemap to mess up.
+* チビYが画面外でスプライトを飲み込んでいる間、そのYよりスロット番号の大きいアイテムを持ちながら向きを変えるとスプライトのタイルマップが化ける。
 
 ---
 ---
