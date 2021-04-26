@@ -573,7 +573,7 @@ _148個(127個有用)_
 <!--
 * Yoshi's tongue will have unusual interacting when crossing screen borders. When crossing offscreen, it will loop to the opposite side of the screen, allowing you to pick up items on the other side. When crossing onscreen, it will "compress" toward Yoshi. An interesting advantage of this is that jumping off Yoshi when it's compressed will let Mario grab the sprite as he's jumping off. Doing this at the bottom of the screen can potentially cause the sprite to register as having despawned before Mario grabs it, allowing you to duplicate the sprite.
 -->
-* Yoshi's tongue will have unusual interacting when crossing screen borders. When crossing offscreen, it will loop to the opposite side of the screen, allowing you to pick up items on the other side. When crossing onscreen, it will "compress" toward Yoshi. An interesting advantage of this is that jumping off Yoshi when it's compressed will let Mario grab the sprite as he's jumping off. Doing this at the bottom of the screen can potentially cause the sprite to register as having despawned before Mario grabs it, allowing you to duplicate the sprite.
+* Yの舌がスクリーンの両端を超えると変な効果がある。スクリーン外の場合は舌がスクリーンの反対側にループしてそこにあるスプライトを掴める。スクリーン内の場合は舌が圧縮されて舌が掴んでいるスプライトをマリオが下りた途端にすぐつかめたりする効果がある。ちなみにこれが画面の下端で発生したら、スプライトはマリオが持つ前に消えた状態に移行するためスプライトを複製することがある。
 
 <!--
 * Yoshi's tongue will have unusual interaction when Yoshi's body OAM is completely offscreen. Regardless of the direction he faces, the actual hitbox will occasionally be stretched far to the right in the same fashion as in the layer switch glitch.
@@ -1345,6 +1345,7 @@ _118個(104個有用)_
 * P-switch jump: Mario can land on and jump off of a P-switch on the first frame he hits the top of it. [Video](https://www.youtube.com/watch?v=ThUu-lWmuiQ) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4330)
 -->
 * Pジャンプ：Pスイッチを踏むFにジャンプできる。[Video](https://www.youtube.com/watch?v=ThUu-lWmuiQ) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4330)
+
 <!--
 * Carrying a silver P-switch through a pipe will make it act like a blue P-switch in the next room. Note that if another sprite in a lower slot is doublegrabbed on top of the silver P-switch, this glitch will not take effect. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#02AC18)
 -->
@@ -1373,7 +1374,7 @@ _118個(104個有用)_
 <!--
 * Sprites do not clear the miscellaneous table at $15AC on initialization, which results in it being carried by sprites if they occupy the same sprite slot. Most sprites don't use $15AC for anything noticeable, but notably, shells don't interact with the sides of blocks when set, which means you can prevent a shell from being "pushed aside" on spawn if it's spawning inside a solid block (see [this video](https://cdn.discordapp.com/attachments/167412470862970881/482284837659607041/turn_timer_transfer.gif)). Note: Fixed by default by all sprite tools.
 -->
-* Sprites do not clear the miscellaneous table at $15AC on initialization, which results in it being carried by sprites if they occupy the same sprite slot. Most sprites don't use $15AC for anything noticeable, but notably, shells don't interact with the sides of blocks when set, which means you can prevent a shell from being "pushed aside" on spawn if it's spawning inside a solid block (see [this video](https://cdn.discordapp.com/attachments/167412470862970881/482284837659607041/turn_timer_transfer.gif)). Note: Fixed by default by all sprite tools.
+* スプライトの初期化ルーチンで$15ACは無視されるから、同じスロットに出現するスプライトが既存の値をそのまま引き継ぐ。$15ACを目立つようなことで利用するスプライトは稀だが、甲羅でこれが設定されているとブロックの側面と相互作用しないからソリッドブロックの中に出現する甲羅が横に押しのけられることを防げる（[Video](https://cdn.discordapp.com/attachments/167412470862970881/482284837659607041/turn_timer_transfer.gif)参照）。全てのspritetoolはデフォルト設定でこのバグを修正する。
 
 <!--
 * If a shell is spinning in a one-tile space, it will become invincible to all quake sprites (including capespins, Yoshi stomps, and hit blocks) until it exits the space.
@@ -1388,12 +1389,12 @@ _118個(104個有用)_
 <!--
 * You can perform the above glitch with other carryable sprites by getting said sprite in slot #1 and overloading it. This will have some odd effects on the sprites when they're reset, such giving a key wings or changing a P-switch into a gold switch (acts like a blue switch, though).
 -->
-* You can perform the above glitch with other carryable sprites by getting said sprite in slot #1 and overloading it. This will have some odd effects on the sprites when they're reset, such giving a key wings or changing a P-switch into a gold switch (acts like a blue switch, though).
+* 他の持ち運べるスプライトもスロット1にロードしてから上書きすることで前のバグを実行できる。これによってリセットされるスプライトにさまざまな奇妙な副作用がある。例えば、鍵に羽が生えたり、Pスイッチが黄色になったり（ただし機能に変化なし）することがある。
 
 <!--
 * Mario can throw a shell up even as a Koopa is entering it, allowing him to effectively move Koopas throughout the level. Note that red and blue shells will invert their speed when the Koopa actually spawns. Similarly, if Yoshi eats a shell as a Koopa is entering it, spitting it out before its stun timer hits zero will still have the Koopa jump out of it.
 -->
-* Mario can throw a shell up even as a Koopa is entering it, allowing him to effectively move Koopas throughout the level. Note that red and blue shells will invert their speed when the Koopa actually spawns. Similarly, if Yoshi eats a shell as a Koopa is entering it, spitting it out before its stun timer hits zero will still have the Koopa jump out of it.
+* ノコノコが甲羅に入ろうとしている間も甲羅を上投げできる。これはノコノコを移動させる有用な方法になる。赤と青の甲羅の場合はノコノコに変身したとき横速度が反転する。また、Yがノコノコの入ろうとしている甲羅を食べてそのスタンタイマーがゼロになる前に吐きだすと、ノコノコは何もなかったかのように甲羅から出てくる。
 
 <!--
 * If you restun a shell with a Koopa inside (by way of capespin/block hit/etc) just as the Koopa jumps out, the shell will end up restunning with another Koopa still inside, resulting in two Koopas overall.
@@ -1433,7 +1434,7 @@ _118個(104個有用)_
 <!--
 * Blue Koopas can catch thrown Bob-Ombs, but only when they're either in a lower slot or on the ground on the frame they register interaction. However, the Koopa won't slide or stop the Bob-Omb's movement, causing it to be kicked from inside or behind the Koopa. It can even fly straight through him or make him turn around to face it.
 -->
-* Blue Koopas can catch thrown Bob-Ombs, but only when they're either in a lower slot or on the ground on the frame they register interaction. However, the Koopa won't slide or stop the Bob-Omb's movement, causing it to be kicked from inside or behind the Koopa. It can even fly straight through him or make him turn around to face it.
+* 裸青ノコノコは投げつけられたボム兵を、スロット番号がより小さいか当たりを判定するFに地面に足をついていたら、受け止めることができる。なお、ノコノコが滑らせられたりボム兵の動きを止めたりするわけではないため、蹴るときはボム兵の位置がノコノコと重なっているか後ろにある。たまにボム兵はノコノコをすり抜けたり、すり抜けざまにノコノコの向きを変えさせたりすることがある。
 
 <!--
 * When catching a dropped throwblock, blue Koopas won't clear the throwblock's X speed, which can cause it to bounce inside the Koopa. If it bounces far enough, it can actually kill the Koopa after it kicks it.
@@ -1468,7 +1469,7 @@ _118個(104個有用)_
 <!--
 * If a blue Koopa and a dropped carryable item have opposite "facing" directions ($157C), then the item will warp in front of the blue Koopa when it touches it, regardless of their relative positions to each other. Note that the "facing" direction of a carryable sprite is not the direction it's actually moving in; instead, it's the last horizontal direction the sprite was moving in when in a non-carryable status (alternatively, it can be inverted by bumping off a wall).
 -->
-* If a blue Koopa and a dropped carryable item have opposite "facing" directions ($157C), then the item will warp in front of the blue Koopa when it touches it, regardless of their relative positions to each other. Note that the "facing" direction of a carryable sprite is not the direction it's actually moving in; instead, it's the last horizontal direction the sprite was moving in when in a non-carryable status (alternatively, it can be inverted by bumping off a wall).
+* 裸青ノコノコと手から離れた持ち運べるアイテムの「向き」（$157C）が逆の時、アイテムが裸青ノコノコに触れられると互いの位置の差にも拘わらず裸青ノコノコの前に瞬間移動させられる。持ち運べるスプライトの「向き」は実際に動いている方向に関係なく、持ち運べる状態に入る直前動いていた水平的な方向である。また、この値はスプライトが壁から跳ね返されたら反転する。
 
 <!--
 * If a thrown Koopa/Buzzy Beetle shell (or stunned Spiny/Yellow Parakoopa) is caught by a blue Koopa and Mario grabs said shell from it before it is kicked, then when the shell returns to normal status (i.e. a normal Koopa/beetle), the sprite will immediately die when touched. [Vid](https://twitter.com/nathanisbored1/status/910402559994503168)[eos](https://twitter.com/Kaizoman666/status/910549944704077824)
@@ -1623,7 +1624,7 @@ _118個(104個有用)_
 <!--
 * Explosions from Bob-ombs won't disappear as long as they are offscreen, beyond the despawn region. This can make them occupy a slot persistently.
 -->
-* Explosions from Bob-ombs won't disappear as long as they are offscreen, beyond the despawn region. This can make them occupy a slot persistently.
+* ボム兵の爆発は消滅領域を超えたスクリーン外で発生すると、時間経過で消滅しない。つまり、永久にスロットを占領することになる。
 
 <!--
 * Mechakoopas will pass through the bottoms of solid blocks while active. In other words, you can just throw it up as it's about to reactivate to send it through the roof.
@@ -1678,7 +1679,7 @@ _118個(104個有用)_
 <!--
 * When throwing a carryable sprite upwards, if the sprite registers itself as hitting both the bottom of one block and the side of another at the same time, neither will actually be activated by the hit. This can be done not only at the inner corner between two blocks, but even on an entirely flat ceiling (by throwing the sprite so it enters the ceiling enough to touch the side of an adjacent block).
 -->
-* When throwing a carryable sprite upwards, if the sprite registers itself as hitting both the bottom of one block and the side of another at the same time, neither will actually be activated by the hit. This can be done not only at the inner corner between two blocks, but even on an entirely flat ceiling (by throwing the sprite so it enters the ceiling enough to touch the side of an adjacent block).
+* 上向きに投げられたスプライトがブロックの下ともう1つのブロックの側面に同時に当たると、両方のブロックに当たらなかったとされる。ブロック間の隅っこに投げつけることではもちろん、側面に当たるように十分にめり込ませれば平面の天井でもこのバグを発生させることができる。
 
 <!--
 * Tile 125's shell will only actually come out if an adjacent block knocks it upward.
@@ -1698,7 +1699,7 @@ _118個(104個有用)_
 <!--
 * Turnblocks can be copied from Layer 1 to Layer 2 or vice-versa by interupting their bounce sprite (even during the rotating animation) with one from a block on the destination layer.
 -->
-* Turnblocks can be copied from Layer 1 to Layer 2 or vice-versa by interupting their bounce sprite (even during the rotating animation) with one from a block on the destination layer.
+* クルクルブロックが叩かれてバウンススプライトが消えないうちに（回るアニメーションが始まっていたとしても）、別のレイヤーにあるブロックでバウンススプライトを出現させると、前者のスプライトが中断されてブロックが後者のレイヤーにコピーされる。
 
 <!--
 * If there is a coin on top of a block when Mario hits it, the coin will become a solid, invisible block. [Fix](http://www.smwcentral.net/?p=nmap&m=smwrom#029347)
@@ -1785,7 +1786,7 @@ _118個(104個有用)_
 <!--
 * If a Koopa starts to jump into a shell while in the water and exits the water midway through the jump, the animation won't line up and it'll end up walking slightly further than it should.
 -->
-* If a Koopa starts to jump into a shell while in the water and exits the water midway through the jump, the animation won't line up and it'll end up walking slightly further than it should.
+* 水中にいる裸ノコノコが甲羅に入ろうとぴょんとジャンプしてる最中に水中から出ると、アニメーションがずれてしまって目的地より少し歩きすぎてしまう。
 
 <!--
 * If a shell, throwblock, Goomba or Bob-omb hit the very top of a Pokey's head, Pokey's head won't actually be hit, but a head graphics will still fall down.
