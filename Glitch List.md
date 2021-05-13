@@ -498,7 +498,7 @@ _148個(127個有用)_
 <!--
 * If Mario is riding Yoshi, on the ground, and inside a solid tile, then for a few frames after jumping off Yoshi, Mario can jump a second time as if he were on the ground. This will not cancel a spinjump, instead just making the jump go higher.
 -->
-* If Mario is riding Yoshi, on the ground, and inside a solid tile, then for a few frames after jumping off Yoshi, Mario can jump a second time as if he were on the ground. This will not cancel a spinjump, instead just making the jump go higher.
+* マリオが地面に立ってYに乗ってソリッドブロックにはまったままYをスピンで乗り捨てて、数FのうちにBを押すと通常より高い乗り捨てが行える。
 
 <!--
 * Yoshi's swallow timer while he has a sprite in his mouth normally decreases once every frame. Freezing the game (via $9D) on one of the decrementing frames, however, will cause the timer to decrease every frame while the game is frozen.
@@ -789,7 +789,7 @@ _148個(127個有用)_
 <!--
 * If you item swap a sprite that uses extra bits (e.g. the goal tape) when Yoshi is in a higher slot than it, the sprite's extra bits will be modified. The game normally stores the extra bits with the sprite's high Y spawn position (in the format %----EE-Y) before correcting it in the sprite's initilization code; if Yoshi's tongue's code runs before the sprite's does, it will instead use the high Y position from the tongue, affecting the extra bits in the process. NOTE: this glitch will NOT work in hacks that use custom sprites, due to using a specialized table for extra bits. [More Info](http://pastebin.com/XBqrVHyH)
 -->
-* Yがより大きい番号のスロットにいてextra bitsを使うスプライト（例えばゴールバー）をアイテムスワップすると、extra bitsが変更される。これはextra bitsは普段スプライトのhigh Y positioと一緒に（%—-EE-Yのフォーマットで）一旦保存されてから、スプライト初期化コードであるべき場所に移されるためで、つまりスプライトのコードよりもYの舌の処理が起動すると代わりに舌のhigh Y positioが使用されてextra bitsに影響が出る。[More Info](http://pastebin.com/XBqrVHyH)
+* Yがより大きい番号のスロットにいてextra bitsを使うスプライト（例えばゴールバー）をアイテムスワップすると、extra bitsが変更される。これはextra bitsは普段スプライトのhigh Y positionと一緒に（%—-EE-Yのフォーマットで）一旦保存されてから、スプライト初期化コードであるべき場所に移されるためで、つまりスプライトのコードよりもYの舌の処理が起動すると代わりに舌のhigh Y positioが使用されてextra bitsに影響が出る。カスタムスプライトを使うハックではextra bitsに特別な情報に保存するからこのバグは起こらない。[More Info](http://pastebin.com/XBqrVHyH)
 
 <!--
 * Yoshification: For one frame after Yoshi despawns, the game will still manage his sprite slot as a Yoshi for one frame afterwards. If a new sprite spawns into his slot on that frame, then there can be a huge variety of effects based on how that new sprite uses its RAM tables that were previously managed by Yoshi. For instance, if it sets $C2 to 01 to spawn (which Yoshi uses as a "mounted" flag), then the game will think Mario is riding that sprite like a Yoshi and warp it to his position. Furthermore, when Mario goes to another room or level, he will suddenly spawn on a new Yoshi (who receives its palette and graphics page from whatever sprite was swapped). [More info](https://www.youtube.com/watch?v=2fLOZrQzDnQ)
@@ -1604,7 +1604,7 @@ _118個(104個有用)_
 <!--
 * It's possible to bounce off Bob-ombs, Goombs, and Mechakoopas a frame before their stun timers run out. This is most notable with Bob-ombs, since you can't normally bounce off them again after they're stunned for the first time.
 -->
-* It's possible to bounce off Bob-ombs, Goombs, and Mechakoopas a frame before their stun timers run out. This is most notable with Bob-ombs, since you can't normally bounce off them again after they're stunned for the first time.
+* スタンタイマーが0になる直前のFにボム兵・クリボウ・メカクッパを踏むことができる。特にボム兵は一度停止状態になると普通は踏めなくなるので、注目に値する。
 
 <!--
 * When Mario grabs a sprite, its X and Y speed doesn't get reset; this instead happens when he throws or drops it. However, sprites that hop out of Mario's hands on their own, such as Goombas, Buzzy Beetles, or MechaKoopas, don't get their speeds reset. One use of this is allowing Mario to bounce off the sprite in mid-air without needing to let go of it.
@@ -1969,7 +1969,7 @@ _280個(180個有用)_
 <!--
 * Touching an invisible mushroom on the frame Mario's speed inverts will cause it to fly in the opposite directly than it normally would.
 -->
-* Touching an invisible mushroom on the frame Mario's speed inverts will cause it to fly in the opposite directly than it normally would.
+* マリオの移動速度が反転するFで跳ねるキノコを出現させるスプライトに触れると、キノコの向きは通常の逆になる。
 
 <!--
 * Stars push themselves far enough through blocks before bouncing off of them that Mario can collect a star through a corner between two blocks.
@@ -1984,12 +1984,12 @@ _280個(180個有用)_
 <!--
 * The block containing a roulette sprite doesn't actually have to be hit in order for it to start rising out. Instead, a nearby block, capespin, net punch, or Yoshi stomp will suffice, so long as their quake sprite comes into contact with the roulette sprite.
 -->
-*ルーレットアイテムスプライトは、近くのブロックが叩かれたり、マント回転・金網パンチ・Yの砂煙などの揺れスプライトに反応して出る。
+* ルーレットアイテムスプライトは、近くのブロックが叩かれたり、マント回転・金網パンチ・Yの砂煙などの揺れスプライトに反応して出る。
 
 <!--
 * The roulette sprite won't interact with the sides or bottoms of solid blocks for a brief period of time after being spawned out of its block, causing it to bounce up on top of them if it does hit any blocks.
 -->
-* The roulette sprite won't interact with the sides or bottoms of solid blocks for a brief period of time after being spawned out of its block, causing it to bounce up on top of them if it does hit any blocks.
+* ルーレットアイテムスプライトがブロックから出現した直後少しの間ソリッドブロックの側面と底との相互作用を無視するので上まで跳ねてしまう。
 
 <!--
 * Spawning a Bullet Bill shooter on the far left edge of a level will not only cause it to not actually spawn, but also create a shell-less green Koopa at [0,0] in every available sprite slot.
@@ -2019,7 +2019,7 @@ _280個(180個有用)_
 <!--
 * Being pushed inside a solid sprite (e.g. message box, turnblock bridge, Hammer Bro platform, Bowser statue...) will cause Mario to warp to the nearest side, even through solid blocks. If the camera moves sharply, this may also cause the newly loaded columns of Map16 to have glitched graphics until they're reloaded. Possible ways of doing this include being pushed in by another sprite, jumping fast enough, or wallrunning via a purple triangle.
 -->
-* Being pushed inside a solid sprite (e.g. message box, turnblock bridge, Hammer Bro platform, Bowser statue...) will cause Mario to warp to the nearest side, even through solid blocks. If the camera moves sharply, this may also cause the newly loaded columns of Map16 to have glitched graphics until they're reloaded. Possible ways of doing this include being pushed in by another sprite, jumping fast enough, or wallrunning via a purple triangle.
+* マリオが実体のあるスプライト（例えばメッセージブロック・クルクルブロックで出来た橋・アッパレの足場・クッパ像など）の中に強制的に押し込まれると、ソリッドブロックを貫通してでも一番近い側面に瞬間移動する。これによってカメラが飛ぶと、新しくロードされるMap16の縦の列はグラフィックが読み込みなおされるまで化けることがある。バグの実行は、別のスプライトに押し込まれることや、高速でジャンプすることや、ピンクの三角ブロックによって壁走りすることなどの方法がある。
 
 <!--
 * When being 'warped' by a solid sprite, it's possible to completely pass the screen's spawn region over a sprite, preventing that sprite from spawning at all.
@@ -2039,12 +2039,12 @@ _280個(180個有用)_
 <!--
 * If Mario touches the bottom of a solid sprite while the sprite is either touching the top border of the visible screen from above or crossing it, he will be warped to its nearest side, with the same effects as the above. This glitch works even if the screen is scrolling.
 -->
-* If Mario touches the bottom of a solid sprite while the sprite is either touching the top border of the visible screen from above or crossing it, he will be warped to its nearest side, with the same effects as the above. This glitch works even if the screen is scrolling.
+* 画面の上端と上から接しているか交わっているソリッドスプライトの下にマリオが触れると前のバグと同じように一番近い側面に瞬間移動する。画面がスクロール中でも可。
 
 <!--
 * As an exception to the above glitch, if a turnblock bridge is crossing the top of the visible screen and Mario's body is onscreen, he will not interact with the bottom or sides of the bridge rather than being warped to its side. In addition, if he is moving downward while touching the bridge, he will be warped on top of it; this effect can be used with vertically extending turnblock bridges to warp Mario upward, even through solid blocks.
 -->
-* As an exception to the above glitch, if a turnblock bridge is crossing the top of the visible screen and Mario's body is onscreen, he will not interact with the bottom or sides of the bridge rather than being warped to its side. In addition, if he is moving downward while touching the bridge, he will be warped on top of it; this effect can be used with vertically extending turnblock bridges to warp Mario upward, even through solid blocks.
+* 前のバグの例外として、左右に伸びるクルクルブロックは画面の上端と交わってマリオの身体が画面内にあってバグを実行すると、側面に移動しない。また、左右に伸びるクルクルブロックに触れたときマリオが下の方に移動中だと左右に伸びるクルクルブロックの上に瞬間移動する。上下左右に伸びるクルクルブロックの場合はマリオを上にソリッドブロックをすり抜けて移動させる方法になる。
 
 <!--
 * If a turnblock bridge is touching (but not crossing) the top of the vertical screen border from below, Mario will not interact with the top or sides of it.
@@ -2064,7 +2064,7 @@ _280個(180個有用)_
 <!--
 * When more than two flying turnblock platforms are activated at once, they don't always move in the directions Lunar Magic claims they'll go. The directions each platform will move in also varies depending on which platform you land on; sometimes they even all move in one direction, even if they're not meant to. The game even gets confused when reversing the directions of the platforms; they don't always change direction when they're supposed to.
 -->
-* When more than two flying turnblock platforms are activated at once, they don't always move in the directions Lunar Magic claims they'll go. The directions each platform will move in also varies depending on which platform you land on; sometimes they even all move in one direction, even if they're not meant to. The game even gets confused when reversing the directions of the platforms; they don't always change direction when they're supposed to.
+* 飛ぶ足場を2つ以上同時に稼働させても、一概にLMの指定する方向に動き出さない。向きは足場のどれに乗るかに影響を受ける。たまに指定されてもいないのに全部が同じ方向に動き出すことさえある。足場が向きを変えるときも同じようなバグがある。つまり、指定通りに向きが変わらないことがある。
 
 <!--
 * Landing on multiple moving platform sprites at the same time will cause their effects on Mario's position to stack. This means if Mario lands on two platforms moving right, he'll slide across them to the right.
@@ -2264,7 +2264,7 @@ _280個(180個有用)_
 <!--
 * Hitting a Hammer Bro. platform and then moving it (via sprite slot storage and spitting it out) before the hit animation finishes will cause its movement pattern to change, potentially making it travel extremely high upwards at a very high speed. [Video](https://www.youtube.com/watch?v=N7u-WvMZDv4)
 -->
-* Hitting a Hammer Bro. platform and then moving it (via sprite slot storage and spitting it out) before the hit animation finishes will cause its movement pattern to change, potentially making it travel extremely high upwards at a very high speed. [Video](https://www.youtube.com/watch?v=N7u-WvMZDv4)
+* アッパレの足場を叩いて、叩かれたアニメーションが終わらない内に（スプライトスロットに保存して吐き出すことで）別の位置に移転させると、その移動パターンが変わる。例えば超高速で上がることがある。[Video](https://www.youtube.com/watch?v=N7u-WvMZDv4)
 
 <!--
 * If a Podoboo's spawn position is exactly 22 tiles above the lava it ends up in, when the Podoboo jumps out, it will end up jumping significantly higher than it should (approximately 34 tiles above the spawn position).
@@ -2284,7 +2284,7 @@ _280個(180個有用)_
 <!-- 
 * If a room has the castle candle flame cluster sprite, then whatever the last sprite loaded into slot 3 was will appear in the room in state 7 (swallowed by Yoshi). If no sprite has spawned into slot 3 yet, then it will have sprite ID 0 (shell-less green Koopa).
 -->
-* If a room has the castle candle flame cluster sprite, then whatever the last sprite loaded into slot 3 was will appear in the room in state 7 (swallowed by Yoshi). If no sprite has spawned into slot 3 yet, then it will have sprite ID 0 (shell-less green Koopa).
+* 城の蝋燭炎のクラスタースプライト（クラスタースプライト05）が出現すると、最後に第3スロットに保存されたスプライトが状態7（ヨッシーに含まれている）で出現する。第3スロットがずっと空きだった場合、登場するスプライトのIDは0（裸緑ノコノコ）になる。
 
 <!--
 * The Mario proximity detection routine for sprites (e.g. for Thwomps, falling spikes, Yoshi eggs, etc) loop across the screen borders.
@@ -2364,7 +2364,6 @@ _280個(180個有用)_
 <!--
 * If the first division is filled, the flames from Sumo Bro's lightning will spawn in strange positions.
 -->
-* If the first division is filled, the flames from Sumo Bro's lightning will spawn in strange positions.
 * スプライトスロットの分割1が埋まっていると、K.K.の雷による炎が通常と異なる位置に出現する。
 
 <!--
@@ -2435,12 +2434,12 @@ _280個(180個有用)_
 <!--
 * Normally, Mario isn't able to jump through the bottom of a moving ghost house hole (due to it being a pixel too high). Clipping through the ceiling through any method (including just simply spinjumping off Yoshi) will push him far enough in, though.
 -->
-* Normally, Mario isn't able to jump through the bottom of a moving ghost house hole (due to it being a pixel too high). Clipping through the ceiling through any method (including just simply spinjumping off Yoshi) will push him far enough in, though.
+* 普段ならお化け屋敷の動く穴が1ピクセルほど高いためマリオは下から上がれないが、天井に嵌まるような動き方（例えばYをスピンジャンプで降りるなど）では通れる。
 
 <!--
 * The moving Ghost House hole sprite will allow Mario (and other sprites) to fall through any solid block as long as he is touching it, not just through the blocks it actually covers. When riding Yoshi, his hitbox is large enough to pass through a tile as far as three blocks below the sprite.
 -->
-* The moving Ghost House hole sprite will allow Mario (and other sprites) to fall through any solid block as long as he is touching it, not just through the blocks it actually covers. When riding Yoshi, his hitbox is large enough to pass through a tile as far as three blocks below the sprite.
+* お化け屋敷の動く穴が素通りさせるソリッドブロックはスプライトが直接触れているのだけでなく、マリオがスプライトに接触している限りあらゆるブロックが対象である。Yに騎乗している当たり判定だと穴の3タイルほど下にあるブロックまですり抜けられる。
 
 <!--
 * Certain sprites will not pass through moving Ghost House holes. [List](https://pastebin.com/Gvgea42u)
@@ -2480,7 +2479,7 @@ _280個(180個有用)_
 <!--
 * Mario can be slightly offset while riding on a moving rope mechanism if he grabs on and holds the direction opposite to the direction the rope is in (though offsetting vertically without a block to assist Mario is only possible while big). This can let Mario fit in gaps that normally would not be possible while riding the rope.
 -->
-* Mario can be slightly offset while riding on a moving rope mechanism if he grabs on and holds the direction opposite to the direction the rope is in (though offsetting vertically without a block to assist Mario is only possible while big). This can let Mario fit in gaps that normally would not be possible while riding the rope.
+* ロープに掴まっているとき、マリオがロープの動いている方向の逆に動き続けることで少しだけ位置がずれることはある。（しかし、垂直にずれるのはブロックを頼りにしなければデカの場合だけ可能。）これによって普通に掴んでいたら通れない隙間を通れるようになることがある。
 
 <!--
 * If a line-guided sprite hits either tile 096-099 or a tile on Map16 page P with position X such that P & (0x80 >> (X % 8)) != 0 while falling, the tile will end up acting like whatever the last lineguide tile the sprite touched was. Then, one of two things will happen. If the sprite hits the block where the "start" of that rope tile is, it will latch on and function as it normally would if it were actually a guide. Otherwise, the sprite will end up warping vertically, with the distance depending on the sprite and certain conditions (specifically, how addresses $08 and $0A were modified prior to $01D938). For most of the sprites, this occurs in the OAM write routine making it difficult to manipulate, but for the Grinder and Fuzzy it's instead based on the Mario proximity routine, where it'll warp to the top of the subscreen Mario is on so long as he's within a 10x12 space around the sprite (though this space also repeats every 16 tiles in any direction).
@@ -2530,12 +2529,12 @@ _280個(180個有用)_
 <!--
 * When flopping out of water, the standard fish sprites have a small chance of clipping inside a block upon hitting its side. This will cause the fish to either climb up the wall or clip straight through it.
 -->
-* When flopping out of water, the standard fish sprites have a small chance of clipping inside a block upon hitting its side. This will cause the fish to either climb up the wall or clip straight through it.
+* ばたついているプクプクがブロックの側面に衝突すると低い確率で嵌まることがある。その後はブロックの上に登ったりブロックの向こう側まですり抜けることがある。
 
 <!--
 * All underwater enemies other than basic fish will still act as if they're in water even when they're not; the only difference is that they'll sink downward as they move around.
 -->
-* All underwater enemies other than basic fish will still act as if they're in water even when they're not; the only difference is that they'll sink downward as they move around.
+* 普段水中にいる敵は普通のプクプクを除いて水を出ても、動いている間だんだん位置が下がること以外その行動に変化はない。
 
 <!--
 * If a Whistling Chuck that wakes up fish is hit by a shell in a lower sprite slot on the frame he starts whistling, then he will summon Super Koopas as well. [Video](https://youtu.be/E6MGW_yNyi8)
@@ -2575,7 +2574,7 @@ _280個(180個有用)_
 <!--
 * Boo rings have two slots for their data, but the first slot of data will only be used by the first boo ring spawned; all others will use the second slot. Since two rings can be spawned at a time, this causes the data from any two rings spawned more than six tiles apart after the first one to overlap. This means, if they're rotating in the same direction, the resulting ring will move at double speed. If they're in opposite directions, it'll instead be completely motionless.
 -->
-* Boo rings have two slots for their data, but the first slot of data will only be used by the first boo ring spawned; all others will use the second slot. Since two rings can be spawned at a time, this causes the data from any two rings spawned more than six tiles apart after the first one to overlap. This means, if they're rotating in the same direction, the resulting ring will move at double speed. If they're in opposite directions, it'll instead be completely motionless.
+* ぐるぐるテレサのデータを司るスロットは2つあるが、その1つ目を使えるのは先に出現するぐるぐるテレサに限られている。ぐるぐるテレサは同時に2つ存在できるため、第1ぐるぐるテレサ以降出現する、タイル6つ以上離れた第2ぐるぐるテレサのデータがかぶってしまう。その場合、回転の方向が同じだと後者の回る速度が2倍になり、方向が逆だと後者の速度がゼロになる。
 
 <!--
 * If a sprite is in slot #0 while a Boo ceiling generator is active, the game will warp the sprite around the level, as if it were one of the ghosts that make up the ceiling.
@@ -2605,7 +2604,7 @@ _280個(180個有用)_
 <!--
 * Each item memory bit covers an entire vertical column (or horizontal row in vertical levels) within a subscreen. This means that, if item memory is enabled, setting the bit for a block (e.g. a coin, 1-up block, Yoshi coin, etc.) will also affect all of the other blocks in the subscreen's column/row once the level is reloaded.
 -->
-* Each item memory bit covers an entire vertical column (or horizontal row in vertical levels) within a subscreen. This means that, if item memory is enabled, setting the bit for a block (e.g. a coin, 1-up block, Yoshi coin, etc.) will also affect all of the other blocks in the subscreen's column/row once the level is reloaded.
+* アイテム記憶のビットはそれぞれサブスクリーンの縦の列を1つ管理する（垂直レベルの場合は横の列）。つまり、アイテム記憶をONに設定すればブロック（例えばコイン・1-upブロック・ドラゴンコインなど）のビットをオンにセットして、同じレベルに移動するとそのサブスクリーンの同じ列にあるブロック全てが影響される。
 
 <!--
 * When a coin is collected and permanently erased from a level, reloading the room will replace the spot the coin filled with whatever block was placed "below" it in Z-order. The same occurs with Yoshi coins, and collecting all five of them will permanently erase the coins even if item memory is untracked.
@@ -2650,7 +2649,7 @@ _280個(180個有用)_
 <!--
 * Mario will "stick" to any platform sprites while wallrunning, slowing him down to the speed of the platform until it passes by. One notable use of this is that it even applies to the animation at the end of a wall where Mario reorients himself, but his horizontal speed will remain unaffected, which can cause him to clip into the tiles in the next column over. It should be noted that this works with the solid platform sprites as well, but only if Mario enters at a position where he doesn't get warped out of it. [Video](https://cdn.discordapp.com/attachments/167412470862970881/462945193574793216/tes27.gif)
 -->
-* Mario will "stick" to any platform sprites while wallrunning, slowing him down to the speed of the platform until it passes by. One notable use of this is that it even applies to the animation at the end of a wall where Mario reorients himself, but his horizontal speed will remain unaffected, which can cause him to clip into the tiles in the next column over. It should be noted that this works with the solid platform sprites as well, but only if Mario enters at a position where he doesn't get warped out of it. [Video](https://cdn.discordapp.com/attachments/167412470862970881/462945193574793216/tes27.gif)
+* 壁走りしている間マリオが足場スプライトに触れたら、垂直位置が足場スプライトに固定され、足場スプライトが壁を離れるまで取れない。水平の位置に影響がないため、マリオが壁の上で斜めになっている状態でバグが起動すると地面に嵌まることがある。これはソリッドの足場スプライトにマリオが瞬間移動しないように突っ込んで行うこともできる。
 
 <!--
 * If Mario starts trying to run up a purple triangle without a wall next to it, he will sometimes move upwards more than he should. If there's a solid block two tiles above the purple triangle, he can pass far enough into it such that jumping will send him straight through. Similarly, if there's a solid block one tile in front of the triangle, he can be pushed into that instead.
@@ -2750,7 +2749,7 @@ _280個(180個有用)_
 <!--
 * The long sideways Layer 2 scroll sprite has some odd effects when used in horizontal levels. Placing it at Y=0 will cause it to act like a leftward conveyor. Y=1 to Y=3 will cause Mario to shake when standing on layer 2, and Y=4 will cause both Layer 1 and Mario to constantly shake. Y=5 and below will for the most part either crash or hardlock the game.
 -->
-* The long sideways Layer 2 scroll sprite has some odd effects when used in horizontal levels. Placing it at Y=0 will cause it to act like a leftward conveyor. Y=1 to Y=3 will cause Mario to shake when standing on layer 2, and Y=4 will cause both Layer 1 and Mario to constantly shake. Y=5 and below will for the most part either crash or hardlock the game.
+* 長いレイヤー2スクロールを発動させるスプライトを横レベルに置くと変な作用がある。Y=0の位置に置く場合は左向きコンベアのようにふるまう。Y=1から3までの場合はマリオがレイヤー2に立っている間揺れるようになる。Y=4の場合はレイヤー1とマリオがずっと揺れる。Y=5以上の場合はだいたいクラッシュかハードロックする。
 
 <!--
 * Any of the Layer 2 scroll sprites intended for vertical levels will kill Mario upon spawning if Mario isn't already spawning on the same screen they are.
@@ -2760,7 +2759,7 @@ _280個(180個有用)_
 <!--
 * Wrong warp: Taking a screen exit 256 times will reload the level from the overworld. The issue with this, however, is that the space of RAM meant for overworld data gets overwritten by level data during level load. This cause the game to try to loading the tile in the level data where the level would be in the overworld data as the translevel number to spawn Mario into. Not only does this potentially allow you to warp to any level in the game (even unused ones), it also can cause some strange effects, such the level getting used as a No-Yoshi entrance in places not meant for one. It should be noted, however, that the No-Yoshi entrance prevents a level from being warped to, as it will load the correct level after being run. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4254) - [Video](https://www.youtube.com/watch?v=v_iv_9QJ6lQ) - [Diagram](http://i.imgur.com/ZcNDrAA.png)
 -->
-* Wrong warp: Taking a screen exit 256 times will reload the level from the overworld. The issue with this, however, is that the space of RAM meant for overworld data gets overwritten by level data during level load. This cause the game to try to loading the tile in the level data where the level would be in the overworld data as the translevel number to spawn Mario into. Not only does this potentially allow you to warp to any level in the game (even unused ones), it also can cause some strange effects, such the level getting used as a No-Yoshi entrance in places not meant for one. It should be noted, however, that the No-Yoshi entrance prevents a level from being warped to, as it will load the correct level after being run. [Fix](http://www.smwcentral.net/?p=section&a=details&id=4254) - [Video](https://www.youtube.com/watch?v=v_iv_9QJ6lQ) - [Diagram](http://i.imgur.com/ZcNDrAA.png)
+* Wrong warp：コース内でレベルを256回もロードするとコースが改めてOWから読み込まれる。しかし、OWが送り先を決めるために使うRAMがレベルの読み込みで上書きされるため、OWのタイルのデータが入ったはずの位置に実際にレベルのタイルがあり、それが送り先のレベルとして採用される。これで未使用レベルを含めたあらゆるレベルがロードできるだけでなく、送り先がヨッシー禁止の前置きがないはずのコースでもそれとして使用されるなど妙な効果が出ることもある。なお、送り先のレベルにヨッシー禁止の前置きがある場合は、前置きの後に正しいレベルに移動する。[Fix](http://www.smwcentral.net/?p=section&a=details&id=4254) - [Video](https://www.youtube.com/watch?v=v_iv_9QJ6lQ) - [Diagram](http://i.imgur.com/ZcNDrAA.png)
 
 <!--
 * When placed next to a screen border, both the screen exit on that screen and the one the door is touching can be accessed depending on Mario's position. Similarly for pipes.
@@ -2800,12 +2799,12 @@ _280個(180個有用)_
 <!--
 * If a sprite has a spawn index of 65 or more (i.e. it's the 65th sprite from the left side of the level), then its "killed" status won't be reset when moving between sublevels. Hence, if you kill the 65th sprite in one room, the 65th sprite in any other room of that level will never spawn.
 -->
-* If a sprite has a spawn index of 65 or more (i.e. it's the 65th sprite from the left side of the level), then its "killed" status won't be reset when moving between sublevels. Hence, if you kill the 65th sprite in one room, the 65th sprite in any other room of that level will never spawn.
+* スプライトの出現インデックスが64以上だと（つまりレベルの一番左から65体目以上のスプライト）、倒しても「倒された」状態を表すフラグがレベル間を移動するときにリセットされない。つまり、対象のスプライトを倒すと、そのコースの他レベルにある同じ番号のスプライトも出現しなくなる。
 
 <!--
 * Stopping the title screen animation on the frame Mario touches a coin will let him keep that coin even after the game is actually started.
 -->
-* Stopping the title screen animation on the frame Mario touches a coin will let him keep that coin even after the game is actually started.
+* マリオがコインを取得するFでタイトル画面のプレーを止めてゲームをスタートすると、そのコインが加算される。
 
 <!--
 * The ability to side-screen-exit is carried across sublevels.
@@ -2822,7 +2821,7 @@ _280個(180個有用)_
 <!--
 * If Mario enters a room too far to the right, the level will display past the screen borders for a bit before snapping back and glitching some of the Map16 graphics until they are reloaded. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8752)
 -->
-* If Mario enters a room too far to the right, the level will display past the screen borders for a bit before snapping back and glitching some of the Map16 graphics until they are reloaded. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8752)
+* マリオのレベル出現位置が右過ぎると、自動に戻されるまで画面がレベル外の領域を表示して、Map16のグラの一部が読み込み直されるまで化けてしまう。[Fix](http://www.smwcentral.net/?p=section&a=details&id=8752)
 
 <!--
 * Collecting enough silver coins produced by a silver P-switch will start giving Mario glitched 5-up and coin score sprites. [Fix (for 5-up)](http://www.smwcentral.net/?p=section&a=details&id=4418)
@@ -2837,7 +2836,7 @@ _280個(180個有用)_
 <!--
 * A byproduct of the above is right when the consecutive enemies stomped counter ([$7E1697](https://www.smwcentral.net/?p=nmap&m=smwram&u=0#7E1697)) loops, a glitched sound effect occurs ($60, since the game tries to read a RTS instruction as a sound fx pointer), and depending on the emulator it keeps playing glitched sounds indefinitely until another sound replaces it or you exit the level. [Video](https://youtu.be/6j9zBwQgmWU)
 -->
-* A byproduct of the above is right when the consecutive enemies stomped counter ([$7E1697](https://www.smwcentral.net/?p=nmap&m=smwram&u=0#7E1697)) loops, a glitched sound effect occurs ($60, since the game tries to read a RTS instruction as a sound fx pointer), and depending on the emulator it keeps playing glitched sounds indefinitely until another sound replaces it or you exit the level. [Video](https://youtu.be/6j9zBwQgmWU)
+* 前述のバグの副作用に、着地せずに踏まれた敵のカウンター（[$7E1697](https://www.smwcentral.net/?p=nmap&m=smwram&u=0#7E1697)）がループするとバグった効果音が鳴る。（RTSコマンドの$60が効果音番号として使われるのが原因。）また、バグった効果音が別の効果音に上書きされるかレベルを出るまで永久に繰り返して再生されるエミュレーターがある。[Video](https://youtu.be/6j9zBwQgmWU)
 
 <!--
 * Bouncing off Wigglers enough will start giving Mario glitched score sprites. [Video](https://youtu.be/7nwktrDawdM) - [Fix](http://www.smwcentral.net/?p=section&a=details&id=4441)
@@ -2862,12 +2861,12 @@ _280個(180個有用)_
 <!--
 * Freezing the game (via $9D) on the frame a Koopa shell turns into a normal Koopa will cause its graphics to glitch during Mario's shrinking animation.
 -->
-* Freezing the game (via $9D) on the frame a Koopa shell turns into a normal Koopa will cause its graphics to glitch during Mario's shrinking animation.
+* 甲羅がノコノコに変化するFに$9Dでフリーズすると、フリーズが解除されるまでそのノコノコのグラフィックが化ける。
 
 <!--
 * Two shell-less Koopas can enter the same Koopa shell if timed correctly, but only the last one to enter before the Koopa emerges will actually have an effect on what spawns.
 -->
-* Two shell-less Koopas can enter the same Koopa shell if timed correctly, but only the last one to enter before the Koopa emerges will actually have an effect on what spawns.
+* タイミングが良ければ裸ノコノコが2匹同時に甲羅に入れるが、出現するノコノコの色に影響を及ぼすのは最後に入った方の裸ノコノコ。
 
 <!--
 * Bullet Bills make no sound when spawning directly into the level, even though Banzai Bills do. [Fix](http://www.smwcentral.net/?p=section&a=details&id=8755)
@@ -2907,7 +2906,7 @@ _280個(180個有用)_
 <!--
 * Yoshi's head, and carried sprites, will turn invisible when in their turning state while Mario is in a cloud. This includes the improper turning state Yoshi has as a result of the layer-switch glitch.
 -->
-* Yoshi's head, and carried sprites, will turn invisible when in their turning state while Mario is in a cloud. This includes the improper turning state Yoshi has as a result of the layer-switch glitch.
+* マリオが雲に乗っている間に方向転換すると、方向転換中はYの頭や持ち運んでいるスプライトが表示されない。これはレイヤー変更バグで向きが不適切な状態であっても起きる。
 
 <!--
 * The net tiles cleared by the climbing net door will improperly update if the sprite is placed across a screen or subscreen border. However, this only affects VRAM and not the actual tiles, so their interaction isn't changed. This can also occur if the screen scrolls far enough before the sprite redraws the gate tiles, though with the same issue.
@@ -3087,7 +3086,7 @@ _280個(180個有用)_
 <!--
 * Mode 7 boss interaction loops between subscreens, allowing you to hit bosses that use it if you fly high enough.
 -->
-* Mode 7 boss interaction loops between subscreens, allowing you to hit bosses that use it if you fly high enough.
+* モード7のボスとの相互作用はサブスクリーンごとにループするため、十分上に飛べばボスを叩くことができる。
 
 <!--
 * Spawning a Koopa Kid that uses Mode 7 in a room where Mode 7 is already active will cause the room to glitch in unusual ways. [Video](https://youtu.be/Dm-Y_TK1vkg)
@@ -3107,7 +3106,7 @@ _280個(180個有用)_
 <!--
 * Destroying certain extended sprites with a star will cause their graphics to move slightly or have glitched graphics based on their orientation for a frame.
 -->
-* Destroying certain extended sprites with a star will cause their graphics to move slightly or have glitched graphics based on their orientation for a frame.
+* 拡張スプライトの一部はスターで倒すとグラフィックがずれたり向きによって1Fの間化けたりする。
 
 <!--
 * Hitting a directional coin block while Mario has star power will cause the music to be overwritten by the directional coins; however, if the coins end before the star does, the music will continue to play for the directional coin path until Mario's star power ends as well.
@@ -3312,12 +3311,12 @@ _280個(180個有用)_
 <!--
 * Loading a level that has a No-Yoshi entrance (by way of the 256 exit glitch or otherwise) when the entrance has already been run will prevent the cutscene from displaying, but will still function as normal, preventing both Yoshi and warps.
 -->
-* Loading a level that has a No-Yoshi entrance (by way of the 256 exit glitch or otherwise) when the entrance has already been run will prevent the cutscene from displaying, but will still function as normal, preventing both Yoshi and warps.
+* ヨッシー禁止の前置きがすでに実行された状態で再びレベルをロードすれば（例えばWrong Warpバグで）、前置きのシーン自体は実行されないがその効果は残る。つまり、依然としてヨッシーを取られ、送り先を直される。
 
 <!--
 * Loading a No-Yoshi entrance from a pipe (via the 256 exit glitch will cause Mario to not animate correctly. Additionally, bringing an item will cause it to stick to a bush during the walk, and bringing a Yoshi will cause the timing of Mario's movement to get offset due to him being unable to spinjump off, causing him to walk straight through the gate (though you don't keep Yoshi, unfortunately).
 -->
-* Loading a No-Yoshi entrance from a pipe (via the 256 exit glitch will cause Mario to not animate correctly. Additionally, bringing an item will cause it to stick to a bush during the walk, and bringing a Yoshi will cause the timing of Mario's movement to get offset due to him being unable to spinjump off, causing him to walk straight through the gate (though you don't keep Yoshi, unfortunately).
+* 土管に入って（Wrong Warpバグで）ヨッシー禁止の前置きをロードすれば、マリオのアニメーションがバグる。また、その際持ち運んでいるアイテムはシーン中に藪にくっつき、Yがお供していればスピンジャンプして降りることができないから、マリオの行動のタイミングがずれてしまい、扉を通り過ぎてしまう。（それでもYは取られてしまう。）
 
 <!--
 * Collecting a star or dying on the title screen will cause the music to change to the special world's theme. [Fix (for death)](http://www.smwcentral.net/?p=section&a=details&id=4528)
@@ -3400,12 +3399,12 @@ _14個_
 <!--
 * Certain results from Yoshification may crash the game, for instance by spawning a sprite that writes a value of 0C+ to $160E (the index of the sprite in Yoshi's mouth) which ultimately corrupts RAM when spat out, or by writing a value of 03+ to $1594 (a value specifying the routine currently used for Yoshi's mouth) which will immediately execute garbage code upon setting. Additional crashes can be obtained by transfering values from Yoshi to the sprite in question, such as writing to $151C (which Yoshi uses as the distance of his tongue) to a flying ? block (which uses it to determine the sprite to spawn), and then hitting the block. [Vid](https://youtu.be/4hKg1J9iuUk)[eos](https://www.youtube.com/watch?v=2fLOZrQzDnQ&feature=youtu.be&t=1h8m49s)
 -->
-* Certain results from Yoshification may crash the game, for instance by spawning a sprite that writes a value of 0C+ to $160E (the index of the sprite in Yoshi's mouth) which ultimately corrupts RAM when spat out, or by writing a value of 03+ to $1594 (a value specifying the routine currently used for Yoshi's mouth) which will immediately execute garbage code upon setting. Additional crashes can be obtained by transfering values from Yoshi to the sprite in question, such as writing to $151C (which Yoshi uses as the distance of his tongue) to a flying ? block (which uses it to determine the sprite to spawn), and then hitting the block. [Vid](https://youtu.be/4hKg1J9iuUk)[eos](https://www.youtube.com/watch?v=2fLOZrQzDnQ&feature=youtu.be&t=1h8m49s)
+* 「ヨッシー化」の結果は特定の場合クラッシュに至る。例えば、Yが口に何を含んでいるかを司る$160Eに$0D以上の値を書き出すスプライトを出現させてYが含んでいるものを吐き出すRAMが化ける。または、Yの口の段階を表す$1594に$03以上の値を書き出すスプライトだとすぐヌルポでコードがずれる。あと、ヨッシー化したスプライトが親（つまり前にそのスロットにいたY）から引き継いだ値によるクラッシュもある。例えば、Yは$151Cを舌の長さとして使うが、飛ぶハテナブロックはその中身として使い、中身として無効な値を引き継いで叩かれるとクラッシュする。[Vid](https://youtu.be/4hKg1J9iuUk)[eos](https://www.youtube.com/watch?v=2fLOZrQzDnQ&feature=youtu.be&t=1h8m49s)
 
 <!--
 * Most results from phase pointer manipulation may crash the game.
 -->
-* Most results from phase pointer manipulation may crash the game.
+* 段階ポインター操作の結果は大抵の場合クラッシュに至る。
 
 <!--
 * Sending a directional coin sprite off the left side of a level with Layer 3 may crash the game.
